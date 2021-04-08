@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "ujfolio",
-  "homepage": "https://mkumail1.github.io/therealmvp.dev/",
+  "homepage": "https://umairjibran.github.io/",
   "version": "1.0.0",
   "scripts": {
     "build": "react-scripts build",
