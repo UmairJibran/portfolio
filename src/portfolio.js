@@ -31,12 +31,6 @@ const socialMediaLinks = [
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
   },
   {
-    name: "e-Mail",
-    link: "mailto:umairjibran7@gmail.com?cc=umair@shaoor.tech",
-    fontAwesomeIcon: "far fa-envelope", // Reference https://fontawesome.com/icons/google?style=brands
-    backgroundColor: "#aa9c81", // Reference https://simpleicons.org/?q=gmail
-  },
-  {
     name: "Twitter",
     link: "https://twitter.com/umairjibran7",
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
@@ -282,7 +276,7 @@ const degrees = {
         "⚡ I have gained deep insights into fundamental software engineering courses like DS, Algorithms, DBMS, OS, Advanced Programming etc.",
         "⚡ Apart from this, I have done courses on MEVN Stack Development, Cloud Computing",
       ],
-      website_link: "https://cusit.edu.pk/",
+      website_link: "https://cu.edu.pk/",
     },
   ],
 };
@@ -290,6 +284,15 @@ const degrees = {
 const certifications = {
   //TODO: Add Certificates
   certifications: [
+    {
+      title: "Node.js Essential Training",
+      subtitle: "",
+      logo_path: "linkedin-learning-logo.png",
+      certificate_link:
+        "https://drive.google.com/file/d/14G4C4lUnL2TVId0r-yls2-aQqEepLOnB/view?usp=sharing",
+      alt_name: "LinkedIn Learning",
+      color_code: "white",
+    },
     {
       title: "Amal Academy Fellowship",
       subtitle: "Career Prep Fellowship",
@@ -299,18 +302,11 @@ const certifications = {
       color_code: "white",
     },
     {
-      title: "Node.js Essential Training",
-      subtitle: "",
-      logo_path: "linkedin-learning-logo.png",
-      certificate_link: "",
-      alt_name: "LinkedIn Learning",
-      color_code: "white",
-    },
-    {
       title: "Tailwind CSS Essential Training",
       subtitle: "",
       logo_path: "linkedin-learning-logo.png",
-      certificate_link: "",
+      certificate_link:
+        "https://drive.google.com/file/d/1VvJWsrahKLaulkwj44pFp6RBKluaBuT8/view?usp=sharing",
       alt_name: "LinkedIn Learning",
       color_code: "white",
     },
@@ -318,7 +314,8 @@ const certifications = {
       title: "Microsoft Power Platform Foundations",
       subtitle: "",
       logo_path: "linkedin-learning-logo.png",
-      certificate_link: "",
+      certificate_link:
+        "https://drive.google.com/file/d/1dupqrAoB-BfZSb0kcOKxk24cbLdHy5cp/view?usp=sharing",
       alt_name: "LinkedIn Learning",
       color_code: "white",
     },
@@ -326,7 +323,8 @@ const certifications = {
       title: "Learning Vue.js",
       subtitle: "",
       logo_path: "linkedin-learning-logo.png",
-      certificate_link: "",
+      certificate_link:
+        "https://drive.google.com/file/d/146NHQrDydavrz5n2lWX2-Kpr8IuVjDpu/view?usp=sharing",
       alt_name: "LinkedIn Learning",
       color_code: "white",
     },
@@ -372,7 +370,7 @@ const experience = {
         {
           title: "Microsoft Power Platform Trainee",
           company: "Empiric Technology",
-          company_url: "https://www.empirictech.com /",
+          company_url: "https://www.empirictech.com/",
           logo_path: "empiric-logo.png",
           duration: "April 2021 - Present",
           location: "Toronto, Canada",

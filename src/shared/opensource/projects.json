@@ -8,10 +8,22 @@
       "description": "",
       "isFork": false,
       "languages": [
-        { "name": "PHP", "iconifyClass": "cib-php" },
-        { "name": "SQL", "iconifyClass": "carbon-sql" },
-        { "name": "HTML", "iconifyClass": "logos-html-5" },
-        { "name": "CSS", "iconifyClass": "logos-css-3" }
+        {
+          "name": "PHP",
+          "iconifyClass": "cib-php"
+        },
+        {
+          "name": "SQL",
+          "iconifyClass": "carbon-sql"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
       ]
     },
     {
@@ -22,20 +34,53 @@
       "description": "",
       "isFork": false,
       "languages": [
-        { "name": "PHP", "iconifyClass": "cib-php" },
-        { "name": "SQL", "iconifyClass": "carbon-sql" },
-        { "name": "HTML", "iconifyClass": "logos-html-5" },
-        { "name": "CSS", "iconifyClass": "logos-css-3" }
+        {
+          "name": "PHP",
+          "iconifyClass": "cib-php"
+        },
+        {
+          "name": "SQL",
+          "iconifyClass": "carbon-sql"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
       ]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=",
-      "name": "Webcrawler",
-      "createdAt": "Jan 2020",
-      "url": "https://github.com/UmairJibran/web-crawler",
+      "name": "Shaoor.Tech",
+      "createdAt": "",
+      "url": "https://www.shaoor.tech",
       "description": "",
       "isFork": false,
-      "languages": [{ "name": "NodeJS", "iconifyClass": "logos-nodejs" }]
+      "languages": [
+        {
+          "name": "NodeJS",
+          "iconifyClass": "logos-nodejs"
+        },
+        {
+          "name": "VUE.JS",
+          "iconifyClass": "logos-vue"
+        },
+        {
+          "name": "MongoDB",
+          "iconifyClass": "vscode-icons:file-type-mongo"
+        },
+        {
+          "name": "Microsoft Azure",
+          "iconifyClass": "logos-azure-icon"
+        },
+        {
+          "name": "TailwindCSS",
+          "iconifyClass": "logos-tailwindcss-icon"
+        }
+      ]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
@@ -44,16 +89,25 @@
       "url": "https://github.com/umairjibran/pdf-unique-name",
       "description": "Not only does it rename all the pdfs but also generates an ordered list",
       "isFork": false,
-      "languages": [{ "name": "nodeJS", "iconifyClass": "logos-nodejs" }]
+      "languages": [
+        {
+          "name": "nodeJS",
+          "iconifyClass": "logos-nodejs"
+        }
+      ]
     },
-
     {
       "name": "Perceptron",
-      "createdAt": "May 2020",
+      "createdAt": "March 2021",
       "url": "https://github.com/umairjibran/Simple-Perceptron",
       "description": "Perceptron Algorithm implemented in C++",
       "isFork": false,
-      "languages": [{ "name": "C++", "iconifyClass": "gg-c-plus-plus" }]
+      "languages": [
+        {
+          "name": "C++",
+          "iconifyClass": "gg-c-plus-plus"
+        }
+      ]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=",
@@ -63,8 +117,14 @@
       "description": "",
       "isFork": false,
       "languages": [
-        { "name": "Flutter", "iconifyClass": "logos-flutter" },
-        { "name": "Dart", "iconifyClass": "logos-dart" }
+        {
+          "name": "Flutter",
+          "iconifyClass": "logos-flutter"
+        },
+        {
+          "name": "Dart",
+          "iconifyClass": "logos-dart"
+        }
       ]
     }
   ]
