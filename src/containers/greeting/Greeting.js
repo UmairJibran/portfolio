@@ -36,7 +36,7 @@ export default function Greeting(props) {
               <div className="portfolio-repo-btn-div">
                 <Button
                   text="Resume 📝"
-                  newTab={true}
+                  newTab={false}
                   href={"/resume"}
                   theme={theme}
                   className="portfolio-repo-btn"
