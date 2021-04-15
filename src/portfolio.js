@@ -336,7 +336,7 @@ const experience = {
   title: "Experience",
   subtitle: "Internship and Volunteership",
   description:
-    "I have worked with many evolving startups as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
+    "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
   header_image_path: "experience.svg",
   sections: [
     // {
@@ -364,7 +364,7 @@ const experience = {
           duration: "August 2020 - November 2021",
           location: "Islamabad, Pakistan",
           description:
-            "I have worked on project of 2D image into 3D using Machine Learning Techniques. There were two objectives: (1) To enuemerate normal prediction of a 2D image. (2) Using ML techniques to draw coordinates on regions and locations. I have closely worked with deep learning models in combination with statistical methods to create solution for this. The project had the following scope: (a) Object Visualization for Uban Cities. (b) Generating/evaluating building hypothesis",
+            "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
         },
         {
@@ -374,8 +374,7 @@ const experience = {
           logo_path: "empiric-logo.png",
           duration: "April 2021 - Present",
           location: "Toronto, Canada",
-          description:
-            "I have worked on project of 2D image into 3D using Machine Learning Techniques. There were two objectives: (1) To enuemerate normal prediction of a 2D image. (2) Using ML techniques to draw coordinates on regions and locations. I have closely worked with deep learning models in combination with statistical methods to create solution for this. The project had the following scope: (a) Object Visualization for Uban Cities. (b) Generating/evaluating building hypothesis",
+          description: "", //TODOD: add description for empiric tech
           color: "#1c0c0c",
         },
       ],
