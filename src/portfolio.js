@@ -368,13 +368,14 @@ const experience = {
           color: "#ee3c26",
         },
         {
-          title: "Microsoft Power Platform Trainee",
-          company: "Empiric Technology",
-          company_url: "https://www.empirictech.com/",
-          logo_path: "empiric-logo.png",
-          duration: "April 2021 - Present",
-          location: "Toronto, Canada",
-          description: "", //TODOD: add description for empiric tech
+          title: "Associate Full Stack Engineer",
+          company: "Prodoct Box",
+          company_url: "https://www.productbox.dev/",
+          logo_path: "product-box-logo.png",
+          duration: "May 2021 - Present",
+          location: "Peshawar, Pakistan",
+          description:
+            "My responsibilities include, but are not limited to: \n◦\t Work with customers/product managers to define, build out, test and release features and products. \n◦\t Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦\t Develop core application of clients in Flutter/Node.js Framework.\n◦\t Write automated test cases of high quality.",
           color: "#1c0c0c",
         },
       ],
