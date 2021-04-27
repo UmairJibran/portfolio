@@ -88,11 +88,11 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
-        "⚡ Creating Single page rendering applications using VUE.JS",
-        "⚡ Developing mobile applications using Flutter",
-        "⚡ Creating optimized application backends in Node.js, Express.js and PHP",
-        "⚡ Experience in usage of Rest APIs in modern programming practices",
+        "Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
+        "Creating Single page rendering applications using VUE.JS",
+        "Developing mobile applications using Flutter",
+        "Creating optimized application backends in Node.js, Express.js and PHP",
+        "Experience in usage of Rest APIs in modern programming practices",
       ],
       softwareSkills: [
         {
@@ -172,9 +172,9 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "⚡ Experience working on Azure platform",
-        "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-        "⚡ Routing DNS records across different websites with secure SSL certificates",
+        "Experience working on Azure platform",
+        "Hosting and maintaining websites on virtual machine instances along with integration of databases",
+        "Routing DNS records across different websites with secure SSL certificates",
       ],
       softwareSkills: [
         {
@@ -225,10 +225,10 @@ const skills = {
       title: "UI/UX Design",
       fileName: "DesignImg",
       skills: [
-        "⚡ Designing highly attractive user interface for mobile and web applications",
-        "⚡ Customizing logo designs and making logos from scratch",
-        "⚡ Creating the flow of application functionalities to optimize user experience",
-        "⚡ Enabling engaging user experience for generating leeds",
+        "Designing highly attractive user interface for mobile and web applications",
+        "Customizing logo designs and making logos from scratch",
+        "Creating the flow of application functionalities to optimize user experience",
+        "Enabling engaging user experience for generating leeds",
       ],
       softwareSkills: [
         {
@@ -273,8 +273,8 @@ const degrees = {
       alt_name: "CUSIT - Peshawar, Pakistan",
       duration: "2017 - Present",
       descriptions: [
-        "⚡ I have gained deep insights into fundamental software engineering courses like DS, Algorithms, DBMS, OS, Advanced Programming etc.",
-        "⚡ Apart from this, I have done courses on MEVN Stack Development, Cloud Computing",
+        "I have gained deep insights into fundamental software engineering courses like DS, Algorithms, DBMS, OS, Advanced Programming etc.",
+        "Apart from this, I have done courses on MEVN Stack Development, Cloud Computing",
       ],
       website_link: "https://cu.edu.pk/",
     },
