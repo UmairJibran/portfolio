@@ -339,20 +339,22 @@ const experience = {
     "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
   header_image_path: "experience.svg",
   sections: [
-    // {
-    //   title: "Work",
-    //   experiences: [
-    //     {
-    //       title: "",
-    //       company: "",
-    //       company_url: "",
-    //       logo_path: "logo.jpg",
-    //       duration: "",
-    //       location: "",
-    //       description:
-    //         "",
-    //       color: "#0879bf",
-    //     },],}
+    {
+      title: "Work",
+      experiences: [
+        {
+          title: "Mobile Application Developer",
+          company: "ProductBox",
+          company_url: "https://www.productbox.dev/",
+          logo_path: "product-box-logo.png",
+          duration: "July 2021 - Present",
+          location: "Peshawar",
+          description:
+            "",
+          color: "#0879bf",
+        },
+      ],
+    },
     {
       title: "Internships",
       experiences: [
@@ -372,7 +374,7 @@ const experience = {
           company: "Prodoct Box",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
-          duration: "May 2021 - Present",
+          duration: "May 2021 - July 2021",
           location: "Peshawar, Pakistan",
           description:
             "My responsibilities include, but are not limited to: \n◦\t Work with customers/product managers to define, build out, test and release features and products. \n◦\t Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦\t Develop core application of clients in Flutter/Node.js Framework.\n◦\t Write automated test cases of high quality.",
