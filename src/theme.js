@@ -146,4 +146,4 @@ export const orangeTheme = {
  * orangeTheme
  */
 
-export const chosenTheme = brownTheme;
+export const chosenTheme = purpleTheme;
