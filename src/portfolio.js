@@ -59,7 +59,7 @@ const socialMediaLinks = [
 const formalSocialMediaLinksHome = [
   {
     name: "Email",
-    link: "mailto:umairjibran7@gmail.com?cc=umair@shaoor.tech",
+    link: "mailto:umairjibran7@gmail.com?cc=hi@umairjibran.me&cc=umair@shaoor.tech",
     fontAwesomeIcon: "far fa-envelope", // Reference https://fontawesome.com/icons/google?style=brands
     backgroundColor: "#aa9c81", // Reference https://simpleicons.org/?q=gmail
   },
