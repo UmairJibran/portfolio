@@ -2,7 +2,7 @@
 
 // Website related settings
 const settings = {
-  isSplash: true, // Change this to false if you don't want Splash screen.
+  isSplash: false, // Change this to false if you don't want Splash screen.
 };
 
 //Home Page
@@ -129,24 +129,38 @@ const skills = {
       fileName: "FullStackImg",
       skills: [
         "Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
-        "Creating Single page rendering applications using VUE.JS",
         "Developing mobile applications using Flutter",
-        "Creating optimized application backends in Node.js, Express.js and PHP",
-        "Experience in usage of Rest APIs in modern programming practices",
+        "Creating optimized application backends in Node.js, Express.js, AWS Lambda, Google Firebase Cloud Functions"
       ],
       softwareSkills: [
+        {
+          skillName: "JavaScript",
+          fontAwesomeClassname: "simple-icons:javascript",
+          style: {
+            backgroundColor: "#000000",
+            color: "#F7DF1E",
+          },
+        },
+	{
+	  skillName: "TypeScript",
+	  fontAwesomeClassname: "simple-icons:typescript",
+	  style: {
+	    color: "#3178C6",
+	  },
+	},
+        {
+          skillName: "Dart",
+          fontAwesomeClassname: "simple-icons:dart",
+          style: {
+            backgroundColor: "#00000000",
+            color: "#0175C2",
+          },
+        },
         {
           skillName: "Flutter",
           fontAwesomeClassname: "simple-icons:flutter",
           style: {
             color: "#60CAF6",
-          },
-        },
-        {
-          skillName: "VUE JS",
-          fontAwesomeClassname: "simple-icons:vue-dot-js",
-          style: {
-            color: "#13AA52",
           },
         },
         {
@@ -156,49 +170,20 @@ const skills = {
             color: "#339933",
           },
         },
-        {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "orange",
-          },
-        },
-        {
-          skillName: "PHP",
-          fontAwesomeClassname: "simple-icons:php",
-          style: {
-            color: "black",
-          },
-        },
-        {
-          skillName: "mongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#13AA52",
-          },
-        },
-        {
-          skillName: "HTML5",
-          fontAwesomeClassname: "simple-icons:html5",
-          style: {
-            color: "#E34F26",
-          },
-        },
-        {
-          skillName: "CSS3",
-          fontAwesomeClassname: "fa-css3",
-          style: {
-            color: "#1572B6",
-          },
-        },
-        {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
-        },
+	{
+	  skillName: "Sequelize",
+	  fontAwesomeClassname: "simple-icons:sequelize",
+	  style: {
+	    color: "#52B0E7",
+	  },
+	},
+ 	{
+	  skillName: "PHP",
+	  fontAwesomeClassname: "simple-icons:php",
+	  style: {
+	    color: "#474aBa",
+	  },
+	},
         {
           skillName: "NPM",
           fontAwesomeClassname: "simple-icons:npm",
@@ -206,6 +191,27 @@ const skills = {
             color: "#CB3837",
           },
         },
+        {
+          skillName: "Jest",
+          fontAwesomeClassname: "simple-icons:jest",
+          style: {
+            color: "#C21325",
+          },
+        },
+        {
+          skillName: "yarn",
+          fontAwesomeClassname: "simple-icons:yarn",
+          style: {
+            color: "skyblue",
+          },
+        },
+        {
+          skillName: "mocha",
+          fontAwesomeClassname: "simple-icons:mocha",
+          style: {
+            color: "#8D6748",
+          },
+        }
       ],
     },
     {
@@ -217,6 +223,13 @@ const skills = {
         "Routing DNS records across different websites with secure SSL certificates",
       ],
       softwareSkills: [
+        {
+          skillName: "AWS",
+          fontAwesomeClassname: "simple-icons:amazonaws",
+          style: {
+            color: "#232F3E",
+          },
+        },
         {
           skillName: "Azure",
           fontAwesomeClassname: "simple-icons:microsoftazure",
@@ -239,10 +252,10 @@ const skills = {
           },
         },
         {
-          skillName: "Docker",
-          fontAwesomeClassname: "simple-icons:docker",
+          skillName: "Serverless",
+          fontAwesomeClassname: "simple-icons:serverless",
           style: {
-            color: "#1488C6",
+            color: "#FD5750",
           },
         },
         {
@@ -259,16 +272,45 @@ const skills = {
             color: "#8BA8B9",
           },
         },
+        {
+          skillName: "mongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: {
+            color: "#13AA52",
+          },
+        },
+        {
+          skillName: "DynamoDb",
+          fontAwesomeClassname: "simple-icons:amazondynamodb",
+          style: {
+            color: "#4053D6",
+          },
+        },
+	{
+	  skillName: "GitHub",
+	  fontAwesomeClassname: "simple-icons:github",
+	  style: {
+	    color: "black"	    
+	  },
+	},
+	{
+	  skillName: "GitHub Actions",
+	  fontAwesomeClassname: "simple-icons:githubactions",
+	  style: {
+	    color: "#2088FF",
+	  },
+	},
       ],
     },
     {
-      title: "UI/UX Design",
+      title: "Design & Misc",
       fileName: "DesignImg",
       skills: [
         "Designing highly attractive user interface for mobile and web applications",
         "Customizing logo designs and making logos from scratch",
         "Creating the flow of application functionalities to optimize user experience",
         "Enabling engaging user experience for generating leeds",
+	"Documenting the API",
       ],
       softwareSkills: [
         {
@@ -278,6 +320,13 @@ const skills = {
             color: "#FF2BC2",
           },
         },
+	{
+	  skillName: "Swagger",
+	  fontAwesomeClassname: "simple-icons:swagger",
+	  style: {
+	    color: "#85EA2D",
+	  },
+	},
         {
           skillName: "Figma",
           fontAwesomeClassname: "simple-icons:figma",
@@ -311,10 +360,10 @@ const degrees = {
       subtitle: "Bachelor's in Computer Sciences",
       logo_path: "cusit-logo.png",
       alt_name: "CUSIT - Peshawar, Pakistan",
-      duration: "2017 - Present",
+      duration: "2017 - 2021",
       descriptions: [
         "I have gained deep insights into fundamental software engineering courses like DS, Algorithms, DBMS, OS, Advanced Programming etc.",
-        "Apart from this, I have done courses on MEVN Stack Development, Cloud Computing",
+        "Apart from this, I have completed courses on and implemented them using real life scenarios projects on Flutter Mobile Development Framwork, NodeJS,  MEVN Stack Development, Cloud Computing",
       ],
       website_link: "https://cu.edu.pk/",
     },
@@ -383,7 +432,7 @@ const experience = {
       title: "Work",
       experiences: [
         {
-          title: "Mobile Application Developer",
+          title: "Associate Full Stack Engineer",
           company: "ProductBox",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
