@@ -10,12 +10,14 @@
   padding: 20px 10px;
   margin: 0px auto;
   margin-top: 2rem;
+  filter: grayscale(10%);
 }
 
 .myimage {
   max-height: 70%;
   border-radius: 50%;
-  margin-left: 10rem;
+  /* margin-left: 5rem; */
+  filter: brightness(1.1) grayscale(90%);
 }
 
 .gretting-main {
@@ -66,6 +68,18 @@
 .greeting-image-div > * {
   max-width: 100%;
   height: auto;
+}
+
+.greeting-image-neon > * {
+  max-width: 70%;
+  border-radius: 50%;
+  margin-left: 5rem;
+
+  /* NEON Effect */
+  border: 0.1rem solid #fff;
+
+  box-shadow: 0 0 5px #fff, inset 0 0 5px #fff, 0 0 10px #800080,
+    inset 0 0 10px #800080, 0 0 10px #800080, inset 0 0 5px #800080;
 }
 
 /* Media Query */

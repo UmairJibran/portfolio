@@ -52,12 +52,14 @@ export default function Greeting(props) {
               </div>
             </div>
           </div>
-          <div className="greeting-image-div">
-            <img
-              className="myimage"
-              src={require("../../assests/images/umair.jpg")}
-              alt="Umair Jibran.img"
-            ></img>
+          <div className="greeting-image-neon">
+            <div className="greeting-image-div">
+              <img
+                className="myimage"
+                src={require("../../assests/images/umair.jpg")}
+                alt="Umair Jibran.img"
+              ></img>
+            </div>
           </div>
         </div>
       </div>
