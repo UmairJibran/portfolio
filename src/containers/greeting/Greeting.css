@@ -16,7 +16,7 @@
 .myimage {
   max-height: 70%;
   border-radius: 50%;
-  /* margin-left: 5rem; */
+  margin-left: 10rem;
   filter: brightness(1.1) grayscale(90%);
 }
 
