@@ -227,7 +227,7 @@ const skills = {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
           style: {
-            color: "#232F3E",
+            color: "#232f3e",
           },
         },
         {
@@ -270,13 +270,6 @@ const skills = {
           fontAwesomeClassname: "simple-icons:mysql",
           style: {
             color: "#8BA8B9",
-          },
-        },
-        {
-          skillName: "mongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#13AA52",
           },
         },
         {

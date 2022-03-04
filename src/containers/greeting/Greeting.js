@@ -52,7 +52,7 @@ export default function Greeting(props) {
               </div>
             </div>
           </div>
-          <div className="greeting-image-neon">
+          {/* <div className="greeting-image-neon"> */}
             <div className="greeting-image-div">
               <img
                 className="myimage"
@@ -61,7 +61,7 @@ export default function Greeting(props) {
               ></img>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </Fade>
   );
