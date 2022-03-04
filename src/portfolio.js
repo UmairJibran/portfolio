@@ -10,8 +10,10 @@ const greeting = {
   title: "Hello World! Umair here",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
-  subTitle: "A full stack  (MEVN) 💻 + Flutter 📱 developer - A student mentor 👨‍🏫 - Public Speaker 🎤",
-  resumeLink: "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
+  subTitle: "Node & Flutter 📱 developer",
+  extraInfo: "Trying to learn new things everyday.",
+  resumeLink:
+    "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
 };
 

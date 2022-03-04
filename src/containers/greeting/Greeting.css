@@ -61,7 +61,11 @@
 
 .greeting-text-p {
   font-size: 30px;
-  line-height: 40px;
+  font-family: "Google Sans Regular";
+}
+
+.greeting-text-p2 {
+  font-size: 1em;
   font-family: "Google Sans Regular";
 }
 

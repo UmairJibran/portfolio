@@ -31,6 +31,12 @@ export default function Greeting(props) {
               >
                 {greeting.subTitle}
               </p>
+              <p
+                className="greeting-text-p2 subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {greeting.extraInfo}
+              </p>
 
               <SocialMedia
                 theme={theme}
