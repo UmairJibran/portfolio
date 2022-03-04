@@ -10,8 +10,8 @@ const greeting = {
   title: "Hello World! Umair here",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
-  subTitle:
-    "A full stack  (MEVN) 💻 + Flutter 📱 developer - A student mentor 👨‍🏫 - Public Speaker 🎤",
+  subTitle: "Node & Flutter 📱 developer",
+  extraInfo: "Trying to learn new things everyday.",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -130,7 +130,7 @@ const skills = {
       skills: [
         "Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
         "Developing mobile applications using Flutter",
-        "Creating optimized application backends in Node.js, Express.js, AWS Lambda, Google Firebase Cloud Functions"
+        "Creating optimized application backends in Node.js, Express.js, AWS Lambda, Google Firebase Cloud Functions",
       ],
       softwareSkills: [
         {
@@ -141,13 +141,13 @@ const skills = {
             color: "#F7DF1E",
           },
         },
-	{
-	  skillName: "TypeScript",
-	  fontAwesomeClassname: "simple-icons:typescript",
-	  style: {
-	    color: "#3178C6",
-	  },
-	},
+        {
+          skillName: "TypeScript",
+          fontAwesomeClassname: "simple-icons:typescript",
+          style: {
+            color: "#3178C6",
+          },
+        },
         {
           skillName: "Dart",
           fontAwesomeClassname: "simple-icons:dart",
@@ -170,20 +170,20 @@ const skills = {
             color: "#339933",
           },
         },
-	{
-	  skillName: "Sequelize",
-	  fontAwesomeClassname: "simple-icons:sequelize",
-	  style: {
-	    color: "#52B0E7",
-	  },
-	},
- 	{
-	  skillName: "PHP",
-	  fontAwesomeClassname: "simple-icons:php",
-	  style: {
-	    color: "#474aBa",
-	  },
-	},
+        {
+          skillName: "Sequelize",
+          fontAwesomeClassname: "simple-icons:sequelize",
+          style: {
+            color: "#52B0E7",
+          },
+        },
+        {
+          skillName: "PHP",
+          fontAwesomeClassname: "simple-icons:php",
+          style: {
+            color: "#474aBa",
+          },
+        },
         {
           skillName: "NPM",
           fontAwesomeClassname: "simple-icons:npm",
@@ -211,7 +211,7 @@ const skills = {
           style: {
             color: "#8D6748",
           },
-        }
+        },
       ],
     },
     {
@@ -227,7 +227,7 @@ const skills = {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
           style: {
-            color: "#232F3E",
+            color: "#232f3e",
           },
         },
         {
@@ -273,33 +273,26 @@ const skills = {
           },
         },
         {
-          skillName: "mongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: {
-            color: "#13AA52",
-          },
-        },
-        {
           skillName: "DynamoDb",
           fontAwesomeClassname: "simple-icons:amazondynamodb",
           style: {
             color: "#4053D6",
           },
         },
-	{
-	  skillName: "GitHub",
-	  fontAwesomeClassname: "simple-icons:github",
-	  style: {
-	    color: "black"	    
-	  },
-	},
-	{
-	  skillName: "GitHub Actions",
-	  fontAwesomeClassname: "simple-icons:githubactions",
-	  style: {
-	    color: "#2088FF",
-	  },
-	},
+        {
+          skillName: "GitHub",
+          fontAwesomeClassname: "simple-icons:github",
+          style: {
+            color: "black",
+          },
+        },
+        {
+          skillName: "GitHub Actions",
+          fontAwesomeClassname: "simple-icons:githubactions",
+          style: {
+            color: "#2088FF",
+          },
+        },
       ],
     },
     {
@@ -310,7 +303,7 @@ const skills = {
         "Customizing logo designs and making logos from scratch",
         "Creating the flow of application functionalities to optimize user experience",
         "Enabling engaging user experience for generating leeds",
-	"Documenting the API",
+        "Documenting the API",
       ],
       softwareSkills: [
         {
@@ -320,13 +313,13 @@ const skills = {
             color: "#FF2BC2",
           },
         },
-	{
-	  skillName: "Swagger",
-	  fontAwesomeClassname: "simple-icons:swagger",
-	  style: {
-	    color: "#85EA2D",
-	  },
-	},
+        {
+          skillName: "Swagger",
+          fontAwesomeClassname: "simple-icons:swagger",
+          style: {
+            color: "#85EA2D",
+          },
+        },
         {
           skillName: "Figma",
           fontAwesomeClassname: "simple-icons:figma",
