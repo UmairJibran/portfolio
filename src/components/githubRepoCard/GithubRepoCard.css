@@ -2,6 +2,11 @@
   margin-right: 0.25rem;
 }
 
+.card-logo > * {
+  max-width: 60%;
+  margin: auto;
+}
+
 .icon-bar {
   display: flex;
   align-items: center;
@@ -50,5 +55,11 @@
 
   .repo-description {
     font-size: 14px;
+  }
+
+  .card-logo > * {
+    height: auto;
+    margin: auto;
+    order: 1;
   }
 }
