@@ -15,6 +15,7 @@ export default function GithubRepoCard({ repo, theme }) {
 
   function openRepoInNewTab(url) {
     var win = window.open(url, "_blank");
+    handleClose();
     win.focus();
   }
 
