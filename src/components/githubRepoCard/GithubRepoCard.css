@@ -2,6 +2,13 @@
   margin-right: 0.25rem;
 }
 
+.icon-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
+}
+
 .cardHeader {
   display: flex;
   align-items: center;

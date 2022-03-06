@@ -3,32 +3,40 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
-import { Fade } from "react-reveal";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
 
 import "./GithubRepoCard.css";
 
 export default function GithubRepoCard({ repo, theme }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   function openRepoInNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
   }
 
   return (
-    <Fade bottom duration={2000} distance="40px">
+    <div>
       <Card
-        sx={{ maxWidth: 500, height: 300, margin: "auto" }}
+        sx={{ maxWidth: 500, height: 200, margin: "auto" }}
         key={repo.id}
-        onClick={() => openRepoInNewTab(repo.url)}
+        onClick={() => handleOpen()}
       >
         <CardContent>
           <div className="cardHeader">
-            <CardMedia component="img" image={repo.logo} sx={{width: 50, height: 50, margin: 2}} />
+            <CardMedia
+              component="img"
+              image={repo.logo}
+              sx={{ width: 50, height: 50, margin: 2 }}
+            />
             <h3 className="repo-name" style={{ color: theme.text }}>
               {repo.name}
             </h3>
           </div>
           {repo.languages.map((logo) => {
-            console.log(logo);
             return (
               <Chip
                 label={logo.name}
@@ -38,53 +46,46 @@ export default function GithubRepoCard({ repo, theme }) {
               />
             );
           })}
+        </CardContent>
+      </Card>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
+          <div className="icon-bar">
+            <i
+              className="fas fa-external-link-alt"
+              id="arrow"
+              aria-hidden="true"
+              onClick={() => openRepoInNewTab(repo.url)}
+            />
+            <i
+              className="fas fa-times"
+              id="arrow"
+              aria-hidden="true"
+              onClick={() => handleClose()}
+            />
+          </div>
+          <h2 id="modal-modal-title">{repo.name}</h2>
           <p className="repo-description" style={{ color: theme.text }}>
             {repo.description}
           </p>
-          {/* <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography> */}
-        </CardContent>
-      </Card>
-    </Fade>
+        </Box>
+      </Modal>
+    </div>
   );
 }
-
-// import React from "react";
-// import "./GithubRepoCard.css";
-
-// export default function () {
-
-//   return (
-//     <div>
-//
-//         <div
-//           className="repo-card-div"
-//         >
-//           <div className="repo-name-div">
-//             <svg
-//               aria-hidden="true"
-//               className="octicon repo-svg"
-//               height="16"
-//               role="img"
-//               viewBox="0 0 12 16"
-//               width="12"
-//             >
-//               <path
-//                 fill-rule="evenodd"
-//                 d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
-//               ></path>
-//             </svg>
-//           </div>
-//           <div className="repo-details">
-
-//           </div>
-//         </div>
-//       </Fade>
-//     </div>
-//   );
-// }
