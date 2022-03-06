@@ -1,84 +1,92 @@
-import React from "react";
-import ProjectLanguages from "../../components/projectLanguages/ProjectLanguages";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+
 import "./GithubRepoCard.css";
-import { Fade } from "react-reveal";
 
 export default function GithubRepoCard({ repo, theme }) {
-  function openRepoinNewTab(url) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  function openRepoInNewTab(url) {
     var win = window.open(url, "_blank");
+    handleClose();
     win.focus();
   }
 
   return (
     <div>
-      <Fade bottom duration={2000} distance="40px">
-        <div
-          className="repo-card-div"
-          key={repo.id}
-          onClick={() => openRepoinNewTab(repo.url)}
-          style={{ backgroundColor: theme.highlight }}
-        >
-          <div className="repo-name-div">
-            <svg
-              aria-hidden="true"
-              className="octicon repo-svg"
-              height="16"
-              role="img"
-              viewBox="0 0 12 16"
-              width="12"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
-              ></path>
-            </svg>
-            <p className="repo-name" style={{ color: theme.text }}>
+      <Card
+        sx={{ maxWidth: 500, height: 200, margin: "auto" }}
+        key={repo.id}
+        onClick={() => handleOpen()}
+      >
+        <CardContent>
+          <div className="cardHeader">
+            <CardMedia
+              component="img"
+              image={repo.logo}
+              sx={{ width: 50, height: 50, margin: 2 }}
+            />
+            <h3 className="repo-name" style={{ color: theme.text }}>
               {repo.name}
-            </p>
+            </h3>
           </div>
+          {repo.languages.map((logo) => {
+            return (
+              <Chip
+                label={logo.name}
+                variant="outlined"
+                size="small"
+                className="language-chip"
+              />
+            );
+          })}
+        </CardContent>
+      </Card>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 400,
+            bgcolor: "background.paper",
+            boxShadow: 24,
+            p: 4,
+          }}
+        >
+          <div className="icon-bar">
+            <i
+              className="fas fa-external-link-alt"
+              id="arrow"
+              aria-hidden="true"
+              onClick={() => openRepoInNewTab(repo.url)}
+            />
+            <i
+              className="fas fa-times"
+              id="arrow"
+              aria-hidden="true"
+              onClick={() => handleClose()}
+            />
+          </div>
+          <h2 id="modal-modal-title">{repo.name}</h2>
           <p className="repo-description" style={{ color: theme.text }}>
             {repo.description}
           </p>
-          <div className="repo-details">
-            <p
-              className="repo-creation-date subTitle"
-              style={{ color: theme.secondaryText }}
-            >
-              {repo.createdAt.split("T")[0]}
-            </p>
-            <ProjectLanguages
-              className="repo-languages"
-              logos={repo.languages}
-            />
-          </div>
-          {/* <div className="repo-stats">
-          <div className="repo-left-stat">
-            <span>
-              <div className="language-color" style={{ backgroundColor: repo.node.primaryLanguage.color }}></div>
-              <p>{repo.node.primaryLanguage.name}</p>
-            </span>
-            <span>
-              <svg aria-hidden="true" className="octicon" height="16" role="img" viewBox="0 0 10 16" width="10" fill="rgb(106, 115, 125)" className="repo-star-svg">
-                <path
-                  fill-rule="evenodd"
-                  d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
-                ></path>
-              </svg>
-              <p>{repo.node.forkCount}</p>
-            </span>
-            <span>
-              <svg aria-hidden="true" className="octicon" height="16" role="img" viewBox="0 0 14 16" width="14" fill="rgb(106, 115, 125)" className="repo-star-svg">
-                <path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path>
-              </svg>
-              <p>{repo.node.stargazers.totalCount}</p>
-            </span>
-          </div>
-          <div className="repo-right-stat">
-            <p>{repo.node.diskUsage} KB</p>
-          </div>
-        </div> */}
-        </div>
-      </Fade>
+        </Box>
+      </Modal>
     </div>
   );
 }
