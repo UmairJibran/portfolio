@@ -18,8 +18,6 @@ export default function GithubRepoCard({ repo, theme }) {
     win.focus();
   }
 
-  const { logo } = repo;
-
   return (
     <div>
       <Card
@@ -32,7 +30,7 @@ export default function GithubRepoCard({ repo, theme }) {
             <div className="card-logo">
               <img
                 className="myimage"
-                src={require(`../../assests/projects/logos/${logo}.png`)}
+                src={require(`../../assests/projects/logos/${repo.logo}.png`)}
                 alt={repo.name}
               ></img>
             </div>
