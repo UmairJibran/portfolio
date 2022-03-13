@@ -5,7 +5,7 @@ export default function Skills(props) {
   const testimonial = props.testimonial;
   return (
     <div className="flex flex-col items-start">
-      <div className="mb-4 bg-gray-100 p-5 text-gray-500">
+      <div className="mb-4 bg-gray-100 p-5 text-gray-500 message-card-box">
         <p className="mt-2 text-sm leading-6 message-card">
           {testimonial.message}
         </p>

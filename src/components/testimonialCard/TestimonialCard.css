@@ -2,6 +2,10 @@
   margin: auto;
 }
 
+.message-card-box {
+  width: 100%;
+}
+
 .message-card {
   margin: auto;
   width: 60%;
