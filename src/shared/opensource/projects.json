@@ -23,7 +23,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
       "name": "Shaoor.Tech",
       "url": "https://www.shaoor.tech",
-      "description": "",
+      "description": "Shaoor.tech was a pet application developed using VUE JS as an SPA(Single Page Application), for the backend services I started with ExpressJS and the switched Microsoft Azure Serverless Functions were used with MongoDB as the database solution.",
       "technologies": [
         "NodeJS",
         "ExpressJS",
