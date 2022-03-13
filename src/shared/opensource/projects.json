@@ -75,6 +75,7 @@
     },
     {
       "name": "Perceptron",
+      "id": "MDEwOlJlcGsagXRvcnkyNzM1MTI1NTE=",
       "logo": "ai",
       "url": "https://github.com/umairjibran/Simple-Perceptron",
       "description": "Perceptron Algorithm implemented in C++",

@@ -6,6 +6,7 @@ import ExperienceAccordion from "../../containers/experienceAccordion/Experience
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Zoom } from "react-reveal";
+// import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
   render() {

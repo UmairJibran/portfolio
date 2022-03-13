@@ -8,6 +8,7 @@ import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
+// import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
