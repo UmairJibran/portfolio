@@ -561,7 +561,7 @@ const testimonialsPageData = [
     name: "Mohsin Raza",
     designation: "Lecturer at Department of Geology",
     employerAtTime: "Bacha Khan University",
-    avatarImagePath: "mohsin-raza.jpg",
+    avatarImagePath: "mohsin-raza.jpeg",
     nameLink: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
     message: `Jibran is very hardworking and extremely talented individual. I got a chance to spend time with him during our Three months fellowship at Amal Academy. I found him very supportive and a great problem solver.`,
   },
