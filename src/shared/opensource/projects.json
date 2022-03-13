@@ -62,7 +62,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
       "name": "eAuction",
       "url": "https://github.com/UmairJibran/online-Auction",
-      "description": "",
+      "description": "eAuction was a semester project that went beyond my and the professor's expectations, it started as a simple HTML website but adding features like manual Authentication, and time control for each auction item kept making it a more complex project. I started with HTML and CSS, then switched to Bootstrap as styling framework, and sticked to PHP and MySQL for the backend.",
       "technologies": ["PHP", "SQL", "HTML", "CSS"]
     },
     {
