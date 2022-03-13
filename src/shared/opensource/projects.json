@@ -1,131 +1,93 @@
 {
   "data": [
     {
+      "id": "asdg3425b=",
+      "name": "MeraID",
+      "url": "https://www.meraid.pk",
+      "description": "In this project I started working on the mobile application's frontend using Flutter. Then I switched to the backend where all the fun happened. I have used NodeJS, Serverless Framework, and AWS Lambda for APIs. For the database solution we went with the DynamoDB a NoSQL database provided by AWS. I have also worked on the authentication of this solution, and our authentication solution was so successful that we have no fake users in our system. The auth system uses passkey protected user's private communication key to facial \"rekognition\" and \"Indexing Faces\" for later confirmation. All communication to and from the API were protected with AES-256 + RSA-2048 over HTTPs protocol, \"Textract\" was also utilized to scan and read information from the CNIC on the server.",
+      "logo": "meraid",
+      "technologies": [
+        "NodeJS",
+        "DynamoDB",
+        "Flutter",
+        "AWS Lambda",
+        "AWS Rekognition",
+        "AWS Textract",
+        "NodeCrypto",
+        "Serverless",
+        "AWS S3"
+      ]
+    },
+    {
+      "logo": "chess",
+      "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
+      "name": "Shaoor.Tech",
+      "url": "https://www.shaoor.tech",
+      "description": "Shaoor.tech was a pet application developed using VUE JS as an SPA(Single Page Application), for the backend services I started with ExpressJS and the switched Microsoft Azure Serverless Functions were used with MongoDB as the database solution.",
+      "technologies": [
+        "NodeJS",
+        "ExpressJS",
+        "VUE.JS",
+        "MongoDB",
+        "Microsoft Azure",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "logo": "broken-image",
+      "id": "sasga=",
+      "name": "Mavencery",
+      "url": "http://mavencery.com/",
+      "description": "Mavencery was an upcoming Grocer Giant registered in California, in this project my primary role was backend development. I started working on this project in between my internship and my graduation. I have used NodeJS, ExpressJS, and MySQL as database solution, I got exposure to Sequelize ORM in this project.",
+      "technologies": [
+        "NodeJS",
+        "ExpressJS",
+        "MySQL",
+        "Sequelize",
+        "Firebase",
+        "Heroku",
+        "Flutter"
+      ]
+    },
+    {
+      "logo": "messages",
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Messenger",
-      "createdAt": "Jun 2020",
       "url": "https://github.com/UmairJibran/PHP-Messenger",
-      "description": "",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "PHP",
-          "iconifyClass": "cib-php"
-        },
-        {
-          "name": "SQL",
-          "iconifyClass": "carbon-sql"
-        },
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        }
-      ]
+      "description": "A pet project for learning PHP and MySQL. I started this project in my early bachelors. I have used PHP for backend and MySQL for the database. And for the front facing interface Pure HTML and CSS were utilized",
+      "technologies": ["PHP", "SQL", "HTML", "CSS"]
     },
     {
+      "logo": "auction",
       "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
       "name": "eAuction",
-      "createdAt": "Jul 2020",
       "url": "https://github.com/UmairJibran/online-Auction",
-      "description": "",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "PHP",
-          "iconifyClass": "cib-php"
-        },
-        {
-          "name": "SQL",
-          "iconifyClass": "carbon-sql"
-        },
-        {
-          "name": "HTML",
-          "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "CSS",
-          "iconifyClass": "logos-css-3"
-        }
-      ]
+      "description": "eAuction was a semester project that went beyond my and the professor's expectations, it started as a simple HTML website but adding features like manual Authentication, and time control for each auction item kept making it a more complex project. I started with HTML and CSS, then switched to Bootstrap as styling framework, and sticked to PHP and MySQL for the backend.",
+      "technologies": ["PHP", "SQL", "HTML", "CSS"]
     },
     {
-      "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=",
-      "name": "Shaoor.Tech",
-      "createdAt": "",
-      "url": "https://www.shaoor.tech",
-      "description": "",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "NodeJS",
-          "iconifyClass": "logos-nodejs"
-        },
-        {
-          "name": "VUE.JS",
-          "iconifyClass": "logos-vue"
-        },
-        {
-          "name": "MongoDB",
-          "iconifyClass": "vscode-icons:file-type-mongo"
-        },
-        {
-          "name": "Microsoft Azure",
-          "iconifyClass": "logos-azure-icon"
-        },
-        {
-          "name": "TailwindCSS",
-          "iconifyClass": "logos-tailwindcss-icon"
-        }
-      ]
-    },
-    {
+      "logo": "pdf",
       "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
       "name": "Bulk PDF renamer",
-      "createdAt": "Sept 2020",
       "url": "https://github.com/umairjibran/pdf-unique-name",
-      "description": "Not only does it rename all the pdfs but also generates an ordered list",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "nodeJS",
-          "iconifyClass": "logos-nodejs"
-        }
-      ]
+      "description": "It started as a basic need for when I conducted my first session and wanted to distribute certificates with unique names, as time went on, I made an automated solution to bulk rename a lot of files and then provide a list of the new names, in an order that we might need to use them in the future.",
+      "technologies": ["NodeJS"]
     },
     {
       "name": "Perceptron",
-      "createdAt": "March 2021",
+      "id": "MDEwOlJlcGsagXRvcnkyNzM1MTI1NTE=",
+      "logo": "ai",
       "url": "https://github.com/umairjibran/Simple-Perceptron",
       "description": "Perceptron Algorithm implemented in C++",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "C++",
-          "iconifyClass": "gg-c-plus-plus"
-        }
-      ]
+      "technologies": ["C++"]
     },
     {
       "id": "MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=",
-      "name": "Counter Application - Flutter",
-      "createdAt": "May 2020",
+      "name": "Counter Application",
+      "logo": "counter",
       "url": "https://github.com/umairjibran/basic-flutter-counter",
-      "description": "",
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Flutter",
-          "iconifyClass": "logos-flutter"
-        },
-        {
-          "name": "Dart",
-          "iconifyClass": "logos-dart"
-        }
-      ]
+      "description": "A counter application in flutter that we could use to keep count of whatever we wanted, it can be simply laps of a race or moves that were made in a game.",
+      "technologies": ["Flutter", "Dart"]
     }
   ]
 }

@@ -128,9 +128,15 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
-        "Developing mobile applications using Flutter",
-        "Creating optimized application backends in Node.js, Express.js, AWS Lambda, Google Firebase Cloud Functions",
+        "Developing Backend APIs for Web/Mobile Applications (Express.js, AWS Lambda, Google Firebase Cloud Functions)",
+        "Developing cross platform (android/iOS) Mobile Applications via Flutter",
+        "Developing Web Applications (VUE.js | Bootstrap | TailwindCSS)",
+        "Developing Static Websites (HTML/CSS | Bootstrap | TailwindCSS)",
+        "Optimizing Existing APIs",
+        "Optimizing Existing Websites",
+        "Automating Tasks via Microservices",
+        "Integrating Payment Gateways",
+        "Writing end-to-end and unit Test Cases",
       ],
       softwareSkills: [
         {
@@ -218,8 +224,14 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "Experience working on Azure platform",
-        "Hosting and maintaining websites on virtual machine instances along with integration of databases",
+        "Deploying Microservices on AWS Lambda",
+        "Deploying Microservices on Google Cloud Functions",
+        "Deploying Microservices on Azure Functions",
+        "Deploying Static Websites on AWS S3",
+        "Deploying dynamic web apps on Azure Web App",
+        "Configuring and deploying MySQL and/or NoSQL databases, such as Firebase Realtime Database, DynamoDB, MySQL, MongoDB, and PostgreSQL",
+        "Monitoring and Logging on AWS CloudWatch",
+        "Deploying REST APIs on Heroku",
         "Routing DNS records across different websites with secure SSL certificates",
       ],
       softwareSkills: [
@@ -300,10 +312,11 @@ const skills = {
       fileName: "DesignImg",
       skills: [
         "Designing highly attractive user interface for mobile and web applications",
-        "Customizing logo designs and making logos from scratch",
-        "Creating the flow of application functionalities to optimize user experience",
-        "Enabling engaging user experience for generating leeds",
-        "Documenting the API",
+        "Researching User Experience with current designs, and enhance them using best practices",
+        "Customizing logos and designing logos from scratch",
+        "Creating the flow of application functionalities aka Prototyping",
+        "Enable engaging user experience for generating leeds",
+        "Documenting the API using industry standards",
       ],
       softwareSkills: [
         {
@@ -419,7 +432,6 @@ const experience = {
   subtitle: "Internship and Volunteership",
   description:
     "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
-  header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
@@ -520,15 +532,14 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools including VueJs, Nodejs, ExpressJs, PHP, MongoDB, HTML/CSS, C/C++, Andriod Apps in Java, and flutter. My best experience is to create Full stack applications and deploy them to web applications using cloud infrastructure.",
-  avatar_image_path: "projects_image.svg",
+    "My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
 };
 
 // Contact Page
 const contactPageData = {
   contactSection: {
     title: "Contact Me",
-    profile_image_path: "address_image.svg",
+    profile_image_path: "hello.svg",
     description:
       "I am available on almost every social media. And here is the fun part, I'm very responsive, so feel free to reach me out weather you want a Freelance work to be done or need a speaker for your tech talk. You can hit me up in order to have a Tech advice too! I can help you with Vue, Android, Flutter, Microsoft Power Platform, Cloud and Opensource Development.",
   },

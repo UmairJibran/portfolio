@@ -41,7 +41,7 @@ class DegreeCard extends Component {
                 </h3>
               </div>
             </div>
-            <div classname="body-content">
+            <div className="body-content">
               {degree.descriptions.map((sentence) => {
                 return (
                   <p className="content-list" style={{ color: theme.text }}>
