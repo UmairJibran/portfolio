@@ -14,7 +14,7 @@ export default function Skills(props) {
         <a href={testimonial.nameLink}>
           <img
             className="w-12 h-12 rounded-full mr-4"
-            src="http://codenawis.com/wp-content/uploads/2020/08/images.jpg"
+            src={require(`../../assests/testimonials/${testimonial.avatarImagePath}`)}
             alt="Avatar"
           ></img>
         </a>
