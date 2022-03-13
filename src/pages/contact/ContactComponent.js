@@ -7,7 +7,7 @@ import Button from "../../components/button/Button";
 import { Zoom } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData, socialMediaLinks } from "../../portfolio.js";
-import { AddressImg } from "./AddressImg";
+import AddressImg from "./AddressImg";
 
 const ContactData = contactPageData.contactSection;
 
