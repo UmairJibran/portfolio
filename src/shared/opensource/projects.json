@@ -54,7 +54,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Messenger",
       "url": "https://github.com/UmairJibran/PHP-Messenger",
-      "description": "",
+      "description": "A pet project for learning PHP and MySQL. I started this project in my early bachelors. I have used PHP for backend and MySQL for the database. And for the front facing interface Pure HTML and CSS were utilized",
       "technologies": ["PHP", "SQL", "HTML", "CSS"]
     },
     {
