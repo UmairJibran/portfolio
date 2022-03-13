@@ -4,7 +4,7 @@
       "id": "asdg3425b=",
       "name": "MeraID",
       "url": "https://www.meraid.pk",
-      "description": "",
+      "description": "In this project I started working on the mobile application's frontend using Flutter. Then I switched to the backend where all the fun happened. I have used NodeJS, Serverless Framework, and AWS Lambda for APIs. For the database solution we went with the DynamoDB a NoSQL database provided by AWS. I have also worked on the authentication of this solution, and our authentication solution was so successful that we have no fake users in our system. The auth system uses passkey protected user's private communication key to facial \"rekognition\" and \"Indexing Faces\" for later confirmation",
       "logo": "meraid",
       "technologies": [
         "NodeJS",
