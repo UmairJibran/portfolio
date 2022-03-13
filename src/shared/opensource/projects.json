@@ -70,8 +70,8 @@
       "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
       "name": "Bulk PDF renamer",
       "url": "https://github.com/umairjibran/pdf-unique-name",
-      "description": "Not only does it rename all the pdfs but also generates an ordered list",
-      "technologies": ["nodeJS"]
+      "description": "It started as a basic need for when I conducted my first session and wanted to distribute certificates with unique names, as time went on, I made an automated solution to bulk rename a lot of files and then provide a list of the new names, in an order that we might need to use them in the future.",
+      "technologies": ["NodeJS"]
     },
     {
       "name": "Perceptron",
