@@ -6,7 +6,7 @@ import ExperienceAccordion from "../../containers/experienceAccordion/Experience
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Zoom } from "react-reveal";
-// import ExperienceImg from "./ExperienceImg";
+import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
   render() {
@@ -18,11 +18,7 @@ class Experience extends Component {
           <Zoom duration={1000}>
             <div className="experience-heading-div">
               <div className="experience-heading-img-div">
-                <img
-									src={require(`../../assests/images/${experience["header_image_path"]}`)}
-									alt=""
-								/>
-                {/* <ExperienceImg theme={theme} /> */}
+                <ExperienceImg theme={theme} />
               </div>
               <div className="experience-heading-text-div">
                 <h1
