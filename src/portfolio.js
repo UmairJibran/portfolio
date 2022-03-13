@@ -224,8 +224,14 @@ const skills = {
       title: "Cloud Infra-Architecture",
       fileName: "CloudInfraImg",
       skills: [
-        "Experience working on Azure platform",
-        "Hosting and maintaining websites on virtual machine instances along with integration of databases",
+        "Deploying Microservices on AWS Lambda",
+        "Deploying Microservices on Google Cloud Functions",
+        "Deploying Microservices on Azure Functions",
+        "Deploying Static Websites on AWS S3",
+        "Deploying dynamic web apps on Azure Web App",
+        "Configuring and deploying MySQL and/or NoSQL databases, such as Firebase Realtime Database, DynamoDB, MySQL, MongoDB, and PostgreSQL",
+        "Monitoring and Logging on AWS CloudWatch",
+        "Deploying REST APIs on Heroku",
         "Routing DNS records across different websites with secure SSL certificates",
       ],
       softwareSkills: [
