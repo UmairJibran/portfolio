@@ -66,6 +66,7 @@ export default function GithubRepoCard({ repo, theme }) {
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,
+            height: "auto",
           }}
         >
           <div className="icon-bar">
