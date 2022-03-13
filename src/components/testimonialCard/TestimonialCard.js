@@ -3,30 +3,34 @@ import "./TestimonialCard.css";
 
 export default function Skills(props) {
   const testimonial = props.testimonial;
-  console.log(testimonial);
   return (
-    <div class="flex flex-col items-start center">
-      <div class="mb-4 bg-gray-100 p-5 text-gray-500">
-        <p class="mt-2 text-sm leading-6 message-card">{testimonial.message}</p>
+    <div className="flex flex-col items-start">
+      <div className="mb-4 bg-gray-100 p-5 text-gray-500">
+        <p className="mt-2 text-sm leading-6 message-card">
+          {testimonial.message}
+        </p>
       </div>
-      <div class="flex items-center">
-        <a href="facebook.com">
+      <div className="flex items-center center">
+        <a href={testimonial.nameLink}>
           <img
-            class="w-12 h-12 rounded-full mr-4"
+            className="w-12 h-12 rounded-full mr-4"
             src="http://codenawis.com/wp-content/uploads/2020/08/images.jpg"
             alt="Avatar"
           ></img>
         </a>
-        <div class="text-sm">
+        <div className="text-sm">
           <a
             href={testimonial.nameLink}
-            class="text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
+            className="text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
           >
             {testimonial.name}
           </a>
-          <p class="text-gray-600">
+          <p className="text-gray-600">
             {testimonial.designation} at
-            <span class="text-indigo-600"> {testimonial.employerAtTime}</span>
+            <span className="text-indigo-600">
+              {" "}
+              {testimonial.employerAtTime}
+            </span>
           </p>
         </div>
       </div>
