@@ -581,6 +581,14 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/kamaluddin0/",
     message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
   },
+  {
+    name: "Muhammad Yasin",
+    designation: "Frontend Developer",
+    employerAtTime: "Drive Safe Medicals",
+    avatarImagePath: "muhammad-yasin.jpeg",
+    nameLink: "https://www.linkedin.com/in/muhammad-yasin-254066187/",
+    message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
+  },
 ];
 
 export {
