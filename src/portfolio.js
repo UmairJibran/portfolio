@@ -573,6 +573,14 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
     message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
   },
+  {
+    name: "Kamal Uddin",
+    designation: "Network Administrator | Network Systems Engineer",
+    employerAtTime: "Freelance Market",
+    avatarImagePath: "kamal-uddin.jpeg",
+    nameLink: "https://www.linkedin.com/in/kamaluddin0/",
+    message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
+  },
 ];
 
 export {
