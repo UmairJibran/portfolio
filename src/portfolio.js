@@ -128,9 +128,15 @@ const skills = {
       title: "Full Stack Development",
       fileName: "FullStackImg",
       skills: [
-        "Building responsive websites using VUE.js | HTML/CSS | Bootstrap | TailwindCSS",
-        "Developing mobile applications using Flutter",
-        "Creating optimized application backends in Node.js, Express.js, AWS Lambda, Google Firebase Cloud Functions",
+        "Developing Backend APIs for Web/Mobile Applications (Express.js, AWS Lambda, Google Firebase Cloud Functions)",
+        "Developing cross platform (android/iOS) Mobile Applications via Flutter",
+        "Developing Web Applications (VUE.js | Bootstrap | TailwindCSS)",
+        "Developing Static Websites (HTML/CSS | Bootstrap | TailwindCSS)",
+        "Optimizing Existing APIs",
+        "Optimizing Existing Websites",
+        "Automating Tasks via Microservices",
+        "Integrating Payment Gateways",
+        "Writing end-to-end and unit Test Cases",
       ],
       softwareSkills: [
         {
