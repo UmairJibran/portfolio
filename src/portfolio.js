@@ -555,6 +555,32 @@ const contactPageData = {
   },
 };
 
+// Testimonials Page
+const testimonialsPageData = [
+  {
+    name: "Saeed Abad",
+    designation: "Software Engineer",
+    employerAtTime: "ProductBox",
+    avatarImagePath: "avatar-1.png",
+    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
+    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
+  },{
+    name: "Saeed Abad",
+    designation: "Software Engineer",
+    employerAtTime: "ProductBox",
+    avatarImagePath: "avatar-1.png",
+    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
+    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
+  },{
+    name: "Saeed Abad",
+    designation: "Software Engineer",
+    employerAtTime: "ProductBox",
+    avatarImagePath: "avatar-1.png",
+    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
+    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
+  },
+];
+
 export {
   settings,
   greeting,
@@ -568,4 +594,5 @@ export {
   experience,
   projectsHeader,
   contactPageData,
+  testimonialsPageData,
 };
