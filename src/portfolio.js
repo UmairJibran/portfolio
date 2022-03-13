@@ -558,6 +558,14 @@ const contactPageData = {
 // Testimonials Page
 const testimonialsPageData = [
   {
+    name: "Waleed Waseem",
+    designation: "Founder and CEO",
+    employerAtTime: "ProductBox",
+    avatarImagePath: "waleed-waseem.jpeg",
+    nameLink: "https://www.linkedin.com/in/waleed-waseem-2b625270/",
+    message: `#madprops to Jibran U. for handling a product which I personally believe is the most complex application we are tackling around server-less model. Excellent work and keep it up!`,
+  },
+  {
     name: "Mohsin Raza",
     designation: "Lecturer at Department of Geology",
     employerAtTime: "Bacha Khan University",
