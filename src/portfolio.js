@@ -565,6 +565,15 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
     message: `Jibran is very hardworking and extremely talented individual. I got a chance to spend time with him during our Three months fellowship at Amal Academy. I found him very supportive and a great problem solver.`,
   },
+  {
+    name: "Qaiser Hussain",
+    designation: "Android Developer || Flutter Developer",
+    employerAtTime: "FF Steels",
+    avatarImagePath: "qaiser-hussain.jpeg",
+    nameLink: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
+    message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
+  },
+  {
     name: "Saeed Abad",
     designation: "Software Engineer",
     employerAtTime: "ProductBox",
