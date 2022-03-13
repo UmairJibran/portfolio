@@ -38,7 +38,7 @@
       "id": "sasga=",
       "name": "Mavencery",
       "url": "http://mavencery.com/",
-      "description": "",
+      "description": "Mavencery was an upcoming Grocer Giant registered in California, in this project my primary role was backend development. I started working on this project in between my internship and my graduation. I have used NodeJS, ExpressJS, and MySQL as database solution, I got exposure to Sequelize ORM in this project.",
       "technologies": [
         "NodeJS",
         "ExpressJS",
