@@ -4,7 +4,6 @@ import Header from "../../components/header/Header";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import AddressImg from "./AddressImg";
 import { Zoom } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData, socialMediaLinks } from "../../portfolio.js";
@@ -21,11 +20,11 @@ class Contact extends Component {
           <Zoom duration={1000}>
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
-                {/* <img
+                <img
                   src={require(`../../assests/images/${ContactData["profile_image_path"]}`)}
                   alt=""
-                /> */}
-                <AddressImg theme={theme} />
+                />
+                {/* <AddressImg theme={theme} /> */}
               </div>
               <div className="contact-heading-text-div">
                 <h1
