@@ -419,7 +419,7 @@ const experience = {
   subtitle: "Internship and Volunteership",
   description:
     "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
-  header_image_path: "experience.svg",
+  header_image_path: "exp.svg",
   sections: [
     {
       title: "Work",
