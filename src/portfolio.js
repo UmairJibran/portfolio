@@ -520,7 +520,7 @@ const experience = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools including VueJs, Nodejs, ExpressJs, PHP, MongoDB, HTML/CSS, C/C++, Andriod Apps in Java, and flutter. My best experience is to create Full stack applications and deploy them to web applications using cloud infrastructure.",
+    "My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
   avatar_image_path: "projects_image.svg",
 };
 
