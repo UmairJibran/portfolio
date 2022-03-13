@@ -573,14 +573,6 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
     message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
   },
-  {
-    name: "Saeed Abad",
-    designation: "Software Engineer",
-    employerAtTime: "ProductBox",
-    avatarImagePath: "avatar-1.png",
-    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
-    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
-  },
 ];
 
 export {
