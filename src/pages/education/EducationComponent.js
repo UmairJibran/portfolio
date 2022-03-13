@@ -20,10 +20,6 @@ class Education extends Component {
           <Zoom duration={1000}>
             <div className="heading-div">
               <div className="heading-img-div">
-                {/* <img
-									src={require("../../assests/images/education.svg")}
-									alt=""
-								/> */}
                 <EducationImg theme={theme} />
               </div>
               <div className="heading-text-div">
@@ -34,10 +30,7 @@ class Education extends Component {
                   My Qualifications and Certifications
                 </h3>
                 <p>
-                  Here's what you need to know about my qualification background{" "}
-                  <span role="img" aria-label="blink">
-                    😉
-                  </span>
+                  Here's a brief background about my academic qualifications{" "}
                 </p>
                 <CompetitiveSites logos={competitiveSites.competitiveSites} />
               </div>
