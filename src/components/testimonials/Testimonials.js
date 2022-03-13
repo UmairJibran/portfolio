@@ -26,6 +26,7 @@ export default function Skills() {
           index={activeStep}
           onChangeIndex={handleStepChange}
           enableMouseEvents
+          interval={7000}
         >
           {testimonialsPageData.map((testimonial, index) => (
             <TestimonialCard testimonial={testimonial} key={index} />
