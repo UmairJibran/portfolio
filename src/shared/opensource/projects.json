@@ -85,7 +85,7 @@
       "name": "Counter Application",
       "logo": "counter",
       "url": "https://github.com/umairjibran/basic-flutter-counter",
-      "description": "",
+      "description": "A counter application in flutter that we could use to keep count of whatever we wanted, it can be simply laps of a race or moves that were made in a game.",
       "technologies": ["Flutter", "Dart"]
     }
   ]
