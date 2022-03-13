@@ -312,10 +312,11 @@ const skills = {
       fileName: "DesignImg",
       skills: [
         "Designing highly attractive user interface for mobile and web applications",
-        "Customizing logo designs and making logos from scratch",
-        "Creating the flow of application functionalities to optimize user experience",
-        "Enabling engaging user experience for generating leeds",
-        "Documenting the API",
+        "Researching User Experience with current designs, and enhance them using best practices",
+        "Customizing logos and designing logos from scratch",
+        "Creating the flow of application functionalities aka Prototyping",
+        "Enable engaging user experience for generating leeds",
+        "Documenting the API using industry standards",
       ],
       softwareSkills: [
         {
