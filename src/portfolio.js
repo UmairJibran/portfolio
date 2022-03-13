@@ -558,20 +558,13 @@ const contactPageData = {
 // Testimonials Page
 const testimonialsPageData = [
   {
-    name: "Saeed Abad",
-    designation: "Software Engineer",
-    employerAtTime: "ProductBox",
-    avatarImagePath: "avatar-1.png",
-    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
-    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
-  },{
-    name: "Saeed Abad",
-    designation: "Software Engineer",
-    employerAtTime: "ProductBox",
-    avatarImagePath: "avatar-1.png",
-    nameLink: "https://www.linkedin.com/in/saeed-abad-b9a9a01a6/",
-    message: `I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible. I am a software engineer with a passion for building things that live on the internet. I'm a huge fan of the open web and I'm excited by the opportunities presented by the technologies that can make all of this possible.`,
-  },{
+    name: "Mohsin Raza",
+    designation: "Lecturer at Department of Geology",
+    employerAtTime: "Bacha Khan University",
+    avatarImagePath: "mohsin-raza.jpg",
+    nameLink: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
+    message: `Jibran is very hardworking and extremely talented individual. I got a chance to spend time with him during our Three months fellowship at Amal Academy. I found him very supportive and a great problem solver.`,
+  },
     name: "Saeed Abad",
     designation: "Software Engineer",
     employerAtTime: "ProductBox",
