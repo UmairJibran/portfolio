@@ -605,6 +605,14 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
     message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
   },
+  {
+    name: "Shah Rukh Khalid",
+    designation: "Marketing Student | Amal Career Prep Fellow",
+    employerAtTime: "Amal Academy",
+    avatarImagePath: "shah-rukh-khalid.jpeg",
+    nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
+    message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
+  },
 ];
 
 export {
