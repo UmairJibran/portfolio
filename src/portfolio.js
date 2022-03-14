@@ -597,6 +597,14 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/muhammad-yasin-254066187/",
     message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
   },
+  {
+    name: "Muhammad Ibrahim",
+    designation: "Front-end Web | ReactJS",
+    employerAtTime: "Freelance Market",
+    avatarImagePath: "muhammad-ibrahim.jpeg",
+    nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
+    message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
+  },
 ];
 
 export {
