@@ -7,7 +7,7 @@ class LogoLoader extends React.Component {
     return (
       <div>
         <img
-          src={require("../../assests/images/infinity-gif.svg")}
+          src={require("../../assets/images/infinity-gif.svg")}
           alt="infinity and beyond..."
           style={{
             display: "block",

@@ -19,7 +19,7 @@ export default class Main extends Component {
           fallback={
             <div>
               <img
-                src={require("../assests/images/infinity-gif.svg")}
+                src={require("../assets/images/infinity-gif.svg")}
                 alt="infinity and beyond..."
               />
             </div>
