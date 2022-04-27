@@ -18,10 +18,6 @@ class Experience extends Component {
           <Zoom duration={1000}>
             <div className="experience-heading-div">
               <div className="experience-heading-img-div">
-                {/* <img
-									src={require(`../../assests/images/${experience["header_image_path"]}`)}
-									alt=""
-								/> */}
                 <ExperienceImg theme={theme} />
               </div>
               <div className="experience-heading-text-div">

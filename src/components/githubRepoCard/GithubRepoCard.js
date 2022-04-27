@@ -1,7 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Chip from "@mui/material/Chip";
 import Modal from "@mui/material/Modal";
 import Box from "@mui/material/Box";
@@ -28,19 +27,21 @@ export default function GithubRepoCard({ repo, theme }) {
       >
         <CardContent>
           <div className="cardHeader">
-            <CardMedia
-              component="img"
-              image={repo.logo}
-              sx={{ width: 50, height: 50, margin: 2 }}
-            />
+            <div className="card-logo">
+              <img
+                className="myimage"
+                src={require(`../../assets/projects/logos/${repo.logo}.png`)}
+                alt={repo.name}
+              ></img>
+            </div>
             <h3 className="repo-name" style={{ color: theme.text }}>
               {repo.name}
             </h3>
           </div>
-          {repo.languages.map((logo) => {
+          {repo.technologies.map((tech) => {
             return (
               <Chip
-                label={logo.name}
+                label={tech}
                 variant="outlined"
                 size="small"
                 className="language-chip"
@@ -65,6 +66,7 @@ export default function GithubRepoCard({ repo, theme }) {
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,
+            height: "auto",
           }}
         >
           <div className="icon-bar">
