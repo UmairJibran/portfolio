@@ -30,7 +30,7 @@ export default function GithubRepoCard({ repo, theme }) {
             <div className="card-logo">
               <img
                 className="myimage"
-                src={require(`../../assests/projects/logos/${repo.logo}.png`)}
+                src={require(`../../assets/projects/logos/${repo.logo}.png`)}
                 alt={repo.name}
               ></img>
             </div>

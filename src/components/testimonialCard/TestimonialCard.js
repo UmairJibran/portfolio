@@ -15,7 +15,7 @@ class TestimonialCard extends Component {
           <a href={testimonial.nameLink}>
             <img
               className="w-12 h-12 rounded-full mr-4"
-              src={require(`../../assests/testimonials/${testimonial.avatarImagePath}`)}
+              src={require(`../../assets/testimonials/${testimonial.avatarImagePath}`)}
               alt="Avatar"
             ></img>
           </a>
