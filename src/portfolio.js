@@ -178,7 +178,7 @@ const skills = {
         },
         {
           skillName: "Socket.io",
-          fontAwesomeClassname: "simple-icons:Socket-dot-io",
+          fontAwesomeClassname: "simple-icons:socketdotio",
           style: {
             color: "#010101",
           },
