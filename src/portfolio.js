@@ -42,18 +42,18 @@ const socialMediaLinks = [
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
     backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
   },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/umairjibran8",
-    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/umairjibran7/",
-    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
-  },
+  // {
+  //   name: "Facebook",
+  //   link: "https://www.facebook.com/umairjibran8",
+  //   fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
+  //   backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
+  // },
+  // {
+  //   name: "Instagram",
+  //   link: "https://www.instagram.com/umairjibran7/",
+  //   fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
+  //   backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
+  // },
 ];
 
 const formalSocialMediaLinksHome = [
@@ -96,18 +96,18 @@ const informalSocialMediaLinksHome = [
     fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
     backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
   },
-  {
-    name: "Snapchat",
-    link: "https://www.snapchat.com/add/umairjibran7",
-    fontAwesomeIcon: "fa-snapchat-ghost",
-    backgroundColor: "#ffdf1f",
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/umairjibran7/",
-    fontAwesomeIcon: "fa-instagram",
-    backgroundColor: "#E4405F",
-  },
+  // {
+  //   name: "Snapchat",
+  //   link: "https://www.snapchat.com/add/umairjibran7",
+  //   fontAwesomeIcon: "fa-snapchat-ghost",
+  //   backgroundColor: "#ffdf1f",
+  // },
+  // {
+  //   name: "Instagram",
+  //   link: "https://www.instagram.com/umairjibran7/",
+  //   fontAwesomeIcon: "fa-instagram",
+  //   backgroundColor: "#E4405F",
+  // },
   {
     name: "Whatsapp",
     link: "https://api.whatsapp.com/send?phone=+92312-091-9647",
@@ -174,6 +174,13 @@ const skills = {
           fontAwesomeClassname: "simple-icons:node-dot-js",
           style: {
             color: "#339933",
+          },
+        },
+        {
+          skillName: "Socket.io",
+          fontAwesomeClassname: "simple-icons:Socket-dot-io",
+          style: {
+            color: "#010101",
           },
         },
         {
