@@ -8,10 +8,16 @@ import { GlobalStyles } from "./global";
 
 function App() {
   useEffect(() => {
+    const referrer = document.referrer;
+
     const apiUrl = "https://europe-west2-jibran-u-portfolio-analytics.cloudfunctions.net/greetings";
 
     const greetUser = async () => {
-      await fetch(apiUrl)
+      await fetch(apiUrl, {
+        method: 'POST',
+        body: { referrer },
+        headers: { 'Content-type': "application/json" }
+      })
     }
 
     greetUser();
