@@ -15,7 +15,7 @@ function App() {
     const greetUser = async () => {
       await fetch(apiUrl, {
         method: 'POST',
-        body: { referrer },
+        body: JSON.stringify({ referrer }),
         headers: { 'Content-type': "application/json" }
       })
     }
