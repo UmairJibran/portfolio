@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Header from "../../components/header/Header";
 // import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
@@ -17,7 +17,18 @@ export default function ({ theme }) {
   const [error, updateError] = useState("");
   const [success, updateSuccess] = useState("");
 
-  const openEmailForm = () => updateShowEmailForm(true);
+  const emailReference = useRef(null);
+
+  const openEmailForm = () => {
+    updateShowEmailForm(true);
+    if (emailReference.current != null) {
+      emailReference.current.focus();
+      emailReference.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   const closeEmailForm = () => updateShowEmailForm(false);
 
   const sendEmail = async () => {
@@ -123,6 +134,7 @@ export default function ({ theme }) {
                                 marginInlineEnd: 40,
                               }}
                               id="email"
+                              ref={emailReference}
                             />
                             <input
                               type="text"
