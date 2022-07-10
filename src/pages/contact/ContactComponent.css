@@ -129,6 +129,55 @@
   margin-top: 0;
 }
 
+.error-message {
+  color: red;
+}
+
+.success-message {
+  color: green;
+}
+
+.margin-start-40 {
+  margin-inline-start: 10px;
+}
+.margin-end-40 {
+  margin-inline-end: 10px;
+}
+
+.field input,
+.field textarea {
+  font-size: 16px;
+  line-height: 28px;
+  padding: 8px 16px;
+  width: 100%;
+  min-height: 44px;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgb(84 105 212 / 0.5);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+.padding-bottom--24 {
+  padding-bottom: 24px;
+}
+
+.align-center {
+  align-items: center;
+}
+.center-center {
+  align-items: center;
+  justify-content: center;
+}
+.box-root {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+}
+
 @media (max-width: 1380px) {
   .contact-heading-text {
     font-size: 50px;
