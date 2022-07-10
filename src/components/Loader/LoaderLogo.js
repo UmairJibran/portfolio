@@ -4,6 +4,7 @@ import "./LoaderLogo.css";
 class LogoLoader extends React.Component {
   render() {
     // const theme = this.props.theme;
+    const isSplash = this.props.isSplash || true;
     return (
       <div>
         <img
@@ -16,20 +17,24 @@ class LogoLoader extends React.Component {
             width: "50%",
           }}
         />
-        <br />
-        <p
-          style={{
-            color: "white",
-            textAlignVertical: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          selecting secrets to reveal...{" "}
-          <span role="img" aria-label="winking">
-            😉
-          </span>
-        </p>
+        {isSplash ?? (
+          <>
+            <br />
+            <p
+              style={{
+                color: "white",
+                textAlignVertical: "center",
+                textAlign: "center",
+                width: "100%",
+              }}
+            >
+              selecting secrets to reveal...{" "}
+              <span role="img" aria-label="winking">
+                😉
+              </span>
+            </p>
+          </>
+        )}
       </div>
     );
   }
