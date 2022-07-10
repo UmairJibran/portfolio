@@ -50,12 +50,12 @@
       ]
     },
     {
-      "logo": "messages",
+      "logo": "fooddo",
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
-      "name": "Messenger",
-      "url": "https://github.com/UmairJibran/PHP-Messenger",
-      "description": "A pet project for learning PHP and MySQL. I started this project in my early bachelors. I have used PHP for backend and MySQL for the database. And for the front facing interface Pure HTML and CSS were utilized",
-      "technologies": ["PHP", "SQL", "HTML", "CSS"]
+      "name": "Fooddo",
+      "url": "https://github.com/UmairJibran/Fooddo",
+      "description": "A project aimed at reducing food waste from banquets and houses, by sharing it with the deserving people.",
+      "technologies": ["flutter", "dart", "firebase", "google maps"]
     },
     {
       "logo": "auction",
@@ -66,12 +66,12 @@
       "technologies": ["PHP", "SQL", "HTML", "CSS"]
     },
     {
-      "logo": "pdf",
+      "logo": "lms",
       "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
-      "name": "Bulk PDF renamer",
-      "url": "https://github.com/umairjibran/pdf-unique-name",
-      "description": "It started as a basic need for when I conducted my first session and wanted to distribute certificates with unique names, as time went on, I made an automated solution to bulk rename a lot of files and then provide a list of the new names, in an order that we might need to use them in the future.",
-      "technologies": ["NodeJS"]
+      "name": "City University LMS",
+      "url": "https://github.com/UmairJibran/cu-lms",
+      "description": "It was a pet project still in development, uses flutter for client side and NodeJS MySQL for the backend.",
+      "technologies": ["NodeJS", "MySQL", "flutter"]
     },
     {
       "name": "Perceptron",
