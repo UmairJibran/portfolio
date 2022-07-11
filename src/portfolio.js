@@ -163,13 +163,6 @@ const skills = {
           },
         },
         {
-          skillName: "Flutter",
-          fontAwesomeClassname: "simple-icons:flutter",
-          style: {
-            color: "#60CAF6",
-          },
-        },
-        {
           skillName: "NodeJS",
           fontAwesomeClassname: "simple-icons:node-dot-js",
           style: {
@@ -188,13 +181,6 @@ const skills = {
           fontAwesomeClassname: "simple-icons:sequelize",
           style: {
             color: "#52B0E7",
-          },
-        },
-        {
-          skillName: "PHP",
-          fontAwesomeClassname: "simple-icons:php",
-          style: {
-            color: "#474aBa",
           },
         },
         {
@@ -223,6 +209,20 @@ const skills = {
           fontAwesomeClassname: "simple-icons:mocha",
           style: {
             color: "#8D6748",
+          },
+        },
+        {
+          skillName: "Flutter",
+          fontAwesomeClassname: "simple-icons:flutter",
+          style: {
+            color: "#60CAF6",
+          },
+        },
+        {
+          skillName: "PHP",
+          fontAwesomeClassname: "simple-icons:php",
+          style: {
+            color: "#474aBa",
           },
         },
       ],
