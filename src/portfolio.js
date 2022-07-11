@@ -155,14 +155,6 @@ const skills = {
           },
         },
         {
-          skillName: "Dart",
-          fontAwesomeClassname: "simple-icons:dart",
-          style: {
-            backgroundColor: "#00000000",
-            color: "#0175C2",
-          },
-        },
-        {
           skillName: "NodeJS",
           fontAwesomeClassname: "simple-icons:node-dot-js",
           style: {
@@ -216,6 +208,14 @@ const skills = {
           fontAwesomeClassname: "simple-icons:flutter",
           style: {
             color: "#60CAF6",
+          },
+        },
+        {
+          skillName: "Dart",
+          fontAwesomeClassname: "simple-icons:dart",
+          style: {
+            backgroundColor: "#00000000",
+            color: "#0175C2",
           },
         },
         {
