@@ -4,7 +4,7 @@ import Greeting from "../../containers/greeting/Greeting";
 import Skills from "../../containers/skills/Skills";
 import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
-import Testimonials from "../../components/testimonials/Testimonials";
+// import Testimonials from "../../components/testimonials/Testimonials";
 
 class Home extends Component {
   render() {
@@ -13,7 +13,7 @@ class Home extends Component {
         <Header theme={this.props.theme} />
         <Greeting theme={this.props.theme} />
         <Skills theme={this.props.theme} />
-        <Testimonials theme={this.props.theme} />
+        {/* <Testimonials theme={this.props.theme} /> */}
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
       </div>
