@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
-// import Footer from "../../components/footer/Footer";
+import Footer from "../../components/footer/Footer";
 import MajorProjectsCard from "../../components/projectsCard/MajorProjectsCard.jsx";
 import MinorProjectsCard from "../../components/projectsCard/MinorProjectsCard.jsx";
 import Button from "../../components/button/Button";
@@ -25,7 +25,7 @@ class Projects extends Component {
               </div>
               <div className="projects-heading-text-div">
                 <h1
-                  className="projects-heading-text"
+                  className="projects-heading-text mb-10"
                   style={{ color: theme.text }}
                 >
                   {projectsHeader.title}
@@ -63,7 +63,7 @@ class Projects extends Component {
           newTab={true}
           theme={theme}
         />
-        {/* <Footer theme={this.props.theme} onToggle={this.props.onToggle} /> */}
+        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>
     );

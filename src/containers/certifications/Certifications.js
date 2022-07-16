@@ -8,10 +8,10 @@ class Certifications extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="main" id="certs">
+      <div className="main my-10" id="certs">
         <div className="certs-header-div">
           <Fade bottom duration={2000} distance="20px">
-            <h1 className="certs-header" style={{ color: theme.text }}>
+            <h1 className="certs-header mb-10" style={{ color: theme.text }}>
               Certifications
             </h1>
           </Fade>
