@@ -6,7 +6,7 @@ class SoftwareSkill extends React.Component {
   render() {
     return (
       <div>
-        <div className="software-skills-main-div">
+        <div className="software-skills-main-div mt-8">
           <ul className="dev-icons">
             {/* {skillsSection.softwareSkills.map(skills => {
             return (

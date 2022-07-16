@@ -1,61 +1,296 @@
 {
-  "data": [
+  "major": [
     {
       "id": "asdg3425b=",
       "name": "MeraID",
       "url": "https://www.meraid.pk",
-      "description": "In this project I started working on the mobile application's frontend using Flutter. Then I switched to the backend where all the fun happened. I have used NodeJS, Serverless Framework, and AWS Lambda for APIs. For the database solution we went with the DynamoDB a NoSQL database provided by AWS. I have also worked on the authentication of this solution, and our authentication solution was so successful that we have no fake users in our system. The auth system uses passkey protected user's private communication key to facial \"rekognition\" and \"Indexing Faces\" for later confirmation. All communication to and from the API were protected with AES-256 + RSA-2048 over HTTPs protocol, \"Textract\" was also utilized to scan and read information from the CNIC on the server.",
+      "description": "In this project I started working on the mobile application's frontend using Flutter. Then I switched to the backend where all the fun happened. I have used NodeJS, Serverless Framework, and AWS Lambda for APIs.",
       "logo": "meraid",
       "technologies": [
-        "NodeJS",
-        "DynamoDB",
-        "Flutter",
-        "AWS Lambda",
-        "AWS Rekognition",
-        "AWS Textract",
-        "NodeCrypto",
-        "Serverless",
-        "AWS S3"
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        },
+        {
+          "skillName": "Flutter",
+          "fontAwesomeClassname": "simple-icons:flutter",
+          "style": {
+            "color": "#60CAF6"
+          }
+        },
+        {
+          "skillName": "Amazon DynamoDB",
+          "fontAwesomeClassname": "simple-icons:amazondynamodb",
+          "style": {
+            "color": "#4053D6"
+          }
+        },
+        {
+          "skillName": "AWS Lambda",
+          "fontAwesomeClassname": "simple-icons:awslambda",
+          "style": {
+            "color": "#FF9900"
+          }
+        },
+        {
+          "skillName": "Amazon S3",
+          "fontAwesomeClassname": "simple-icons:amazons3",
+          "style": {
+            "color": "#569A31"
+          }
+        },
+        {
+          "skillName": "Serverless",
+          "fontAwesomeClassname": "simple-icons:serverless",
+          "style": {
+            "color": "#FD5750"
+          }
+        },
+        {
+          "skillName": "Amazon CloudWatch",
+          "fontAwesomeClassname": "simple-icons:amazoncloudwatch",
+          "style": {
+            "color": "#FF4F8B"
+          }
+        },
+        {
+          "skillName": "Amazon API Gateway",
+          "fontAwesomeClassname": "simple-icons:amazonapigateway",
+          "style": {
+            "color": "#FF4F8B"
+          }
+        },
+        {
+          "skillName": "Rekognition",
+          "fontAwesomeClassname": "simple-icons:amazonaws",
+          "style": {
+            "color": "#FF7E29"
+          }
+        },
+        {
+          "skillName": "Textract",
+          "fontAwesomeClassname": "simple-icons:amazonaws",
+          "style": {
+            "color": "#FF7E29"
+          }
+        },
+        {
+          "skillName": "GitHub Actions",
+          "fontAwesomeClassname": "simple-icons:githubactions",
+          "style": {
+            "color": "#2088FF"
+          }
+        }
       ]
     },
     {
-      "logo": "chess",
+      "logo": "shaoor",
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
-      "name": "Shaoor.Tech",
-      "url": "https://www.shaoor.tech",
+      "name": "Shaoor.tech",
+      "url": "https://umairjibran.github.io/shaoor-tech/",
       "description": "Shaoor.tech was a pet application developed using VUE JS as an SPA(Single Page Application), for the backend services I started with ExpressJS and the switched Microsoft Azure Serverless Functions were used with MongoDB as the database solution.",
       "technologies": [
-        "NodeJS",
-        "ExpressJS",
-        "VUE.JS",
-        "MongoDB",
-        "Microsoft Azure",
-        "TailwindCSS"
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        },
+        {
+          "skillName": "Express",
+          "fontAwesomeClassname": "simple-icons:express",
+          "style": {
+            "color": "#000000"
+          }
+        },
+        {
+          "skillName": "Vue.js",
+          "fontAwesomeClassname": "simple-icons:vuejs",
+          "style": {
+            "color": "#4FC08D"
+          }
+        },
+        {
+          "skillName": "MongoDB",
+          "fontAwesomeClassname": "simple-icons:mongodb",
+          "style": {
+            "color": "#47A248"
+          }
+        },
+        {
+          "skillName": "Microsoft Azure",
+          "fontAwesomeClassname": "simple-icons:microsoftazure",
+          "style": {
+            "color": "#0089D6"
+          }
+        },
+        {
+          "skillName": "TailwindCSS",
+          "fontAwesomeClassname": "simple-icons:tailwindcss",
+          "style": {
+            "color": "#06B6D4"
+          }
+        }
       ]
     },
     {
-      "logo": "broken-image",
+      "logo": "mavencery",
       "id": "sasga=",
       "name": "Mavencery",
       "url": "http://mavencery.com/",
       "description": "Mavencery was an upcoming Grocer Giant registered in California, in this project my primary role was backend development. I started working on this project in between my internship and my graduation. I have used NodeJS, ExpressJS, and MySQL as database solution, I got exposure to Sequelize ORM in this project.",
       "technologies": [
-        "NodeJS",
-        "ExpressJS",
-        "MySQL",
-        "Sequelize",
-        "Firebase",
-        "Heroku",
-        "Flutter"
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        },
+        {
+          "skillName": "Express",
+          "fontAwesomeClassname": "simple-icons:express",
+          "style": {
+            "color": "#000000"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "fontAwesomeClassname": "simple-icons:mysql",
+          "style": {
+            "color": "#8BA8B9"
+          }
+        },
+        {
+          "skillName": "Sequelize",
+          "fontAwesomeClassname": "simple-icons:sequelize",
+          "style": {
+            "color": "#52B0E7"
+          }
+        },
+        {
+          "skillName": "Firebase",
+          "fontAwesomeClassname": "simple-icons:firebase",
+          "style": {
+            "color": "#FFCA28"
+          }
+        },
+        {
+          "skillName": "Heroku",
+          "fontAwesomeClassname": "simple-icons:heroku",
+          "style": {
+            "color": "#430098"
+          }
+        },
+        {
+          "skillName": "Flutter",
+          "fontAwesomeClassname": "simple-icons:flutter",
+          "style": {
+            "color": "#60CAF6"
+          }
+        }
       ]
     },
+    {
+      "logo": "dsm",
+      "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
+      "name": "Drive Safe Medicals",
+      "url": "https://www.drivesafemedicals.co.uk",
+      "description": "",
+      "technologies": [
+        {
+          "skillName": "Google Cloud",
+          "fontAwesomeClassname": "simple-icons:googlecloud",
+          "style": {
+            "color": "#4285F4"
+          }
+        },
+        {
+          "skillName": "Firebase",
+          "fontAwesomeClassname": "simple-icons:firebase",
+          "style": {
+            "color": "#FFCA28"
+          }
+        },
+        {
+          "skillName": "TypeScript",
+          "fontAwesomeClassname": "simple-icons:typescript",
+          "style": {
+            "color": "#3178C6"
+          }
+        },
+        {
+          "skillName": "JavaScript",
+          "fontAwesomeClassname": "simple-icons:javascript",
+          "style": {
+            "color": "#F7DF1E"
+          }
+        },
+        {
+          "skillName": "Google My Business",
+          "fontAwesomeClassname": "simple-icons:googlemybusiness",
+          "style": {
+            "color": "#4285F4"
+          }
+        },
+        {
+          "skillName": "Google Search Console",
+          "fontAwesomeClassname": "simple-icons:googlesearchconsole",
+          "style": {
+            "color": "#458CF5"
+          }
+        },
+        {
+          "skillName": "HTML",
+          "fontAwesomeClassname": "simple-icons:html5",
+          "style": {
+            "color": "#E34F26"
+          }
+        },
+        {
+          "skillName": "CSS",
+          "fontAwesomeClassname": "simple-icons:css3",
+          "style": {
+            "color": "#1572B6"
+          }
+        }
+      ]
+    }
+  ],
+  "minor": [
     {
       "logo": "fooddo",
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Fooddo",
       "url": "https://github.com/UmairJibran/Fooddo",
       "description": "A project aimed at reducing food waste from banquets and houses, by sharing it with the deserving people.",
-      "technologies": ["flutter", "dart", "firebase", "google maps"]
+      "technologies": [
+        {
+          "skillName": "Flutter",
+          "fontAwesomeClassname": "simple-icons:flutter",
+          "style": {
+            "color": "#60CAF6"
+          }
+        },
+        {
+          "skillName": "Firebase",
+          "fontAwesomeClassname": "simple-icons:firebase",
+          "style": {
+            "color": "#FFCA28"
+          }
+        },
+        {
+          "skillName": "Google Maps",
+          "fontAwesomeClassname": "simple-icons:googlemaps",
+          "style": {
+            "color": "#4285F4"
+          }
+        }
+      ]
     },
     {
       "logo": "auction",
@@ -63,7 +298,44 @@
       "name": "eAuction",
       "url": "https://github.com/UmairJibran/online-Auction",
       "description": "eAuction was a semester project that went beyond my and the professor's expectations, it started as a simple HTML website but adding features like manual Authentication, and time control for each auction item kept making it a more complex project. I started with HTML and CSS, then switched to Bootstrap as styling framework, and sticked to PHP and MySQL for the backend.",
-      "technologies": ["PHP", "SQL", "HTML", "CSS"]
+      "technologies": [
+        {
+          "skillName": "PHP",
+          "fontAwesomeClassname": "simple-icons:php",
+          "style": {
+            "color": "#474aBa"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "fontAwesomeClassname": "simple-icons:mysql",
+          "style": {
+            "color": "#8BA8B9"
+          }
+        },
+        {
+          "skillName": "JavaScript",
+          "fontAwesomeClassname": "simple-icons:javascript",
+          "style": {
+            "backgroundColor": "#000000",
+            "color": "#F7DF1E"
+          }
+        },
+        {
+          "skillName": "HTML",
+          "fontAwesomeClassname": "simple-icons:html5",
+          "style": {
+            "color": "#E34F26"
+          }
+        },
+        {
+          "skillName": "CSS",
+          "fontAwesomeClassname": "simple-icons:css3",
+          "style": {
+            "color": "#1572B6"
+          }
+        }
+      ]
     },
     {
       "logo": "lms",
@@ -71,23 +343,29 @@
       "name": "City University LMS",
       "url": "https://github.com/UmairJibran/cu-lms",
       "description": "It was a pet project still in development, uses flutter for client side and NodeJS MySQL for the backend.",
-      "technologies": ["NodeJS", "MySQL", "flutter"]
-    },
-    {
-      "name": "Perceptron",
-      "id": "MDEwOlJlcGsagXRvcnkyNzM1MTI1NTE=",
-      "logo": "ai",
-      "url": "https://github.com/umairjibran/Simple-Perceptron",
-      "description": "Perceptron Algorithm implemented in C++",
-      "technologies": ["C++"]
-    },
-    {
-      "id": "MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=",
-      "name": "Counter Application",
-      "logo": "counter",
-      "url": "https://github.com/umairjibran/basic-flutter-counter",
-      "description": "A counter application in flutter that we could use to keep count of whatever we wanted, it can be simply laps of a race or moves that were made in a game.",
-      "technologies": ["Flutter", "Dart"]
+      "technologies": [
+        {
+          "skillName": "Flutter",
+          "fontAwesomeClassname": "simple-icons:flutter",
+          "style": {
+            "color": "#60CAF6"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "fontAwesomeClassname": "simple-icons:mysql",
+          "style": {
+            "color": "#8BA8B9"
+          }
+        },
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        }
+      ]
     }
   ]
 }

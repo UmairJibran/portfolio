@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 // import Footer from "../../components/footer/Footer";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
+import MajorProjectsCard from "../../components/projectsCard/MajorProjectsCard.jsx";
+import MinorProjectsCard from "../../components/projectsCard/MinorProjectsCard.jsx";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import { Zoom } from "react-reveal";
@@ -39,11 +40,22 @@ class Projects extends Component {
             </div>
           </Zoom>
         </div>
-        <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
+        <>
+          {ProjectsData.major.map((repo, index) => {
+            return (
+              <MajorProjectsCard repo={repo} theme={theme} right={index % 2} />
+            );
           })}
-        </div>
+        </>
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -mx-4 -my-8">
+              {ProjectsData.minor.map((repo) => {
+                return <MinorProjectsCard repo={repo} />;
+              })}
+            </div>
+          </div>
+        </section>
         <Button
           text={"More Projects"}
           className="project-button"

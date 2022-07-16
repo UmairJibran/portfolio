@@ -219,6 +219,13 @@ const skills = {
           },
         },
         {
+          skillName: "TailwindCSS",
+          fontAwesomeClassname: "simple-icons:tailwindcss",
+          style: {
+            color: "#06B6D4",
+          },
+        },
+        {
           skillName: "PHP",
           fontAwesomeClassname: "simple-icons:php",
           style: {
@@ -246,7 +253,7 @@ const skills = {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
           style: {
-            color: "#232f3e",
+            color: "#FF9900",
           },
         },
         {
@@ -254,6 +261,13 @@ const skills = {
           fontAwesomeClassname: "simple-icons:microsoftazure",
           style: {
             color: "#0089D6",
+          },
+        },
+        {
+          skillName: "Google Cloud",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: {
+            color: "#4285F4",
           },
         },
         {
