@@ -77,7 +77,7 @@ export default function ({ theme }) {
             </div>
             <div className="contact-heading-text-div">
               <h1
-                className="contact-heading-text"
+                className="contact-heading-text mb-10"
                 style={{ color: theme.text }}
               >
                 {ContactData["title"]}
@@ -207,7 +207,7 @@ export default function ({ theme }) {
           </div>
         </Zoom>
       </div>
-      {/* <Footer theme={this.props.theme} onToggle={this.props.onToggle} /> */}
+      {/* <Footer theme={theme} /> */}
       <TopButton theme={theme} />
     </div>
   );

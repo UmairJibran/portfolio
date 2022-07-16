@@ -3,18 +3,16 @@
   /* color: #868e96; */
   font-weight: inherit;
   font-family: "Google Sans Regular";
+  margin: 0;
+  padding: 30px;
 }
 
 .footer-div {
-  margin-top: 2rem;
-  margin-bottom: 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-text a:hover {
   color: #ee6950 !important;
-}
-
-.footer-text {
-  margin: 0;
-  padding: 30px;
 }

@@ -459,7 +459,7 @@ const experience = {
       experiences: [
         {
           title: "Associate Full Stack Engineer",
-          company: "ProductBox",
+          company: "Productbox",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
           duration: "July 2021 - Present",
@@ -473,6 +473,17 @@ const experience = {
       title: "Internships",
       experiences: [
         {
+          title: "Associate Full Stack Engineer Intern",
+          company: "Prodoctbox",
+          company_url: "https://www.productbox.dev/",
+          logo_path: "product-box-logo.png",
+          duration: "May 2021 - July 2021",
+          location: "Peshawar, Pakistan",
+          description:
+            "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
+          color: "#1c0c0c",
+        },
+        {
           title: "Flutter Intern",
           company: "IdeoMetrix",
           company_url: "https://www.ideometrix.com/",
@@ -482,17 +493,6 @@ const experience = {
           description:
             "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
-        },
-        {
-          title: "Associate Full Stack Engineer",
-          company: "Prodoct Box",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
-          duration: "May 2021 - July 2021",
-          location: "Peshawar, Pakistan",
-          description:
-            "My responsibilities include, but are not limited to: \n◦\t Work with customers/product managers to define, build out, test and release features and products. \n◦\t Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦\t Develop core application of clients in Flutter/Node.js Framework.\n◦\t Write automated test cases of high quality.",
-          color: "#1c0c0c",
         },
       ],
     },
@@ -504,7 +504,7 @@ const experience = {
           company: "Microsoft",
           company_url: "https://studentambassadors.microsoft.com/",
           logo_path: "microsoft_logo.png",
-          duration: "Aug 2020 - present",
+          duration: "Aug 2020 - Dec 2021",
           location: "CUSIT, Peshawar, Pakistan",
           description:
             "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
@@ -518,7 +518,7 @@ const experience = {
           duration: "",
           location: "",
           description:
-            "I am actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
+            "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
           color: "#181717",
         },
         {
@@ -529,7 +529,7 @@ const experience = {
           duration: "",
           location: "Peshawar, Pakistan",
           description:
-            "I collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
+            "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
           color: "#181717",
         },
         {
@@ -541,7 +541,7 @@ const experience = {
           duration: "",
           location: "Peshawar, Pakistan",
           description:
-            "I collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
+            "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
           color: "#181717",
         },
       ],
@@ -602,38 +602,38 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
     message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
   },
-  // {
-  //   name: "Kamal Uddin",
-  //   designation: "Network Administrator | Network Systems Engineer",
-  //   employerAtTime: "Freelance Market",
-  //   avatarImagePath: "kamal-uddin.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/kamaluddin0/",
-  //   message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
-  // },
-  // {
-  //   name: "Muhammad Yasin",
-  //   designation: "Frontend Developer",
-  //   employerAtTime: "Drive Safe Medicals",
-  //   avatarImagePath: "muhammad-yasin.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/muhammad-yasin-254066187/",
-  //   message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
-  // },
-  // {
-  //   name: "Muhammad Ibrahim",
-  //   designation: "Front-end Web | ReactJS",
-  //   employerAtTime: "Freelance Market",
-  //   avatarImagePath: "muhammad-ibrahim.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
-  //   message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
-  // },
-  // {
-  //   name: "Shah Rukh Khalid",
-  //   designation: "Marketing Student | Amal Career Prep Fellow",
-  //   employerAtTime: "Amal Academy",
-  //   avatarImagePath: "shah-rukh-khalid.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
-  //   message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
-  // },
+  {
+    name: "Kamal Uddin",
+    designation: "Network Administrator | Network Systems Engineer",
+    employerAtTime: "Freelance Market",
+    avatarImagePath: "kamal-uddin.jpeg",
+    nameLink: "https://www.linkedin.com/in/kamaluddin0/",
+    message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
+  },
+  {
+    name: "Muhammad Yasin",
+    designation: "Frontend Developer",
+    employerAtTime: "Drive Safe Medicals",
+    avatarImagePath: "muhammad-yasin.jpeg",
+    nameLink: "https://www.linkedin.com/in/muhammad-yasin-254066187/",
+    message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
+  },
+  {
+    name: "Muhammad Ibrahim",
+    designation: "Front-end Web | ReactJS",
+    employerAtTime: "Freelance Market",
+    avatarImagePath: "muhammad-ibrahim.jpeg",
+    nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
+    message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
+  },
+  {
+    name: "Shah Rukh Khalid",
+    designation: "Marketing Student | Amal Career Prep Fellow",
+    employerAtTime: "Amal Academy",
+    avatarImagePath: "shah-rukh-khalid.jpeg",
+    nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
+    message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
+  },
 ];
 
 export {
