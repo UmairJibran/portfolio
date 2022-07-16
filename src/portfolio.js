@@ -7,7 +7,7 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello World! Umair here",
+  title: "Hello World! Jibran here",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
   subTitle: "Node & Flutter 📱 developer",
