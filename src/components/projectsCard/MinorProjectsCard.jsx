@@ -12,7 +12,7 @@ const MinorProjectsCard = ({ repo }) => {
 
   return (
     <div
-      class="py-8 px-4 lg:w-1/3 cursor-pointer bg-semi-grey"
+      class="m-2 py-8 px-4 lg:w-1/4 cursor-pointer bg-semi-grey"
       onClick={() => handleOpen(repo.url)}
     >
       <div class="h-full flex items-start">
