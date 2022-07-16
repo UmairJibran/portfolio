@@ -459,7 +459,7 @@ const experience = {
       experiences: [
         {
           title: "Associate Full Stack Engineer",
-          company: "ProductBox",
+          company: "Productbox",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
           duration: "July 2021 - Present",
@@ -473,6 +473,17 @@ const experience = {
       title: "Internships",
       experiences: [
         {
+          title: "Associate Full Stack Engineer Intern",
+          company: "Prodoctbox",
+          company_url: "https://www.productbox.dev/",
+          logo_path: "product-box-logo.png",
+          duration: "May 2021 - July 2021",
+          location: "Peshawar, Pakistan",
+          description:
+            "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
+          color: "#1c0c0c",
+        },
+        {
           title: "Flutter Intern",
           company: "IdeoMetrix",
           company_url: "https://www.ideometrix.com/",
@@ -482,17 +493,6 @@ const experience = {
           description:
             "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
-        },
-        {
-          title: "Associate Full Stack Engineer",
-          company: "Prodoct Box",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
-          duration: "May 2021 - July 2021",
-          location: "Peshawar, Pakistan",
-          description:
-            "My responsibilities include, but are not limited to: \n◦\t Work with customers/product managers to define, build out, test and release features and products. \n◦\t Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦\t Develop core application of clients in Flutter/Node.js Framework.\n◦\t Write automated test cases of high quality.",
-          color: "#1c0c0c",
         },
       ],
     },
@@ -504,7 +504,7 @@ const experience = {
           company: "Microsoft",
           company_url: "https://studentambassadors.microsoft.com/",
           logo_path: "microsoft_logo.png",
-          duration: "Aug 2020 - present",
+          duration: "Aug 2020 - Dec 2021",
           location: "CUSIT, Peshawar, Pakistan",
           description:
             "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
@@ -518,7 +518,7 @@ const experience = {
           duration: "",
           location: "",
           description:
-            "I am actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
+            "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
           color: "#181717",
         },
         {
@@ -529,7 +529,7 @@ const experience = {
           duration: "",
           location: "Peshawar, Pakistan",
           description:
-            "I collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
+            "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
           color: "#181717",
         },
         {
@@ -541,7 +541,7 @@ const experience = {
           duration: "",
           location: "Peshawar, Pakistan",
           description:
-            "I collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
+            "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
           color: "#181717",
         },
       ],
