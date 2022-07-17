@@ -65,7 +65,7 @@
 }
 
 .greeting-text-p2 {
-  font-size: 1em;
+  font-size: 1rem;
   font-family: "Google Sans Regular";
 }
 
@@ -109,7 +109,8 @@
     font-size: 25px;
     text-align: center;
   }
-  .greeting-text-p {
+  .greeting-text-p,
+  .greeting-text-p2 {
     font-size: 21px !important;
     margin-right: 0px;
     line-height: normal;
