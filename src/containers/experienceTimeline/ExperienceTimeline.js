@@ -41,7 +41,7 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           <span className="font-medium">{experience.title}</span>{" "}
           <small>at</small>{" "}
           <span
-            className="font-bold cursor-pointer underline underline-offset-4"
+            className="font-bold cursor-pointer hover:underline underline-offset-4"
             onClick={() => handleOpen(experience.company_url)}
           >
             {experience.company}
