@@ -43,7 +43,7 @@ class SkillSection extends Component {
                     {skill.skills.map((skillSentence, key) => {
                       return (
                         <p
-                          className="subTitle skills-text"
+                          className="subTitle skills-text mt-1"
                           style={{ color: theme.secondaryText }}
                           key={key}
                         >
