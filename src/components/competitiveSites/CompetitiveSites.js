@@ -41,7 +41,6 @@ class CompetitiveSites extends React.Component {
           </ul>
         </div>
       </Slide>
-
     );
   }
 }

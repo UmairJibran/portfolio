@@ -85,7 +85,7 @@
   .skills-main-div {
     flex-direction: column;
   }
-  
+
   .skills-main-div:nth-child(odd) {
     flex-direction: column;
   }
