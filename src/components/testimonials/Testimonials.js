@@ -30,7 +30,7 @@ export default function Skills() {
               isIntrinsicHeight={true}
               totalSlides={testimonialsPageData.length}
               isPlaying
-              interval={10000}
+              interval={15000}
               infinite
             >
               <Slider>
