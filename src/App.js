@@ -27,9 +27,7 @@ function App() {
     <ThemeProvider theme={chosenTheme}>
       <>
         <GlobalStyles />
-        <div>
-          <Main theme={chosenTheme} />
-        </div>
+        <Main theme={chosenTheme} />
       </>
     </ThemeProvider>
   );
