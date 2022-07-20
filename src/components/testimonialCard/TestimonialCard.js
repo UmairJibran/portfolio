@@ -18,19 +18,19 @@ const TestimonialCard = ({ testimonial, index }) => {
         </svg>
       </div>
       <div className="mx-auto sm:w-1/6 xl:w-1/2 lg:w-3/4 w-1/5">
-        <div className="mx-auto text-center text-xs md:text-base mx-auto">
+        <div className="mx-auto text-center text-xs md:text-base">
           {testimonial.message}
         </div>
         <div className="mx-auto text-center">
-          <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-          <p class="text-xs md:text-base">
+          <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+          <p className="text-xs md:text-base">
             <a
               href={testimonial.nameLink}
               className="text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
             >
               {testimonial.name.toUpperCase()}
             </a>
-            <p className="text-gray-500">
+            <span className="text-gray-500">
               {testimonial.designation}
               {testimonial.employerAtTime ? (
                 <>
@@ -44,7 +44,7 @@ const TestimonialCard = ({ testimonial, index }) => {
               ) : (
                 <></>
               )}
-            </p>
+            </span>
           </p>
         </div>
       </div>

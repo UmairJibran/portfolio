@@ -44,8 +44,8 @@ class Experience extends Component {
             </div>
           </Zoom>
         </div>
-        <section class="text-gray-600 body-font">
-          <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto flex flex-wrap">
             {/* <ExperienceAccordion sections={experience["sections"]} theme={theme} /> */}
             {experiences.map((experience, index) => {
               return (

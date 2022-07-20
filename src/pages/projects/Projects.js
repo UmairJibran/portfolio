@@ -39,15 +39,20 @@ class Projects extends Component {
         <>
           {ProjectsData.major.map((repo, index) => {
             return (
-              <MajorProjectsCard repo={repo} theme={theme} right={index % 2} />
+              <MajorProjectsCard
+                repo={repo}
+                key={index}
+                theme={theme}
+                right={index % 2}
+              />
             );
           })}
         </>
-        <section class="text-gray-600 body-font">
-          <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap -mx-4 -my-8">
-              {ProjectsData.minor.map((repo) => {
-                return <MinorProjectsCard repo={repo} />;
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap -mx-4 -my-8">
+              {ProjectsData.minor.map((repo, index) => {
+                return <MinorProjectsCard key={index} repo={repo} />;
               })}
             </div>
           </div>

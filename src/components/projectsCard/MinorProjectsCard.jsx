@@ -12,13 +12,13 @@ const MinorProjectsCard = ({ repo }) => {
 
   return (
     <div
-      class="m-2 py-8 px-4 lg:w-1/4 cursor-pointer bg-semi-grey"
+      className="m-2 py-8 px-4 lg:w-1/4 cursor-pointer bg-semi-grey"
       onClick={() => handleOpen(repo.url)}
     >
-      <div class="h-full flex items-start">
-        <div class="flex-grow">
-          {/* <h2 class="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1"></h2> */}
-          <h1 class="title-font text-xl font-medium text-gray-900">
+      <div className="h-full flex items-start">
+        <div className="flex-grow">
+          {/* <h2 className="tracking-widest text-xs title-font font-medium text-indigo-500 mb-1"></h2> */}
+          <h1 className="title-font text-xl font-medium text-gray-900">
             {repo.name}
           </h1>
           <Fade right duration={1500}>
