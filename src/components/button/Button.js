@@ -19,7 +19,7 @@ export default function Button({ text, className, href, newTab, theme }) {
       <a
         className="main-button"
         href={href}
-        target={newTab ? "_blank" : undefined}
+        target={newTab && "_blank"}
         style={{
           color: theme.body,
           backgroundColor: theme.text,
@@ -33,7 +33,3 @@ export default function Button({ text, className, href, newTab, theme }) {
     </div>
   );
 }
-
-Button.defaultProps = {
-  newTab: true,
-};
