@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import Splash from "../pages/splash/Splash";
-import Education from "../pages/education/EducationComponent";
 import Resume from "../pages/resume/ResumeComponent";
-import Error from "../pages/error/ErrorComponent";
-import { settings } from "../portfolio.js";
 import { Suspense } from "react";
 const Home = React.lazy(() => import("../pages/home/HomeComponent"));
 
