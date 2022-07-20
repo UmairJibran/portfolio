@@ -12,7 +12,7 @@ import AddressImg from "./AddressImg";
 
 const ContactData = contactPageData.contactSection;
 
-export default function ({ theme }) {
+const ContactComponent = ({ theme }) => {
   const [loading, updateLoading] = useState(false);
   const [showEmailForm, updateShowEmailForm] = useState(false);
   const [error, updateError] = useState("");
@@ -211,4 +211,6 @@ export default function ({ theme }) {
       <TopButton theme={theme} />
     </div>
   );
-}
+};
+
+export default ContactComponent;
