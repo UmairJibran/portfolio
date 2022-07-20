@@ -18,8 +18,7 @@ class Experience extends Component {
       experiences.push(...v.experiences);
     });
     return (
-      <div className="experience-main">
-        <Header theme={theme} />
+      <div className="experience-main py-10">
         <div className="basic-experience">
           <Zoom duration={1000}>
             <div className="experience-heading-div">
@@ -64,8 +63,6 @@ class Experience extends Component {
             })}
           </div>
         </section>
-        <Footer theme={this.props.theme} />
-        <TopButton theme={this.props.theme} />
       </div>
     );
   }

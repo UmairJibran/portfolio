@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import MajorProjectsCard from "../../components/projectsCard/MajorProjectsCard.jsx";
 import MinorProjectsCard from "../../components/projectsCard/MinorProjectsCard.jsx";
 import Button from "../../components/button/Button";
-import TopButton from "../../components/topButton/TopButton";
 import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
@@ -15,8 +12,7 @@ class Projects extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="projects-main">
-        <Header theme={theme} />
+      <div className="projects-main py-10">
         <div className="basic-projects">
           <Zoom duration={1000}>
             <div className="projects-heading-div">
@@ -63,8 +59,6 @@ class Projects extends Component {
           newTab={true}
           theme={theme}
         />
-        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
-        <TopButton theme={this.props.theme} />
       </div>
     );
   }

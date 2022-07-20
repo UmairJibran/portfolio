@@ -1,8 +1,5 @@
 import React, { useState, useRef } from "react";
-import Header from "../../components/header/Header";
 import Loader from "../../components/Loader/LoaderLogo";
-// import Footer from "../../components/footer/Footer";
-import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import ClickableButton from "../../components/button/ClickableButton";
 import { Zoom } from "react-reveal";
@@ -67,8 +64,7 @@ const ContactComponent = ({ theme }) => {
   };
 
   return (
-    <div className="contact-main">
-      <Header theme={theme} />
+    <div className="contact-main bg-white py-10">
       <div className="basic-contact">
         <Zoom duration={1000}>
           <div className="contact-heading-div">
@@ -207,8 +203,6 @@ const ContactComponent = ({ theme }) => {
           </div>
         </Zoom>
       </div>
-      {/* <Footer theme={theme} /> */}
-      <TopButton theme={theme} />
     </div>
   );
 };
