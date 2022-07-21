@@ -12,7 +12,7 @@ export default function MajorProjectsCard({ repo, right }) {
   return right ? (
     <section
       onClick={() => handleOpen(repo.url)}
-      className="rounded-lg mx-auto md:mx-32 my-8 text-gray-600 body-font cursor-pointer bg-semi-grey"
+      className="rounded-lg mx-auto md:mx-32 my-8 text-gray-600 body-font cursor-pointer bg-semi-grey major-projects-card"
     >
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
@@ -42,7 +42,7 @@ export default function MajorProjectsCard({ repo, right }) {
   ) : (
     <section
       onClick={() => handleOpen(repo.url)}
-      className="rounded-lg -mx-4  md:mx-32 my-8 text-gray-600 body-font cursor-pointer bg-semi-grey"
+      className="rounded-lg -mx-4  md:mx-32 my-8 text-gray-600 body-font cursor-pointer bg-semi-grey major-projects-card"
     >
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
         <div className="lg:w-1/2 sm:w-1/3 w-full overflow-hidden mt-6 sm:mt-0 sm:pr-10">

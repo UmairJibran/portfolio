@@ -1,3 +1,8 @@
 .bg-semi-grey {
   background-color: #e6e6e6;
 }
+
+.major-projects-card,
+.minor-projects-card {
+  /* font: 19px / 23px "Space Mono", Montserrat, "Montserrat", sans-serif; */
+}

@@ -7,7 +7,7 @@ import "./TestimonialCard.css";
 const TestimonialCard = ({ testimonial, index }) => {
   return (
     <Slide index={index} tabIndex="null">
-      <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+      <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center testimonial-main">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -30,6 +30,7 @@ const TestimonialCard = ({ testimonial, index }) => {
             >
               {testimonial.name.toUpperCase()}
             </a>
+            <br />
             <span className="text-gray-500">
               {testimonial.designation}
               {testimonial.employerAtTime ? (

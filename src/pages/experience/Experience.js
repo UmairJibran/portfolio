@@ -14,7 +14,7 @@ class Experience extends Component {
       experiences.push(...v.experiences);
     });
     return (
-      <div className="experience-main py-10">
+      <div className="experience-main py-10" id="experience">
         <div className="basic-experience">
           <Zoom duration={1000}>
             <div className="experience-heading-div">

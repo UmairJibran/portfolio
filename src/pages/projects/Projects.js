@@ -12,7 +12,7 @@ class Projects extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="projects-main py-10">
+      <div className="projects-main py-10" id="projects">
         <div className="basic-projects">
           <Zoom duration={1000}>
             <div className="projects-heading-div">

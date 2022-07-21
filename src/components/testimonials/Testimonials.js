@@ -19,7 +19,7 @@ export default function Skills() {
     <div className="py-10 bg-white testimonial-body">
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
         <div className="text-center">
-          <h3 className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900">
+          <h3 className="text-3xl sm:text-5xl leading-normal font-extrabold tracking-tight text-gray-900 mb-10">
             REF<span className="text-indigo-600">EREN</span>CES
           </h3>
         </div>

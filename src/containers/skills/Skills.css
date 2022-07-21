@@ -5,14 +5,20 @@
 .skills-header {
   font-size: 60px;
   line-height: normal;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
 .skills-description {
   font-size: 26px;
   line-height: normal;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
 }
 
@@ -22,7 +28,10 @@
 
 .skills-text-div {
   margin-left: 50px;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .skills-main-div > * {
@@ -39,7 +48,10 @@
 .skills-heading {
   font-size: 56px;
   font-weight: 400;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   line-height: normal;
 }
 
