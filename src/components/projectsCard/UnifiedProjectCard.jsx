@@ -40,7 +40,8 @@ const UnifiedProjectsCard = ({ repo }) => {
             return (
               <span key={index}>
                 <span class="text-gray-400 mx-1 items-center leading-none text-xs">
-                  {tech.skillName} -
+                  {tech.skillName}{" "}
+                  {index !== repo.technologies.length - 1 ? "-" : ""}
                 </span>
               </span>
             );
