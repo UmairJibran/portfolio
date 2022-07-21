@@ -39,8 +39,8 @@ const UnifiedProjectsCard = ({ repo }) => {
           {repo.technologies.map((tech, index) => {
             return (
               <span key={index}>
-                <span class="text-gray-400 mr-3 items-center leading-none text-xs px-1">
-                  {tech.skillName}
+                <span class="text-gray-400 mx-1 items-center leading-none text-xs">
+                  {tech.skillName} -
                 </span>
               </span>
             );
