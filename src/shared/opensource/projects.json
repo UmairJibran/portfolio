@@ -204,7 +204,7 @@
       "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
       "name": "Drive Safe Medicals",
       "url": "https://www.drivesafemedicals.co.uk",
-      "description": "",
+      "description": "Drive Safe Medicals is a UK startup where they provide low-cost medical examinations reports for a Group 2, bus or lorry licenses, taxi's, motorsport, firefighters, and forklift/crane operators. They also provide occupational health services to both individuals and businesses.",
       "technologies": [
         {
           "skillName": "Google Cloud",
@@ -272,7 +272,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Fooddo",
       "url": "https://github.com/UmairJibran/Fooddo",
-      "description": "A project aimed at reducing food waste from banquets and houses, by sharing it with the deserving people.",
+      "description": "Fooddo aimed at reducing food waste from banquets and houses, by sharing it with the deserving people. I designed and developed the solution using Figma and Flutter respectively.",
       "technologies": [
         {
           "skillName": "Flutter",
@@ -293,6 +293,13 @@
           "fontAwesomeClassname": "simple-icons:googlemaps",
           "style": {
             "color": "#4285F4"
+          }
+        },
+        {
+          "skillName": "Figma",
+          "fontAwesomeClassname": "simple-icons:figma",
+          "style": {
+            "color": "#F24E1E"
           }
         }
       ]
