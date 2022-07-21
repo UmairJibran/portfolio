@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import MajorProjectsCard from "../../components/projectsCard/MajorProjectsCard.jsx";
-import MinorProjectsCard from "../../components/projectsCard/MinorProjectsCard.jsx";
+import UnifiedProjectCard from "../../components/projectsCard/UnifiedProjectCard.jsx";
 import Button from "../../components/button/Button";
 import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
@@ -36,27 +35,22 @@ class Projects extends Component {
             </div>
           </Zoom>
         </div>
-        <>
-          {ProjectsData.major.map((repo, index) => {
-            return (
-              <MajorProjectsCard
-                repo={repo}
-                key={index}
-                theme={theme}
-                right={index % 2}
-              />
-            );
-          })}
-        </>
-        <section className="text-gray-600 body-font">
-          <div className="container px-5 py-24 mx-auto">
-            <div className="flex flex-wrap -mx-4 -my-8">
-              {ProjectsData.minor.map((repo, index) => {
-                return <MinorProjectsCard key={index} repo={repo} />;
-              })}
-            </div>
+        <div className="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            {[...ProjectsData.major, ...ProjectsData.minor].map(
+              (repo, index) => {
+                return (
+                  <UnifiedProjectCard
+                    repo={repo}
+                    key={index}
+                    theme={theme}
+                    right={index % 2}
+                  />
+                );
+              }
+            )}
           </div>
-        </section>
+        </div>
         <Button
           text={"More Projects"}
           className="project-button"

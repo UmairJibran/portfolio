@@ -3,6 +3,7 @@
 }
 
 .major-projects-card,
-.minor-projects-card {
+.minor-projects-card,
+.unified-projects-card {
   font-family: "Space Mono", monospace;
 }
