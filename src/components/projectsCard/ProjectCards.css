@@ -4,5 +4,5 @@
 
 .major-projects-card,
 .minor-projects-card {
-  /* font: 19px / 23px "Space Mono", Montserrat, "Montserrat", sans-serif; */
+  font-family: "Space Mono", monospace;
 }

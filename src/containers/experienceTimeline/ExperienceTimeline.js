@@ -15,7 +15,7 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
     multiLine = true;
   }
   return (
-    <div className="flex relative pb-12">
+    <div className="experience-timeline-main flex relative pb-12">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
         <div
           className={`h-full w-1 ${
@@ -37,7 +37,7 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
         </svg>
       </div>
       <div className="flex-grow pl-4">
-        <h2 className="text-sm text-gray-900 mb-1 tracking-wider">
+        <h2 className="text-base text-gray-900 mb-1 tracking-wider">
           <span className="font-medium">{experience.title}</span>{" "}
           <small>at</small>{" "}
           <span
@@ -58,9 +58,9 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
         {multiLine ? (
           description
             .split("\n")
-            .map((line, index) => <p key={index}>{line}</p>)
+            .map((line, index) => <p className="text-sm" key={index}>{line}</p>)
         ) : (
-          <p className="leading-relaxed">{description}</p>
+          <p className="leading-relaxed text-sm">{description}</p>
         )}
       </div>
     </div>
