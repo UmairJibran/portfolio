@@ -92,7 +92,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
       "category": "Backend/Web",
       "name": "Shaoor.tech",
-      "url": "https://umairjibran.github.io/shaoor-tech/",
+      "url": "https://shaoor.umairjibran.com/",
       "description": "Shaoor.tech was a pet application developed using VUE JS as an SPA(Single Page Application), for the backend services I started with ExpressJS and the switched Microsoft Azure Serverless Functions were used with MongoDB as the database solution.",
       "technologies": [
         {
