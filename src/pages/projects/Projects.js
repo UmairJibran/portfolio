@@ -36,7 +36,7 @@ class Projects extends Component {
           </Zoom>
         </div>
         <div className="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4">
             {[...ProjectsData.major, ...ProjectsData.minor].map(
               (repo, index) => {
                 return (

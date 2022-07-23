@@ -32,23 +32,34 @@ class Header extends Component {
             <li
               className="mx-2 cursor-pointer"
               onClick={() => scrollIntoView("projects")}
-              activeStyle={{ fontWeight: "normal" }}
               style={{ color: theme.text }}
             >
               Projects
             </li>
             <li
               className="mx-2 cursor-pointer"
+              onClick={() => scrollIntoView("references")}
+              style={{ color: theme.text }}
+            >
+              References
+            </li>
+            <li
+              className="mx-2 cursor-pointer"
               onClick={() => scrollIntoView("experience")}
-              activeStyle={{ fontWeight: "normal" }}
               style={{ color: theme.text }}
             >
               Experience
             </li>
             <li
               className="mx-2 cursor-pointer"
+              onClick={() => scrollIntoView("skills")}
+              style={{ color: theme.text }}
+            >
+              Skills
+            </li>
+            <li
+              className="mx-2 cursor-pointer"
               onClick={() => scrollIntoView("contact")}
-              activeStyle={{ fontWeight: "normal" }}
             >
               Contact
             </li>
