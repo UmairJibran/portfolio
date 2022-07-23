@@ -7,7 +7,7 @@ import "./ProjectCards.css";
 const UnifiedProjectsCard = ({ repo }) => {
   return (
     <div className="p-4 lg:w-1/3  unified-projects-card">
-      <div className="h-full border border-gray-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+      <div className="h-full border border-gray-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative glass-effect">
         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
           {repo.category?.toUpperCase()}
         </h2>
