@@ -18,7 +18,7 @@ class Home extends Component {
         <Projects theme={this.props.theme} />
         {/* <Testimonials theme={this.props.theme} /> */}
         <Experience theme={this.props.theme} />
-        {/* <Skills theme={this.props.theme} /> */}
+        <Skills theme={this.props.theme} />
         <Contact theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
