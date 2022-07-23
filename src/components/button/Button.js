@@ -14,7 +14,6 @@ const onMouseOut = (event, color, bgColor) => {
 };
 
 export default function Button({ text, className, href, newTab, theme }) {
-  console.log(text);
   return (
     <div className={className}>
       <a
