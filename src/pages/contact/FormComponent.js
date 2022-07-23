@@ -1,7 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+
+import toast from "react-hot-toast";
 
 import ClickableButton from "../../components/button/ClickableButton";
 import Loader from "../../components/Loader/LoaderLogo";
+import ErrorToast from "../../components/toast/ErrorToast";
+import SuccessToast from "../../components/toast/SuccessToast";
 
 const FormComponent = ({ theme, closeEmailForm }) => {
   const [loading, updateLoading] = useState(false);
@@ -32,7 +36,6 @@ const FormComponent = ({ theme, closeEmailForm }) => {
 
     if (response.status >= 200 && response.status < 300) {
       updateSuccess("Email Sent!");
-      updateError("");
       updateLoading(false);
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
@@ -50,6 +53,29 @@ const FormComponent = ({ theme, closeEmailForm }) => {
   };
 
   const emailReference = useRef(null);
+
+  useEffect(() => {
+    if (error) {
+      toast.custom((t) => (
+        <ErrorToast
+          title={"Oops!"}
+          subTitle={error}
+          onClick={() => toast.dismiss(t.id)}
+        />
+      ));
+      updateError("");
+    }
+    if (success) {
+      toast.custom((t) => (
+        <SuccessToast
+          title={"Yay!"}
+          subTitle={success}
+          onClick={() => toast.dismiss(t.id)}
+        />
+      ));
+      updateSuccess("");
+    }
+  }, [success, error]);
 
   return loading ? (
     <>
@@ -110,15 +136,6 @@ const FormComponent = ({ theme, closeEmailForm }) => {
                         <textarea id="message" placeholder="Message"></textarea>
                       </div>
                     </form>
-                    {error ? (
-                      <>
-                        <h2 className="error-message">{error}</h2>
-                      </>
-                    ) : (
-                      <>
-                        <h2 className="success-message">{success}</h2>
-                      </>
-                    )}
                   </div>
                 </div>
               </div>

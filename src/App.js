@@ -5,6 +5,7 @@ import Main from "./containers/Main";
 import { ThemeProvider } from "styled-components";
 import { chosenTheme } from "./theme";
 import { GlobalStyles } from "./global";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
   return (
     <ThemeProvider theme={chosenTheme}>
       <>
+        <Toaster />
         <GlobalStyles />
         <Main theme={chosenTheme} />
       </>
