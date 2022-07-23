@@ -38,7 +38,7 @@ class Header extends Component {
             </li>
             <li
               className="mx-2 cursor-pointer"
-              onClick={() => scrollIntoView("references")}
+              onClick={() => scrollIntoView("testimonials")}
               style={{ color: theme.text }}
             >
               References

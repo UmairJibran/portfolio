@@ -14,9 +14,9 @@ import "./Testimonials.css";
 import TestimonialCard from "../testimonialCard/TestimonialCard";
 import { testimonialsPageData } from "../../portfolio";
 
-export default function Skills() {
+export default function Testimonials() {
   return (
-    <div className="py-10 testimonial-body">
+    <div className="py-10 testimonial-body" id="testimonials">
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
         <div className="text-center">
           <h3 className="text-lg sm:text-5xl leading-normal tracking-tight text-gray-900 mb-10">
