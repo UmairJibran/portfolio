@@ -11,7 +11,8 @@ const greeting = {
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
   subTitle: "Node & Flutter 📱 developer",
-  extraInfo: "Learning new tech everyday.",
+  extraInfo:
+    "Learning new tech everyday. A curious full stack developer with ~2 years in the security space. I like to focus on the security of the system. Working in startups where time is of the essence gives me goosebumps. Let's connect!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
