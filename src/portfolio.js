@@ -144,7 +144,6 @@ const skills = {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
-            backgroundColor: "#000000",
             color: "#F7DF1E",
           },
         },
@@ -215,7 +214,6 @@ const skills = {
           skillName: "Dart",
           fontAwesomeClassname: "simple-icons:dart",
           style: {
-            backgroundColor: "#00000000",
             color: "#0175C2",
           },
         },
