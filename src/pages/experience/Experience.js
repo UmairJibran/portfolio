@@ -3,7 +3,7 @@ import ExperienceTimeline from "../../containers/experienceTimeline/ExperienceTi
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Zoom } from "react-reveal";
-import ExperienceImg from "./ExperienceImg";
+// import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
   render() {
@@ -14,13 +14,13 @@ class Experience extends Component {
       experiences.push(...v.experiences);
     });
     return (
-      <div className="experience-main py-10" id="experience">
+      <div className="bg-white experience-main py-10" id="experience">
         <div className="basic-experience">
           <Zoom duration={1000}>
             <div className="experience-heading-div">
-              <div className="experience-heading-img-div">
+              {/* <div className="experience-heading-img-div">
                 <ExperienceImg theme={theme} />
-              </div>
+              </div> */}
               <div className="experience-heading-text-div">
                 <h1
                   className="experience-heading-text mb-4"

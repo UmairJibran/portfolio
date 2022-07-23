@@ -5,19 +5,19 @@ import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
-import ProjectsImg from "./ProjectsImg";
+// import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="projects-main py-10" id="projects">
+      <div className="bg-white projects-main py-10" id="projects">
         <div className="basic-projects">
           <Zoom duration={1000}>
             <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
+              {/* <div className="projects-heading-img-div">
                 <ProjectsImg theme={theme} />
-              </div>
+              </div> */}
               <div className="projects-heading-text-div">
                 <h1
                   className="projects-heading-text mb-10"

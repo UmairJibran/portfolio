@@ -15,10 +15,10 @@ class Home extends Component {
       <div>
         <Header theme={this.props.theme} />
         <Greeting theme={this.props.theme} />
-        <Skills theme={this.props.theme} />
         <Projects theme={this.props.theme} />
         <Testimonials theme={this.props.theme} />
         <Experience theme={this.props.theme} />
+        <Skills theme={this.props.theme} />
         <Contact theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />

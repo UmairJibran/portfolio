@@ -83,80 +83,76 @@ const FormComponent = ({ theme, closeEmailForm }) => {
     </>
   ) : (
     <>
-      <div className="container">
-        <div className="login-root">
-          <div
-            className="box-root flex-flex flex-direction--column"
-            style={{ minHeight: "10vh", flexGrow: 1 }}
-          >
-            <div
-              className="box-root padding-top--24 flex-flex flex-direction--column"
-              style={{ flexGrow: 1, zIndex: 9 }}
-            >
-              <div className="formbg-outer">
-                <div className="formbg">
-                  <div className="formbg-inner padding-horizontal--48">
-                    <form id="stripe-login">
-                      <div
-                        className="field padding-bottom--24"
-                        style={{
-                          display: "inline-flex",
-                          width: "100%",
-                        }}
-                      >
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          style={{
-                            marginInlineEnd: 10,
-                          }}
-                          id="email"
-                          ref={emailReference}
-                        />
-                        <input
-                          type="text"
-                          name="Name"
-                          placeholder="Name"
-                          style={{
-                            marginInlineStart: 10,
-                          }}
-                          id="name"
-                        />
-                      </div>
-                      <div className="field padding-bottom--24">
-                        <input
-                          type="text"
-                          name="subject"
-                          placeholder="Subject"
-                          id="subject"
-                        />
-                      </div>
-                      <div className="field padding-bottom--24">
-                        <textarea id="message" placeholder="Message"></textarea>
-                      </div>
-                    </form>
+      <div
+        className="box-root flex-flex flex-direction--column"
+        style={{ minHeight: "10vh", flexGrow: 1 }}
+      >
+        <div
+          className="box-root padding-top--24 flex-flex flex-direction--column"
+          style={{ flexGrow: 1, zIndex: 9 }}
+        >
+          <div className="formbg-outer">
+            <div className="formbg">
+              <div className="formbg-inner padding-horizontal--48">
+                <form id="stripe-login">
+                  <div
+                    className="field padding-bottom--24"
+                    style={{
+                      display: "inline-flex",
+                      width: "100%",
+                    }}
+                  >
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      style={{
+                        marginInlineEnd: 10,
+                      }}
+                      id="email"
+                      ref={emailReference}
+                    />
+                    <input
+                      type="text"
+                      name="Name"
+                      placeholder="Name"
+                      style={{
+                        marginInlineStart: 10,
+                      }}
+                      id="name"
+                    />
                   </div>
-                </div>
+                  <div className="field padding-bottom--24">
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="Subject"
+                      id="subject"
+                    />
+                  </div>
+                  <div className="field padding-bottom--24">
+                    <textarea id="message" placeholder="Message"></textarea>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-        <div className="resume-btn-div">
-          <ClickableButton
-            className={"margin-end-40"}
-            text="Close Form!"
-            onClick={closeEmailForm}
-            theme={theme}
-          />{" "}
-          <div className="mx-5"></div>{" "}
-          <ClickableButton
-            className={"margin-start-40"}
-            text="Send!"
-            onClick={sendEmail}
-            theme={theme}
-          />
-        </div>
+      </div>
+      <div className="resume-btn-div">
+        <ClickableButton
+          className={"margin-end-40"}
+          text="Close Form!"
+          onClick={closeEmailForm}
+          theme={theme}
+        />{" "}
+        <div className="mx-5"></div>{" "}
+        <ClickableButton
+          className={"margin-start-40"}
+          text="Send!"
+          onClick={sendEmail}
+          theme={theme}
+        />
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import FormComponent from "./FormComponent";
 import { Zoom } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData } from "../../portfolio.js";
-import AddressImg from "./AddressImg";
+// import AddressImg from "./AddressImg";
 
 const ContactData = contactPageData.contactSection;
 
@@ -23,9 +23,9 @@ const ContactComponent = ({ theme }) => {
       <div className="basic-contact">
         <Zoom duration={1000}>
           <div className="contact-heading-div">
-            <div className="contact-heading-img-div">
+            {/* <div className="contact-heading-img-div">
               <AddressImg theme={theme} />
-            </div>
+            </div> */}
             <div className="contact-heading-text-div">
               <h1
                 className="contact-heading-text mb-10"
