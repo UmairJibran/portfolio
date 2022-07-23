@@ -12,8 +12,8 @@ class Header extends Component {
 
     return (
       <div>
-        <header className="header sticky top-0 z-50">
-          <div>
+        <header className="header">
+          <div  className="hidden md:block">
             <span style={{ color: theme.text }}> &lt;</span>
             <span
               className="logo-name cursor-pointer"
