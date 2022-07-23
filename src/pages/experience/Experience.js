@@ -16,7 +16,7 @@ class Experience extends Component {
     return (
       <div className="bg-white experience-main py-10" id="experience">
         <div className="basic-experience">
-          <Zoom duration={1000}>
+          <Zoom duration={500}>
             <div className="experience-heading-div">
               {/* <div className="experience-heading-img-div">
                 <ExperienceImg theme={theme} />

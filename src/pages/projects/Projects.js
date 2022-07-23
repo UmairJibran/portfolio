@@ -13,7 +13,7 @@ class Projects extends Component {
     return (
       <div className="bg-white projects-main py-10" id="projects">
         <div className="basic-projects">
-          <Zoom duration={1000}>
+          <Zoom duration={500}>
             <div className="projects-heading-div">
               {/* <div className="projects-heading-img-div">
                 <ProjectsImg theme={theme} />

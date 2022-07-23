@@ -21,7 +21,7 @@ const ContactComponent = ({ theme }) => {
   return (
     <div className="contact-main bg-white py-10" id="contact">
       <div className="basic-contact">
-        <Zoom duration={1000}>
+        <Zoom duration={500}>
           <div className="contact-heading-div">
             {/* <div className="contact-heading-img-div">
               <AddressImg theme={theme} />

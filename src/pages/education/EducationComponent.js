@@ -17,7 +17,7 @@ class Education extends Component {
       <div className="education-main">
         <Header theme={this.props.theme} />
         <div className="basic-education">
-          <Zoom duration={1000}>
+          <Zoom duration={500}>
             <div className="heading-div">
               <div className="heading-img-div">
                 <EducationImg theme={theme} />
