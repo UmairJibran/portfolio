@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <div>
         <header className="header">
-          <div  className="hidden md:block">
+          <div className="hidden md:block">
             <span style={{ color: theme.text }}> &lt;</span>
             <span
               className="logo-name cursor-pointer"
@@ -30,35 +30,37 @@ class Header extends Component {
           </label>
           <ul className="menu" style={{ backgroundColor: theme.body }}>
             <li
-              className="mx-2 cursor-pointer"
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
               onClick={() => scrollIntoView("projects")}
-              style={{ color: theme.text }}
             >
               Projects
             </li>
-            <li
-              className="mx-2 cursor-pointer"
+            {/* <li
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
               onClick={() => scrollIntoView("testimonials")}
-              style={{ color: theme.text }}
             >
               References
-            </li>
+            </li> */}
             <li
-              className="mx-2 cursor-pointer"
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
               onClick={() => scrollIntoView("experience")}
-              style={{ color: theme.text }}
             >
               Experience
             </li>
             <li
-              className="mx-2 cursor-pointer"
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
               onClick={() => scrollIntoView("skills")}
-              style={{ color: theme.text }}
             >
               Skills
             </li>
+            {/* <li
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              onClick={() => scrollIntoView("Stats")}
+            >
+              Stats
+            </li> */}
             <li
-              className="mx-2 cursor-pointer"
+              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
               onClick={() => scrollIntoView("contact")}
             >
               Contact
