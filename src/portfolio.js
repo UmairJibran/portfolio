@@ -7,10 +7,10 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello World! Jibran here",
+  title: "Hello World, Jibran here!",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
-  subTitle: "Node & Flutter 📱 developer",
+  subTitle: "Full stack developer",
   extraInfo:
     "Learning new tech everyday. A curious full stack developer with ~2 years in the security space. I like to focus on the security of the system. Working in startups where time is of the essence gives me goosebumps. Let's connect!",
   resumeLink:
@@ -91,12 +91,12 @@ const informalSocialMediaLinksHome = [
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
     backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
   },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/umairjibran8",
-    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  },
+  // {
+  //  name: "Facebook",
+  //  link: "https://www.facebook.com/umairjibran8",
+  //  fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
+  //  backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
+  // },
   // {
   //   name: "Snapchat",
   //   link: "https://www.snapchat.com/add/umairjibran7",
@@ -115,12 +115,12 @@ const informalSocialMediaLinksHome = [
     fontAwesomeIcon: "fa-whatsapp",
     backgroundColor: "#25D366",
   },
-  {
-    name: "iMessage",
-    link: "sms:+923120919647&body=Hi",
-    fontAwesomeIcon: "fa fa-comment",
-    backgroundColor: "#FF9800",
-  },
+  // {
+  //  name: "iMessage",
+  //  link: "sms:+923120919647&body=Hi",
+  //  fontAwesomeIcon: "fa fa-comment",
+  //  backgroundColor: "#FF9800",
+  // },
 ];
 
 const skills = {
