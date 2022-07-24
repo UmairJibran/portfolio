@@ -7,16 +7,16 @@ import "./ProjectCards.css";
 const UnifiedProjectsCard = ({ repo }) => {
   return (
     <div className="p-4 lg:w-1/3  unified-projects-card">
-      <div className="h-full border border-gray-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative glass-effect">
-        <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+      <div className="h-full border border-slate-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative glass-effect">
+        <h2 className="tracking-widest text-xs title-font font-semibold text-stone-900 mb-1 -mt-8">
           {repo.category?.toUpperCase()}
         </h2>
-        <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+        <h1 className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3">
           {repo.name}
         </h1>
-        <p className="leading-relaxed mb-3">{repo.description}</p>
+        <p className="leading-relaxed mb-3 text-gray-500">{repo.description}</p>
         <a
-          className="text-indigo-500 inline-flex items-center"
+          className="text-indigo-400 inline-flex items-center hover:text-indigo-700"
           href={repo.url}
           target="_blank"
           rel="noreferrer"
