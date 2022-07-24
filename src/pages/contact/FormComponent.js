@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import toast from "react-hot-toast";
 
 import ClickableButton from "../../components/button/ClickableButton";
-import Loader from "../../components/Loader/LoaderLogo";
+import Loader from "../../components/Loader/Loader";
 import ErrorToast from "../../components/toast/ErrorToast";
 import SuccessToast from "../../components/toast/SuccessToast";
 
@@ -79,7 +79,7 @@ const FormComponent = ({ theme, closeEmailForm }) => {
 
   return loading ? (
     <>
-      <Loader isSplash={false} />
+      <Loader theme={theme} />
     </>
   ) : (
     <>
