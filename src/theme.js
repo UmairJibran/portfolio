@@ -131,6 +131,18 @@ export const orangeTheme = {
   headerColor: "#FF6B3577",
 };
 
+export const strongTheme = {
+  body: "#1C1339",
+  text: "#FFFFFF",
+  highlight: "#A29F40",
+  dark: "#1C1339",
+  secondaryText: "#F7E2EE",
+  imageHighlight: "#0E6BA8",
+  compImgHighlight: "#E6E6E6",
+  jacketColor: "#A29F40",
+  headerColor: "#1C1339",
+};
+
 /*
  *Available Themes
  * blackTheme
@@ -146,4 +158,4 @@ export const orangeTheme = {
  * orangeTheme
  */
 
-export const chosenTheme = blueTheme;
+export const chosenTheme = strongTheme;

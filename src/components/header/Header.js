@@ -17,7 +17,7 @@ class Header extends Component {
             <span style={{ color: theme.text }}> &lt;</span>
             <span
               className="logo-name cursor-pointer"
-              style={{ color: "#010101" }}
+              style={{ color: theme.text }}
             >
               {greeting.logo_name}
             </span>
@@ -30,37 +30,43 @@ class Header extends Component {
           </label>
           <ul className="menu" style={{ backgroundColor: theme.body }}>
             <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("projects")}
             >
               Projects
             </li>
             {/* <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("testimonials")}
             >
               References
             </li> */}
             <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("experience")}
             >
               Experience
             </li>
             <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("skills")}
             >
               Skills
             </li>
             {/* <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("Stats")}
             >
               Stats
             </li> */}
             <li
-              className="mx-3 my-1 cursor-pointer font-light text-slate-500 hover:font-bold hover:text-cyan-900"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("contact")}
             >
               Contact

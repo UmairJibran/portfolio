@@ -23,7 +23,10 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           } pointer-events-none`}
         ></div>
       </div>
-      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-dark inline-flex items-center justify-center text-white relative z-10">
+      <div
+        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10"
+        style={{ backgroundColor: `${theme.text}F0` }}
+      >
         <svg
           fill="none"
           stroke={theme.body}
@@ -37,7 +40,10 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
         </svg>
       </div>
       <div className="flex-grow pl-4">
-        <h2 className="text-base text-gray-900 mb-1 tracking-wider">
+        <h2
+          className="text-base mb-1 tracking-wider"
+          style={{ color: theme.text }}
+        >
           <span className="font-medium">{experience.title}</span>{" "}
           <small>at</small>{" "}
           <span
@@ -47,7 +53,10 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
             {experience.company}
           </span>
         </h2>
-        <h2 className="text-sm text-gray-900 mb-1 tracking-wider">
+        <h2
+          className="text-sm text-gray-900 mb-1 tracking-wider"
+          style={{ color: theme.text }}
+        >
           <small>{experience.location}</small>{" "}
           {experience.duration ?? (
             <span className="font-bold cursor-pointer">
@@ -55,13 +64,17 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
             </span>
           )}
         </h2>
-        {multiLine ? (
-          description
-            .split("\n")
-            .map((line, index) => <p className="text-sm" key={index}>{line}</p>)
-        ) : (
-          <p className="leading-relaxed text-sm">{description}</p>
-        )}
+        <div style={{ color: `${theme.text}A0` }}>
+          {multiLine ? (
+            description.split("\n").map((line, index) => (
+              <p className="text-sm" key={index}>
+                {line}
+              </p>
+            ))
+          ) : (
+            <p className="leading-relaxed text-sm">{description}</p>
+          )}
+        </div>
       </div>
     </div>
   );

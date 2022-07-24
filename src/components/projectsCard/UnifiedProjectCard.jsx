@@ -4,19 +4,30 @@ import * as React from "react";
 
 import "./ProjectCards.css";
 
-const UnifiedProjectsCard = ({ repo }) => {
+const UnifiedProjectsCard = ({ repo, theme }) => {
   return (
     <div className="p-4 lg:w-1/3  unified-projects-card">
       <div className="h-full border border-slate-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative glass-effect">
-        <h2 className="tracking-widest text-xs title-font font-semibold text-stone-900 mb-1 -mt-8">
+        <h2
+          className="tracking-widest text-xs title-font font-semibold text-stone-900 mb-1 -mt-8"
+          style={{ color: theme.text }}
+        >
           {repo.category?.toUpperCase()}
         </h2>
-        <h1 className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3">
+        <h1
+          className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3"
+          style={{ color: theme.text }}
+        >
           {repo.name}
         </h1>
-        <p className="leading-relaxed mb-3 text-gray-500">{repo.description}</p>
+        <p
+          className="leading-relaxed mb-3 text-gray-500"
+          style={{ color: `${theme.text}A0` }}
+        >
+          {repo.description}
+        </p>
         <a
-          className="text-indigo-400 inline-flex items-center hover:text-indigo-700"
+          className="text-cyan-200 inline-flex items-center hover:text-cyan-500"
           href={repo.url}
           target="_blank"
           rel="noreferrer"
