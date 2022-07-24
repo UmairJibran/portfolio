@@ -69,7 +69,7 @@
 .contact-heading-text {
   font-size: 56px;
   font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-family: "Space Mono";
   line-height: 1.1;
   text-align: center;
   margin-top: 60px;
@@ -78,7 +78,7 @@
 .blog-heading-text {
   font-size: 56px;
   font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-family: "Space Mono";
   line-height: 1.1;
   text-align: center;
   margin-top: 40px;
@@ -112,7 +112,7 @@
   margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Google Sans Medium";
+  font-family: "Space Mono";
 }
 
 .resume-btn-div {
