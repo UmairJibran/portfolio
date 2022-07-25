@@ -30,13 +30,13 @@ class Experience extends Component {
                 </h1>
                 <h3
                   className="experience-heading-sub-text mb-6"
-                  style={{ color: theme.text }}
+                  style={{ color: `${theme.secondaryText}D0` }}
                 >
                   {experience["subtitle"]}
                 </h3>
                 <p
                   className="experience-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
+                  style={{ color: `${theme.secondaryText}A0` }}
                 >
                   {experience["description"]}
                 </p>

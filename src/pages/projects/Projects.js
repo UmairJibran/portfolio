@@ -27,7 +27,7 @@ class Projects extends Component {
                 </h1>
                 <p
                   className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
+                  style={{ color: `${theme.secondaryText}A0` }}
                 >
                   {projectsHeader["description"]}
                 </p>

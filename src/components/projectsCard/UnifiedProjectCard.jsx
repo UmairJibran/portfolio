@@ -16,7 +16,7 @@ const UnifiedProjectsCard = ({ repo, theme }) => {
         </h2>
         <h1
           className="title-font sm:text-2xl text-xl font-bold text-gray-900 mb-3"
-          style={{ color: theme.text }}
+          style={{ color: `${theme.text}D0` }}
         >
           {repo.name}
         </h1>

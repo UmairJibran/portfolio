@@ -47,7 +47,7 @@ class SkillSection extends Component {
                       return (
                         <p
                           className="subTitle skills-text mt-1"
-                          style={{ color: theme.secondaryText }}
+                          style={{ color: `${theme.secondaryText}D0` }}
                           key={key}
                         >
                           {skillSentence}
