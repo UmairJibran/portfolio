@@ -19,7 +19,10 @@ const ContactComponent = ({ theme }) => {
   const closeEmailForm = () => updateShowEmailForm(false);
 
   return (
-    <div className="contact-main py-10" id="contact">
+    <div
+      className={`contact-main py-10 ${showEmailForm ? "-mb-20 -pb-5" : ""}`}
+      id="contact"
+    >
       <div className="basic-contact">
         <Zoom duration={500}>
           <div className="contact-heading-div">

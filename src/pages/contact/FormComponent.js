@@ -108,6 +108,11 @@ const FormComponent = ({ theme, closeEmailForm }) => {
                       placeholder="Email"
                       style={{
                         marginInlineEnd: 10,
+                        backgroundColor: `${theme.body}00`,
+                        borderColor: theme.text,
+                        borderWidth: 0.5,
+                        borderStyle: "solid",
+                        color: theme.text,
                       }}
                       id="email"
                       ref={emailReference}
@@ -118,6 +123,11 @@ const FormComponent = ({ theme, closeEmailForm }) => {
                       placeholder="Name"
                       style={{
                         marginInlineStart: 10,
+                        backgroundColor: `${theme.body}00`,
+                        borderColor: theme.text,
+                        borderWidth: 0.5,
+                        borderStyle: "solid",
+                        color: theme.text,
                       }}
                       id="name"
                     />
@@ -128,10 +138,27 @@ const FormComponent = ({ theme, closeEmailForm }) => {
                       name="subject"
                       placeholder="Subject"
                       id="subject"
+                      style={{
+                        backgroundColor: `${theme.body}00`,
+                        borderColor: theme.text,
+                        borderWidth: 0.5,
+                        borderStyle: "solid",
+                        color: theme.text,
+                      }}
                     />
                   </div>
                   <div className="field padding-bottom--24">
-                    <textarea id="message" placeholder="Message"></textarea>
+                    <textarea
+                      id="message"
+                      placeholder="Message"
+                      style={{
+                        backgroundColor: `${theme.body}00`,
+                        borderColor: theme.text,
+                        borderWidth: 0.5,
+                        borderStyle: "solid",
+                        color: theme.text,
+                      }}
+                    ></textarea>
                   </div>
                 </form>
               </div>
