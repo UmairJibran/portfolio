@@ -9,8 +9,7 @@ const UnifiedProjectsCard = ({ repo, theme }) => {
     <div className="p-4 lg:w-1/3 w-full unified-projects-card">
       <div className="h-full border border-slate-300 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative glass-effect">
         <h2
-          className="tracking-widest text-xs title-font font-semibold text-stone-900 mb-1 -mt-8"
-          style={{ color: theme.text }}
+          className="tracking-widest text-xs title-font font-semibold text-green-400 mb-1 -mt-8"
         >
           {repo.category?.toUpperCase()}
         </h2>
