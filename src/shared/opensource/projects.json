@@ -4,7 +4,7 @@
       "id": "asdg3425b=",
       "name": "MeraID",
       "url": "https://www.meraid.pk",
-      "description": "In this project I started working on the mobile application's frontend using Flutter. Then I switched to the backend where all the fun happened. I have used NodeJS, Serverless Framework, and AWS Lambda for APIs.",
+      "description": "An upcoming KYC service that will verify customer up and beyond",
       "logo": "meraid",
       "category": "Mobile/Backend/Web",
       "technologies": [
@@ -93,7 +93,7 @@
       "category": "Backend/Web",
       "name": "Shaoor.tech",
       "url": "https://shaoor.umairjibran.com/",
-      "description": "Shaoor.tech was a pet application developed using VUE JS as an SPA(Single Page Application), for the backend services I started with ExpressJS and the switched Microsoft Azure Serverless Functions were used with MongoDB as the database solution.",
+      "description": "Shaoor.tech was a pet project, and a masterpiece in the making",
       "technologies": [
         {
           "skillName": "NodeJS",
@@ -145,7 +145,7 @@
       "name": "Mavencery",
       "category": "Mobile/Backend",
       "url": "http://mavencery.com/",
-      "description": "Mavencery was an upcoming Grocer Giant registered in California, in this project my primary role was backend development. I started working on this project in between my internship and my graduation. I have used NodeJS, ExpressJS, and MySQL as database solution, I got exposure to Sequelize ORM in this project.",
+      "description": "Mavencery was an upcoming Grocer Giant registered in California.",
       "technologies": [
         {
           "skillName": "NodeJS",
@@ -204,7 +204,7 @@
       "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
       "name": "Drive Safe Medicals",
       "url": "https://www.drivesafemedicals.co.uk",
-      "description": "Drive Safe Medicals is a UK startup where they provide low-cost medical examinations reports for a Group 2, bus or lorry licenses, taxi's, motorsport, firefighters, and forklift/crane operators. They also provide occupational health services to both individuals and businesses.",
+      "description": "Drive Safe Medicals is a UK startup to administer drivers' medicals",
       "technologies": [
         {
           "skillName": "Google Cloud",
@@ -272,7 +272,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Fooddo",
       "url": "https://github.com/UmairJibran/Fooddo",
-      "description": "Fooddo aimed at reducing food waste from banquets and houses, by sharing it with the deserving people. I designed and developed the solution using Figma and Flutter respectively.",
+      "description": "Fooddo is aimed at controlling food waste.",
       "technologies": [
         {
           "skillName": "Flutter",
@@ -310,7 +310,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
       "name": "eAuction",
       "url": "https://github.com/UmairJibran/online-Auction",
-      "description": "eAuction was a semester project that went beyond my and the professor's expectations, it started as a simple HTML website but adding features like manual Authentication, and time control for each auction item kept making it a more complex project. I started with HTML and CSS, then switched to Bootstrap as styling framework, and sticked to PHP and MySQL for the backend.",
+      "description": "eAuction is a semester project.",
       "technologies": [
         {
           "skillName": "PHP",
@@ -356,7 +356,7 @@
       "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
       "name": "City University LMS",
       "url": "https://github.com/UmairJibran/cu-lms",
-      "description": "It was a pet project still in development, uses flutter for client side and NodeJS MySQL for the backend.",
+      "description": "It is a pet project still in development",
       "technologies": [
         {
           "skillName": "Flutter",

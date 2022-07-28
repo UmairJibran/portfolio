@@ -32,7 +32,7 @@ const UnifiedProjectsCard = ({ repo, theme }) => {
           target="_blank"
           rel="noreferrer"
         >
-          Visit Project Page
+          Learn more
           <svg
             className="w-4 h-4 ml-2"
             viewBox="0 0 24 24"
