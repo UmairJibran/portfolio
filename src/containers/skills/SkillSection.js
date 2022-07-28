@@ -33,7 +33,7 @@ class SkillSection extends Component {
                 <Fade left duration={500}>
                   <h1
                     className="skills-heading mx-auto text-center"
-                    style={{ color: theme.text }}
+                    style={{ color: theme.text, marginBottom: "2rem" }}
                   >
                     {skill.title}
                   </h1>
