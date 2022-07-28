@@ -13,9 +13,8 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
     <div className="experience-timeline-main flex relative pb-12">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
         <div
-          className={`h-full w-1 ${
-            lastExperience ? "" : "bg-tracker"
-          } pointer-events-none`}
+          style={{ backgroundColor: lastExperience ? "" : `${theme.text}88` }}
+          className={`h-full w-1 pointer-events-none`}
         ></div>
       </div>
       <div
