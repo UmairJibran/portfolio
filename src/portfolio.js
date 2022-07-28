@@ -12,7 +12,7 @@ const greeting = {
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
   extraInfo:
-    "Learning new tech everyday. A curious full stack developer with ~2 years in the security space. I like to focus on the security of the system. Working in startups where time is of the essence gives me goosebumps. Let's connect!",
+    "Learning new tech everyday. A curious full stack developer with over 2 years of experience. Let's connect!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -452,8 +452,7 @@ const certifications = {
 const experience = {
   title: "Experience",
   subtitle: "Internship and Volunteership",
-  description:
-    "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
+  description: "", // "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
   sections: [
     {
       title: "Work",
@@ -480,8 +479,7 @@ const experience = {
           logo_path: "product-box-logo.png",
           duration: "May 2021 - July 2021",
           location: "Peshawar, Pakistan",
-          description:
-            "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
+          description: "", // "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
           color: "#1c0c0c",
         },
         {
@@ -491,8 +489,7 @@ const experience = {
           logo_path: "ideometrix-logo.png",
           duration: "August 2020 - November 2021",
           location: "Islamabad, Pakistan",
-          description:
-            "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
+          description: "", //"My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
         },
       ],
@@ -507,44 +504,43 @@ const experience = {
           logo_path: "microsoft_logo.png",
           duration: "Aug 2020 - Dec 2021",
           location: "CUSIT, Peshawar, Pakistan",
-          description:
-            "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
+          description: "", // "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
           color: "#D83B01",
         },
-        {
-          title: "Developer Program Member",
-          company: "Github",
-          company_url: "https://github.com/",
-          logo_path: "github_logo.png",
-          duration: "",
-          location: "",
-          description:
-            "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
-          color: "#181717",
-        },
-        {
-          title: "BookDrive",
-          company: "Read Pakistan",
-          company_url: "https://readpakistan.org.pk/",
-          logo_path: "book-charity.svg",
-          duration: "",
-          location: "Peshawar, Pakistan",
-          description:
-            "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
-          color: "#181717",
-        },
-        {
-          title: "BookDrive",
-          company: "Chughtai Library",
-          company_url:
-            "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
-          logo_path: "book-charity.svg",
-          duration: "",
-          location: "Peshawar, Pakistan",
-          description:
-            "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
-          color: "#181717",
-        },
+        // {
+        //   title: "Developer Program Member",
+        //   company: "Github",
+        //   company_url: "https://github.com/",
+        //   logo_path: "github_logo.png",
+        //   duration: "",
+        //   location: "",
+        //   description:
+        //     "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
+        //   color: "#181717",
+        // },
+        // {
+        //   title: "BookDrive",
+        //   company: "Read Pakistan",
+        //   company_url: "https://readpakistan.org.pk/",
+        //   logo_path: "book-charity.svg",
+        //   duration: "",
+        //   location: "Peshawar, Pakistan",
+        //   description:
+        //     "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
+        //   color: "#181717",
+        // },
+        // {
+        //   title: "BookDrive",
+        //   company: "Chughtai Library",
+        //   company_url:
+        //     "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
+        //   logo_path: "book-charity.svg",
+        //   duration: "",
+        //   location: "Peshawar, Pakistan",
+        //   description:
+        //     "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
+        //   color: "#181717",
+        // },
       ],
     },
   ],
@@ -553,8 +549,7 @@ const experience = {
 // Projects Page
 const projectsHeader = {
   title: "Projects",
-  description:
-    "My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
+  description: "", //"My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
 };
 
 // Contact Page
