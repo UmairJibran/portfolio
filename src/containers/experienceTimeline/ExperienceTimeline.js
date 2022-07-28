@@ -9,11 +9,6 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
     win.focus();
   }
 
-  const description = experience.description;
-  let multiLine = false;
-  if (description.includes("\n")) {
-    multiLine = true;
-  }
   return (
     <div className="experience-timeline-main flex relative pb-12">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -64,17 +59,6 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
             </span>
           )}
         </h2>
-        <div style={{ color: `${theme.text}A0` }}>
-          {multiLine ? (
-            description.split("\n").map((line, index) => (
-              <p className="text-sm" key={index}>
-                {line}
-              </p>
-            ))
-          ) : (
-            <p className="leading-relaxed text-sm">{description}</p>
-          )}
-        </div>
       </div>
     </div>
   );
