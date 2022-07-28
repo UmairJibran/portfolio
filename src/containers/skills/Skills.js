@@ -16,11 +16,6 @@ export default function Skills(props) {
             className="skills-description"
             style={{ color: theme.secondaryText }}
           >
-            I love to code and <s>coffee</s> tea.{" "}
-            <span role="img" aria-label="hand-shake">
-              ☕
-            </span>{" "}
-            <br />
             My development stack is as follows:
           </p>
         </Fade>
