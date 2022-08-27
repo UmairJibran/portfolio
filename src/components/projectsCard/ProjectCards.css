@@ -1,0 +1,20 @@
+.bg-semi-grey {
+  background-color: #e6e6e6;
+}
+
+.major-projects-card,
+.minor-projects-card,
+.unified-projects-card {
+  font-family: "Space Mono", monospace;
+}
+
+.glass-effect {
+  background: linear-gradient(135deg, #1C1339 0%, #1C1339 100%);
+  background: -webkit-linear-gradient(135deg, #1C1339 0%, #1C1335 100%);
+  background: -moz-linear-gradient(135deg, #1C1339 0%, #1C1339 100%);
+  background: -o-linear-gradient(135deg, #1C1339 0%, #1C1339 100%);
+  background: -ms-linear-gradient(135deg, #1C1339 0%, #1C1339 100%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32 px 0 rgba(0, 0, 0, 0.37);
+}

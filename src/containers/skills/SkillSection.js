@@ -3,17 +3,17 @@ import "./Skills.css";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import { skills } from "../../portfolio";
 import { Fade } from "react-reveal";
-import FullStackImg from "./FullStackImg";
-import CloudInfraImg from "./CloudInfraImg";
-import DesignImg from "./DesignImg";
+// import FullStackImg from "./FullStackImg";
+// import CloudInfraImg from "./CloudInfraImg";
+// import DesignImg from "./DesignImg";
 
-function GetSkillSvg(props) {
-  if (props.fileName === "FullStackImg")
-    return <FullStackImg theme={props.theme} />;
-  else if (props.fileName === "CloudInfraImg")
-    return <CloudInfraImg theme={props.theme} />;
-  return <DesignImg theme={props.theme} />;
-}
+// function GetSkillSvg(props) {
+//   if (props.fileName === "FullStackImg")
+//     return <FullStackImg theme={props.theme} />;
+//   else if (props.fileName === "CloudInfraImg")
+//     return <CloudInfraImg theme={props.theme} />;
+//   return <DesignImg theme={props.theme} />;
+// }
 
 class SkillSection extends Component {
   render() {
@@ -22,29 +22,32 @@ class SkillSection extends Component {
       <div>
         {skills.data.map((skill, index) => {
           return (
-            <div className="skills-main-div" key={index}>
-              <Fade left duration={2000}>
+            <div className="skills-main-div h-fit" key={index}>
+              {/* <Fade left duration={2000}>
                 <div className="skills-image-div">
                   <GetSkillSvg fileName={skill.fileName} theme={theme} />
                 </div>
-              </Fade>
+              </Fade> */}
 
               <div className="skills-text-div">
-                <Fade left duration={1000}>
-                  <h1 className="skills-heading" style={{ color: theme.text }}>
+                <Fade left duration={500}>
+                  <h1
+                    className="skills-heading mx-auto text-center"
+                    style={{ color: theme.text, marginBottom: "2rem" }}
+                  >
                     {skill.title}
                   </h1>
                 </Fade>
-                <Fade right duration={1500}>
+                <Fade right duration={500}>
                   <SoftwareSkill logos={skill.softwareSkills} />
                 </Fade>
-                <Fade left duration={2000}>
+                <Fade left duration={1000}>
                   <div>
                     {skill.skills.map((skillSentence, key) => {
                       return (
                         <p
-                          className="subTitle skills-text"
-                          style={{ color: theme.secondaryText }}
+                          className="subTitle skills-text mt-1"
+                          style={{ color: `${theme.secondaryText}D0` }}
                           key={key}
                         >
                           {skillSentence}

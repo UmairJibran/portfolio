@@ -29,7 +29,7 @@ export default class DataScienceImg extends Component {
           fill="none"
           stroke={theme.text}
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M352.468,237.56768A94,94,0,0,0,286,77.09967v94Z"
@@ -79,7 +79,7 @@ export default class DataScienceImg extends Component {
           fill="none"
           stroke={theme.text}
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="175"
@@ -232,14 +232,14 @@ export default class DataScienceImg extends Component {
           fill="none"
           stroke={theme.text}
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <polyline
           points="556 227.5 556 435.5 757 435.5"
           fill="none"
           stroke={theme.text}
           stroke-miterlimit="10"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <rect
           x="567"

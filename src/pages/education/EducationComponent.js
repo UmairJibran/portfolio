@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
-// import Footer from "../../components/footer/Footer";
+import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import Educations from "../../containers/education/Educations";
 import Certifications from "../../containers/certifications/Certifications";
@@ -17,16 +17,19 @@ class Education extends Component {
       <div className="education-main">
         <Header theme={this.props.theme} />
         <div className="basic-education">
-          <Zoom duration={1000}>
+          <Zoom duration={500}>
             <div className="heading-div">
               <div className="heading-img-div">
                 <EducationImg theme={theme} />
               </div>
               <div className="heading-text-div">
-                <h1 className="heading-text" style={{ color: theme.text }}>
+                <h1 className="heading-text mb-4" style={{ color: theme.text }}>
                   Education
                 </h1>
-                <h3 className="heading-sub-text" style={{ color: theme.text }}>
+                <h3
+                  className="heading-sub-text mb-6"
+                  style={{ color: theme.text }}
+                >
                   My Qualifications and Certifications
                 </h3>
                 <p>
@@ -39,7 +42,7 @@ class Education extends Component {
           <Educations theme={this.props.theme} />
           <Certifications theme={this.props.theme} />
         </div>
-        {/* <Footer theme={this.props.theme} /> */}
+        <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
       </div>
     );

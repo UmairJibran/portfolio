@@ -11,7 +11,11 @@
   display: inline-block;
   margin-right: 20px;
   margin-bottom: 20px;
-  font-family: "Google Sans Regular";
+  font-family: "Space Mono", monospace;
+}
+
+.font-space-mono {
+  font-family: "Space Mono", monospace;
 }
 
 .software-skill-inline > i {

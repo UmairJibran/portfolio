@@ -16,7 +16,7 @@ export const SunSvg = styled.svg`
 `;
 
 export const MoonSvg = styled.svg`
-  margin-left: 10px;
+  marginLeft: 10px;
 `;
 
 export default class ToggleSwitch extends Component {
@@ -34,9 +34,9 @@ export default class ToggleSwitch extends Component {
           viewBox="0 0 24 24"
           fill="none"
           stroke={back}
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <circle cx="12" cy="12" r="5" />
           <line x1="12" y1="1" x2="12" y2="3" />
@@ -57,7 +57,7 @@ export default class ToggleSwitch extends Component {
         />
         <label
           style={{ background: back }}
-          className="react-switch-label"
+          className="react-switchLabel"
           htmlFor={`react-switch-new`}
         >
           <span
@@ -72,9 +72,9 @@ export default class ToggleSwitch extends Component {
           viewBox="0 0 24 24"
           fill="none"
           stroke={back}
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </MoonSvg>

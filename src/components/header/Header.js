@@ -1,75 +1,75 @@
 import React, { Component } from "react";
 import "./Header.css";
-import { NavLink, Link } from "react-router-dom";
 import { greeting } from "../../portfolio.js";
 
 class Header extends Component {
   render() {
     const theme = this.props.theme;
+
+    const scrollIntoView = (view) => {
+      document.getElementById(view).scrollIntoView();
+    };
+
     return (
       <div>
         <header className="header">
-          <NavLink to="/home" tag={Link} className="logo">
+          <div className="hidden md:block">
             <span style={{ color: theme.text }}> &lt;</span>
-            <span className="logo-name" style={{ color: "#010101" }}>
+            <span
+              className="logo-name cursor-pointer"
+              style={{ color: theme.text }}
+            >
               {greeting.logo_name}
             </span>
             <span style={{ color: theme.text }}>/&gt;</span>
-          </NavLink>
+          </div>
+
           <input className="menu-btn" type="checkbox" id="menu-btn" />
           <label className="menu-icon" htmlFor="menu-btn">
             <span className="navicon"></span>
           </label>
           <ul className="menu" style={{ backgroundColor: theme.body }}>
-            <li>
-              <NavLink
-                to="/home"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
-              >
-                Home
-              </NavLink>
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("projects")}
+            >
+              Projects
             </li>
-            <li>
-              <NavLink
-                to="/education"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
-              >
-                Education
-              </NavLink>
+            {/* <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("testimonials")}
+            >
+              References
+            </li> */}
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("experience")}
+            >
+              Experience
             </li>
-            <li>
-              <NavLink
-                to="/experience"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
-              >
-                Experience
-              </NavLink>
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("skills")}
+            >
+              Skills
             </li>
-            <li>
-              <NavLink
-                to="/projects"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
-              >
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                tag={Link}
-                activeStyle={{ fontWeight: "bold" }}
-                style={{ color: theme.text }}
-              >
-                Contact Me
-              </NavLink>
+            {/* <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("Stats")}
+            >
+              Stats
+            </li> */}
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("contact")}
+            >
+              Contact
             </li>
           </ul>
         </header>

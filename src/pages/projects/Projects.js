@@ -1,37 +1,33 @@
 import React, { Component } from "react";
-import Header from "../../components/header/Header";
-// import Footer from "../../components/footer/Footer";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
+import UnifiedProjectCard from "../../components/projectsCard/UnifiedProjectCard.jsx";
 import Button from "../../components/button/Button";
-import TopButton from "../../components/topButton/TopButton";
 import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
-import ProjectsImg from "./ProjectsImg";
+// import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
     const theme = this.props.theme;
     return (
-      <div className="projects-main">
-        <Header theme={theme} />
+      <div className="projects-main" id="projects">
         <div className="basic-projects">
-          <Zoom duration={1000}>
+          <Zoom duration={500}>
             <div className="projects-heading-div">
-              <div className="projects-heading-img-div">
+              {/* <div className="projects-heading-img-div">
                 <ProjectsImg theme={theme} />
-              </div>
+              </div> */}
               <div className="projects-heading-text-div">
                 <h1
-                  className="projects-heading-text"
+                  className="projects-heading-text mb-10"
                   style={{ color: theme.text }}
                 >
                   {projectsHeader.title}
                 </h1>
                 <p
                   className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
+                  style={{ color: `${theme.secondaryText}A0` }}
                 >
                   {projectsHeader["description"]}
                 </p>
@@ -39,20 +35,29 @@ class Projects extends Component {
             </div>
           </Zoom>
         </div>
-        <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
-          })}
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap -m-4">
+            {[...ProjectsData.major, ...ProjectsData.minor].map(
+              (repo, index) => {
+                return (
+                  <UnifiedProjectCard
+                    repo={repo}
+                    key={index}
+                    theme={theme}
+                    right={index % 2}
+                  />
+                );
+              }
+            )}
+          </div>
         </div>
         <Button
           text={"More Projects"}
           className="project-button"
-          href="https://github.com/umairjibran"
+          href="https://github.com/umairjibran?tab=repositories&sort=stargazers"
           newTab={true}
           theme={theme}
         />
-        {/* <Footer theme={this.props.theme} onToggle={this.props.onToggle} /> */}
-        <TopButton theme={this.props.theme} />
       </div>
     );
   }

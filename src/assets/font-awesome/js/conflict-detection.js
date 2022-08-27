@@ -101,9 +101,8 @@
   var loaded = false;
 
   if (IS_DOM) {
-    loaded = (DOCUMENT.documentElement.doScroll
-      ? /^loaded|^c/
-      : /^loaded|^i|^c/
+    loaded = (
+      DOCUMENT.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/
     ).test(DOCUMENT.readyState);
     if (!loaded) DOCUMENT.addEventListener("DOMContentLoaded", listener);
   }

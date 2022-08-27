@@ -1,15 +1,15 @@
 .main {
-  width: 100%;
-  padding: 20px 10px;
+  width: auto;
+  padding: 20px 10px 0 10px;
   margin: 0px auto;
   margin-top: 4rem;
   /* background: black!important; */
 }
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
+  padding: 20px 10px 0 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 4rem;
   filter: grayscale(10%);
 }
 
@@ -22,7 +22,7 @@
 
 .gretting-main {
   width: 90%;
-  padding: 20px 10px;
+  padding: 20px 10px 0 10px;
   margin: 0px auto;
 }
 
@@ -32,7 +32,6 @@
 
 .greeting-main > * {
   flex: 1;
-  margin-bottom: 30px;
 }
 .button-greeting-div {
   display: flex;
@@ -42,31 +41,37 @@
 .greeting-text {
   margin-top: 80px;
   font-size: 55px;
-  line-height: 1.1;
-  font-family: "Google Sans Regular";
+  line-height: 1.1; 
+  font-family: "Space Mono";
+  margin-top: 1em;
   color: #133b4f;
 }
 
 .celeb {
   margin-left: 35px;
-  /* margin-bottom: 5rem; */
   font-size: 2rem;
 }
 
 .greeting-nickname {
   font-size: 30px;
   line-height: 0px;
-  font-family: "Google Sans Bold Italic";
+  font-family: "Space Mono";
 }
 
 .greeting-text-p {
   font-size: 30px;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .greeting-text-p2 {
-  font-size: 1em;
-  font-family: "Google Sans Regular";
+  font-size: 1rem;
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .greeting-image-div > * {
@@ -109,7 +114,8 @@
     font-size: 25px;
     text-align: center;
   }
-  .greeting-text-p {
+  .greeting-text-p,
+  .greeting-text-p2 {
     font-size: 21px !important;
     margin-right: 0px;
     line-height: normal;

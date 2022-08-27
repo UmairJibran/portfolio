@@ -17,7 +17,7 @@
 }
 
 .logo_img {
-  margin: 3px;
+  margin: auto;
   width: auto;
   height: 100px;
 }
@@ -27,13 +27,19 @@
 }
 
 .cert-body-title {
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: 20px;
   margin: 10px;
 }
 
 .cert-body-subtitle {
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   font-size: 18px;
   color: #808080;
   margin: 10px;
@@ -91,7 +97,10 @@
 .content-details h3 {
   color: #fff;
   font-weight: 500;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase;

@@ -7,11 +7,12 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello World! Umair here",
+  title: "Hello World, Jibran here!",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
-  subTitle: "Node & Flutter 📱 developer",
-  extraInfo: "Trying to learn new things everyday.",
+  subTitle: "Full stack developer",
+  extraInfo:
+    "Learning new tech everyday. A curious full stack developer with over 2 years of experience. Let's connect!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -90,12 +91,12 @@ const informalSocialMediaLinksHome = [
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
     backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
   },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/umairjibran8",
-    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  },
+  // {
+  //  name: "Facebook",
+  //  link: "https://www.facebook.com/umairjibran8",
+  //  fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
+  //  backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
+  // },
   // {
   //   name: "Snapchat",
   //   link: "https://www.snapchat.com/add/umairjibran7",
@@ -114,12 +115,12 @@ const informalSocialMediaLinksHome = [
     fontAwesomeIcon: "fa-whatsapp",
     backgroundColor: "#25D366",
   },
-  {
-    name: "iMessage",
-    link: "sms:+923120919647&body=Hi",
-    fontAwesomeIcon: "fa fa-comment",
-    backgroundColor: "#FF9800",
-  },
+  // {
+  //  name: "iMessage",
+  //  link: "sms:+923120919647&body=Hi",
+  //  fontAwesomeIcon: "fa fa-comment",
+  //  backgroundColor: "#FF9800",
+  // },
 ];
 
 const skills = {
@@ -143,7 +144,6 @@ const skills = {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
           style: {
-            backgroundColor: "#000000",
             color: "#F7DF1E",
           },
         },
@@ -165,7 +165,8 @@ const skills = {
           skillName: "Socket.io",
           fontAwesomeClassname: "simple-icons:socketdotio",
           style: {
-            color: "#010101",
+            // color: "#010101",
+            color: "#FFFFFF",
           },
         },
         {
@@ -214,8 +215,14 @@ const skills = {
           skillName: "Dart",
           fontAwesomeClassname: "simple-icons:dart",
           style: {
-            backgroundColor: "#00000000",
             color: "#0175C2",
+          },
+        },
+        {
+          skillName: "TailwindCSS",
+          fontAwesomeClassname: "simple-icons:tailwindcss",
+          style: {
+            color: "#06B6D4",
           },
         },
         {
@@ -246,7 +253,7 @@ const skills = {
           skillName: "AWS",
           fontAwesomeClassname: "simple-icons:amazonaws",
           style: {
-            color: "#232f3e",
+            color: "#FF9900",
           },
         },
         {
@@ -254,6 +261,13 @@ const skills = {
           fontAwesomeClassname: "simple-icons:microsoftazure",
           style: {
             color: "#0089D6",
+          },
+        },
+        {
+          skillName: "Google Cloud",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: {
+            color: "#4285F4",
           },
         },
         {
@@ -302,7 +316,8 @@ const skills = {
           skillName: "GitHub",
           fontAwesomeClassname: "simple-icons:github",
           style: {
-            color: "black",
+            // color: "000000",
+            color: "#FFFFFF",
           },
         },
         {
@@ -437,15 +452,14 @@ const certifications = {
 const experience = {
   title: "Experience",
   subtitle: "Internship and Volunteership",
-  description:
-    "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
+  description: "", // "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
   sections: [
     {
       title: "Work",
       experiences: [
         {
           title: "Associate Full Stack Engineer",
-          company: "ProductBox",
+          company: "Productbox",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
           duration: "July 2021 - Present",
@@ -459,26 +473,24 @@ const experience = {
       title: "Internships",
       experiences: [
         {
+          title: "Associate Full Stack Engineer Intern",
+          company: "Prodoctbox",
+          company_url: "https://www.productbox.dev/",
+          logo_path: "product-box-logo.png",
+          duration: "May 2021 - July 2021",
+          location: "Peshawar, Pakistan",
+          description: "", // "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
+          color: "#1c0c0c",
+        },
+        {
           title: "Flutter Intern",
           company: "IdeoMetrix",
           company_url: "https://www.ideometrix.com/",
           logo_path: "ideometrix-logo.png",
           duration: "August 2020 - November 2021",
           location: "Islamabad, Pakistan",
-          description:
-            "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
+          description: "", //"My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
-        },
-        {
-          title: "Associate Full Stack Engineer",
-          company: "Prodoct Box",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
-          duration: "May 2021 - July 2021",
-          location: "Peshawar, Pakistan",
-          description:
-            "My responsibilities include, but are not limited to: \n◦\t Work with customers/product managers to define, build out, test and release features and products. \n◦\t Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦\t Develop core application of clients in Flutter/Node.js Framework.\n◦\t Write automated test cases of high quality.",
-          color: "#1c0c0c",
         },
       ],
     },
@@ -490,46 +502,45 @@ const experience = {
           company: "Microsoft",
           company_url: "https://studentambassadors.microsoft.com/",
           logo_path: "microsoft_logo.png",
-          duration: "Aug 2020 - present",
+          duration: "Aug 2020 - Dec 2021",
           location: "CUSIT, Peshawar, Pakistan",
-          description:
-            "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
+          description: "", // "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
           color: "#D83B01",
         },
-        {
-          title: "Developer Program Member",
-          company: "Github",
-          company_url: "https://github.com/",
-          logo_path: "github_logo.png",
-          duration: "",
-          location: "",
-          description:
-            "I am actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
-          color: "#181717",
-        },
-        {
-          title: "BookDrive",
-          company: "Read Pakistan",
-          company_url: "https://readpakistan.org.pk/",
-          logo_path: "book-charity.svg",
-          duration: "",
-          location: "Peshawar, Pakistan",
-          description:
-            "I collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
-          color: "#181717",
-        },
-        {
-          title: "BookDrive",
-          company: "Chughtai Library",
-          company_url:
-            "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
-          logo_path: "book-charity.svg",
-          duration: "",
-          location: "Peshawar, Pakistan",
-          description:
-            "I collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
-          color: "#181717",
-        },
+        // {
+        //   title: "Developer Program Member",
+        //   company: "Github",
+        //   company_url: "https://github.com/",
+        //   logo_path: "github_logo.png",
+        //   duration: "",
+        //   location: "",
+        //   description:
+        //     "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
+        //   color: "#181717",
+        // },
+        // {
+        //   title: "BookDrive",
+        //   company: "Read Pakistan",
+        //   company_url: "https://readpakistan.org.pk/",
+        //   logo_path: "book-charity.svg",
+        //   duration: "",
+        //   location: "Peshawar, Pakistan",
+        //   description:
+        //     "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
+        //   color: "#181717",
+        // },
+        // {
+        //   title: "BookDrive",
+        //   company: "Chughtai Library",
+        //   company_url:
+        //     "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
+        //   logo_path: "book-charity.svg",
+        //   duration: "",
+        //   location: "Peshawar, Pakistan",
+        //   description:
+        //     "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
+        //   color: "#181717",
+        // },
       ],
     },
   ],
@@ -538,8 +549,7 @@ const experience = {
 // Projects Page
 const projectsHeader = {
   title: "Projects",
-  description:
-    "My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
+  description: "", //"My projects makes use of vast variety of latest technology tools including Nodejs, ExpressJS, AWS Lambda, Serverless Framework, Flutter, DynamoDB, MySQL, MongoDB, PHP, HTML/CSS, TailwindCSS, Bootstrap, C/C++. The design and architecture of the project plays an important role for me, so keeping the project scope in mind, selecting from one of the many design patterns and architectures is critical. Apart from development I do have a firm grasp in User Interface Designs using Figma and XD.",
 };
 
 // Contact Page
@@ -567,59 +577,80 @@ const testimonialsPageData = [
   {
     name: "Waleed Waseem",
     designation: "Founder and CEO",
-    employerAtTime: "ProductBox",
-    avatarImagePath: "waleed-waseem.jpeg",
+    employerAtTime: "Productbox",
     nameLink: "https://www.linkedin.com/in/waleed-waseem-2b625270/",
+    linkedin: "https://www.linkedin.com/in/waleed-waseem-2b625270/",
     message: `#madprops to Jibran U. for handling a product which I personally believe is the most complex application we are tackling around server-less model. Excellent work and keep it up!`,
+    email: "waleed@productbox.dev",
+  },
+  {
+    name: "Saif Ullah Sajid",
+    designation: "Engineering Lead | iOS Engineer",
+    employerAtTime: "Productbox",
+    nameLink: "https://www.linkedin.com/in/saifsajid99/",
+    linkedin: "https://www.linkedin.com/in/saifsajid99/",
+    message:
+      "Jibran is someone who stops at nothing. Once he is challenged to do a task, he delivers the best output no matter what. Being a manager jibran was the easiest engineer to manage. He is always humble and friendly. His learning attitude is amazing and he experiments with the top tech all the time. He is way ahead of his time in his professional journey.",
+    website: "https://saifullahsajid.com/",
   },
   {
     name: "Mohsin Raza",
     designation: "Lecturer at Department of Geology",
     employerAtTime: "Bacha Khan University",
-    avatarImagePath: "mohsin-raza.jpeg",
     nameLink: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
+    linkedin: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
     message: `Jibran is very hardworking and extremely talented individual. I got a chance to spend time with him during our Three months fellowship at Amal Academy. I found him very supportive and a great problem solver.`,
   },
   {
     name: "Qaiser Hussain",
-    designation: "Android Developer || Flutter Developer",
+    designation: "Android Developers Lead",
     employerAtTime: "FF Steels",
-    avatarImagePath: "qaiser-hussain.jpeg",
     nameLink: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
+    linkedin: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
     message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
   },
-  // {
-  //   name: "Kamal Uddin",
-  //   designation: "Network Administrator | Network Systems Engineer",
-  //   employerAtTime: "Freelance Market",
-  //   avatarImagePath: "kamal-uddin.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/kamaluddin0/",
-  //   message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
-  // },
-  // {
-  //   name: "Muhammad Yasin",
-  //   designation: "Frontend Developer",
-  //   employerAtTime: "Drive Safe Medicals",
-  //   avatarImagePath: "muhammad-yasin.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/muhammad-yasin-254066187/",
-  //   message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
-  // },
-  // {
-  //   name: "Muhammad Ibrahim",
-  //   designation: "Front-end Web | ReactJS",
-  //   employerAtTime: "Freelance Market",
-  //   avatarImagePath: "muhammad-ibrahim.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
-  //   message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
-  // },
-  // {
-  //   name: "Shah Rukh Khalid",
-  //   designation: "Marketing Student | Amal Career Prep Fellow",
-  //   employerAtTime: "Amal Academy",
-  //   avatarImagePath: "shah-rukh-khalid.jpeg",
-  //   nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
-  //   message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
-  // },
+  {
+    name: "Kamal Uddin",
+    designation: "Network Administrator | Network Systems Engineer",
+    employerAtTime: "",
+    nameLink: "https://www.linkedin.com/in/kamaluddin0/",
+    linkedin: "https://www.linkedin.com/in/kamaluddin0/",
+    message: `I have known Umair Jibran for a little over 4 years. He is one of the best developers I have come across. Umair's strong points are backend development and mobile apps. The thing that sets him apart from other developers is that he has a security-first approach which means your data will be safe, or as safe as it can be!`,
+  },
+  {
+    name: "Muhammad Yasin",
+    designation: "Frontend Developer",
+    employerAtTime: "DevSlayers",
+    nameLink: "https://www.linkedin.com/in/yasin-icl/",
+    linkedin: "https://www.linkedin.com/in/yasin-icl/",
+    message: `Working with Jibran is an absolute pleasure. He is the best backend developer I have ever worked with. His code quality, both in terms of re-usability and architecture, is unmatched in the industry. I also very much appreciate his focus on maintainability - he always maintains a clear separation of concerns when designing backend systems that are easy to work with for developers who are that focused on details.`,
+    email: "yasin_icl@yahoo.com",
+    website: "https://www.yasinistic.com",
+  },
+  {
+    name: "Muhammad Ibrahim",
+    designation: "ReactJS",
+    employerAtTime: "AlphaSquad ",
+    nameLink: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
+    linkedin: "https://www.linkedin.com/in/muhammad-ibrahim-9a2aa9169/",
+    message: `Mr. Umair Jibran is a very hard working person. He is very cooperative and loves to solve problems. I highly recommend him.`,
+  },
+  {
+    name: "Shah Rukh Khalid",
+    designation: "Marketing Student | Amal Career Prep Fellow",
+    employerAtTime: "Amal Academy",
+    nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
+    linkedin: "https://www.linkedin.com/in/shah-rukh-khalid/",
+    message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
+  },
+  {
+    name: "Muhammad Sulaimand",
+    designation: "Full Stack Developer",
+    employerAtTime: "FF STEEL",
+    nameLink: "https://www.linkedin.com/in/muhammad-sulaiman-7b2b77194/",
+    linkedin: "https://www.linkedin.com/in/muhammad-sulaiman-7b2b77194/",
+    message: `working with Umair Jibran can be best luck for a developer because he is one of the smart, technical and cooperative developer he loves to solve different problems, he is very good in R&D and googling.. one the best backend developer`,
+  },
 ];
 
 export {

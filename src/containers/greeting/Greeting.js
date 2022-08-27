@@ -14,7 +14,7 @@ export default function Greeting(props) {
   const theme = props.theme;
 
   return (
-    <Fade bottom duration={2000} distance="40px">
+    <Fade top duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
@@ -33,7 +33,7 @@ export default function Greeting(props) {
               </p>
               <p
                 className="greeting-text-p2 subTitle"
-                style={{ color: theme.secondaryText }}
+                style={{ color: `${theme.secondaryText}A0` }}
               >
                 {greeting.extraInfo}
               </p>
@@ -58,16 +58,14 @@ export default function Greeting(props) {
               </div>
             </div>
           </div>
-          {/* <div className="greeting-image-neon"> */}
-            <div className="greeting-image-div">
-              <img
-                className="myimage"
-                src={require("../../assets/images/umair.jpg")}
-                alt="Umair Jibran.img"
-              ></img>
-            </div>
+          <div className="greeting-image-div">
+            <img
+              className="myimage"
+              src={require("../../assets/images/umair.jpg")}
+              alt="Umair Jibran.img"
+            ></img>
           </div>
-        {/* </div> */}
+        </div>
       </div>
     </Fade>
   );

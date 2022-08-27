@@ -32,7 +32,7 @@
 .experience-heading-text {
   font-size: 56px;
   font-weight: 400;
-  font-family: "Google Sans Medium";
+  font-family: "Space Mono";
   line-height: 1.1;
   text-align: center;
   margin-top: 80px;
@@ -40,7 +40,10 @@
 
 .experience-heading-sub-text {
   font-size: 30px;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -51,7 +54,10 @@
   margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Google Sans Regular";
+ 
+  font-family: "Space Mono";
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 @media (max-width: 1380px) {

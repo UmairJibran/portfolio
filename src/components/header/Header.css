@@ -25,11 +25,6 @@
   text-decoration: none;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  /* background-color: #a6e1fa; */
-}
-
 .header li a {
   color: #fff;
 
@@ -74,7 +69,7 @@
 /* menu */
 
 .menu {
-  font-family: "Google Sans Regular";
+  font-family: "Space Mono";
 }
 
 .header .menu {
@@ -95,7 +90,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: #333;
+  background: #F7E2EE;
   display: block;
   height: 2px;
   position: relative;
@@ -105,7 +100,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: #F7E2EE;
   content: "";
   display: block;
   height: 100%;

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Agustina Regular";
   font-style: normal;
@@ -5,41 +9,9 @@
   src: local("Agustina Regular"),
     url("./assets/fonts/Agustina.woff") format("woff");
 }
-@font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("./assets/fonts/Montserrat-Regular.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Bold";
-  src: local("Google Sans Bold"),
-    url("./assets/fonts/GoogleSans-Bold.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Bold Italic";
-  src: local("Google Sans Bold Italic"),
-    url("./assets/fonts/GoogleSans-BoldItalic.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Italic";
-  src: local("Google Sans Italic"),
-    url("./assets/fonts/GoogleSans-Italic.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Medium";
-  src: local("Google Sans Medium"),
-    url("./assets/fonts/GoogleSans-Medium.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Medium Italic";
-  src: local("Google Sans Medium Italic"),
-    url("./assets/fonts/GoogleSans-MediumItalic.ttf") format("woff");
-}
-@font-face {
-  font-family: "Google Sans Regular";
-  src: local("Google Sans Regular"),
-    url("./assets/fonts/GoogleSans-Regular.ttf") format("woff");
-}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -50,7 +22,7 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 19px / 23px "Space Mono", Montserrat, "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;

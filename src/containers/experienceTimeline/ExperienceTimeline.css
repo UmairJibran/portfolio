@@ -1,0 +1,21 @@
+.experience-timeline-main {
+  font-family: "Space Mono", monospace;
+}
+
+.bg-dark {
+  background-color: #00072d !important;
+}
+
+.bg-tracker {
+  background-color: #1f2547 !important;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .experience-accord {
+    margin: 20px;
+  }
+}
