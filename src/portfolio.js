@@ -474,7 +474,7 @@ const experience = {
       experiences: [
         {
           title: "Associate Full Stack Engineer Intern",
-          company: "Prodoctbox",
+          company: "Productbox",
           company_url: "https://www.productbox.dev/",
           logo_path: "product-box-logo.png",
           duration: "May 2021 - July 2021",
