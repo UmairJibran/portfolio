@@ -232,6 +232,13 @@ const skills = {
             color: "#474aBa",
           },
         },
+        {
+          skillName: "WordPress",
+          fontAwesomeClassname: "simple-icons:wordpress",
+          style: {
+            color: "#21759B",
+          },
+        },
       ],
     },
     {
