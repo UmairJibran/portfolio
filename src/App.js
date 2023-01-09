@@ -15,6 +15,7 @@ function App() {
       "https://europe-west2-jibran-u-portfolio-analytics.cloudfunctions.net/greetings";
 
     const greetUser = async () => {
+      if (referrer === 'https://github.com/Evavic44/portfolio-ideas') return
       await fetch(apiUrl, {
         method: "POST",
         body: JSON.stringify({ referrer }),
