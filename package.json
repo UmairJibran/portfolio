@@ -3,6 +3,9 @@
   "name": "ujfolio",
   "homepage": "https://umairjibran.github.io/",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
