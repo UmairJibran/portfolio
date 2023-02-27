@@ -12,7 +12,7 @@ const greeting = {
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
   extraInfo:
-    "Learning new tech everyday. A curious full stack developer with over 2 years of experience. Let's connect!",
+    "With over two years of experience in the tech industry, I bring a unique combination of technical expertise and strategic thinking to every project I work on. As a Full Stack Engineer at Productbox, one of the top companies in Peshawar, I collaborate with talented engineers on innovative projects using cutting-edge technologies such as Git & GitHub, Serverless, Microservices, AWS, NodeJS, Flutter, and ReactJS. I am also proficient in SQL and NoSQL databases, including MySQL, DynamoDB, Firebase Firestore, and MongoDB, as well as programming languages like Javascript, Python, Typescript, and Dart. Throughout my career, I have consistently delivered results and have been recognized for my ability to translate complex technical concepts into actionable solutions. My goal is to continue growing my expertise and making a positive impact in the tech industry. I am open to exploring new opportunities in leadership and technology and am eager to connect with others who share my passion for innovation and problem-solving. Let's connect to exchange thoughts!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
