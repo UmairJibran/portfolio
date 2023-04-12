@@ -107,7 +107,7 @@
   }
   .greeting-text {
     font-size: 30px;
-    margin-top: 0px;
+    margin-top: 10px;
     text-align: center;
   }
   .greeting-nickname {
@@ -116,10 +116,10 @@
   }
   .greeting-text-p,
   .greeting-text-p2 {
-    font-size: 21px !important;
+    font-size: 18px !important;
     margin-right: 0px;
     line-height: normal;
-    text-align: center;
+    text-align: justify;
   }
   .greet-main {
     margin-top: 0;
