@@ -20,7 +20,7 @@ const ContactComponent = ({ theme }) => {
 
   return (
     <div
-      className={`contact-main py-10 ${showEmailForm ? "-mb-20 -pb-5" : ""}`}
+      className={`contact-main pb-10 ${showEmailForm ? "-mb-20 -pb-5" : ""}`}
       id="contact"
     >
       <div className="basic-contact">
