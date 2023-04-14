@@ -1,13 +1,10 @@
 import React from "react";
-import { Slide } from "pure-react-carousel";
-
-import "pure-react-carousel/dist/react-carousel.es.css";
 import "./TestimonialCard.css";
 
-const TestimonialCard = ({ testimonial, index }) => {
+const TestimonialCard = ({ testimonial }) => {
   const mailTo = `mailto:${testimonial.email}`;
   return (
-    <Slide index={index} tabIndex="null">
+    <>
       <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center testimonial-main">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +24,7 @@ const TestimonialCard = ({ testimonial, index }) => {
           <p className="text-xs md:text-base">
             <a
               href={testimonial.nameLink}
-              className="text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
+              className="text-gray-100 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
             >
               {testimonial.name.toUpperCase()}
             </a>
@@ -118,7 +115,7 @@ const TestimonialCard = ({ testimonial, index }) => {
           </span>
         </div>
       </div>
-    </Slide>
+    </>
   );
 };
 
