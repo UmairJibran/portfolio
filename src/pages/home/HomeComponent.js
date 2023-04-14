@@ -8,6 +8,7 @@ import TopButton from "../../components/topButton/TopButton";
 import Projects from "../projects/Projects";
 import Contact from "../contact/ContactComponent";
 import Experience from "../experience/Experience";
+import Mentoring from "../mentoring/MentoringComponent";
 
 class Home extends Component {
   render() {
@@ -19,6 +20,7 @@ class Home extends Component {
         {/* <Testimonials theme={this.props.theme} /> */}
         <Experience theme={this.props.theme} />
         <Skills theme={this.props.theme} />
+        <Mentoring theme={this.props.theme} />
         <Contact theme={this.props.theme} />
         <Footer theme={this.props.theme} />
         <TopButton theme={this.props.theme} />
