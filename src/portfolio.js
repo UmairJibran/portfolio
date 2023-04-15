@@ -12,7 +12,7 @@ const greeting = {
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
   extraInfo:
-    "With over two years of experience in the tech industry, I bring a unique combination of technical expertise and strategic thinking to every project I work on. As a Full Stack Engineer at Productbox, one of the top companies in Peshawar, I collaborate with talented engineers on innovative projects using cutting-edge technologies such as Git & GitHub, Serverless, Microservices, AWS, NodeJS, Flutter, and ReactJS. I am also proficient in SQL and NoSQL databases, including MySQL, DynamoDB, Firebase Firestore, and MongoDB, as well as programming languages like Javascript, Python, Typescript, and Dart. Throughout my career, I have consistently delivered results and have been recognized for my ability to translate complex technical concepts into actionable solutions. My goal is to continue growing my expertise and making a positive impact in the tech industry. I am open to exploring new opportunities in leadership and technology and am eager to connect with others who share my passion for innovation and problem-solving. Let's connect to exchange thoughts!",
+    "Experienced Full Stack Engineer with a strong background in Git & GitHub, Serverless, Microservices, AWS, NodeJS, Flutter, and ReactJS. Skilled in both SQL and NoSQL databases, including MySQL, DynamoDB, Firebase Firestore, and MongoDB, as well as programming languages such as Javascript, Python, Typescript, and Dart. Known for delivering results and translating complex technical concepts into actionable solutions. Passionate about innovation and problem-solving, seeking new opportunities in leadership and technology. Let's connect to exchange thoughts!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -565,7 +565,7 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "hello.svg",
     description:
-      "I am available on almost every social media. And here is the fun part, I'm very responsive, so feel free to reach me out weather you want a Freelance work to be done or need a speaker for your tech talk. You can hit me up in order to have a Tech advice too! I can help you with Vue, Android, Flutter, Microsoft Power Platform, Cloud and Opensource Development.",
+      "I'm a tech enthusiast and I love connecting with others who share the same passion! You can find me on almost every social media platform and I'm always ready to chat. If you need a freelance developer or a tech speaker for your event, hit me up! I'm also happy to offer tech advice on Vue, Android, Flutter, Cloud, and Open-source development. So don't hesitate to reach out, let's geek out together!",
   },
   addressSection: {
     title: "Address",
