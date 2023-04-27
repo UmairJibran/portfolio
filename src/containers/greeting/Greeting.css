@@ -41,7 +41,7 @@
 .greeting-text {
   margin-top: 80px;
   font-size: 55px;
-  line-height: 1.1; 
+  line-height: 1.1;
   font-family: "Space Mono";
   margin-top: 1em;
   color: #133b4f;
@@ -60,7 +60,6 @@
 
 .greeting-text-p {
   font-size: 30px;
- 
   font-family: "Space Mono";
   margin-top: 1em;
   margin-bottom: 1em;
@@ -68,15 +67,15 @@
 
 .greeting-text-p2 {
   font-size: 1rem;
- 
   font-family: "Space Mono";
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 .greeting-image-div > * {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
+  border-radius: 39% 61% 81% 20%/38% 29% 71% 62%;
 }
 
 .greeting-image-neon > * {
