@@ -4,7 +4,7 @@
       "id": "asdg3425b=",
       "name": "MeraID",
       "url": "https://www.meraid.pk",
-      "description": "An upcoming KYC service that will verify customer up and beyond",
+      "description": "Meraid.pk, an upcoming KYC service in Pakistan, promises to verify customers' identities thoroughly and comprehensively, going above and beyond the standard KYC requirements.",
       "logo": "meraid",
       "category": "Mobile/Backend/Web",
       "technologies": [
@@ -88,12 +88,43 @@
       ]
     },
     {
+      "id": "asdg3s425b=",
+      "name": "Alpha",
+      "url": "https://alpha.solenova.tech",
+      "description": "A free and simple browser extension that helps boost productivity by blocking distracting websites and allowing access only after solving a math problem.",
+      "logo": "meraid",
+      "category": "Web",
+      "technologies": [
+        {
+          "skillName": "JavaScript",
+          "fontAwesomeClassname": "simple-icons:javascript",
+          "style": {
+            "color": "#F7DF1E"
+          }
+        },
+        {
+          "skillName": "HTML",
+          "fontAwesomeClassname": "simple-icons:html5",
+          "style": {
+            "color": "#E34F26"
+          }
+        },
+        {
+          "skillName": "CSS",
+          "fontAwesomeClassname": "simple-icons:css3",
+          "style": {
+            "color": "#1572B6"
+          }
+        }
+      ]
+    },
+    {
       "logo": "shaoor",
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
       "category": "Backend/Web",
-      "name": "Shaoor.tech",
+      "name": "Shaoor",
       "url": "https://shaoor.umairjibran.com/",
-      "description": "Shaoor.tech was a pet project, and a masterpiece in the making",
+      "description": "Shaoor, the blog, a website dedicated to my passion project, was a labor of love and a work of art in progress.",
       "technologies": [
         {
           "skillName": "NodeJS",
