@@ -51,28 +51,32 @@ export default function Testimonials({ theme }) {
               REF<span className="text-3xl text-indigo-600">EREN</span>CES
             </span>
           </h3>
-          <Slider
-            dots={true}
-            infinite
-            speed={1500}
-            autoplay={true}
-            arrows={false}
-            fade={true}
-            lazyLoad="anticipated"
-            autoplaySpeed={5000}
-            pauseOnHover={true}
-            // prevArrow=<BtnPrev />
-            // nextArrow=<BtNext />
-          >
-            {testimonialsPageData.map((testimonial, index) => (
-              <TestimonialCard
-                testimonial={testimonial}
-                key={index}
-                index={index}
-                theme={theme}
-              />
-            ))}
-          </Slider>
+
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Slider
+              style={{ width: "100vw" }}
+              dots={true}
+              // infinite
+              speed={1500}
+              autoplay={true}
+              arrows={false}
+              fade={true}
+              lazyLoad="anticipated"
+              autoplaySpeed={5000}
+              pauseOnHover={true}
+              // prevArrow=<BtnPrev />
+              // nextArrow=<BtNext />
+            >
+              {testimonialsPageData.map((testimonial, index) => (
+                <TestimonialCard
+                  testimonial={testimonial}
+                  key={index}
+                  index={index}
+                  theme={theme}
+                />
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </>
