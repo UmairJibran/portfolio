@@ -36,13 +36,13 @@ class Header extends Component {
             >
               Projects
             </li>
-            {/* <li
+            <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
               style={{ color: theme.text }}
               onClick={() => scrollIntoView("testimonials")}
             >
               References
-            </li> */}
+            </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
               style={{ color: theme.text }}
