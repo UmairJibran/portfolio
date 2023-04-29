@@ -57,7 +57,7 @@ export default function Testimonials({ theme }) {
               style={{ width: "100vw" }}
               dots={true}
               // infinite
-              speed={1500}
+              speed={5000}
               autoplay={true}
               arrows={false}
               fade={true}
