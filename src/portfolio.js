@@ -600,14 +600,14 @@ const testimonialsPageData = [
       "Jibran is someone who stops at nothing. Once he is challenged to do a task, he delivers the best output no matter what. Being a manager jibran was the easiest engineer to manage. He is always humble and friendly. His learning attitude is amazing and he experiments with the top tech all the time. He is way ahead of his time in his professional journey.",
     website: "https://saifullahsajid.com/",
   },
-  {
+  /* {
     name: "Mohsin Raza",
     designation: "Lecturer at Department of Geology",
     employerAtTime: "Bacha Khan University",
     nameLink: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
     linkedin: "https://www.linkedin.com/in/mohsin-raza-7025344a/",
     message: `Jibran is very hardworking and extremely talented individual. I got a chance to spend time with him during our Three months fellowship at Amal Academy. I found him very supportive and a great problem solver.`,
-  },
+  }, */
   {
     name: "Qaiser Hussain",
     designation: "Android Developers Lead",
@@ -616,7 +616,7 @@ const testimonialsPageData = [
     linkedin: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
     message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
   },
-  {
+  /* {
     name: "Kamal Uddin",
     designation: "Network Administrator | Network Systems Engineer",
     employerAtTime: "",
@@ -649,7 +649,7 @@ const testimonialsPageData = [
     nameLink: "https://www.linkedin.com/in/shah-rukh-khalid/",
     linkedin: "https://www.linkedin.com/in/shah-rukh-khalid/",
     message: `Umair Jibran was my group member at Amal Academy. He is the best group member one could have. Always ready to participate and never sits idle. If I every needed any help I would go to him. He is a very reliable person. He has got great skills in his field as well and is actively working on his app design. Alot of people just talk and don't really do any work, but Umair Jibran is that rare breed that actually does what he says. Loved having you as a group member!`,
-  },
+  }, */
   {
     name: "Muhammad Sulaimand",
     designation: "Full Stack Developer",
