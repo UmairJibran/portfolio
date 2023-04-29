@@ -57,12 +57,12 @@ export default function Testimonials({ theme }) {
               style={{ width: "100vw" }}
               dots={true}
               // infinite
-              speed={5000}
+              speed={1000}
               autoplay={true}
               arrows={false}
               fade={true}
               lazyLoad="anticipated"
-              autoplaySpeed={5000}
+              autoplaySpeed={10000}
               pauseOnHover={true}
               // prevArrow=<BtnPrev />
               // nextArrow=<BtNext />
