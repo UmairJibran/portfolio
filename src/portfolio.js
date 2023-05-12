@@ -406,7 +406,6 @@ const degrees = {
 };
 
 const certifications = {
-  //TODO: Add Certificates
   certifications: [
     {
       title: "Node.js Essential Training",
@@ -459,7 +458,8 @@ const certifications = {
 const experience = {
   title: "Experience",
   subtitle: "Job, Internship, and Volunteership",
-  description: "", // "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
+  description:
+    "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
   sections: [
     {
       title: "Work",
@@ -468,9 +468,15 @@ const experience = {
           title: "Associate Full Stack Engineer",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
+          logo_path: "productox-logo.png",
           duration: "July 2021 - Present",
-          location: "Peshawar",
+          startedAt: {
+            year: "2021",
+            month: "July",
+            day: "01",
+          },
+          endedAt: null,
+          location: "Peshawar, Pakistan",
           description: "",
           color: "#0879bf",
         },
@@ -483,10 +489,21 @@ const experience = {
           title: "Associate Full Stack Engineer Intern",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
+          logo_path: "productox-logo.png",
           duration: "May 2021 - July 2021",
           location: "Peshawar, Pakistan",
-          description: "", // "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
+          startedAt: {
+            year: "2021",
+            month: "May",
+            day: "03",
+          },
+          endedAt: {
+            year: "2021",
+            month: "July",
+            day: "03",
+          },
+          description:
+            "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
           color: "#1c0c0c",
         },
         {
@@ -496,8 +513,19 @@ const experience = {
           logo_path: "ideometrix-logo.png",
           duration: "August 2020 - November 2021",
           location: "Islamabad, Pakistan",
-          description: "", //"My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
+          description:
+            "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
           color: "#ee3c26",
+          startedAt: {
+            year: "2020",
+            month: "August",
+            day: "15",
+          },
+          endedAt: {
+            year: "2020",
+            month: "November",
+            day: "15",
+          },
         },
       ],
     },
@@ -508,11 +536,22 @@ const experience = {
           title: "Microsoft Learn Student Ambassador",
           company: "Microsoft",
           company_url: "https://studentambassadors.microsoft.com/",
-          logo_path: "microsoft_logo.png",
+          logo_path: "microsoft-logo.png",
           duration: "Aug 2020 - Dec 2021",
-          location: "CUSIT, Peshawar, Pakistan",
-          description: "", // "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
+          location: "Peshawar, Pakistan",
+          description:
+            "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
           color: "#D83B01",
+          startedAt: {
+            year: "2020",
+            month: "August",
+            day: "01",
+          },
+          endedAt: {
+            year: "2021",
+            month: "December",
+            day: "31",
+          },
         },
         // {
         //   title: "Developer Program Member",
