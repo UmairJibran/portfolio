@@ -7,6 +7,8 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
     win.focus();
   }
 
+  const { duration, period } = getExperienceString(experience);
+
   return (
     <div className="experience-timeline-main flex relative pb-12">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
@@ -49,10 +51,8 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           className="text-sm text-gray-900 mb-1 tracking-wider"
           style={{ color: theme.text }}
         >
-          <small>{experience.location}</small>{" "}
-          <span className="font-bold cursor-pointer">
-            {getExperienceString(experience)}
-          </span>
+          <small>{experience.location}</small> {period}{" "}
+          <span className="font-bold cursor-pointer">· {duration}</span>
         </h2>
       </div>
     </div>
@@ -79,7 +79,7 @@ const getExperienceString = (exp) => {
 
   let duration = calculateDateDifference(startedAt, endedAt);
 
-  return Object.values(formattedAnswer).join(" — ") + ` · ${duration}`;
+  return { period: Object.values(formattedAnswer).join(" — "), duration };
 };
 
 const getMonthName = (monthId) => {
