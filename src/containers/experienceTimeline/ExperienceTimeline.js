@@ -2,8 +2,6 @@ import React from "react";
 import "./ExperienceTimeline.css";
 
 const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
-  // console.log(experience);
-
   function handleOpen(url) {
     const win = window.open(url, "_blank");
     win.focus();
@@ -52,11 +50,9 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           style={{ color: theme.text }}
         >
           <small>{experience.location}</small>{" "}
-          {experience.duration ?? (
-            <span className="font-bold cursor-pointer">
-              {experience.duration}
-            </span>
-          )}
+          <span className="font-bold cursor-pointer">
+            {getExperienceString(experience)}
+          </span>
         </h2>
       </div>
     </div>
@@ -64,3 +60,81 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
 };
 
 export default ExperienceTimeline;
+
+const getExperienceString = (exp) => {
+  const startedAt = new Date(Object.values(exp.startedAt).join("-"));
+  const endedAt = exp.endedAt
+    ? new Date(Object.values(exp.endedAt).join("-"))
+    : new Date();
+
+  const formattedAnswer = {
+    startedAt: [
+      getMonthName(startedAt.getMonth()),
+      startedAt.getFullYear(),
+    ].join(" "),
+    endedAt: exp.endedAt
+      ? [getMonthName(endedAt.getMonth()), endedAt.getFullYear()].join(" ")
+      : "present",
+  };
+
+  let duration = calculateDateDifference(startedAt, endedAt);
+
+  return Object.values(formattedAnswer).join(" — ") + ` · ${duration}`;
+};
+
+const getMonthName = (monthId) => {
+  const monthsName = {
+    0: "Jan",
+    1: "Feb",
+    2: "Mar",
+    3: "Apr",
+    4: "May",
+    5: "Jun",
+    6: "Jul",
+    7: "Aug",
+    8: "Sep",
+    9: "Oct",
+    10: "Nov",
+    11: "Dec",
+  };
+
+  return monthsName[monthId];
+};
+
+const calculateDateDifference = (startDate, endDate) => {
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+  let days = endDate.getDate() - startDate.getDate();
+
+  const response = [];
+
+  // Adjust for negative differences
+  if (days < 0) {
+    const daysInLastMonth = new Date(
+      endDate.getFullYear(),
+      endDate.getMonth(),
+      0
+    ).getDate();
+    months--;
+    days += daysInLastMonth;
+  }
+
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  if (years > 1) {
+    response.push(`${years} years`);
+  } else if (years === 1) {
+    response.push(`${years} year`);
+  }
+
+  if (months > 1) {
+    response.push(`${months} months`);
+  } else if (months === 1) {
+    response.push(`${months} month`);
+  }
+
+  return response.join(", ");
+};
