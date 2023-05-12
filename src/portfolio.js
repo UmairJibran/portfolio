@@ -468,7 +468,7 @@ const experience = {
           title: "Associate Full Stack Engineer",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "productox-logo.png",
+          logo_path: "productbox-logo.png",
           duration: "July 2021 - Present",
           startedAt: {
             year: "2021",
@@ -489,7 +489,7 @@ const experience = {
           title: "Associate Full Stack Engineer Intern",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "productox-logo.png",
+          logo_path: "productbox-logo.png",
           duration: "May 2021 - July 2021",
           location: "Peshawar, Pakistan",
           startedAt: {
