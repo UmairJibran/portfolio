@@ -459,7 +459,7 @@ const experience = {
   title: "Experience",
   subtitle: "Job, Internship, and Volunteership",
   description:
-    "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
+    "I have worked with an evolving startup as a Backend Developer, Designer and Flutter Developer. Below is a brief timeline of my professional journey. I have been a mentor to students in different hackathons as a Microsoft representative and creating empowering communities that have benefited more than 1500 students and new developers across the globe",
   sections: [
     {
       title: "Work",
@@ -468,7 +468,7 @@ const experience = {
           title: "Associate Full Stack Engineer",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "productox-logo.png",
+          logo_path: "productbox-logo.png",
           duration: "July 2021 - Present",
           startedAt: {
             year: "2021",
@@ -489,7 +489,7 @@ const experience = {
           title: "Associate Full Stack Engineer Intern",
           company: "Productbox",
           company_url: "https://www.productbox.dev/",
-          logo_path: "productox-logo.png",
+          logo_path: "productbox-logo.png",
           duration: "May 2021 - July 2021",
           location: "Peshawar, Pakistan",
           startedAt: {
