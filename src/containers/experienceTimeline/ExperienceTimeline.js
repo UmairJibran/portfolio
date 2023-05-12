@@ -17,17 +17,21 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           className={`h-full w-1 pointer-events-none`}
         ></div>
       </div>
+      {!experience.continued && (
+        <div
+          className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10"
+          style={{ backgroundColor: `${theme.text}F0` }}
+        >
+          <img
+            src={require(`../../assets/images/${experience.logo_path}`)}
+            className="w-5 h-5"
+            alt={experience.company}
+          />
+        </div>
+      )}
       <div
-        className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10"
-        style={{ backgroundColor: `${theme.text}F0` }}
+        className={experience.continued ? "flex-grow pl-20" : "flex-grow pl-4"}
       >
-        <img
-          src={require(`../../assets/images/${experience.logo_path}`)}
-          className="w-5 h-5"
-          alt={experience.company}
-        />
-      </div>
-      <div className="flex-grow pl-4">
         <h2
           className="text-base mb-1 tracking-wider"
           style={{ color: theme.text }}

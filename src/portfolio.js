@@ -505,6 +505,7 @@ const experience = {
           description:
             "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
           color: "#1c0c0c",
+          continued: true,
         },
         {
           title: "Flutter Intern",
