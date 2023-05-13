@@ -24,7 +24,7 @@ const TestimonialCard = ({ testimonial }) => {
           <p className="text-xs md:text-base">
             <a
               href={testimonial.nameLink}
-              className="text-gray-100 hover:text-indigo-600 transition duration-500 ease-in-out font-medium leading-none"
+              className="text-gray-100 font-medium custom-underline"
             >
               {testimonial.name.toUpperCase()}
             </a>

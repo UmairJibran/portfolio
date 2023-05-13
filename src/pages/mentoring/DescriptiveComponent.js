@@ -15,7 +15,7 @@ const DescriptiveComponent = ({ theme }) => {
         reach out to me at{" "}
         <a
           href="mailto:mentoring@umairjibran.com"
-          className="text-cyan-100 hover:text-orange-200"
+          className="text-stone-100 custom-underline"
         >
           mentoring@umairjibran.com
         </a>
