@@ -3,16 +3,14 @@ import ExperienceTimeline from "../../containers/experienceTimeline/ExperienceTi
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Zoom } from "react-reveal";
+import { getExperienceString } from "../../global/utils.js";
+
 // import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
   render() {
     const theme = this.props.theme;
 
-    const experiences = [];
-    experience["sections"].forEach((v) => {
-      experiences.push(...v.experiences);
-    });
     return (
       <div className="experience-main py-10" id="experience">
         <div className="basic-experience">
@@ -47,13 +45,14 @@ class Experience extends Component {
         <section className="text-gray-600 body-font">
           <div className="container px-5 pt-24 mx-auto">
             {/* <ExperienceAccordion sections={experience["sections"]} theme={theme} /> */}
-            {experiences.map((experience, index) => {
+            {experience.timeline.map((exp, index) => {
               return (
                 <ExperienceTimeline
                   theme={theme}
-                  experience={experience}
+                  experience={exp}
                   key={index}
-                  lastExperience={index + 1 === experiences.length}
+                  lastExperience={index + 1 === experience.timeline.length}
+                  getExperienceString={getExperienceString}
                 />
               );
             })}
