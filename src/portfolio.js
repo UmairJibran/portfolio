@@ -85,12 +85,12 @@ const formalSocialMediaLinksHome = [
 ];
 
 const informalSocialMediaLinksHome = [
-  {
-    name: "Twitter",
-    link: "https://twitter.com/umairjibran7",
-    fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
-    backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
-  },
+  // {
+  //   name: "Twitter",
+  //   link: "https://twitter.com/umairjibran7",
+  //   fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
+  //   backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
+  // },
   // {
   //  name: "Facebook",
   //  link: "https://www.facebook.com/umairjibran8",
@@ -109,12 +109,12 @@ const informalSocialMediaLinksHome = [
   //   fontAwesomeIcon: "fa-instagram",
   //   backgroundColor: "#E4405F",
   // },
-  {
-    name: "Whatsapp",
-    link: "https://api.whatsapp.com/send?phone=+92312-091-9647",
-    fontAwesomeIcon: "fa-whatsapp",
-    backgroundColor: "#25D366",
-  },
+  // {
+  //   name: "Whatsapp",
+  //   link: "https://api.whatsapp.com/send?phone=+92312-091-9647",
+  //   fontAwesomeIcon: "fa-whatsapp",
+  //   backgroundColor: "#25D366",
+  // },
   // {
   //  name: "iMessage",
   //  link: "sms:+923120919647&body=Hi",
