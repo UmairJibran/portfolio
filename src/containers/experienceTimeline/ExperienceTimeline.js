@@ -60,10 +60,17 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
 export default ExperienceTimeline;
 
 const getExperienceString = (exp) => {
-  const startedAt = new Date(Object.values(exp.startedAt).join("-"));
-  const endedAt = exp.endedAt
-    ? new Date(Object.values(exp.endedAt).join("-"))
-    : new Date();
+  const startedAt = new Date();
+  const endedAt = new Date();
+
+  startedAt.setDate(exp.startedAt.day);
+  startedAt.setMonth(getMonthId(exp.startedAt.month));
+  startedAt.setFullYear(exp.startedAt.year);
+  if (exp.endedAt) {
+    endedAt.setDate(exp.endedAt.day);
+    endedAt.setMonth(getMonthId(exp.endedAt.month));
+    endedAt.setFullYear(exp.endedAt.year);
+  }
 
   const formattedAnswer = {
     startedAt: [
@@ -97,6 +104,25 @@ const getMonthName = (monthId) => {
   };
 
   return monthsName[monthId];
+};
+
+const getMonthId = (monthName) => {
+  const monthsIds = {
+    January: 0,
+    February: 1,
+    March: 2,
+    April: 3,
+    May: 4,
+    June: 5,
+    July: 6,
+    August: 7,
+    September: 8,
+    October: 9,
+    November: 10,
+    December: 11,
+  };
+
+  return monthsIds[monthName];
 };
 
 const calculateDateDifference = (startDate, endDate) => {
