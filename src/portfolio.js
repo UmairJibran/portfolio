@@ -460,38 +460,32 @@ const experience = {
   subtitle: "Job, Internship, and Volunteership",
   description:
     "I have worked with an evolving startup as a Backend Developer, Designer and Flutter Developer. Below is a brief timeline of my professional journey. I have been a mentor to students in different hackathons as a Microsoft representative and creating empowering communities that have benefited more than 1500 students and new developers across the globe",
-  sections: [
+  timeline: [
     {
-      title: "Work",
-      experiences: [
+      company: "Productbox",
+      startingDate: {
+        year: "2021",
+        month: "May",
+        day: "03",
+      },
+      endingDate: null,
+      companyUrl: "https://www.productbox.dev/",
+      logo_path: "productbox-logo.png",
+      location: "Peshawar, Pakistan",
+      roles: [
         {
           title: "Associate Full Stack Engineer",
-          company: "Productbox",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "productbox-logo.png",
-          duration: "July 2021 - Present",
           startedAt: {
             year: "2021",
             month: "July",
             day: "01",
           },
           endedAt: null,
-          location: "Peshawar, Pakistan",
-          description: "",
-          color: "#0879bf",
+          description:
+            "As an Associate Full Stack Developer at Productbox, I contributed to diverse software projects, enhancing web applications with robustness and scalability. I utilized Node.js, React, Serverless, and AlpineJS to build efficient and user-friendly apps. Git and GitHub facilitated seamless collaboration and version control. I developed RESTful APIs adhering to best practices and security protocols. Database management involved SQL and NoSQL databases like MySQL, Firebase Firestore, and Amazon DynamoDB. I employed AWS CloudFormation and worked with DevOps teams for software deployment and automation. Agile methodologies guided my approach, fostering efficient communication and adaptation. I explored Python's OpenCV and Flutter for image processing and cross-platform mobile development. Effective communication with stakeholders and collaboration with UI/UX designers, backend developers, and QA ensured seamless project execution. Continual improvement, problem-solving, and staying updated with emerging technologies remain my focus.",
         },
-      ],
-    },
-    {
-      title: "Internships",
-      experiences: [
         {
           title: "Associate Full Stack Engineer Intern",
-          company: "Productbox",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "productbox-logo.png",
-          duration: "May 2021 - July 2021",
-          location: "Peshawar, Pakistan",
           startedAt: {
             year: "2021",
             month: "May",
@@ -503,20 +497,30 @@ const experience = {
             day: "03",
           },
           description:
-            "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
-          color: "#1c0c0c",
-          continued: true,
+            "As an intern at Productbox, I collaborated with the development team, working on web applications. I gained experience in MySQL, Express.js, and Firebase Authentication. I assisted in database management, developed server-side functionality, and integrated secure user authentication using Firebase. I also gained basic knowledge of Flutter for mobile app development. Utilizing Git, I participated in code reviews and troubleshooting. I communicated effectively and actively contributed to project goals, demonstrating a willingness to learn and adapt.",
         },
+      ],
+    },
+    {
+      company: "IdeoMetrix",
+      startingDate: {
+        year: "2020",
+        month: "August",
+        day: "15",
+      },
+      endingDate: {
+        year: "2020",
+        month: "November",
+        day: "15",
+      },
+      companyUrl: "https://www.ideometrix.com/",
+      logo_path: "ideometrix-logo.png",
+      location: "Islamabad, Pakistan",
+      roles: [
         {
-          title: "Flutter Intern",
-          company: "IdeoMetrix",
-          company_url: "https://www.ideometrix.com/",
-          logo_path: "ideometrix-logo.png",
-          duration: "August 2020 - November 2021",
-          location: "Islamabad, Pakistan",
+          title: "Flutter Developer - Intern",
           description:
-            "My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
-          color: "#ee3c26",
+            "My main responsibilities include designing frontend for the applications as well as helping out fellow interns who were new to flutter.",
           startedAt: {
             year: "2020",
             month: "August",
@@ -531,18 +535,25 @@ const experience = {
       ],
     },
     {
-      title: "Volunteerships",
-      experiences: [
+      company: "Microsoft",
+      startingDate: {
+        year: "2020",
+        month: "August",
+        day: "01",
+      },
+      endingDate: {
+        year: "2021",
+        month: "December",
+        day: "31",
+      },
+      companyUrl: "https://studentambassadors.microsoft.com/",
+      logo_path: "microsoft-logo.png",
+      location: "Peshawar, Pakistan",
+      roles: [
         {
           title: "Microsoft Learn Student Ambassador",
-          company: "Microsoft",
-          company_url: "https://studentambassadors.microsoft.com/",
-          logo_path: "microsoft-logo.png",
-          duration: "Aug 2020 - Dec 2021",
-          location: "Peshawar, Pakistan",
           description:
             "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
-          color: "#D83B01",
           startedAt: {
             year: "2020",
             month: "August",
@@ -554,40 +565,6 @@ const experience = {
             day: "31",
           },
         },
-        // {
-        //   title: "Developer Program Member",
-        //   company: "Github",
-        //   company_url: "https://github.com/",
-        //   logo_path: "github_logo.png",
-        //   duration: "",
-        //   location: "",
-        //   description:
-        //     "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
-        //   color: "#181717",
-        // },
-        // {
-        //   title: "BookDrive",
-        //   company: "Read Pakistan",
-        //   company_url: "https://readpakistan.org.pk/",
-        //   logo_path: "book-charity.svg",
-        //   duration: "",
-        //   location: "Peshawar, Pakistan",
-        //   description:
-        //     "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
-        //   color: "#181717",
-        // },
-        // {
-        //   title: "BookDrive",
-        //   company: "Chughtai Library",
-        //   company_url:
-        //     "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
-        //   logo_path: "book-charity.svg",
-        //   duration: "",
-        //   location: "Peshawar, Pakistan",
-        //   description:
-        //     "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
-        //   color: "#181717",
-        // },
       ],
     },
   ],
