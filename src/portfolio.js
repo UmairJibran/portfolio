@@ -459,7 +459,7 @@ const experience = {
   title: "Experience",
   subtitle: "Job, Internship, and Volunteership",
   description:
-    "I have worked with an evolving startup as a Backend Developer, Designer and Flutter Developer. Below is a brief timeline of my professional journey. I have been a mentor to students in different hackathons as a Microsoft representative and creating empowering communities that have benefited more than 1500 students and new developers across the globe",
+    "I worked as a Backend Developer, Designer, and Flutter Developer in an evolving startup. Timeline: Mentored students in hackathons as a Microsoft representative, creating empowering communities that benefited over 1500 students and new developers worldwide.",
   timeline: [
     {
       company: "Productbox",
@@ -482,7 +482,7 @@ const experience = {
           },
           endedAt: null,
           description:
-            "As an Associate Full Stack Developer at Productbox, I contributed to diverse software projects, enhancing web applications with robustness and scalability. I utilized Node.js, React, Serverless, and AlpineJS to build efficient and user-friendly apps. Git and GitHub facilitated seamless collaboration and version control. I developed RESTful APIs adhering to best practices and security protocols. Database management involved SQL and NoSQL databases like MySQL, Firebase Firestore, and Amazon DynamoDB. I employed AWS CloudFormation and worked with DevOps teams for software deployment and automation. Agile methodologies guided my approach, fostering efficient communication and adaptation. I explored Python's OpenCV and Flutter for image processing and cross-platform mobile development. Effective communication with stakeholders and collaboration with UI/UX designers, backend developers, and QA ensured seamless project execution. Continual improvement, problem-solving, and staying updated with emerging technologies remain my focus.",
+            "I contributed to diverse software projects, building efficient and scalable web apps using Node.js, React, Serverless, and AlpineJS. I developed RESTful APIs, managed databases (SQL and NoSQL), and collaborated with DevOps teams for deployment. Experiment different agile methodologies, Python's OpenCV, and Flutter. Effective communication, collaboration, and continual improvement remain priorities.",
         },
         {
           title: "Associate Full Stack Engineer Intern",
@@ -497,7 +497,7 @@ const experience = {
             day: "03",
           },
           description:
-            "As an intern at Productbox, I collaborated with the development team, working on web applications. I gained experience in MySQL, Express.js, and Firebase Authentication. I assisted in database management, developed server-side functionality, and integrated secure user authentication using Firebase. I also gained basic knowledge of Flutter for mobile app development. Utilizing Git, I participated in code reviews and troubleshooting. I communicated effectively and actively contributed to project goals, demonstrating a willingness to learn and adapt.",
+            "Interned at Productbox, collaborating on web apps. Gained experience in MySQL, Express.js, Firebase Auth. Assisted in DB management, server-side dev, secure user auth with Firebase. ",
         },
       ],
     },
@@ -553,7 +553,7 @@ const experience = {
         {
           title: "Microsoft Learn Student Ambassador",
           description:
-            "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
+            "As a Microsoft Student Ambassador, I led the promotion and utilization of Cloud, specifically Azure tools, among university students for their projects and startups. Organized hands-on workshops and seminars on GitHub and Cloud Computing concepts, empowering students with practical knowledge.",
           startedAt: {
             year: "2020",
             month: "August",
