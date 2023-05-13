@@ -43,7 +43,7 @@ const ExperienceTimeline = ({
           style={{ color: theme.text }}
         >
           <span
-            className="font-bold cursor-pointer hover:underline underline-offset-4"
+            className="font-bold cursor-pointer custom-underline"
             onClick={() => handleOpen(experience.companyUrl)}
           >
             {experience.company}
