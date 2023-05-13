@@ -1,0 +1,12 @@
+.role-timeline-main {
+  display: block;
+  font-family: "Space Mono", monospace;
+}
+
+.bg-dark {
+  background-color: #00072d !important;
+}
+
+.bg-tracker {
+  background-color: #1f2547 !important;
+}
