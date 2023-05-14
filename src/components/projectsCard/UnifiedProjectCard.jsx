@@ -29,7 +29,7 @@ const UnifiedProjectsCard = ({ repo, theme }) => {
           target="_blank"
           rel="noreferrer"
         >
-          Learn mores
+          Learn more.
         </a>
         <div className="text-center mt-2 leading-none justify-center absolute bottom-0 left-0 w-full py-4">
           {repo.technologies.map((tech, index) => {
