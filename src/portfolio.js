@@ -485,7 +485,7 @@ const experience = {
             "I contributed to diverse software projects, building efficient and scalable web apps using Node.js, React, Serverless, and AlpineJS. I developed RESTful APIs, managed databases (SQL and NoSQL), and collaborated with DevOps teams for deployment. Experiment different agile methodologies, Python's OpenCV, and Flutter. Effective communication, collaboration, and continual improvement remain priorities.",
         },
         {
-          title: "Associate Full Stack Engineer Intern",
+          title: "Associate Full Stack Engineer - Intern",
           startedAt: {
             year: "2021",
             month: "May",
@@ -551,7 +551,7 @@ const experience = {
       location: "Peshawar, Pakistan",
       roles: [
         {
-          title: "Microsoft Learn Student Ambassador",
+          title: "Microsoft Learn Student Ambassador - Volunteer",
           description:
             "As a Microsoft Student Ambassador, I led the promotion and utilization of Cloud, specifically Azure tools, among university students for their projects and startups. Organized hands-on workshops and seminars on GitHub and Cloud Computing concepts, empowering students with practical knowledge.",
           startedAt: {

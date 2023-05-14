@@ -32,18 +32,18 @@ class Experience extends Component {
                 >
                   {experience["subtitle"]}
                 </h3>
-                <p
+                {/* <p
                   className="experience-header-detail-text subTitle"
                   style={{ color: `${theme.secondaryText}A0` }}
                 >
                   {experience["description"]}
-                </p>
+                </p> */}
               </div>
             </div>
           </Zoom>
         </div>
         <section className="text-gray-600 body-font">
-          <div className="container px-5 pt-24 mx-auto">
+          <div className="container px-5 mx-auto  mt-8">
             {/* <ExperienceAccordion sections={experience["sections"]} theme={theme} /> */}
             {experience.timeline.map((exp, index) => {
               return (
