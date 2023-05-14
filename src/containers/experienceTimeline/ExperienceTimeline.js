@@ -53,8 +53,11 @@ const ExperienceTimeline = ({
           className="text-sm text-gray-900 mb-1 tracking-wider"
           style={{ color: theme.text }}
         >
-          <small>{experience.location}</small> {period}{" "}
-          <span className="font-bold">· {duration}</span>
+          <span className="text-sm"> {experience.location}</span>
+          <small>
+            {" "}
+            {period} · <span className="font-bold">{duration}</span>
+          </small>
         </h2>
         {experience.roles.map((role, index) => {
           return (
