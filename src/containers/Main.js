@@ -3,21 +3,13 @@ import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import Splash from "../pages/splash/Splash";
 import Resume from "../pages/resume/ResumeComponent";
 import { Suspense } from "react";
+import Loader from "../components/Loader/Loader";
 const Home = React.lazy(() => import("../pages/home/HomeComponent"));
 
 export default class Main extends Component {
   render() {
     return (
-      <Suspense
-        fallback={
-          <div>
-            <img
-              src={require("../assets/images/infinity-gif.svg")}
-              alt="infinity and beyond..."
-            />
-          </div>
-        }
-      >
+      <Suspense fallback={<Loader theme={this.props.theme} />}>
         <div>
           <Router>
             <Switch>

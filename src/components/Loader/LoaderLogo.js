@@ -7,7 +7,7 @@ const LogoLoader = ({ theme, isSplash }) => {
     <>
       <img
         src={require("../../assets/splash/umair-jibran-strokes-only_animated.svg").default}
-        alt="infinity and beyond..."
+        alt="Jibran!"
         style={{
           display: "block",
           marginLeft: "auto",
