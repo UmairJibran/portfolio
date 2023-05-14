@@ -1,13 +1,23 @@
 import React from "react";
 import "./ExperienceTimeline.css";
 
-const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
-  // console.log(experience);
+import RoleTimeline from "../roleTimeline/RoleTimeline";
 
+const ExperienceTimeline = ({
+  theme,
+  experience,
+  lastExperience,
+  getExperienceString,
+}) => {
   function handleOpen(url) {
     const win = window.open(url, "_blank");
     win.focus();
   }
+
+  const { duration, period } = getExperienceString({
+    start: experience.startingDate,
+    end: experience.endingDate,
+  });
 
   return (
     <div className="experience-timeline-main flex relative pb-12">
@@ -21,28 +31,20 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10"
         style={{ backgroundColor: `${theme.text}F0` }}
       >
-        <svg
-          fill="none"
-          stroke={theme.body}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
+        <img
+          src={require(`../../assets/images/${experience.logo_path}`)}
           className="w-5 h-5"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
+          alt={experience.company}
+        />
       </div>
-      <div className="flex-grow pl-4">
+      <div className={"flex-grow pl-4"}>
         <h2
           className="text-base mb-1 tracking-wider"
           style={{ color: theme.text }}
         >
-          <span className="font-medium">{experience.title}</span>{" "}
-          <small>at</small>{" "}
           <span
-            className="font-bold cursor-pointer hover:underline underline-offset-4"
-            onClick={() => handleOpen(experience.company_url)}
+            className="font-bold cursor-pointer custom-underline"
+            onClick={() => handleOpen(experience.companyUrl)}
           >
             {experience.company}
           </span>
@@ -51,13 +53,19 @@ const ExperienceTimeline = ({ theme, experience, lastExperience }) => {
           className="text-sm text-gray-900 mb-1 tracking-wider"
           style={{ color: theme.text }}
         >
-          <small>{experience.location}</small>{" "}
-          {experience.duration ?? (
-            <span className="font-bold cursor-pointer">
-              {experience.duration}
-            </span>
-          )}
+          <small>{experience.location}</small> {period}{" "}
+          <span className="font-bold">· {duration}</span>
         </h2>
+        {experience.roles.map((role, index) => {
+          return (
+            <RoleTimeline
+              role={role}
+              theme={theme}
+              key={index}
+              getExperienceString={getExperienceString}
+            />
+          );
+        })}
       </div>
     </div>
   );

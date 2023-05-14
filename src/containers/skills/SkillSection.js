@@ -39,7 +39,9 @@ class SkillSection extends Component {
                   </h1>
                 </Fade>
                 <Fade right duration={500}>
-                  <SoftwareSkill logos={skill.softwareSkills} />
+                  <div className="mx-auto ml-4">
+                    <SoftwareSkill logos={skill.softwareSkills} />
+                  </div>
                 </Fade>
                 <Fade left duration={1000}>
                   <div>

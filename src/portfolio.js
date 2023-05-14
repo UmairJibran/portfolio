@@ -85,12 +85,12 @@ const formalSocialMediaLinksHome = [
 ];
 
 const informalSocialMediaLinksHome = [
-  {
-    name: "Twitter",
-    link: "https://twitter.com/umairjibran7",
-    fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
-    backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
-  },
+  // {
+  //   name: "Twitter",
+  //   link: "https://twitter.com/umairjibran7",
+  //   fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
+  //   backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
+  // },
   // {
   //  name: "Facebook",
   //  link: "https://www.facebook.com/umairjibran8",
@@ -109,12 +109,12 @@ const informalSocialMediaLinksHome = [
   //   fontAwesomeIcon: "fa-instagram",
   //   backgroundColor: "#E4405F",
   // },
-  {
-    name: "Whatsapp",
-    link: "https://api.whatsapp.com/send?phone=+92312-091-9647",
-    fontAwesomeIcon: "fa-whatsapp",
-    backgroundColor: "#25D366",
-  },
+  // {
+  //   name: "Whatsapp",
+  //   link: "https://api.whatsapp.com/send?phone=+92312-091-9647",
+  //   fontAwesomeIcon: "fa-whatsapp",
+  //   backgroundColor: "#25D366",
+  // },
   // {
   //  name: "iMessage",
   //  link: "sms:+923120919647&body=Hi",
@@ -406,7 +406,6 @@ const degrees = {
 };
 
 const certifications = {
-  //TODO: Add Certificates
   certifications: [
     {
       title: "Node.js Essential Training",
@@ -459,95 +458,113 @@ const certifications = {
 const experience = {
   title: "Experience",
   subtitle: "Job, Internship, and Volunteership",
-  description: "", // "I have worked with an evolving startup as a Designer and Flutter Developer. I love giving back to the people what I have learnt. So, organising events and fundraising is what I do week in week out. I have been a mentor to students in different hackathos as a Microsoft representative and creating empowering communities that benefits more than 1150 people accross the country",
-  sections: [
+  description:
+    "I worked as a Backend Developer, Designer, and Flutter Developer in an evolving startup. Timeline: Mentored students in hackathons as a Microsoft representative, creating empowering communities that benefited over 1500 students and new developers worldwide.",
+  timeline: [
     {
-      title: "Work",
-      experiences: [
+      company: "Productbox",
+      startingDate: {
+        year: "2021",
+        month: "May",
+        day: "03",
+      },
+      endingDate: null,
+      companyUrl: "https://www.productbox.dev/",
+      logo_path: "productbox-logo.png",
+      location: "Peshawar, Pakistan",
+      roles: [
         {
           title: "Associate Full Stack Engineer",
-          company: "Productbox",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
-          duration: "July 2021 - Present",
-          location: "Peshawar",
-          description: "",
-          color: "#0879bf",
+          startedAt: {
+            year: "2021",
+            month: "July",
+            day: "01",
+          },
+          endedAt: null,
+          description:
+            "I contributed to diverse software projects, building efficient and scalable web apps using Node.js, React, Serverless, and AlpineJS. I developed RESTful APIs, managed databases (SQL and NoSQL), and collaborated with DevOps teams for deployment. Experiment different agile methodologies, Python's OpenCV, and Flutter. Effective communication, collaboration, and continual improvement remain priorities.",
         },
-      ],
-    },
-    {
-      title: "Internships",
-      experiences: [
         {
           title: "Associate Full Stack Engineer Intern",
-          company: "Productbox",
-          company_url: "https://www.productbox.dev/",
-          logo_path: "product-box-logo.png",
-          duration: "May 2021 - July 2021",
-          location: "Peshawar, Pakistan",
-          description: "", // "My responsibilities included, but were not limited to: \n◦ Work with customers/product managers to define, build out, test and release features and products. \n◦ Partner with customers and cross cutting teams to ensure projects are delivered as committed and per expectation of customers/product managers. \n◦ Develop core application of clients in Flutter/Node.js Framework.\n◦ Write automated test cases of high quality.",
-          color: "#1c0c0c",
-        },
-        {
-          title: "Flutter Intern",
-          company: "IdeoMetrix",
-          company_url: "https://www.ideometrix.com/",
-          logo_path: "ideometrix-logo.png",
-          duration: "August 2020 - November 2021",
-          location: "Islamabad, Pakistan",
-          description: "", //"My main responsibilties include designing frontend for the applications as well as teaching those interns who were new to flutter, I also acted as team lead in the absence of our designated team lead.",
-          color: "#ee3c26",
+          startedAt: {
+            year: "2021",
+            month: "May",
+            day: "03",
+          },
+          endedAt: {
+            year: "2021",
+            month: "July",
+            day: "03",
+          },
+          description:
+            "Interned at Productbox, collaborating on web apps. Gained experience in MySQL, Express.js, Firebase Auth. Assisted in DB management, server-side dev, secure user auth with Firebase. ",
         },
       ],
     },
     {
-      title: "Volunteerships",
-      experiences: [
+      company: "IdeoMetrix",
+      startingDate: {
+        year: "2020",
+        month: "August",
+        day: "15",
+      },
+      endingDate: {
+        year: "2020",
+        month: "November",
+        day: "15",
+      },
+      companyUrl: "https://www.ideometrix.com/",
+      logo_path: "ideometrix-logo.png",
+      location: "Islamabad, Pakistan",
+      roles: [
+        {
+          title: "Flutter Developer - Intern",
+          description:
+            "My main responsibilities include designing frontend for the applications as well as helping out fellow interns who were new to flutter.",
+          startedAt: {
+            year: "2020",
+            month: "August",
+            day: "15",
+          },
+          endedAt: {
+            year: "2020",
+            month: "November",
+            day: "15",
+          },
+        },
+      ],
+    },
+    {
+      company: "Microsoft",
+      startingDate: {
+        year: "2020",
+        month: "August",
+        day: "01",
+      },
+      endingDate: {
+        year: "2021",
+        month: "December",
+        day: "31",
+      },
+      companyUrl: "https://studentambassadors.microsoft.com/",
+      logo_path: "microsoft-logo.png",
+      location: "Peshawar, Pakistan",
+      roles: [
         {
           title: "Microsoft Learn Student Ambassador",
-          company: "Microsoft",
-          company_url: "https://studentambassadors.microsoft.com/",
-          logo_path: "microsoft_logo.png",
-          duration: "Aug 2020 - Dec 2021",
-          location: "CUSIT, Peshawar, Pakistan",
-          description: "", // "Microsoft Student Ambassador is a program for university students to lead the awareness and use of Cloud especially Azure tools in the development of their projects and startups. Under this program, I have organised hands on workshops of GitHub and seminars to teach Cloud Computing concepts to students.",
-          color: "#D83B01",
+          description:
+            "As a Microsoft Student Ambassador, I led the promotion and utilization of Cloud, specifically Azure tools, among university students for their projects and startups. Organized hands-on workshops and seminars on GitHub and Cloud Computing concepts, empowering students with practical knowledge.",
+          startedAt: {
+            year: "2020",
+            month: "August",
+            day: "01",
+          },
+          endedAt: {
+            year: "2021",
+            month: "December",
+            day: "31",
+          },
         },
-        // {
-        //   title: "Developer Program Member",
-        //   company: "Github",
-        //   company_url: "https://github.com/",
-        //   logo_path: "github_logo.png",
-        //   duration: "",
-        //   location: "",
-        //   description:
-        //     "Actively contributing to many opensource projects. I have contributed to projects of organisations like Hacktoberfest and flutter mobile apps. These contributions include bug fixes, feature requests and formulating proper documentation for a project.",
-        //   color: "#181717",
-        // },
-        // {
-        //   title: "BookDrive",
-        //   company: "Read Pakistan",
-        //   company_url: "https://readpakistan.org.pk/",
-        //   logo_path: "book-charity.svg",
-        //   duration: "",
-        //   location: "Peshawar, Pakistan",
-        //   description:
-        //     "Collected over 140 books curricullum books ranging from school to university and donated them which were then delivered to deserving unfortunate children who couldn't afford to purchase them.",
-        //   color: "#181717",
-        // },
-        // {
-        //   title: "BookDrive",
-        //   company: "Chughtai Library",
-        //   company_url:
-        //     "https://chughtailab.com/chughtai-foundation/chughtaipubliclibrary/",
-        //   logo_path: "book-charity.svg",
-        //   duration: "",
-        //   location: "Peshawar, Pakistan",
-        //   description:
-        //     "Collected over 30 books non-curricullum books ranging from Novels to test preparation modules and donated Chughtai Labs's pulbic library which were then placed in the library for readers to benifit from.",
-        //   color: "#181717",
-        // },
       ],
     },
   ],
