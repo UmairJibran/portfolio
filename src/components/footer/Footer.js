@@ -8,7 +8,7 @@ export default function Footer(props) {
   return (
     <div className="footer-div" style={{ backgroundColor: props.theme.text }}>
       <Fade>
-        <p className="footer-text" style={{ color: props.theme.highlight }}>
+        <p className="footer-text" style={{ color: '#000' }}>
           {new Date().getFullYear().toString()}&copy; Made with{" "}
           <span role="img">🤍</span> by
           <a
