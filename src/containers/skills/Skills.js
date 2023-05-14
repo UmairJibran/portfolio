@@ -12,12 +12,6 @@ export default function Skills(props) {
           <h1 className="skills-header" style={{ color: theme.text }}>
             What can I do for you?
           </h1>
-          <p
-            className="skills-description"
-            style={{ color: theme.secondaryText }}
-          >
-            My development stack is as follows:
-          </p>
         </Fade>
       </div>
       <SkillSection theme={theme} />
