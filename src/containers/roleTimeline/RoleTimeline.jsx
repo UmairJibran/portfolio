@@ -9,7 +9,7 @@ const RoleTimeline = ({ theme, role, getExperienceString }) => {
 
   return (
     <div className="role-timeline-main flex relative pb-4">
-      <div className="text-justify ml-9">
+      <div className="ml-9">
         <h3 className="text-lg font-bold mb-1" style={{ color: theme.text }}>
           {role.title}
         </h3>
@@ -17,12 +17,14 @@ const RoleTimeline = ({ theme, role, getExperienceString }) => {
           {period} · {duration}
         </span>
         <br />
-        <small
-          className="text-sm text-ellipsis text-justify"
-          style={{ color: `${theme.secondaryText}A0` }}
-        >
-          {role.description}
-        </small>
+        <div className="text-justify">
+          <small
+            className="text-sm text-ellipsis text-justify"
+            style={{ color: `${theme.secondaryText}A0` }}
+          >
+            {role.description}
+          </small>
+        </div>
       </div>
     </div>
   );
