@@ -119,6 +119,37 @@
       ]
     },
     {
+      "id": "asdg2353s425b=",
+      "name": "Gamma",
+      "url": "https://gamma.solenova.tech",
+      "description": "A free and simple GitHub Action that allows consumer to merge their pull requests directly into the testing branch. It simplifies the process of merging pull requests by automating the necessary Git commands.",
+      "logo": "meraid",
+      "category": "Automation",
+      "technologies": [
+        {
+          "skillName": "Git",
+          "fontAwesomeClassname": "simple-icons:git",
+          "style": {
+            "color": "#F05032"
+          }
+        },
+        {
+          "skillName": "GitHub Actions",
+          "fontAwesomeClassname": "simple-icons:githubactions",
+          "style": {
+            "color": "#F7DF1E"
+          }
+        },
+        {
+          "skillName": "YML",
+          "fontAwesomeClassname": "simple-icons:yaml",
+          "style": {
+            "color": "#CB171E"
+          }
+        }
+      ]
+    },
+    {
       "logo": "shaoor",
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
       "category": "Backend/Web",
@@ -362,83 +393,6 @@
           "fontAwesomeClassname": "simple-icons:figma",
           "style": {
             "color": "#F24E1E"
-          }
-        }
-      ]
-    },
-    {
-      "logo": "auction",
-      "category": "Backend/Web",
-      "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
-      "name": "eAuction",
-      "url": "https://github.com/UmairJibran/online-Auction",
-      "description": "eAuction is a semester project.",
-      "technologies": [
-        {
-          "skillName": "PHP",
-          "fontAwesomeClassname": "simple-icons:php",
-          "style": {
-            "color": "#474aBa"
-          }
-        },
-        {
-          "skillName": "MySQL",
-          "fontAwesomeClassname": "simple-icons:mysql",
-          "style": {
-            "color": "#8BA8B9"
-          }
-        },
-        {
-          "skillName": "JavaScript",
-          "fontAwesomeClassname": "simple-icons:javascript",
-          "style": {
-            "backgroundColor": "#000000",
-            "color": "#F7DF1E"
-          }
-        },
-        {
-          "skillName": "HTML",
-          "fontAwesomeClassname": "simple-icons:html5",
-          "style": {
-            "color": "#E34F26"
-          }
-        },
-        {
-          "skillName": "CSS",
-          "fontAwesomeClassname": "simple-icons:css3",
-          "style": {
-            "color": "#1572B6"
-          }
-        }
-      ]
-    },
-    {
-      "logo": "lms",
-      "category": "Mobile/Backend",
-      "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
-      "name": "City University LMS",
-      "url": "https://github.com/UmairJibran/cu-lms",
-      "description": "It is a pet project still in development",
-      "technologies": [
-        {
-          "skillName": "Flutter",
-          "fontAwesomeClassname": "simple-icons:flutter",
-          "style": {
-            "color": "#60CAF6"
-          }
-        },
-        {
-          "skillName": "MySQL",
-          "fontAwesomeClassname": "simple-icons:mysql",
-          "style": {
-            "color": "#8BA8B9"
-          }
-        },
-        {
-          "skillName": "NodeJS",
-          "fontAwesomeClassname": "simple-icons:node-dot-js",
-          "style": {
-            "color": "#339933"
           }
         }
       ]
