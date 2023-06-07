@@ -7,7 +7,7 @@ const settings = {
 
 //Home Page
 const greeting = {
-  title: "Hello World, Jibran here!",
+  title: "Jibran here!",
   logo_name: "Umair Jibran",
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
