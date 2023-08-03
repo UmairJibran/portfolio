@@ -7,7 +7,7 @@ import Testimonials from "../../components/testimonials/Testimonials";
 import Projects from "../projects/Projects";
 import Contact from "../contact/ContactComponent";
 import Experience from "../experience/Experience";
-// import GithubStats from "../github/Stats";
+import GithubStats from "../github/Stats";
 import Mentoring from "../mentoring/MentoringComponent";
 
 const HomeComponent = ({ theme }) => {
@@ -20,7 +20,7 @@ const HomeComponent = ({ theme }) => {
       <Experience theme={theme} />
       <Skills theme={theme} />
       <Mentoring theme={theme} />
-      {/* <GithubStats theme={theme} /> */}
+      <GithubStats theme={theme} />
       <Contact theme={theme} />
       <Footer theme={theme} />
       <TopButton theme={theme} />

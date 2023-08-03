@@ -57,13 +57,13 @@ class Header extends Component {
             >
               Skills
             </li>
-            {/* <li
+            <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
               style={{ color: theme.text }}
               onClick={() => scrollIntoView("Stats")}
             >
               Stats
-            </li> */}
+            </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
               style={{ color: theme.text }}
