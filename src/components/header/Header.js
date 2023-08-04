@@ -30,18 +30,11 @@ class Header extends Component {
           </label>
           <ul className="menu" style={{ backgroundColor: theme.body }}>
             <li
-              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
               style={{ color: theme.text }}
-              onClick={() => scrollIntoView("projects")}
+              onClick={() => scrollIntoView("Stats")}
             >
-              Projects
-            </li>
-            <li
-              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
-              style={{ color: theme.text }}
-              onClick={() => scrollIntoView("testimonials")}
-            >
-              References
+              Activity
             </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
@@ -53,16 +46,23 @@ class Header extends Component {
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
               style={{ color: theme.text }}
+              onClick={() => scrollIntoView("projects")}
+            >
+              Projects
+            </li>
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
+              style={{ color: theme.text }}
               onClick={() => scrollIntoView("skills")}
             >
               Skills
             </li>
             <li
-              className="mx-3 my-1 cursor-pointer font-light hover:font-bold"
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
               style={{ color: theme.text }}
-              onClick={() => scrollIntoView("Stats")}
+              onClick={() => scrollIntoView("testimonials")}
             >
-              Stats
+              References
             </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
