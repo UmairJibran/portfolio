@@ -22,25 +22,17 @@ const Activity = ({ theme }) => {
         headers: { "Content-type": "application/json" },
       });
       const response = await githubActivityEvents.json();
-      setEvents(response);
+      setEvents(response.splice(0, 14));
     };
 
     fetchEvents();
-  });
+  }, []);
   if (!events) return <></>;
   return (
     <>
-      <section className="text-gray-400 body-font">
-        <div className="container px-5 pt-24 mx-auto" bis_skin_checked="1">
-          <div
-            className="flex flex-wrap w-full mb-10 flex-col items-center text-center"
-            bis_skin_checked="1"
-          >
-            <h1 className="sm:text-3xl text-2xl font-black text-white">
-              Last 30 Day Open Source Contributions
-            </h1>
-          </div>
-          <div className="flex flex-wrap -m-4" bis_skin_checked="1">
+      <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 pt-24 mx-auto" bis_skin_checked="1">
+          <div class="-my-8" bis_skin_checked="1">
             {events.map((event, id) => {
               if (event.type === "PushEvent")
                 return <PushEventContainer event={event} key={id} />;
@@ -56,7 +48,7 @@ const Activity = ({ theme }) => {
                 return <ForkEventContainer event={event} key={id} />;
               if (event.type === "PublicEvent")
                 return <PublicEventContainer event={event} key={id} />;
-              return <div key={id}></div>;
+              return <div key={id}>{event.length}</div>;
             })}
           </div>
         </div>
