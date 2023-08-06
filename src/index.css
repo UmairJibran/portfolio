@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: "Space Mono";
+}
+
 @font-face {
   font-family: "Agustina Regular";
   font-style: normal;

@@ -474,13 +474,27 @@ const experience = {
       location: "Peshawar, Pakistan",
       roles: [
         {
+          title: "Full Stack Engineer",
+          startedAt: {
+            year: "2022",
+            month: "July",
+            day: "01",
+          },
+          endedAt: null,
+          description: "",
+        },
+        {
           title: "Associate Full Stack Engineer",
           startedAt: {
             year: "2021",
             month: "July",
             day: "01",
           },
-          endedAt: null,
+          endedAt: {
+            year: "2022",
+            month: "July",
+            day: "01",
+          },
           description:
             "I contributed to diverse software projects, building efficient and scalable web apps using Node.js, React, Serverless, and AlpineJS. I developed RESTful APIs, managed databases (SQL and NoSQL), and collaborated with DevOps teams for deployment. Experiment different agile methodologies, Python's OpenCV, and Flutter. Effective communication, collaboration, and continual improvement remain priorities.",
         },
