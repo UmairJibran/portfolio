@@ -1,0 +1,33 @@
+{
+  "emittedProjects": {
+    "logo": "tfp.png",
+    "category": "Website Development",
+    "id": "MDEwOlJlcG934536cnkyNzM1MTI1NTE=",
+    "name": "Tameer Foundation Pakistan",
+    "url": "https://tameerfoundationpakistan.org",
+    "description": "Non-profit website showcases community-driven programs and impactful stories.",
+    "technologies": [
+      {
+        "skillName": "Wordpress",
+        "fontAwesomeClassname": "simple-icons:flutter",
+        "style": {
+          "color": "#60CAF6"
+        }
+      },
+      {
+        "skillName": "MySQL",
+        "fontAwesomeClassname": "simple-icons:mysql",
+        "style": {
+          "color": "#8BA8B9"
+        }
+      },
+      {
+        "skillName": "PHP",
+        "fontAwesomeClassname": "simple-icons:node-dot-js",
+        "style": {
+          "color": "#339933"
+        }
+      }
+    ]
+  }
+}
