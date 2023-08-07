@@ -457,7 +457,7 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Job, Internship, and Volunteership",
+  subtitle: "Jobs, Internships, and Volunteer work",
   description:
     "I worked as a Backend Developer, Designer, and Flutter Developer in an evolving startup. Timeline: Mentored students in hackathons as a Microsoft representative, creating empowering communities that benefited over 1500 students and new developers worldwide.",
   timeline: [
@@ -499,7 +499,7 @@ const experience = {
             "I contributed to diverse software projects, building efficient and scalable web apps using Node.js, React, Serverless, and AlpineJS. I developed RESTful APIs, managed databases (SQL and NoSQL), and collaborated with DevOps teams for deployment. Experiment different agile methodologies, Python's OpenCV, and Flutter. Effective communication, collaboration, and continual improvement remain priorities.",
         },
         {
-          title: "Associate Full Stack Engineer - Intern",
+          title: "Junior Full Stack Engineer",
           startedAt: {
             year: "2021",
             month: "May",
@@ -511,7 +511,7 @@ const experience = {
             day: "03",
           },
           description:
-            "Interned at Productbox, collaborating on web apps. Gained experience in MySQL, Express.js, Firebase Auth. Assisted in DB management, server-side dev, secure user auth with Firebase. ",
+            "As a junior full stack engineer at Productbox, I collaborated on web apps. Gained experience in MySQL, Express.js, Firebase Auth. Assisted in DB management, server-side dev, secure user auth with Firebase. ",
         },
       ],
     },
@@ -532,7 +532,7 @@ const experience = {
       location: "Islamabad, Pakistan",
       roles: [
         {
-          title: "Flutter Developer - Intern",
+          title: "Junior Flutter Developer",
           description:
             "My main responsibilities include designing frontend for the applications as well as helping out fellow interns who were new to flutter.",
           startedAt: {
