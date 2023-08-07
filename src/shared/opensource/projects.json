@@ -4,8 +4,8 @@
       "id": "asdg3425b=",
       "name": "MeraID",
       "url": "https://www.meraid.pk",
-      "description": "Meraid.pk, an upcoming authentication service in Pakistan to verify customers' identities thoroughly and comprehensively.",
-      "logo": "meraid.png",
+      "description": "Meraid.pk, an upcoming KYC service in Pakistan, promises to verify customers' identities thoroughly and comprehensively, going above and beyond the standard KYC requirements.",
+      "logo": "meraid",
       "category": "Mobile/Backend/Web",
       "technologies": [
         {
@@ -92,7 +92,7 @@
       "name": "Alpha",
       "url": "https://alpha.solenova.tech",
       "description": "A free and simple browser extension that helps boost productivity by blocking distracting websites and allowing access only after solving a math problem.",
-      "logo": "alpha.png",
+      "logo": "meraid",
       "category": "Web",
       "technologies": [
         {
@@ -123,7 +123,7 @@
       "name": "Gamma",
       "url": "https://gamma.solenova.tech",
       "description": "A free and simple GitHub Action that allows consumer to merge their pull requests directly into the testing branch. It simplifies the process of merging pull requests by automating the necessary Git commands.",
-      "logo": "gamma.png",
+      "logo": "meraid",
       "category": "Automation",
       "technologies": [
         {
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "logo": "shaoor.png",
+      "logo": "shaoor",
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3rtNTQ=",
       "category": "Backend/Web",
       "name": "Shaoor",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "logo": "mavencery.png",
+      "logo": "mavencery",
       "id": "sasga=",
       "name": "Mavencery",
       "category": "Mobile/Backend",
@@ -261,7 +261,7 @@
       ]
     },
     {
-      "logo": "dsm.png",
+      "logo": "dsm",
       "category": "Backend/Web",
       "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
       "name": "Drive Safe Medicals",
@@ -329,7 +329,38 @@
   ],
   "minor": [
     {
-      "logo": "fooddo.png",
+      "logo": "tfp",
+      "category": "Website Development",
+      "id": "MDEwOlJlcG934536cnkyNzM1MTI1NTE=",
+      "name": "Tameer Foundation Pakistan",
+      "url": "https://tameerfoundationpakistan.org",
+      "description": "Non-profit website showcases community-driven programs and impactful stories.",
+      "technologies": [
+        {
+          "skillName": "Wordpress",
+          "fontAwesomeClassname": "simple-icons:flutter",
+          "style": {
+            "color": "#60CAF6"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "fontAwesomeClassname": "simple-icons:mysql",
+          "style": {
+            "color": "#8BA8B9"
+          }
+        },
+        {
+          "skillName": "PHP",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        }
+      ]
+    },
+    {
+      "logo": "fooddo",
       "category": "Mobile/Backend",
       "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       "name": "Fooddo",

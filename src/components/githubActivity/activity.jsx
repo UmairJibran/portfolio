@@ -1,5 +1,5 @@
 import GitHubCalendar from "react-github-calendar";
-import GitHubActivityView from "../../containers/githubActivity/githubActivityView";
+// import GitHubActivityView from "../../containers/githubActivity/githubActivityView";
 
 import "./activity.css";
 
@@ -17,7 +17,7 @@ const Activity = ({ theme }) => {
           blockMargin={10}
           hideMonthLabels={true}
         />
-        <GitHubActivityView theme={{ theme }} />
+        {/* <GitHubActivityView theme={{ theme }} /> */}
       </div>
     </>
   );
