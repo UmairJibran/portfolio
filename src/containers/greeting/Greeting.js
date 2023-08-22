@@ -150,6 +150,7 @@ export default function Greeting(props) {
           </div>
           <div className="greeting-image-div">
             <img
+              fetchPriority="high"
               className="myimage"
               src={require("../../assets/images/umair.jpg")}
               alt="Umair Jibran.img"
