@@ -55,6 +55,14 @@ body {
   width: 100%;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   html,
