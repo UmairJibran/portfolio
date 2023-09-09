@@ -24,36 +24,42 @@ const socialMediaLinks = [
     link: "https://github.com/umairjibran",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    featherIcon: "github",
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/umairjibran/",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    featherIcon: "linkedin",
   },
   {
     name: "Medium",
     link: "https://medium.com/@umairjibran",
     fontAwesomeIcon: "fa-medium", // Reference https://fontawesome.com/icons/medium?style=brands
     backgroundColor: "#0C2461", // Reference https://simpleicons.org/?q=medium
+    featherIcon: "feather",
   },
   {
     name: "Twitter",
     link: "https://twitter.com/umairjibran7",
     fontAwesomeIcon: "fa-twitter", // Reference https://fontawesome.com/icons/twitter?style=brands
     backgroundColor: "#1DA1F2", // Reference https://simpleicons.org/?q=twitter
+    featherIcon: "twitter",
   },
   // {
   //   name: "Facebook",
   //   link: "https://www.facebook.com/umairjibran8",
   //   fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
   //   backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
+  // featherIcon: "github",
   // },
   // {
   //   name: "Instagram",
   //   link: "https://www.instagram.com/umairjibran7/",
   //   fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
   //   backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
+  // featherIcon: "github",
   // },
 ];
 
@@ -63,24 +69,28 @@ const formalSocialMediaLinksHome = [
     link: "mailto:me@umairjibran.com?cc=umairjibran7@gmail.com",
     fontAwesomeIcon: "far fa-envelope", // Reference https://fontawesome.com/icons/google?style=brands
     backgroundColor: "#aa9c81", // Reference https://simpleicons.org/?q=gmail
+    featherIcon: "mail",
   },
   {
     name: "Github",
     link: "https://github.com/umairjibran",
     fontAwesomeIcon: "fa-github", // Reference https://fontawesome.com/icons/github?style=brands
     backgroundColor: "#181717", // Reference https://simpleicons.org/?q=github
+    featherIcon: "github",
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/umairjibran/",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
+    featherIcon: "linkedin",
   },
   {
     name: "Medium",
     link: "https://medium.com/@umairjibran",
     fontAwesomeIcon: "fa-medium", // Reference https://fontawesome.com/icons/medium?style=brands
     backgroundColor: "#000", // Reference https://simpleicons.org/?q=medium
+    featherIcon: "feather",
   },
 ];
 
