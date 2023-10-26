@@ -468,7 +468,11 @@ const experience = {
         month: "May",
         day: "03",
       },
-      endingDate: null,
+      endingDate: {
+        year: "2023",
+        month: "November",
+        day: "25",
+      },
       companyUrl: "https://www.productbox.dev/",
       logo_path: "productbox-logo.png",
       location: "Peshawar, Pakistan",
