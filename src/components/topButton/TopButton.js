@@ -53,7 +53,7 @@ export default function TopButton({ theme }) {
       style={{
         color: theme.body,
         backgroundColor: theme.text,
-        border: `solid 1px ${theme.imgHighlight}`,
+        border: `solid 1px ${theme.text}`,
       }}
       title="Go up"
       onMouseEnter={() => onMouseEnter(theme.text, theme.body)}

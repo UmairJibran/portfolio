@@ -15,7 +15,10 @@ const DescriptiveComponent = ({ theme }) => {
         reach out to me at{" "}
         <a
           href="mailto:mentoring@umairjibran.com"
-          className="text-stone-100 custom-underline"
+          className="custom-underline"
+          style={{
+            color: theme.alternateText
+          }}
         >
           mentoring@umairjibran.com
         </a>

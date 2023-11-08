@@ -174,8 +174,8 @@ const skills = {
           skillName: "Socket.io",
           fontAwesomeClassname: "simple-icons:socketdotio",
           style: {
-            // color: "#010101",
-            color: "#FFFFFF",
+            color: "#010101",
+            // color: "#FFFFFF",
           },
         },
         {
@@ -333,8 +333,8 @@ const skills = {
           skillName: "GitHub",
           fontAwesomeClassname: "simple-icons:github",
           style: {
-            // color: "000000",
-            color: "#FFFFFF",
+            color: "000000",
+            // color: "#FFFFFF",
           },
         },
         {
@@ -627,45 +627,25 @@ const testimonialsPageData = [
     designation: "Founder and CEO",
     employerAtTime: "Productbox",
     linkedin: "https://www.linkedin.com/in/waleed-waseem-2b625270/",
-    message: `#madprops to Jibran U. for handling a product which I personally believe is the most complex application we are tackling around server-less model. Excellent work and keep it up!`,
+    message: `I had the privilege of working with Umair Jibran for over two years, and it is without a doubt that he is one of the most talented backend resources I've had the pleasure of collaborating with. Umair not only possesses exceptional technical skills but also carries himself with a remarkable level of professionalism, setting a clear standard for what a Professional Engineer should be.`,
     email: "waleed@productbox.dev",
   },
   {
+    name: "Farqaleet Kirmani",
+    designation: "Co-founder",
+    employerAtTime: "Nordvisor",
+    linkedin: "https://www.linkedin.com/in/farqaleetkirmani",
+    message: `I highly recommend Umair as an exceptional resource for any project or team. He joined our project with limited experience but quickly proved himself as highly dedicated and a fast learner. He continuously demonstrated a remarkable work ethic, taking ownership for the project tasks and challenges even when they were not his direct responsibility. He constantly strove for excellence.`,
+  },
+
+  {
     name: "Saif Ullah Sajid",
     designation: "Engineering Lead | iOS Engineer",
-    employerAtTime: "Productbox",
+    employerAtTime: "Heini",
     linkedin: "https://www.linkedin.com/in/saifsajid99/",
     message:
       "Jibran is someone who stops at nothing. Once he is challenged to do a task, he delivers the best output no matter what. Being a manager jibran was the easiest engineer to manage. He is always humble and friendly. His learning attitude is amazing and he experiments with the top tech all the time. He is way ahead of his time in his professional journey.",
     website: "https://saifullahsajid.com/",
-  },
-  {
-    name: "Qaiser Hussain",
-    designation: "Android Developers Lead",
-    employerAtTime: "FF Steels",
-    linkedin: "https://www.linkedin.com/in/qaiser-hussain-khan-bangash/",
-    message: `Umair is a modern application developer who has got special approach and techniques of doing any scale of tasks. I have learned basics of flutter from him. He is a good teacher as well as a good human being. I'll definitely recommend him.`,
-  },
-  {
-    name: "Muhammad Sulaimand",
-    designation: "Full Stack Developer",
-    employerAtTime: "FF STEEL",
-    linkedin: "https://www.linkedin.com/in/muhammad-sulaiman-7b2b77194/",
-    message: `working with Umair Jibran can be best luck for a developer because he is one of the smart, technical and cooperative developer he loves to solve different problems, he is very good in R&D and googling.. one the best backend developer`,
-  },
-  {
-    name: "Babar Khan",
-    designation: "Full Stack Senior Developer",
-    employerAtTime: "Advantest ",
-    linkedin: "https://www.linkedin.com/in/babar-khan-b809a5193",
-    message: `A very detailed individual in terms of problem solving. As a team member Umair always prove himself as a key player to handle client demands with proper collaboration with his team mates.`,
-  },
-  {
-    name: "Faisal Tahir",
-    designation: "SQA Specialist & SCRUM Master",
-    employerAtTime: "RedMarkers",
-    linkedin: "https://www.linkedin.com/in/itsfaisaltahir",
-    message: `I had the pleasure of working with Umair Jibran in the past and can say with confidence that he is a talented full-stack developer who is always dedicated to producing high-quality work. As a QA, I appreciated his professionalism and willingness to work collaboratively to solve problems and produce the best results possible. Umair has a keen eye for detail and doesn't hesitate to speak up when he sees room for improvement, which I found very helpful in our work together. He is dedicated and honest towards his work, always striving to do what's best for the team and the project at hand. I appreciated his straightforward and honest approach, even if it was sometimes tough to hear, as I knew it was coming from a place of wanting the best for you. I highly recommend Umair Jibran as a valuable addition to any team!`,
   },
 ];
 
