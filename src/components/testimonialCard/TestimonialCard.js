@@ -1,7 +1,9 @@
 import React from "react";
+
+import feather from "feather-icons";
 import "./TestimonialCard.css";
 
-const TestimonialCard = ({ testimonial }) => {
+const TestimonialCard = ({ testimonial, theme }) => {
   const mailTo = `mailto:${testimonial.email}`;
   return (
     <>
@@ -24,7 +26,10 @@ const TestimonialCard = ({ testimonial }) => {
           <p className="text-xs md:text-base">
             <a
               href={testimonial.linkedin}
-              className="text-gray-100 font-medium custom-underline"
+              className="font-medium custom-underline"
+              // style={{
+              //   color: `${theme.text}`,
+              // }}
             >
               {testimonial.name.toUpperCase()}
             </a>
@@ -48,66 +53,45 @@ const TestimonialCard = ({ testimonial }) => {
           <span className="button-bar mx-auto text-center my-5 gap-10">
             {testimonial.email ? (
               <a href={mailTo} target="_blank" rel="noreferrer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: feather.icons.mail.toSvg({
+                      "stroke-width": 0.75,
+                      height: 32,
+                      width: 32,
+                    }),
+                  }}
+                />
               </a>
             ) : (
               <></>
             )}
             {testimonial.linkedin ? (
               <a href={testimonial.linkedin} target="_blank" rel="noreferrer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-brand-linkedin"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  {" "}
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />{" "}
-                  <rect x="4" y="4" width="16" height="16" rx="2" />{" "}
-                  <line x1="8" y1="11" x2="8" y2="16" />{" "}
-                  <line x1="8" y1="8" x2="8" y2="8.01" />{" "}
-                  <line x1="12" y1="16" x2="12" y2="11" />{" "}
-                  <path d="M16 16v-3a2 2 0 0 0 -4 0" />{" "}
-                </svg>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: feather.icons.linkedin.toSvg({
+                      "stroke-width": 0.75,
+                      height: 32,
+                      width: 32,
+                    }),
+                  }}
+                />
               </a>
             ) : (
               <></>
             )}
             {testimonial.website ? (
               <a href={testimonial.website} target="_blank" rel="noreferrer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: feather.icons["mouse-pointer"].toSvg({
+                      "stroke-width": 0.75,
+                      height: 32,
+                      width: 32,
+                    }),
+                  }}
+                />
               </a>
             ) : (
               <></>

@@ -6,19 +6,15 @@ import { Fade } from "react-reveal";
 
 export default function Footer(props) {
   return (
-    <div className="footer-div" style={{ backgroundColor: props.theme.text }}>
+    <div className="footer-div" style={{ backgroundColor: props.theme.experienceBubble }}>
       <Fade>
-        <p className="footer-text" style={{ color: '#000' }}>
+        <p className="footer-text" style={{ color: `${props.theme.body}` }}>
           {new Date().getFullYear().toString()}&copy; Made with{" "}
           <span role="img">🤍</span> by
           <a
             href="https://www.linkedin.com/in/umairjibran/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              color: props.theme.imageHighlight,
-              textDecoration: "none",
-            }}
           >
             {" "}
             Umair Jibran

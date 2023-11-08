@@ -16,6 +16,7 @@ const Activity = ({ theme }) => {
           fontSize={40}
           blockMargin={10}
           hideMonthLabels={true}
+          colorScheme="light"
         />
         {/* <GitHubActivityView theme={{ theme }} /> */}
       </div>
