@@ -20,7 +20,7 @@ const ExperienceTimeline = ({
   });
 
   return (
-    <div className="experience-timeline-main flex relative pb-12">
+    <div className="experience-timeline-main flex relative pb-4">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
         <div
           style={{ backgroundColor: lastExperience ? "" : `${theme.text}88` }}

@@ -16,11 +16,11 @@ const HomeComponent = ({ theme }) => {
       <Header theme={theme} />
       <Greeting theme={theme} />
       <GithubStats theme={theme} />
-      <Experience theme={theme} />
       <Projects theme={theme} />
       <Skills theme={theme} />
       <Testimonials theme={theme} />
       <Mentoring theme={theme} />
+      <Experience theme={theme} />
       <Contact theme={theme} />
       <Footer theme={theme} />
       <TopButton theme={theme} />

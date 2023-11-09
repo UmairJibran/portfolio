@@ -39,13 +39,6 @@ class Header extends Component {
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
               style={{ color: theme.text }}
-              onClick={() => scrollIntoView("experience")}
-            >
-              Experience
-            </li>
-            <li
-              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
-              style={{ color: theme.text }}
               onClick={() => scrollIntoView("projects")}
             >
               Projects
@@ -63,6 +56,13 @@ class Header extends Component {
               onClick={() => scrollIntoView("testimonials")}
             >
               References
+            </li>
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("experience")}
+            >
+              Experience
             </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
