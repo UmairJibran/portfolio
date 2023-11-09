@@ -21,7 +21,7 @@ class Header extends Component {
             >
               {greeting.logo_name}
             </span>
-            <span style={{ color: theme.text }}>/&gt;</span>
+            <span style={{ color: theme.text }}>/ &gt;</span>
           </div>
 
           <input className="menu-btn" type="checkbox" id="menu-btn" />
