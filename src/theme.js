@@ -151,6 +151,7 @@ export const creamTheme = {
   secondaryText: "#3f444c",
   headerColor: "#f9f9f5",
   experienceBubble: "#8785A2",
+  imageHighlight: "#8785A2",
 };
 
 /*
