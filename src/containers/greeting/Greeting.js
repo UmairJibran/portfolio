@@ -132,15 +132,15 @@ export default function Greeting(props) {
               />
 
               <div className="portfolio-repo-btn-div">
-                <Button
+                {/* <Button
                   text="Resume 📝"
                   newTab={false}
                   href={"/resume"}
                   theme={theme}
                   className="portfolio-repo-btn"
-                />
+                /> */}
                 <Button
-                  text="Hire Me"
+                  text="Hire Me 🥳"
                   href={"#contact"}
                   theme={theme}
                   className="portfolio-repo-btn"

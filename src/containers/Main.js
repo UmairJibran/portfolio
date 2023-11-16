@@ -1,6 +1,11 @@
 import React, { Component } from "react";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
-import Splash from "../pages/splash/Splash";
+import {
+  Route,
+  Redirect,
+  Switch,
+  BrowserRouter as Router,
+} from "react-router-dom";
+// import Splash from "../pages/splash/Splash";
 import Resume from "../pages/resume/ResumeComponent";
 import { Suspense } from "react";
 import Loader from "../components/Loader/Loader";
@@ -17,12 +22,9 @@ export default class Main extends Component {
                 path="/"
                 exact
                 render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
+                  <Home {...props} theme={this.props.theme} />
+                  // <Splash {...props} theme={this.props.theme} />
                 )}
-              />
-              <Route
-                path="/home"
-                render={(props) => <Home {...props} theme={this.props.theme} />}
               />
               <Route
                 path="/resume"
@@ -33,7 +35,8 @@ export default class Main extends Component {
               />
               <Route
                 render={(props) => (
-                  <Splash {...props} theme={this.props.theme} />
+                  <Redirect to="/" />
+                  // <Splash {...props} theme={this.props.theme} />
                 )}
               />
             </Switch>

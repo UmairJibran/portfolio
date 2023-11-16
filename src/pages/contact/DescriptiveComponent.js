@@ -11,7 +11,16 @@ const DescriptiveComponent = ({ theme, ContactData, openEmailForm }) => {
       >
         {ContactData["description"]}
       </p>
-      <SocialMedia theme={theme} socialMediaLinks={socialMediaLinks} />
+      <div
+        className="w-[100%]"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <SocialMedia theme={theme} socialMediaLinks={socialMediaLinks} />
+      </div>
 
       <div className="resume-btn-div">
         <ClickableButton

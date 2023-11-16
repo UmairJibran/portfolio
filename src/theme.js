@@ -132,15 +132,26 @@ export const orangeTheme = {
 };
 
 export const strongTheme = {
-  body: "#1C1339",
+  body: "#222831",
   text: "#FFFFFF",
   highlight: "#A29F40",
-  dark: "#1C1339",
+  dark: "#222831",
   secondaryText: "#F7E2EE",
   imageHighlight: "#0E6BA8",
   compImgHighlight: "#E6E6E6",
   jacketColor: "#A29F40",
-  headerColor: "#1C1339",
+  headerColor: "#222831",
+};
+
+export const creamTheme = {
+  body: "#f9f9f5",
+  text: "#222831",
+  alternateText: "#6A2C70",
+  dark: "#f9f9f5",
+  secondaryText: "#3f444c",
+  headerColor: "#f9f9f5",
+  experienceBubble: "#8785A2",
+  imageHighlight: "#8785A2",
 };
 
 /*
@@ -158,4 +169,4 @@ export const strongTheme = {
  * orangeTheme
  */
 
-export const chosenTheme = strongTheme;
+export const chosenTheme = creamTheme;

@@ -21,7 +21,7 @@ class Header extends Component {
             >
               {greeting.logo_name}
             </span>
-            <span style={{ color: theme.text }}>/&gt;</span>
+            <span style={{ color: theme.text }}>/ &gt;</span>
           </div>
 
           <input className="menu-btn" type="checkbox" id="menu-btn" />
@@ -35,13 +35,6 @@ class Header extends Component {
               onClick={() => scrollIntoView("Stats")}
             >
               Activity
-            </li>
-            <li
-              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
-              style={{ color: theme.text }}
-              onClick={() => scrollIntoView("experience")}
-            >
-              Experience
             </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
@@ -63,6 +56,13 @@ class Header extends Component {
               onClick={() => scrollIntoView("testimonials")}
             >
               References
+            </li>
+            <li
+              className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"
+              style={{ color: theme.text }}
+              onClick={() => scrollIntoView("experience")}
+            >
+              Experience
             </li>
             <li
               className="mx-3 my-1 cursor-pointer font-light hover:font-bold custom-underline"

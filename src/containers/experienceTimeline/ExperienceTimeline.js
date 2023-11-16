@@ -20,7 +20,7 @@ const ExperienceTimeline = ({
   });
 
   return (
-    <div className="experience-timeline-main flex relative pb-12">
+    <div className="experience-timeline-main flex relative pb-4">
       <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
         <div
           style={{ backgroundColor: lastExperience ? "" : `${theme.text}88` }}
@@ -29,7 +29,7 @@ const ExperienceTimeline = ({
       </div>
       <div
         className="flex-shrink-0 w-10 h-10 rounded-full inline-flex items-center justify-center text-white relative z-10"
-        style={{ backgroundColor: `${theme.text}F0` }}
+        style={{ backgroundColor: `${theme.experienceBubble}` }}
       >
         <img
           src={require(`../../assets/images/${experience.logo_path}`)}

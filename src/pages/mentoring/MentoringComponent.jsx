@@ -13,7 +13,7 @@ const ContactComponent = ({ theme }) => {
                 className="contact-heading-text mb-10"
                 style={{ color: theme.text }}
               >
-                Market Ready
+                Require Mentoring?
               </h1>
               <DescriptiveComponent theme={theme} />
             </div>

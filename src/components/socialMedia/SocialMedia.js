@@ -1,18 +1,9 @@
 import React from "react";
+import feather from "feather-icons";
+
 import "./SocialMedia.css";
-import styled from "styled-components";
 
-const IconWrapper = styled.span`
-  i {
-    background-color: ${(props) => props.backgroundColor};
-  }
-  &:hover i {
-    background-color: ${({ theme }) => `${theme.text}0F`};
-    transition: 0.3s ease-in;
-  }
-`;
-
-export default function socialMedia({ theme, socialMediaLinks }) {
+export default function SocialMedia({ socialMediaLinks }) {
   return (
     <div className="social-media-div">
       {socialMediaLinks.map((media, index) => {
@@ -24,10 +15,15 @@ export default function socialMedia({ theme, socialMediaLinks }) {
             rel="noopener noreferrer"
             key={index}
           >
-            <IconWrapper {...media} {...theme} key={index}>
-              <i className={`fab ${media.fontAwesomeIcon}`}></i>
-            </IconWrapper>
-            {/* <span></span> */}
+            <div
+              dangerouslySetInnerHTML={{
+                __html: feather.icons[media.featherIcon].toSvg({
+                  "stroke-width": 0.75,
+                  height: 32,
+                  width: 32,
+                }),
+              }}
+            />
           </a>
         );
       })}
