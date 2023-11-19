@@ -480,7 +480,7 @@ const experience = {
       },
       endingDate: {
         year: "2023",
-        month: "November",
+        month: "October",
         day: "25",
       },
       companyUrl: "https://www.productbox.dev/",
@@ -494,7 +494,11 @@ const experience = {
             month: "July",
             day: "01",
           },
-          endedAt: null,
+          endedAt: {
+            year: "2023",
+            month: "October",
+            day: "25",
+          },
           description: "",
         },
         {
