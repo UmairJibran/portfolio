@@ -478,15 +478,21 @@ const experience = {
         month: "May",
         day: "03",
       },
-      endingDate: {
-        year: "2023",
-        month: "October",
-        day: "25",
-      },
+      endingDate: null,
       companyUrl: "https://www.productbox.dev/",
       logo_path: "productbox-logo.png",
       location: "Peshawar, Pakistan",
       roles: [
+        {
+          title: "Full Stack Engineer",
+          startedAt: {
+            year: "2023",
+            month: "December",
+            day: "01",
+          },
+          endedAt: null,
+          description: "",
+        },
         {
           title: "Full Stack Engineer",
           startedAt: {
