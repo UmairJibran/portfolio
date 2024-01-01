@@ -316,6 +316,13 @@ const skills = {
           },
         },
         {
+          skillName: "RabbitMQ",
+          fontAwesomeClassname: "simple-icons:rabbitmq",
+          style: {
+            color: "#FF6600",
+          },
+        },
+        {
           skillName: "MySQL",
           fontAwesomeClassname: "simple-icons:mysql",
           style: {
