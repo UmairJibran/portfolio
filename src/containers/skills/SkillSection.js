@@ -31,12 +31,12 @@ class SkillSection extends Component {
 
               <div className="skills-text-div">
                 <Fade left duration={500}>
-                  <h1
+                  <h2
                     className="skills-heading mx-auto text-center"
                     style={{ color: theme.text, marginBottom: "2rem" }}
                   >
                     {skill.title}
-                  </h1>
+                  </h2>
                 </Fade>
                 <Fade right duration={500}>
                   <div className="mx-auto ml-4">

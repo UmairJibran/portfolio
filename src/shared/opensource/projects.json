@@ -88,6 +88,86 @@
       ]
     },
     {
+      "id": "asdg3425b1=",
+      "name": "Upptik",
+      "url": "https://www.upptik.com",
+      "description": "Upptik is revolutionary platform to connect students with mentors for career counseling to better navigate their future",
+      "logo": "meraid",
+      "category": "Mobile/Backend/Web",
+      "technologies": [
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933"
+          }
+        },
+        {
+          "skillName": "TypeScript",
+          "fontAwesomeClassname": "simple-icons:typescript",
+          "style": {
+            "color": "#3178C6"
+          }
+        },
+        {
+          "skillName": "ExpressJS",
+          "fontAwesomeClassname": "simple-icons:express",
+          "style": {
+            "color": "#000000"
+          }
+        },
+        {
+          "skillName": "Sequelize",
+          "fontAwesomeClassname": "simple-icons:sequelize",
+          "style": {
+            "color": "#52B0E7"
+          }
+        },
+        {
+          "skillName": "MySQL",
+          "fontAwesomeClassname": "simple-icons:mysql",
+          "style": {
+            "color": "#4479A1"
+          }
+        },
+        {
+          "skillName": "AWS Lambda",
+          "fontAwesomeClassname": "simple-icons:awslambda",
+          "style": {
+            "color": "#FF9900"
+          }
+        },
+        {
+          "skillName": "Amazon S3",
+          "fontAwesomeClassname": "simple-icons:amazons3",
+          "style": {
+            "color": "#569A31"
+          }
+        },
+        {
+          "skillName": "Serverless",
+          "fontAwesomeClassname": "simple-icons:serverless",
+          "style": {
+            "color": "#FD5750"
+          }
+        },
+        {
+          "skillName": "RabbitMQ",
+          "fontAwesomeClassname": "simple-icons:rabbitmq",
+          "style": {
+            "color": "#FF6600"
+          }
+        },
+        {
+          "skillName": "GitHub Actions",
+          "fontAwesomeClassname": "simple-icons:githubactions",
+          "style": {
+            "color": "#2088FF"
+          }
+        }
+      ]
+    },
+    {
       "id": "asdg3s425b=",
       "name": "Alpha",
       "url": "https://alpha.solenova.tech",

@@ -12,7 +12,7 @@ const greeting = {
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
   extraInfo:
-    "Experienced Full Stack Engineer with a strong background in Git & GitHub, Serverless, Microservices, AWS, NodeJS, Flutter, and ReactJS. Skilled in both SQL and NoSQL databases, including MySQL, DynamoDB, Firebase Firestore, and MongoDB, as well as programming languages such as Javascript, Python, Typescript, and Dart. Known for delivering results and translating complex technical concepts into actionable solutions. Passionate about innovation and problem-solving, seeking new opportunities in leadership and technology. Let's connect to exchange thoughts!",
+    "I am a Software Engineer at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, currently working on <strong><a target='_blank' class='custom-underline' href='https://www.upptik.com'>Upptik</a></strong>. As Software Engineer, I wear many hats, including writing production code, writing unit tests, building sample apps, managing products, writing dev docs. <br/> <br/> Before Upptik, I was a founding engineer at <strong><a target='_blank' class='custom-underline' href='https://www.meraid.pk'>meraID</a></strong>, an upcoming KYC service in Pakistan, that promises to verify customers' identities thoroughly and comprehensively, going above and beyond the standard KYC requirements. If you're building your next market disruptive idea, or just want to connect, feel free to reach out, I'd love to hear from you!",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -316,6 +316,13 @@ const skills = {
           },
         },
         {
+          skillName: "RabbitMQ",
+          fontAwesomeClassname: "simple-icons:rabbitmq",
+          style: {
+            color: "#FF6600",
+          },
+        },
+        {
           skillName: "MySQL",
           fontAwesomeClassname: "simple-icons:mysql",
           style: {
@@ -486,25 +493,11 @@ const experience = {
         {
           title: "Full Stack Engineer",
           startedAt: {
-            year: "2023",
-            month: "December",
+            year: "2022",
+            month: "August",
             day: "01",
           },
           endedAt: null,
-          description: "",
-        },
-        {
-          title: "Full Stack Engineer",
-          startedAt: {
-            year: "2022",
-            month: "July",
-            day: "01",
-          },
-          endedAt: {
-            year: "2023",
-            month: "October",
-            day: "25",
-          },
           description: "",
         },
         {
