@@ -21,7 +21,9 @@ export function getExperienceString({ start, end = undefined }) {
       : "present",
   };
 
-  let duration = calculateDateDifference(startedAt, endedAt);
+  let duration = end
+    ? calculateDateDifference(startedAt, endedAt)
+    : calculateDateDifference(startedAt, new Date());
 
   return { period: Object.values(formattedAnswer).join(" — "), duration };
 }
