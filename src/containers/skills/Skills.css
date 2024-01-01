@@ -43,7 +43,7 @@
 }
 
 .skills-heading {
-  font-size: 56px;
+  font-size: 44px;
   font-weight: 400;
   font-family: "Space Mono";
   margin-top: 0.25em;
@@ -58,7 +58,7 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .skills-heading {
-    font-size: 40px;
+    font-size: 34px;
   }
   .skills-header {
     font-size: 50px;
@@ -76,7 +76,7 @@
     margin-top: 1rem;
   }
   .skills-heading {
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
   }
   .skills-header {
