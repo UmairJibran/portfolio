@@ -493,25 +493,11 @@ const experience = {
         {
           title: "Full Stack Engineer",
           startedAt: {
-            year: "2023",
-            month: "December",
+            year: "2022",
+            month: "August",
             day: "01",
           },
           endedAt: null,
-          description: "",
-        },
-        {
-          title: "Full Stack Engineer",
-          startedAt: {
-            year: "2022",
-            month: "July",
-            day: "01",
-          },
-          endedAt: {
-            year: "2023",
-            month: "October",
-            day: "25",
-          },
           description: "",
         },
         {
