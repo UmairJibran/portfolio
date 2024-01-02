@@ -288,6 +288,13 @@ const skills = {
           },
         },
         {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: {
+            color: "#2496ED",
+          },
+        },
+        {
           skillName: "Firebase",
           fontAwesomeClassname: "simple-icons:firebase",
           style: {
