@@ -12,7 +12,7 @@ const greeting = {
   nickname: "Omair Jibran",
   subTitle: "Full stack developer",
   extraInfo:
-    "I am a Software Engineer at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, currently working on <strong><a target='_blank' class='custom-underline' href='https://www.upptik.com'>Upptik</a></strong>. As Software Engineer, I wear many hats, including writing production code, writing unit tests, building sample apps, managing products, writing dev docs. <br/> <br/> Before Upptik, I was a founding engineer at <strong><a target='_blank' class='custom-underline' href='https://www.meraid.pk'>meraID</a></strong>, an upcoming KYC service in Pakistan, that promises to verify customers' identities thoroughly and comprehensively, going above and beyond the standard KYC requirements. If you're building your next market disruptive idea, or just want to connect, feel free to reach out, I'd love to hear from you!",
+    "I work as a Software Engineer at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, focusing on <strong><a target='_blank' class='custom-underline' href='https://www.upptik.com'>Upptik</a></strong>. In my role, I handle various tasks, from writing production code and unit tests to creating sample apps, managing products, and crafting developer documentation. Prior to Upptik, I served as a founding engineer at <strong><a target='_blank' class='custom-underline' href='https://www.meraid.pk'>meraID</a></strong>, a KYC service in Pakistan dedicated to thorough and comprehensive identity verification, surpassing standard KYC requirements.",
   resumeLink:
     "https://drive.google.com/file/d/1eP9O3EAZMfRrqqTXlDFeCJkU5WjyhWYz/view?usp=sharing",
   portfolio_repository: "https://github.com/umairjibran/umairjibran.github.io",
@@ -638,7 +638,7 @@ const contactPageData = {
 const testimonialsPageData = [
   {
     name: "Waleed Waseem",
-    designation: "Founder and CEO",
+    designation: "Co-founder and CEO",
     employerAtTime: "Productbox",
     linkedin: "https://www.linkedin.com/in/waleed-waseem-2b625270/",
     message: `I had the privilege of working with Umair Jibran for over two years, and it is without a doubt that he is one of the most talented backend resources I've had the pleasure of collaborating with. Umair not only possesses exceptional technical skills but also carries himself with a remarkable level of professionalism, setting a clear standard for what a Professional Engineer should be.`,
@@ -647,7 +647,7 @@ const testimonialsPageData = [
   {
     name: "Farqaleet Kirmani",
     designation: "Co-founder",
-    employerAtTime: "Nordvisor",
+    employerAtTime: "Nordvisor | Metaformics | meraID",
     linkedin: "https://www.linkedin.com/in/farqaleetkirmani",
     message: `I highly recommend Umair as an exceptional resource for any project or team. He joined our project with limited experience but quickly proved himself as highly dedicated and a fast learner. He continuously demonstrated a remarkable work ethic, taking ownership for the project tasks and challenges even when they were not his direct responsibility. He constantly strove for excellence.`,
   },
