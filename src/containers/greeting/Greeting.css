@@ -42,9 +42,10 @@
   margin-top: 80px;
   font-size: 55px;
   line-height: 1.1;
-  font-family: "Space Mono";
+  font-family: "sacramento", "Space Mono";
   margin-top: 1em;
   color: #133b4f;
+  font-weight: bolder;
 }
 
 .celeb {
