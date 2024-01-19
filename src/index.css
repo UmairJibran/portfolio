@@ -15,6 +15,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -30,6 +31,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+.sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-style: normal;
+  font-weight: bolder;
 }
 
 .custom-underline {
