@@ -45,17 +45,25 @@ const Modal = ({ showModal, setShowModal }) => {
               </h2>
               <p className="mt-2 text-sm text-gray-500">
                 An offensive starting{" "}
-                <span className="font-black">07 Octover 2023</span> that is
-                ongoing up till{" "}
-                <span className="font-black">09 November 2023</span> more than
-                11,000 innocent Palestinians, over 40% of whom are children,
-                have been murdered by the draconian forces of israel.
-                Journalists, UN officials, and medical professionals have been
-                disregarded. The use of carpet bombing and white phosphorus,
-                both prohibited by the international community, in the densely
-                populated area resulted in the destruction of hospitals,
-                schools, and refugee camps where women, children, the sick, and
-                the weak sought shelter.
+                <span className="font-black">07 October 2023</span> that is
+                still ongoing the immoral genocide has led to an alarming toll,
+                with over 24,762<sup>*</sup> Gazans murdered of which 9,600 were
+                children and 6,750 were women. Injuring a score of over 62,108
+                others, and that is just in Gaza, over at the West Bank the
+                israel has indiscriminantly killed over 368 people of which
+                about 100 were just children. Journalists, UN officials, and
+                medical professionals have been disregarded. The use of carpet
+                bombing and white phosphorus, both prohibited by the
+                international community, in the densely populated area resulted
+                in the destruction of hospitals, schools, and refugee camps
+                where women, children, the sick, and the weak sought shelter.
+                <br />
+                <br />
+                <small className="text-xs mx-6 mb-4">
+                  <sup>*</sup> Since the Gazan health ministry has collapsed we
+                  the regular casualty updates have been impeded since 10 Nov
+                  2023, and the numbers can be much higher
+                </small>
               </p>
               <h2 className="mt-2 text-lg font-medium text-gray-900">
                 How to help?

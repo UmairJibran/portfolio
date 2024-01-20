@@ -90,7 +90,7 @@
 }
 
 .header .menu-icon .navicon {
-  background: #F7E2EE;
+  background: #f7e2ee;
   display: block;
   height: 2px;
   position: relative;
@@ -100,7 +100,7 @@
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #F7E2EE;
+  background: #f7e2ee;
   content: "";
   display: block;
   height: 100%;
