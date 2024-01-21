@@ -1,7 +1,7 @@
 import React from "react";
 import feather from "feather-icons";
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal, stats }) => {
   const links = [
     {
       text: "An blog site updated regularly by the awesome people at Mille",
@@ -46,23 +46,32 @@ const Modal = ({ showModal, setShowModal }) => {
               <p className="mt-2 text-sm text-gray-500">
                 An offensive starting{" "}
                 <span className="font-black">07 October 2023</span> that is
-                still ongoing the immoral genocide has led to an alarming toll,
-                with over 24,762<sup>*</sup> Gazans murdered of which 9,600 were
-                children and 6,750 were women. Injuring a score of over 62,108
-                others, and that is just in Gaza, over at the West Bank the
-                israel has indiscriminantly killed over 368 people of which
-                about 100 were just children. Journalists, UN officials, and
-                medical professionals have been disregarded. The use of carpet
-                bombing and white phosphorus, both prohibited by the
+                still ongoing. This wave of the genocide has led to an alarming
+                toll, with over {stats.killed.total}
+                <sup>*</sup> Gazans murdered of which {stats.killed.children}
+                <sup>*</sup> were children and {stats.killed.women}
+                <sup>*</sup> were women. Injuring a score of over{" "}
+                {stats.injured.total}
+                <sup>*</sup> others, and that is just in Gaza, over at the West
+                Bank the israel has indiscriminantly killed over 368 people of
+                which about 100 were just children. Journalists, UN officials,
+                and medical professionals have been disregarded. The use of
+                carpet bombing and white phosphorus, both prohibited by the
                 international community, in the densely populated area resulted
                 in the destruction of hospitals, schools, and refugee camps
                 where women, children, the sick, and the weak sought shelter.
                 <br />
                 <br />
                 <small className="text-xs mx-6 mb-4">
-                  <sup>*</sup> Since the Gazan health ministry has collapsed we
-                  the regular casualty updates have been impeded since 10 Nov
-                  2023, and the numbers can be much higher
+                  <sup>*</sup> Last updated: {stats.lastDailyUpdate} courtesy of{" "}
+                  <a
+                    rel="_blank"
+                    class="custom-underline font-bold"
+                    href="https://data.techforpalestine.org/"
+                  >
+                    <span className="text-lime-600">Tech </span> For{" "}
+                    <span className="text-red-500">Palestine</span>
+                  </a>
                 </small>
               </p>
               <h2 className="mt-2 text-lg font-medium text-gray-900">

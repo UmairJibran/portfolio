@@ -11,6 +11,7 @@ import Modal from "./containers/global/InfoModal";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const [gazaStats, setGazaStates] = useState();
 
   useEffect(() => {
     const referrer = document.referrer;
@@ -34,11 +35,24 @@ function App() {
 
     greetUser();
   }, []);
+
+  useEffect(() => {
+
+    const updateStats = async () => {
+      const res = await fetch('https://data.techforpalestine.org/api/v2/summary.min.json')
+      const json = await res.json()
+      console.log(json)
+      setGazaStates(json)
+    }
+
+    updateStats()
+  }, [])
+
   return (
     <ThemeProvider theme={chosenTheme}>
       <div>
-        <Banner setShowModal={setShowModal} />
-        <Modal showModal={showModal} setShowModal={setShowModal} />
+        <Banner setShowModal={setShowModal} message={gazaStats ? `${gazaStats.killed.total} murdered in ${gazaStats.dailyReportCount} days | ` : ''} />
+        <Modal showModal={showModal} setShowModal={setShowModal} stats={gazaStats} />
         <Toaster />
         <GlobalStyles />
         <Main theme={chosenTheme} />
