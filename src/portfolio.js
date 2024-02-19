@@ -498,13 +498,27 @@ const experience = {
       location: "Peshawar, Pakistan",
       roles: [
         {
+          title: "Tech Lead - Full Stack Engineer",
+          startedAt: {
+            year: "2024",
+            month: "February",
+            day: "01",
+          },
+          endedAt: null,
+          description: "",
+        },
+        {
           title: "Full Stack Engineer",
           startedAt: {
             year: "2022",
             month: "August",
             day: "01",
           },
-          endedAt: null,
+          endedAt: {
+            year: "2024",
+            month: "January",
+            day: "31",
+          },
           description: "",
         },
         {
