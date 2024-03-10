@@ -20,7 +20,7 @@ const ContactComponent = ({ theme }) => {
 
   return (
     <div
-      className={`contact-main pb-10 ${showEmailForm ? "-mb-20 -pb-5" : ""}`}
+      className={`contact-main pb-10 ${showEmailForm ? "-mb-20 -pb-5" : ""} bg-slate-100 min-h-screen text-center items-center justify-center flex`}
       id="contact"
     >
       <div className="basic-contact">

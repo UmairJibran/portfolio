@@ -15,7 +15,7 @@ export default function Greeting(props) {
 
   return (
     <Fade top duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
+      <div className="greet-main min-h-[80vh]" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div className="">

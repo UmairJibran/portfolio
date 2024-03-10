@@ -11,6 +11,7 @@
   margin: 0px auto;
   margin-top: 4rem;
   filter: grayscale(10%);
+  /* background: black !important; */
 }
 
 .myimage {
