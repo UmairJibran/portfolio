@@ -12,7 +12,7 @@ class Experience extends Component {
     const theme = this.props.theme;
 
     return (
-      <div className="experience-main" id="experience">
+      <div className="experience-main min-h-screen" id="experience">
         <div className="basic-experience">
           <Zoom duration={500}>
             <div className="experience-heading-div">
