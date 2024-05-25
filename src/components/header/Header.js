@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./Header.css";
 import { greeting } from "../../portfolio.js";
+import { scrollIntoView } from "../../global/utils.js";
 
 class Header extends Component {
   render() {
     const theme = this.props.theme;
 
-    const scrollIntoView = (view) => {
-      document.getElementById(view).scrollIntoView();
-    };
 
     return (
       <div>
@@ -69,7 +67,7 @@ class Header extends Component {
               style={{ color: theme.text }}
               onClick={() => scrollIntoView("contact")}
             >
-              Contact
+              Hire Me 🥳
             </li>
           </ul>
         </header>

@@ -58,8 +58,8 @@ export default function Greeting(props) {
                   className="portfolio-repo-btn"
                 /> */}
                 <Button
-                  text="Hire Me 🥳"
-                  href={"#contact"}
+                  text="Work"
+                  href={"#projects"}
                   theme={theme}
                   className="portfolio-repo-btn"
                 />

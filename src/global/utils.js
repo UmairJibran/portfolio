@@ -103,3 +103,7 @@ export function calculateDateDifference(startDate, endDate) {
 
   return response.join(", ");
 }
+
+export const scrollIntoView = (view) => {
+  document.getElementById(view).scrollIntoView();
+};
