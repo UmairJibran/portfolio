@@ -48,15 +48,7 @@ export default function Greeting(props) {
                 theme={theme}
                 socialMediaLinks={informalSocialMediaLinksHome}
               />
-
               <div className="portfolio-repo-btn-div">
-                {/* <Button
-                  text="Resume 📝"
-                  newTab={false}
-                  href={"/resume"}
-                  theme={theme}
-                  className="portfolio-repo-btn"
-                /> */}
                 <Button
                   text="Work"
                   href={"#projects"}
