@@ -12,77 +12,88 @@
           "skillName": "NodeJS",
           "fontAwesomeClassname": "simple-icons:node-dot-js",
           "style": {
-            "color": "#339933"
+            "color": "#339933",
+            "background": "#33993320"
           }
         },
         {
           "skillName": "Flutter",
           "fontAwesomeClassname": "simple-icons:flutter",
           "style": {
-            "color": "#60CAF6"
+            "color": "#4189A8",
+            "background": "#60CAF620"
           }
         },
         {
           "skillName": "Amazon DynamoDB",
           "fontAwesomeClassname": "simple-icons:amazondynamodb",
           "style": {
-            "color": "#4053D6"
+            "color": "#4053D6",
+            "background": "#4053D620"
           }
         },
         {
           "skillName": "AWS Lambda",
           "fontAwesomeClassname": "simple-icons:awslambda",
           "style": {
-            "color": "#FF9900"
+            "color": "#D58103",
+            "background": "#FF990020"
           }
         },
         {
           "skillName": "Amazon S3",
           "fontAwesomeClassname": "simple-icons:amazons3",
           "style": {
-            "color": "#569A31"
+            "color": "#569A31",
+            "background": "#569A3120"
           }
         },
         {
           "skillName": "Serverless",
           "fontAwesomeClassname": "simple-icons:serverless",
           "style": {
-            "color": "#FD5750"
+            "color": "#FD5750",
+            "background": "#FD575020"
           }
         },
         {
           "skillName": "Amazon CloudWatch",
           "fontAwesomeClassname": "simple-icons:amazoncloudwatch",
           "style": {
-            "color": "#FF4F8B"
+            "color": "#FF4F8B",
+            "background": "#FF4F8B20"
           }
         },
         {
           "skillName": "Amazon API Gateway",
           "fontAwesomeClassname": "simple-icons:amazonapigateway",
           "style": {
-            "color": "#FF4F8B"
+            "color": "#FF4F8B",
+            "background": "#FF4F8B20"
           }
         },
         {
           "skillName": "Rekognition",
           "fontAwesomeClassname": "simple-icons:amazonaws",
           "style": {
-            "color": "#FF7E29"
+            "color": "#FF7E29",
+            "background": "#FF7E2920"
           }
         },
         {
           "skillName": "Textract",
           "fontAwesomeClassname": "simple-icons:amazonaws",
           "style": {
-            "color": "#FF7E29"
+            "color": "#FF7E29",
+            "background": "#FF7E2920"
           }
         },
         {
           "skillName": "GitHub Actions",
           "fontAwesomeClassname": "simple-icons:githubactions",
           "style": {
-            "color": "#2088FF"
+            "color": "#2088FF",
+            "background": "#2088FF20"
           }
         }
       ]
@@ -99,70 +110,162 @@
           "skillName": "NodeJS",
           "fontAwesomeClassname": "simple-icons:node-dot-js",
           "style": {
-            "color": "#339933"
+            "color": "#339933",
+            "background": "#33993320"
           }
         },
         {
           "skillName": "TypeScript",
           "fontAwesomeClassname": "simple-icons:typescript",
           "style": {
-            "color": "#3178C6"
+            "color": "#3178C6",
+            "background": "#3178C620"
+          }
+        },
+        {
+          "skillName": "Docker",
+          "fontAwesomeClassname": "simple-icons:docker",
+          "style": {
+            "color": "#2496ED",
+            "background": "#2496ED20"
           }
         },
         {
           "skillName": "ExpressJS",
           "fontAwesomeClassname": "simple-icons:express",
           "style": {
-            "color": "#000000"
+            "color": "#000000",
+            "background": "#00000020"
           }
         },
         {
           "skillName": "Sequelize",
           "fontAwesomeClassname": "simple-icons:sequelize",
           "style": {
-            "color": "#52B0E7"
+            "color": "#52B0E7",
+            "background": "#52B0E720"
           }
         },
         {
           "skillName": "MySQL",
           "fontAwesomeClassname": "simple-icons:mysql",
           "style": {
-            "color": "#4479A1"
+            "color": "#4479A1",
+            "background": "#4479A120"
           }
         },
         {
           "skillName": "AWS Lambda",
           "fontAwesomeClassname": "simple-icons:awslambda",
           "style": {
-            "color": "#FF9900"
+            "color": "#D58103",
+            "background": "#FF990020"
           }
         },
         {
           "skillName": "Amazon S3",
           "fontAwesomeClassname": "simple-icons:amazons3",
           "style": {
-            "color": "#569A31"
+            "color": "#569A31",
+            "background": "#569A3120"
           }
         },
         {
           "skillName": "Serverless",
           "fontAwesomeClassname": "simple-icons:serverless",
           "style": {
-            "color": "#FD5750"
+            "color": "#FD5750",
+            "background": "#FD575020"
           }
         },
         {
           "skillName": "RabbitMQ",
           "fontAwesomeClassname": "simple-icons:rabbitmq",
           "style": {
-            "color": "#FF6600"
+            "color": "#FF6600",
+            "background": "#FF660020"
+          }
+        },
+        {
+          "skillName": "Python",
+          "fontAwesomeClassname": "simple-icons:python",
+          "style": {
+            "color": "#3776AB",
+            "background": "#3776AB20"
           }
         },
         {
           "skillName": "GitHub Actions",
           "fontAwesomeClassname": "simple-icons:githubactions",
           "style": {
-            "color": "#2088FF"
+            "color": "#2088FF",
+            "background": "#2088FF20"
+          }
+        }
+      ]
+    },
+    {
+      "id": "asdgv3425b=",
+      "name": "Afterwork",
+      "url": "https://www.goafterwork.com",
+      "description": "Afterwork is an AI powered platform that helps companies to plan and manage their events and team building activities.",
+      "logo": "afterwork",
+      "category": "Backend/Web",
+      "technologies": [
+        {
+          "skillName": "NodeJS",
+          "fontAwesomeClassname": "simple-icons:node-dot-js",
+          "style": {
+            "color": "#339933",
+            "background": "#33993320"
+          }
+        },
+        {
+          "skillName": "AWS Cognito",
+          "fontAwesomeClassname": "simple-icons:amazoncognito",
+          "style": {
+            "color": "#DD344C",
+            "background": "#DD344C20"
+          }
+        },
+        {
+          "skillName": "Amazon S3",
+          "fontAwesomeClassname": "simple-icons:amazons3",
+          "style": {
+            "color": "#569A31",
+            "background": "#569A3120"
+          }
+        },
+        {
+          "skillName": "Amazon API Gateway",
+          "fontAwesomeClassname": "simple-icons:amazonapigateway",
+          "style": {
+            "color": "#FF4F8B",
+            "background": "#FF4F8B20"
+          }
+        },
+        {
+          "skillName": "GitHub Actions",
+          "fontAwesomeClassname": "simple-icons:githubactions",
+          "style": {
+            "color": "#2088FF",
+            "background": "#2088FF20"
+          }
+        },
+        {
+          "skillName": "PostgreSQL",
+          "fontAwesomeClassname": "simple-icons:react",
+          "style": {
+            "color": "#4169E1",
+            "background": "#4169E120"
+          }
+        },
+        {
+          "skillName": "ReactJS",
+          "fontAwesomeClassname": "simple-icons:postgresql",
+          "style": {
+            "color": "#2088FF",
+            "background": "#61DAFB20"
           }
         }
       ]
@@ -179,21 +282,24 @@
           "skillName": "JavaScript",
           "fontAwesomeClassname": "simple-icons:javascript",
           "style": {
-            "color": "#F7DF1E"
+            "color": "#7F7845",
+            "background": "#F7DF1E20"
           }
         },
         {
           "skillName": "HTML",
           "fontAwesomeClassname": "simple-icons:html5",
           "style": {
-            "color": "#E34F26"
+            "color": "#E34F26",
+            "background": "#E34F2620"
           }
         },
         {
           "skillName": "CSS",
           "fontAwesomeClassname": "simple-icons:css3",
           "style": {
-            "color": "#1572B6"
+            "color": "#1572B6",
+            "background": "#1572B620"
           }
         }
       ]
@@ -210,21 +316,24 @@
           "skillName": "Git",
           "fontAwesomeClassname": "simple-icons:git",
           "style": {
-            "color": "#F05032"
+            "color": "#F05032",
+            "background": "#F0503220"
           }
         },
         {
           "skillName": "GitHub Actions",
           "fontAwesomeClassname": "simple-icons:githubactions",
           "style": {
-            "color": "#F7DF1E"
+            "color": "#2088FF",
+            "background": "#2088FF20"
           }
         },
         {
           "skillName": "YML",
           "fontAwesomeClassname": "simple-icons:yaml",
           "style": {
-            "color": "#CB171E"
+            "color": "#CB171E",
+            "background": "#CB171E20"
           }
         }
       ]
@@ -241,42 +350,48 @@
           "skillName": "NodeJS",
           "fontAwesomeClassname": "simple-icons:node-dot-js",
           "style": {
-            "color": "#339933"
+            "color": "#339933",
+            "background": "#33993320"
           }
         },
         {
           "skillName": "Express",
           "fontAwesomeClassname": "simple-icons:express",
           "style": {
-            "color": "#000000"
+            "color": "#000000",
+            "background": "#00000020"
           }
         },
         {
           "skillName": "Vue.js",
           "fontAwesomeClassname": "simple-icons:vuejs",
           "style": {
-            "color": "#4FC08D"
+            "color": "#4FC08D",
+            "background": "#4FC08D20"
           }
         },
         {
           "skillName": "MongoDB",
           "fontAwesomeClassname": "simple-icons:mongodb",
           "style": {
-            "color": "#47A248"
+            "color": "#47A248",
+            "background": "#47A24820"
           }
         },
         {
           "skillName": "Microsoft Azure",
           "fontAwesomeClassname": "simple-icons:microsoftazure",
           "style": {
-            "color": "#0089D6"
+            "color": "#0089D6",
+            "background": "#0089D620"
           }
         },
         {
           "skillName": "TailwindCSS",
           "fontAwesomeClassname": "simple-icons:tailwindcss",
           "style": {
-            "color": "#06B6D4"
+            "color": "#06B6D4",
+            "background": "#06B6D420"
           }
         }
       ]
@@ -293,49 +408,56 @@
           "skillName": "NodeJS",
           "fontAwesomeClassname": "simple-icons:node-dot-js",
           "style": {
-            "color": "#339933"
+            "color": "#339933",
+            "background": "#33993320"
           }
         },
         {
           "skillName": "Express",
           "fontAwesomeClassname": "simple-icons:express",
           "style": {
-            "color": "#000000"
+            "color": "#000000",
+            "background": "#00000020"
           }
         },
         {
           "skillName": "MySQL",
           "fontAwesomeClassname": "simple-icons:mysql",
           "style": {
-            "color": "#8BA8B9"
+            "color": "#8BA8B9",
+            "background": "#8BA8B920"
           }
         },
         {
           "skillName": "Sequelize",
           "fontAwesomeClassname": "simple-icons:sequelize",
           "style": {
-            "color": "#52B0E7"
+            "color": "#52B0E7",
+            "background": "#52B0E720"
           }
         },
         {
           "skillName": "Firebase",
           "fontAwesomeClassname": "simple-icons:firebase",
           "style": {
-            "color": "#FFCA28"
+            "color": "#574510",
+            "background": "#FFCA2820"
           }
         },
         {
           "skillName": "Heroku",
           "fontAwesomeClassname": "simple-icons:heroku",
           "style": {
-            "color": "#430098"
+            "color": "#430098",
+            "background": "#43009820"
           }
         },
         {
           "skillName": "Flutter",
           "fontAwesomeClassname": "simple-icons:flutter",
           "style": {
-            "color": "#60CAF6"
+            "color": "#4189A8",
+            "background": "#60CAF620"
           }
         }
       ]
@@ -352,56 +474,64 @@
           "skillName": "Google Cloud",
           "fontAwesomeClassname": "simple-icons:googlecloud",
           "style": {
-            "color": "#4285F4"
+            "color": "#4285F4",
+            "background": "#4285F420"
           }
         },
         {
           "skillName": "Firebase",
           "fontAwesomeClassname": "simple-icons:firebase",
           "style": {
-            "color": "#FFCA28"
+            "color": "#574510",
+            "background": "#FFCA2820"
           }
         },
         {
           "skillName": "TypeScript",
           "fontAwesomeClassname": "simple-icons:typescript",
           "style": {
-            "color": "#3178C6"
+            "color": "#3178C6",
+            "background": "#3178C620"
           }
         },
         {
           "skillName": "JavaScript",
           "fontAwesomeClassname": "simple-icons:javascript",
           "style": {
-            "color": "#F7DF1E"
+            "color": "#7F7845",
+            "background": "#F7DF1E20"
           }
         },
         {
           "skillName": "Google My Business",
           "fontAwesomeClassname": "simple-icons:googlemybusiness",
           "style": {
-            "color": "#4285F4"
+            "color": "#4285F4",
+            "background": "#4285F420"
           }
         },
         {
           "skillName": "Google Search Console",
           "fontAwesomeClassname": "simple-icons:googlesearchconsole",
           "style": {
-            "color": "#458CF5"
+            "color": "#458CF5",
+            "background": "#458CF520"
           }
         },
         {
           "skillName": "HTML",
           "fontAwesomeClassname": "simple-icons:html5",
           "style": {
-            "color": "#E34F26"
+            "color": "#E34F26",
+            "background": "#E34F2620"
           }
         },
         {
           "skillName": "CSS",
           "fontAwesomeClassname": "simple-icons:css3",
           "style": {
-            "color": "#1572B6"
+            "color": "#1572B6",
+            "background": "#1572B620"
           }
         }
       ]
@@ -420,21 +550,24 @@
           "skillName": "Wordpress",
           "fontAwesomeClassname": "simple-icons:flutter",
           "style": {
-            "color": "#60CAF6"
+            "color": "#4189A8",
+            "background": "#60CAF620"
           }
         },
         {
           "skillName": "MySQL",
           "fontAwesomeClassname": "simple-icons:mysql",
           "style": {
-            "color": "#8BA8B9"
+            "color": "#8BA8B9",
+            "background": "#8BA8B920"
           }
         },
         {
           "skillName": "PHP",
           "fontAwesomeClassname": "simple-icons:node-dot-js",
           "style": {
-            "color": "#339933"
+            "color": "#339933",
+            "background": "#33993320"
           }
         }
       ]
@@ -451,28 +584,32 @@
           "skillName": "Flutter",
           "fontAwesomeClassname": "simple-icons:flutter",
           "style": {
-            "color": "#60CAF6"
+            "color": "#4189A8",
+            "background": "#60CAF620"
           }
         },
         {
           "skillName": "Firebase",
           "fontAwesomeClassname": "simple-icons:firebase",
           "style": {
-            "color": "#FFCA28"
+            "color": "#574510",
+            "background": "#FFCA2820"
           }
         },
         {
           "skillName": "Google Maps",
           "fontAwesomeClassname": "simple-icons:googlemaps",
           "style": {
-            "color": "#4285F4"
+            "color": "#4285F4",
+            "background": "#4285F420"
           }
         },
         {
           "skillName": "Figma",
           "fontAwesomeClassname": "simple-icons:figma",
           "style": {
-            "color": "#F24E1E"
+            "color": "#F24E1E",
+            "background": "#F24E1E20"
           }
         }
       ]

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UnifiedProjectCard from "../../components/projectsCard/UnifiedProjectCard.jsx";
+import ProjectCard from "../../components/projectsCard/minimalProjectCard.jsx";
 import Button from "../../components/button/Button";
 import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
@@ -35,12 +35,12 @@ class Projects extends Component {
             </div>
           </Zoom>
         </div>
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container px-5 py-4 mx-auto">
           <div className="flex flex-wrap -m-4">
             {[...ProjectsData.major, ...ProjectsData.minor].map(
               (repo, index) => {
                 return (
-                  <UnifiedProjectCard
+                  <ProjectCard
                     repo={repo}
                     key={index}
                     theme={theme}

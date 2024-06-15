@@ -4,6 +4,7 @@ import "./Experience.css";
 import { experience } from "../../portfolio.js";
 import { Zoom } from "react-reveal";
 import { getExperienceString } from "../../global/utils.js";
+import Button from "../../components/button/Button.js";
 
 // import ExperienceImg from "./ExperienceImg";
 
@@ -12,7 +13,7 @@ class Experience extends Component {
     const theme = this.props.theme;
 
     return (
-      <div className="experience-main" id="experience">
+      <div className="experience-main min-h-screen" id="experience">
         <div className="basic-experience">
           <Zoom duration={500}>
             <div className="experience-heading-div">
@@ -32,6 +33,9 @@ class Experience extends Component {
                 >
                   {experience["subtitle"]}
                 </h3>
+                <div className="w-full flex">
+                  <Button text="Resume 📃" href={"/resume"} theme={theme} className="mx-auto" />
+                </div>
                 {/* <p
                   className="experience-header-detail-text subTitle"
                   style={{ color: `${theme.secondaryText}A0` }}

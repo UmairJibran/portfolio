@@ -44,7 +44,7 @@ import { testimonialsPageData } from "../../portfolio";
 export default function Testimonials({ theme }) {
   return (
     <>
-      <div className="py-10 testimonial-body" id="testimonials">
+      <div className="py-10 testimonial-body min-h-screen text-center items-center justify-center flex" id="testimonials">
         <div className="max-w-screen-lg mx-auto flex flex-col justify-between">
           <h3 className="text-lg sm:text-5xl leading-normal tracking-tight text-gray-900 mb-10 text-center">
             <span className="text-3xl" style={{ color: theme.text }}>

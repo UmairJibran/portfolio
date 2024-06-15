@@ -15,7 +15,7 @@ export default function Greeting(props) {
 
   return (
     <Fade top duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
+      <div className="greet-main min-h-[80vh]" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div className="">
@@ -48,18 +48,10 @@ export default function Greeting(props) {
                 theme={theme}
                 socialMediaLinks={informalSocialMediaLinksHome}
               />
-
               <div className="portfolio-repo-btn-div">
-                {/* <Button
-                  text="Resume 📝"
-                  newTab={false}
-                  href={"/resume"}
-                  theme={theme}
-                  className="portfolio-repo-btn"
-                /> */}
                 <Button
-                  text="Hire Me 🥳"
-                  href={"#contact"}
+                  text="Work"
+                  href={"#projects"}
                   theme={theme}
                   className="portfolio-repo-btn"
                 />

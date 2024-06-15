@@ -5,7 +5,10 @@ import GithubActivity from "../../components/githubActivity/activity";
 
 const StatsComponent = ({ theme }) => {
   return (
-    <div className="stats-main pt-10" id="Stats">
+    <div
+      className="stats-main py-5 bg-slate-100 min-h-screen text-center items-center justify-center flex"
+      id="Stats"
+    >
       <div className="basic-stats">
         <Zoom duration={500}>
           <div className="stats-heading-div">
