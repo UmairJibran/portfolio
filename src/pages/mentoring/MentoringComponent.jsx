@@ -1,5 +1,3 @@
-import { Zoom } from "react-reveal";
-
 import DescriptiveComponent from "./DescriptiveComponent";
 
 const ContactComponent = ({ theme }) => {
@@ -9,7 +7,7 @@ const ContactComponent = ({ theme }) => {
       id="market"
     >
       <div className="basic-contact">
-        <Zoom duration={500}>
+        <>
           <div className="contact-heading-div">
             <div className="contact-heading-text-div">
               <h1
@@ -21,7 +19,7 @@ const ContactComponent = ({ theme }) => {
               <DescriptiveComponent theme={theme} />
             </div>
           </div>
-        </Zoom>
+        </>
       </div>
     </div>
   );

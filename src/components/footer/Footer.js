@@ -1,8 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import { Fade } from "react-reveal";
-// import ToggleSwitch from "../../components/footer/ToggleSwitch";
-/* eslint-disable jsx-a11y/accessible-emoji */
 
 export default function Footer(props) {
   return (
@@ -10,12 +7,12 @@ export default function Footer(props) {
       className="footer-div"
       style={{ backgroundColor: props.theme.experienceBubble }}
     >
-      <Fade>
+      <>
         <p className="footer-text" style={{ color: `${props.theme.body}` }}>
           Umair Jibran {new Date().getFullYear().toString()}&copy;
         </p>
         {/* <ToggleSwitch theme={props.theme} onToggle={props.onToggle} /> */}
-      </Fade>
+      </>
     </div>
   );
 }

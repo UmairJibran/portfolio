@@ -1,4 +1,3 @@
-import { Zoom } from "react-reveal";
 import "./stats.css";
 
 import GithubActivity from "../../components/githubActivity/activity";
@@ -10,7 +9,7 @@ const StatsComponent = ({ theme }) => {
       id="Stats"
     >
       <div className="basic-stats">
-        <Zoom duration={500}>
+        <>
           <div className="stats-heading-div">
             <div className="stats-heading-text-div">
               <h1
@@ -22,7 +21,7 @@ const StatsComponent = ({ theme }) => {
               <GithubActivity theme={{ theme }} />
             </div>
           </div>
-        </Zoom>
+        </>
       </div>
     </div>
   );

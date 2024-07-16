@@ -7,14 +7,13 @@ import {
   formalSocialMediaLinksHome,
   informalSocialMediaLinksHome,
 } from "../../portfolio";
-import { Fade } from "react-reveal";
 // import FeelingProud from "./FeelingProud";
 
 export default function Greeting(props) {
   const theme = props.theme;
 
   return (
-    <Fade top duration={1000} distance="40px">
+    <>
       <div className="greet-main min-h-[80vh]" id="greeting">
         <div className="greeting-main">
           <div className="greeting-text-div">
@@ -68,7 +67,7 @@ export default function Greeting(props) {
           </div>
         </div>
       </div>
-    </Fade>
+    </>
   );
 }
 

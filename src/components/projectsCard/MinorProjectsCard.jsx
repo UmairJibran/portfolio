@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Fade } from "react-reveal";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 
 import "./ProjectCards.css";
@@ -21,9 +20,9 @@ const MinorProjectsCard = ({ repo }) => {
           <h1 className="title-font text-xl font-medium text-gray-900">
             {repo.name}
           </h1>
-          <Fade right duration={1500}>
+          <>
             <SoftwareSkill logos={repo.technologies} />
-          </Fade>
+          </>
         </div>
       </div>
     </div>

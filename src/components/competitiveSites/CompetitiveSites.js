@@ -1,12 +1,11 @@
 import React from "react";
 import "./CompetitiveSites.css";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
-import { Slide } from "react-reveal";
 
 class CompetitiveSites extends React.Component {
   render() {
     return (
-      <Slide right duration={1000}>
+      <>
         <div className="competitive-sites-main-div">
           <ul className="dev-icons">
             {this.props.logos.map((logo) => {
@@ -40,7 +39,7 @@ class CompetitiveSites extends React.Component {
             })}
           </ul>
         </div>
-      </Slide>
+      </>
     );
   }
 }

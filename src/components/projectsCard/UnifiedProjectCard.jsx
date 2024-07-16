@@ -1,6 +1,4 @@
 import * as React from "react";
-// import { Fade } from "react-reveal";
-// import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 
 import "./ProjectCards.css";
 

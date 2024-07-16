@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import ProjectCard from "../../components/projectsCard/minimalProjectCard.jsx";
 import Button from "../../components/button/Button";
-import { Zoom } from "react-reveal";
 import { projectsHeader } from "../../portfolio.js";
 import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
-// import ProjectsImg from "./ProjectsImg";
 
 class Projects extends Component {
   render() {
@@ -13,7 +11,7 @@ class Projects extends Component {
     return (
       <div className="projects-main" id="projects">
         <div className="basic-projects">
-          <Zoom duration={500}>
+          <>
             <div className="projects-heading-div">
               {/* <div className="projects-heading-img-div">
                 <ProjectsImg theme={theme} />
@@ -33,7 +31,7 @@ class Projects extends Component {
                 </p>
               </div>
             </div>
-          </Zoom>
+          </>
         </div>
         <div className="container px-5 py-4 mx-auto">
           <div className="flex flex-wrap -m-4">

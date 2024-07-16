@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import DescriptiveComponent from "./DescriptiveComponent";
 import FormComponent from "./FormComponent";
 
-import { Zoom } from "react-reveal";
 import "./ContactComponent.css";
 import { contactPageData } from "../../portfolio.js";
 // import AddressImg from "./AddressImg";
@@ -24,7 +23,7 @@ const ContactComponent = ({ theme }) => {
       id="contact"
     >
       <div className="basic-contact">
-        <Zoom duration={500}>
+        < >
           <div className="contact-heading-div">
             {/* <div className="contact-heading-img-div">
               <AddressImg theme={theme} />
@@ -47,7 +46,7 @@ const ContactComponent = ({ theme }) => {
               )}
             </div>
           </div>
-        </Zoom>
+        </>
       </div>
     </div>
   );

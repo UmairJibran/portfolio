@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Fade } from "react-reveal";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 
 import "./ProjectCards.css";
@@ -22,9 +21,9 @@ export default function MajorProjectsCard({ repo, right }) {
             </h1>
             {/* <div className="leading-relaxed">{repo.description}</div> */}
           </div>
-          <Fade right duration={1500}>
+          <>
             <SoftwareSkill logos={repo.technologies} />
-          </Fade>
+          </>
           {/* <div className="p-4 sm:w-1/2 lg:w-1/4 w-1/2">
             <h2 className="title-font font-medium text-3xl text-gray-900">2.7K</h2>
             <p className="leading-relaxed">Users</p>

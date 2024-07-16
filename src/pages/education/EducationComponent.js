@@ -8,7 +8,6 @@ import CompetitiveSites from "../../components/competitiveSites/CompetitiveSites
 import EducationImg from "./EducationImg";
 import { competitiveSites } from "../../portfolio";
 import "./EducationComponent.css";
-import { Zoom } from "react-reveal";
 
 class Education extends Component {
   render() {
@@ -17,7 +16,7 @@ class Education extends Component {
       <div className="education-main">
         <Header theme={this.props.theme} />
         <div className="basic-education">
-          <Zoom duration={500}>
+          <>
             <div className="heading-div">
               <div className="heading-img-div">
                 <EducationImg theme={theme} />
@@ -38,7 +37,7 @@ class Education extends Component {
                 <CompetitiveSites logos={competitiveSites.competitiveSites} />
               </div>
             </div>
-          </Zoom>
+          </>
           <Educations theme={this.props.theme} />
           <Certifications theme={this.props.theme} />
         </div>

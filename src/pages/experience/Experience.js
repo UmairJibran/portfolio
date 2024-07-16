@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import ExperienceTimeline from "../../containers/experienceTimeline/ExperienceTimeline.js";
 import "./Experience.css";
 import { experience } from "../../portfolio.js";
-import { Zoom } from "react-reveal";
 import { getExperienceString } from "../../global/utils.js";
 import Button from "../../components/button/Button.js";
 
-// import ExperienceImg from "./ExperienceImg";
 
 class Experience extends Component {
   render() {
@@ -15,7 +13,7 @@ class Experience extends Component {
     return (
       <div className="experience-main min-h-screen" id="experience">
         <div className="basic-experience">
-          <Zoom duration={500}>
+          <>
             <div className="experience-heading-div">
               {/* <div className="experience-heading-img-div">
                 <ExperienceImg theme={theme} />
@@ -44,7 +42,7 @@ class Experience extends Component {
                 </p> */}
               </div>
             </div>
-          </Zoom>
+          </>
         </div>
         <section className="text-gray-600 body-font">
           <div className="container px-5 mx-auto  mt-8">
