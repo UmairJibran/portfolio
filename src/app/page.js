@@ -1,9 +1,20 @@
-'use client';
+'use client'
 
 import React from "react";
-import { useEffect, } from "react";
+import { useEffect, useState } from "react";
+import "../App.css";
+import Main from "../containers/Main";
+import { ThemeProvider } from "styled-components";
+import { chosenTheme } from "../theme";
+import { GlobalStyles } from "../global";
+import { Toaster } from "react-hot-toast";
+import Banner from "../containers/global/PalestinianBanner";
+import Modal from "../containers/global/InfoModal";
 
 function App() {
+    const [showModal, setShowModal] = useState(false);
+    const [gazaStats, setGazaStates] = useState();
+
     useEffect(() => {
         const referrer = document.referrer;
 
@@ -27,10 +38,28 @@ function App() {
         // greetUser();
     }, []);
 
+    useEffect(() => {
 
+        const updateStats = async () => {
+            const res = await fetch('https://data.techforpalestine.org/api/v2/summary.min.json')
+            const json = await res.json()
+            console.log(json)
+            setGazaStates(json)
+        }
+
+        updateStats()
+    }, [])
 
     return (
-        <h1>Hello world</h1>
+        <ThemeProvider theme={chosenTheme}>
+            <div>
+                <Banner setShowModal={setShowModal} message={gazaStats ? `${gazaStats.killed.total} murdered in ${gazaStats.dailyReportCount} days | ` : ''} />
+                <Modal showModal={showModal} setShowModal={setShowModal} stats={gazaStats} />
+                <Toaster />
+                <GlobalStyles />
+                <Main theme={chosenTheme} />
+            </div>
+        </ThemeProvider>
     );
 }
 
