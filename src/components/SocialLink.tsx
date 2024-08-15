@@ -1,13 +1,18 @@
 import * as Icon from 'react-feather';
 
 export interface SocialLinkProps {
-  icon: keyof typeof Icon;
+  icon: string;
   link: string;
   name: string;
 }
 
 export default function SocialLink(props: SocialLinkProps) {
-  const IconComponent = Icon[props.icon] || Icon['ExternalLink'];
+  let featherIcon: keyof typeof Icon = 'ExternalLink';
+
+  if (Object.keys(Icon).includes(props.icon)) {
+    featherIcon = props.icon as keyof typeof Icon;
+  }
+  const IconComponent = Icon[featherIcon];
   return (
     <>
       <a href={props.link} target="_blank" title={props.name}>
