@@ -16,9 +16,9 @@ export default function Greetings() {
     <>
       <div id="intro">
         <h1 className={`${sacramento.className} text-6xl my-4`}>
-          hey there, {profile.name.toLowerCase()} here!
+          hey there, {profile.name.lastName.toLowerCase()} here!
         </h1>
-        <p>{profile.subTitle}</p>
+        <p className="my-2 text-2xl">{profile.subTitle.toLowerCase()}</p>
         <p>{parse(profile.extraInfo)}</p>
         <SocialStrip />
       </div>

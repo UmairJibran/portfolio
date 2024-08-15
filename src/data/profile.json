@@ -1,5 +1,8 @@
 {
-  "name": "Umair Jibran",
+  "name": {
+    "firstName": "Umair",
+    "lastName": "Jibran"
+  },
   "subTitle": "Full stack developer",
   "extraInfo": "I'm Umair Jibran, a software engineer with expertise in serverless computing, AWS, Node.js, and microservices. As the Backend Tech Lead at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, I lead teams to deliver robust and scalable web applications. Passionate about innovation and teamwork, I'm eager to bring my skills to forward-thinking projects in Europe or North America. Outside of tech, I enjoy hiking <Image style='display: inline;' src='/assets/emojis/hiking.png' alt='Hiking' height=18 width=18 />, playing chess <Image style='display: inline;' src='/assets/emojis/chess.png' alt='Chess' height=18 width=18 />, cycling 🚴‍♂️, and diving into the world of Game of Thrones <Image style='display: inline;' src='/assets/emojis/iron-throne.png' alt='Iron Throne' height=18 width=18 />",
   "social": [
@@ -17,6 +20,11 @@
       "name": "Twitter(x)",
       "link": "https://www.twitter.com/umairjibran7/",
       "icon": "Twitter"
+    },
+    {
+      "name": "Medium",
+      "link": "https://umairjibran.medium.com/",
+      "icon": "Type"
     }
   ],
   "email": "me@umairjibran.com",
