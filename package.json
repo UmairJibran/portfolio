@@ -1,67 +1,26 @@
 {
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
-  "name": "umairjibran.com",
-  "homepage": "https://umairjibran.com/",
-  "version": "2.0.0",
-  "engines": {
-    "node": "20.14.0"
-  },
   "scripts": {
-    "build": "next build",
-    "eject": "next eject",
-    "start": "next start",
     "dev": "next dev",
-    "prettier": "npx prettier -c ."
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.16.1",
-    "baseui": "^14.0.0",
-    "feather-icons": "^4.29.2",
-    "fs": "0.0.1-security",
-    "next": "^14.2.5",
-    "react": "^18.3.1",
-    "react-bootstrap": "^2.10.4",
-    "react-dom": "^18.3.1",
-    "react-github-calendar": "^4.1.6",
-    "react-hot-toast": "^2.4.1",
-    "react-router-dom": "^6.24.1",
-    "react-slick": "^0.30.2",
-    "sass": "1.77.8",
-    "sharp": "^0.33.4",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^6.1.11",
-    "styletron-engine-atomic": "^1.6.2",
-    "styletron-react": "^6.1.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.5"
   },
   "devDependencies": {
-    "@iconify/icons-logos": "^1.2.36",
-    "@iconify/react": "^5.0.1",
-    "autoprefixer": "^10.4.19",
-    "lint-staged": "^15.2.7",
-    "postcss": "^8.4.39",
-    "prettier": "^3.3.3",
-    "prettier-package-json": "^2.8.0",
-    "tailwindcss": "^3.4.5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "lint-staged": {
-    "*.json": "prettier-package-json --write",
-    "*.{js,css,md}": "prettier --write"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
   }
 }
