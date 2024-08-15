@@ -3,6 +3,8 @@
 import profile from '@/data/profile.json';
 import parse from 'html-react-parser';
 
+import SocialStrip from '@/components/SocialStrip';
+
 export default function Greetings() {
   return (
     <>
@@ -12,6 +14,7 @@ export default function Greetings() {
         </h1>
         <p className="greeting-text-p subTitle">{profile.subTitle}</p>
         <p className="">{parse(profile.extraInfo)}</p>
+        <SocialStrip />
       </div>
     </>
   );
