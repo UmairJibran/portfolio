@@ -10,15 +10,18 @@ import { image } from '@/data/profile.json';
 export default function Greetings() {
   return (
     <>
-      <div id="greeting" className="flex">
+      <div
+        id="greeting"
+        className="flex w-full h-full text-start items-center m-auto"
+      >
         <Intro />
         <Image
           className="hero-image"
-          alt="Jibran"
+          alt="Cat Programmer"
           src={image}
           fetchPriority="low"
-          width={300}
-          height={300}
+          width={450}
+          height={450}
         />
       </div>
     </>

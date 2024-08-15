@@ -11,7 +11,7 @@ export default function SocialLink(props: SocialLinkProps) {
   return (
     <>
       <a href={props.link} target="_blank" title={props.name}>
-        <IconComponent strokeWidth={0.75} size={32} />
+        <IconComponent strokeWidth={1} size={32} />
       </a>
     </>
   );
