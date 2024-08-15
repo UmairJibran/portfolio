@@ -16,10 +16,9 @@ export default function Greetings() {
       >
         <Intro />
         <Image
-          className="hero-image"
+          className="hero-image w-full"
           alt="Cat Programmer"
           src={image}
-          fetchPriority="low"
           width={450}
           height={450}
         />
