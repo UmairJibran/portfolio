@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Intro from '@/components/Intro';
 import '@/styles/greetings.scss';
 
-import { image } from '@/data/profile';
+import { image } from '@/data/profile.json';
 
 export default function Greetings() {
   return (
