@@ -1,0 +1,14 @@
+{
+  "name": "Umair Jibran",
+  "subTitle": "Full stack developer",
+  "extraInfo": "I'm Umair Jibran, a software engineer with expertise in serverless computing, AWS, Node.js, and microservices. As the Backend Tech Lead at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, I lead teams to deliver robust and scalable web applications. Passionate about innovation and teamwork, I'm eager to bring my skills to forward-thinking projects in Europe or North America. Outside of tech, I enjoy hiking <Image style='display: inline;' src='assets/emojis/hiking.png' alt='Hiking' height=18 width=18 />, playing chess <Image style='display: inline;' src='assets/emojis/chess.png' alt='Chess' height=18 width=18 />, cycling 🚴‍♂️, and diving into the world of Game of Thrones <Image style='display: inline;' src='assets/emojis/iron-throne.png' alt='Iron Throne' height=18 width=18 />",
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/umairjibran/",
+    "github": "https://www.github.com/umairjibran"
+  },
+  "email": "me@umairjibran.com",
+  "phone": "00923120919647",
+  "location": "Peshawar, Pakistan",
+  "resume": "/",
+  "image": "/assets/images/profile.jpg"
+}

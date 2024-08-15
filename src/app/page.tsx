@@ -1,7 +1,11 @@
+'use client';
+
+import Greetings from '@/components/Greetings';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Jibran Here, welcome to my .next portfolio
+    <main className="flex min-h-screen flex-col px-24 text-black">
+      <Greetings />
     </main>
   );
 }
