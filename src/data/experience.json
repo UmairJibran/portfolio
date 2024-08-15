@@ -1,0 +1,58 @@
+[
+  {
+    "company": "Productbox",
+    "website": "https://www.productbox.dev",
+    "position": "Full stack engineer",
+    "startDate": "2021-05-03",
+    "endDate": null,
+    "oneLine": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+    "bullets": [
+      "lorem ipsum dolor sit amet lorem ipsum dolor",
+      "sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum",
+      "dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+    ],
+    "volunteer": false
+  },
+  {
+    "company": "IM Sciences",
+    "website": "https://www.imsciences.edu.pk",
+    "position": "Corporate Advisor",
+    "startDate": "2024-08-12",
+    "endDate": null,
+    "oneLine": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+    "bullets": [
+      "lorem ipsum dolor sit amet lorem ipsum dolor",
+      "sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum",
+      "dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+    ],
+    "volunteer": true
+  },
+  {
+    "company": "Microsoft",
+    "website": "https://www.microsoft.com",
+    "position": "Student Ambassador",
+    "startDate": "2020-08-12",
+    "endDate": "2021-12-16",
+    "oneLine": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+    "bullets": [
+      "lorem ipsum dolor sit amet lorem ipsum dolor",
+      "sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum",
+      "dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+    ],
+    "volunteer": true
+  },
+  {
+    "company": "Ideometrix",
+    "website": "https://www.ideometrix.com",
+    "position": "Junior Mobile Developer",
+    "startDate": "2020-08-15",
+    "endDate": "2020-11-15",
+    "oneLine": "lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit ametlorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+    "bullets": [
+      "lorem ipsum dolor sit amet lorem ipsum dolor",
+      "sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum",
+      "dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet"
+    ],
+    "volunteer": false
+  }
+]
