@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3.6.0
         with:
-          node-version: 22.4.1
+          node-version: 20.14.0
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -67,7 +67,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3.6.0
         with:
-          node-version: 14.18.0
+          node-version: 20.14.0
       - name: Close Pull Request
         id: closepullrequest
         uses: Azure/static-web-apps-deploy@v1
