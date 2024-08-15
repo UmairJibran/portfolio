@@ -29,6 +29,7 @@
     "react-router-dom": "^6.24.1",
     "react-slick": "^0.30.2",
     "sass": "1.77.8",
+    "sharp": "^0.33.4",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.11",
     "styletron-engine-atomic": "^1.6.2",
