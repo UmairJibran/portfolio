@@ -8,3 +8,9 @@
 .hero-image:hover {
   filter: grayscale(10%);
 }
+
+@media (max-width: 768px) {
+  .hero-image {
+    filter: grayscale(0%);
+  }
+}
