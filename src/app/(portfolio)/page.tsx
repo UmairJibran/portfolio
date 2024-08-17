@@ -3,6 +3,7 @@
 import Greetings from "@/components/Greetings";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import Copyright from "@/components/Copyright";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <Greetings />
         <Portfolio />
         <Experience />
+        <Testimonials />
         <Footer />
       </div>
       <Copyright />
