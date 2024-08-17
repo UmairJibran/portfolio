@@ -42,7 +42,7 @@ export default function PortfolioDetail({ item }: { item: IPortfilioItem }) {
   return (
     <>
       <Card
-        className="w-full"
+        className="w-full font-mono"
         cover={
           <Image
             width={300}
