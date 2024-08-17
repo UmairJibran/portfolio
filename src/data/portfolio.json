@@ -3,7 +3,7 @@
     "id": "pd-pb",
     "name": "PuppyDog.io",
     "url": "https://www.puppydog.io",
-    "description": "",
+    "description": "Create hyper-personalized product demos, at scale.",
     "logo": "puppydog",
     "category": "Backend/Web",
     "source": null,
@@ -70,7 +70,7 @@
     "id": "asdg3425b=",
     "name": "MeraID",
     "url": "https://www.meraid.pk",
-    "description": "Meraid.pk, an upcoming KYC service in Pakistan, promises to verify customers' identities thoroughly and comprehensively, going above and beyond the standard KYC requirements.",
+    "description": "meraID is Pakistan's first e-identity mobile application",
     "logo": "meraid",
     "category": "Mobile/Backend/Web",
     "source": null,
@@ -169,7 +169,7 @@
     "id": "asdg3425b1=",
     "name": "Upptik",
     "url": "https://www.upptik.com",
-    "description": "Upptik is revolutionary platform to connect students with mentors for career counseling to better navigate their future",
+    "description": "Upptik is a platform that connect students with mentors for career counseling.",
     "logo": "upptik",
     "category": "Mobile/Backend/Web",
     "source": null,
@@ -276,7 +276,7 @@
     "id": "asdgv3425b=",
     "name": "Afterwork",
     "url": "https://www.goafterwork.com",
-    "description": "Afterwork is an AI powered platform that helps companies to plan and manage their events and team building activities.",
+    "description": "Afterwork is an AI powered platform that helps corporations plan their events at scale",
     "logo": "afterwork",
     "category": "Backend/Web",
     "source": null,
@@ -343,8 +343,8 @@
     "id": "asdg3s425b=",
     "name": "Alpha",
     "url": "https://alpha.umairjibran.com",
-    "description": "A free and simple browser extension that helps boost productivity by blocking distracting websites and allowing access only after solving a math problem.",
-    "logo": "meraid",
+    "description": "A free browser extension that helps boost productivity by blocking distracting websites.",
+    "logo": "alpha",
     "category": "Web",
     "source": null,
     "technologies": [
@@ -378,8 +378,8 @@
     "id": "asdg2353s425b=",
     "name": "Gamma",
     "url": "https://gamma.umairjibran.com",
-    "description": "A free and simple GitHub Action that allows consumer to merge their pull requests directly into the testing branch. It simplifies the process of merging pull requests by automating the necessary Git commands.",
-    "logo": "meraid",
+    "description": "A free GitHub Action that allows developers to ship their code to production with ease.",
+    "logo": "gamma",
     "category": "Automation",
     "source": "https://github.com/solenova-tech/gamma",
     "technologies": [
@@ -415,7 +415,7 @@
     "name": "Mavencery",
     "category": "Mobile/Backend",
     "url": "http://www.mavencery.com/",
-    "description": "Mavencery was an upcoming Grocer Giant registered in California.",
+    "description": "Mavencery enhances online shopping with digital coupons and personalized suggestions.",
     "source": null,
     "technologies": [
       {
@@ -482,7 +482,7 @@
     "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
     "name": "Drive Safe Medicals",
     "url": "https://www.drivesafemedicals.co.uk",
-    "description": "Drive Safe Medicals is a UK startup to administer drivers' medicals",
+    "description": "Drive Safe Medicals eases drivers to to administer their medicals",
     "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io",
     "technologies": [
       {
@@ -557,7 +557,7 @@
     "id": "MDEwOlJlcG934536cnkyNzM1MTI1NTE=",
     "name": "Tameer Foundation Pakistan",
     "url": "https://www.tameerfoundationpakistan.org",
-    "description": "Non-profit website showcases community-driven programs and impactful stories.",
+    "description": "Tameer is a non profit working for the betterment of the people of Pakistan",
     "source": null,
     "technologies": [
       {
