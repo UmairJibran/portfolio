@@ -3,6 +3,7 @@
 import Greetings from "@/components/Greetings";
 import Portfolio from "@/components/Portfolio";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Greetings />
       <Portfolio />
       <Experience />
+      <Footer />
       <span className="h-8" />
     </main>
   );
