@@ -3,22 +3,12 @@
 import { Plus } from "react-feather";
 
 import { formatDate } from "@/utils";
-
-export interface ExperienceDetail {
-  company: string;
-  website: string;
-  position: string;
-  startDate: string;
-  endDate: string | null;
-  oneLine: string;
-  bullets: string[];
-  volunteer: boolean;
-}
+import { IExperienceDetail } from "@/types/experience";
 
 export default function ExperienceDetail({
   experience,
 }: {
-  experience: ExperienceDetail;
+  experience: IExperienceDetail;
 }) {
   return (
     <>
