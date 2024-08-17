@@ -1,0 +1,20 @@
+{
+  "title": "Umair Jibran - FullStack Engineer & AWS Expert",
+  "description": "Explore the world of Umair Jibran - a highly skilled full-stack developer with expertise in Node.js, JavaScript, and AWS. Discover his impressive portfolio and passion for open-source technologies. Connect with him to discuss your next project or exchange thoughts on the latest tech trends.",
+  "authors": [{ "name": "Umair Jibran", "url": "https://umairjibran.com" }],
+  "openGraph": {
+    "type": "website",
+    "locale": "en_US",
+    "url": "https://www.umairjibran.com",
+    "title": "Umair Jibran - Full Stack Engineer",
+    "description": "Full-stack developer with expertise in Node.js, JavaScript, and AWS",
+    "images": [
+      {
+        "url": "/assets/gifs/cat-programmer.gif",
+        "width": 1200,
+        "height": 630,
+        "alt": "Not Umair Jibran"
+      }
+    ]
+  }
+}
