@@ -1,14 +1,15 @@
 "use client";
 
-import SocialLink, { SocialLinkProps } from "@/components/SocialLink";
+import SocialLink from "@/components/SocialLink";
 
 import { social } from "@/data/profile.json";
+import { ISocialLinkProps } from "@/types/social";
 
 export default function SocialStrip() {
   return (
     <>
       <div className="flex flex-row gap-4 mt-4">
-        {social.map((socialLink: SocialLinkProps) => {
+        {social.map((socialLink: ISocialLinkProps) => {
           return (
             <SocialLink
               key={socialLink.link}

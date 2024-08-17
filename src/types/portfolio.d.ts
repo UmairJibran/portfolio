@@ -5,7 +5,7 @@ export interface IPortfilioItem {
   description: string;
   logo: string;
   category: string;
-  source?: string;
+  source: string | null;
   caseStudy?: string;
   technologies: Technology[];
 }

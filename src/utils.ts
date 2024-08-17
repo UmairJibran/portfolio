@@ -16,6 +16,7 @@ export const formatDate = ({
   return dayjs(date).format(DATE_FORMATS[format]);
 };
 
-export const launchExternalUrl = (url: string) => {
+export const launchExternalUrl = (url: string | null) => {
+  if (!url) return;
   window.open(url, "_blank");
 };
