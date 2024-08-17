@@ -3,7 +3,7 @@
     "id": "puppydog-pb",
     "name": "PuppyDog.io",
     "url": "https://www.puppydog.io",
-    "description": "Create hyper-personalized product demos, at scale.",
+    "description": "Create hyper-personalized product demos, at scale",
     "logo": "puppydog",
     "source": null
   },
@@ -19,7 +19,7 @@
     "id": "upptik-pb",
     "name": "Upptik",
     "url": "https://www.upptik.com",
-    "description": "Upptik is a platform that connect students with mentors for career counseling.",
+    "description": "Platform that connect students with mentors for career counseling",
     "logo": "upptik",
     "source": null
   },
@@ -27,7 +27,7 @@
     "id": "afterwokr-pb",
     "name": "Afterwork",
     "url": "https://www.goafterwork.com",
-    "description": "Afterwork is an AI powered platform that helps corporations plan their events at scale",
+    "description": "An AI powered platform that helps companies plan events at scale",
     "logo": "afterwork",
     "source": null
   },
@@ -35,7 +35,7 @@
     "id": "alpha",
     "name": "Alpha",
     "url": "https://alpha.umairjibran.com",
-    "description": "A free browser extension that helps boost productivity by blocking distracting websites.",
+    "description": "Browser addon to boost productivity by blocking distractions",
     "logo": "alpha",
     "source": null
   },
@@ -43,7 +43,7 @@
     "id": "gamma",
     "name": "Gamma",
     "url": "https://gamma.umairjibran.com",
-    "description": "A free GitHub Action that allows developers to ship their code to production with ease.",
+    "description": "An action to enable developers ship their code with ease",
     "logo": "gamma",
     "source": "https://github.com/solenova-tech/gamma"
   },
@@ -52,7 +52,7 @@
     "id": "sasga=",
     "name": "Mavencery",
     "url": "http://www.mavencery.com/",
-    "description": "Mavencery enhances online shopping with digital coupons and personalized suggestions.",
+    "description": "Enhances online shopping with coupons and personalized suggestions",
     "source": null
   },
   {
@@ -68,7 +68,7 @@
     "id": "MDEwOlJlcG934536cnkyNzM1MTI1NTE=",
     "name": "Tameer Foundation Pakistan",
     "url": "https://www.tameerfoundationpakistan.org",
-    "description": "Tameer is a non profit working for the betterment of the people of Pakistan",
+    "description": "Tameer is a non profit working for the betterment of Pakistan",
     "source": null
   }
 ]
