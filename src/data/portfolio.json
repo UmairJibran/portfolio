@@ -1,589 +1,74 @@
 [
   {
-    "id": "pd-pb",
+    "id": "puppydog-pb",
     "name": "PuppyDog.io",
     "url": "https://www.puppydog.io",
     "description": "Create hyper-personalized product demos, at scale.",
     "logo": "puppydog",
-    "category": "Backend/Web",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "NodeJS",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      },
-      {
-        "skillName": "AWS Lambda",
-        "simpleIcon": "awslambda",
-        "style": {
-          "color": "#D58103",
-          "background": "#FF990020"
-        }
-      },
-      {
-        "skillName": "Amazon S3",
-        "simpleIcon": "amazons3",
-        "style": {
-          "color": "#569A31",
-          "background": "#569A3120"
-        }
-      },
-      {
-        "skillName": "Serverless",
-        "simpleIcon": "serverless",
-        "style": {
-          "color": "#FD5750",
-          "background": "#FD575020"
-        }
-      },
-      {
-        "skillName": "Amazon CloudWatch",
-        "simpleIcon": "amazoncloudwatch",
-        "style": {
-          "color": "#FF4F8B",
-          "background": "#FF4F8B20"
-        }
-      },
-      {
-        "skillName": "Amazon API Gateway",
-        "simpleIcon": "amazonapigateway",
-        "style": {
-          "color": "#FF4F8B",
-          "background": "#FF4F8B20"
-        }
-      },
-      {
-        "skillName": "GitHub Actions",
-        "simpleIcon": "githubactions",
-        "style": {
-          "color": "#2088FF",
-          "background": "#2088FF20"
-        }
-      }
-    ]
+    "source": null
   },
   {
-    "id": "asdg3425b=",
+    "id": "meraid-pb",
     "name": "MeraID",
     "url": "https://www.meraid.pk",
     "description": "meraID is Pakistan's first e-identity mobile application",
     "logo": "meraid",
-    "category": "Mobile/Backend/Web",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "NodeJS",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      },
-      {
-        "skillName": "Flutter",
-        "simpleIcon": "flutter",
-        "style": {
-          "color": "#4189A8",
-          "background": "#60CAF620"
-        }
-      },
-      {
-        "skillName": "Amazon DynamoDB",
-        "simpleIcon": "amazondynamodb",
-        "style": {
-          "color": "#4053D6",
-          "background": "#4053D620"
-        }
-      },
-      {
-        "skillName": "AWS Lambda",
-        "simpleIcon": "awslambda",
-        "style": {
-          "color": "#D58103",
-          "background": "#FF990020"
-        }
-      },
-      {
-        "skillName": "Amazon S3",
-        "simpleIcon": "amazons3",
-        "style": {
-          "color": "#569A31",
-          "background": "#569A3120"
-        }
-      },
-      {
-        "skillName": "Serverless",
-        "simpleIcon": "serverless",
-        "style": {
-          "color": "#FD5750",
-          "background": "#FD575020"
-        }
-      },
-      {
-        "skillName": "Amazon CloudWatch",
-        "simpleIcon": "amazoncloudwatch",
-        "style": {
-          "color": "#FF4F8B",
-          "background": "#FF4F8B20"
-        }
-      },
-      {
-        "skillName": "Amazon API Gateway",
-        "simpleIcon": "amazonapigateway",
-        "style": {
-          "color": "#FF4F8B",
-          "background": "#FF4F8B20"
-        }
-      },
-      {
-        "skillName": "Rekognition",
-        "simpleIcon": "amazonaws",
-        "style": {
-          "color": "#FF7E29",
-          "background": "#FF7E2920"
-        }
-      },
-      {
-        "skillName": "Textract",
-        "simpleIcon": "amazonaws",
-        "style": {
-          "color": "#FF7E29",
-          "background": "#FF7E2920"
-        }
-      },
-      {
-        "skillName": "GitHub Actions",
-        "simpleIcon": "githubactions",
-        "style": {
-          "color": "#2088FF",
-          "background": "#2088FF20"
-        }
-      }
-    ]
+    "source": null
   },
   {
-    "id": "asdg3425b1=",
+    "id": "upptik-pb",
     "name": "Upptik",
     "url": "https://www.upptik.com",
     "description": "Upptik is a platform that connect students with mentors for career counseling.",
     "logo": "upptik",
-    "category": "Mobile/Backend/Web",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "NodeJS",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      },
-      {
-        "skillName": "TypeScript",
-        "simpleIcon": "typescript",
-        "style": {
-          "color": "#3178C6",
-          "background": "#3178C620"
-        }
-      },
-      {
-        "skillName": "Docker",
-        "simpleIcon": "docker",
-        "style": {
-          "color": "#2496ED",
-          "background": "#2496ED20"
-        }
-      },
-      {
-        "skillName": "ExpressJS",
-        "simpleIcon": "express",
-        "style": {
-          "color": "#000000",
-          "background": "#00000020"
-        }
-      },
-      {
-        "skillName": "Sequelize",
-        "simpleIcon": "sequelize",
-        "style": {
-          "color": "#52B0E7",
-          "background": "#52B0E720"
-        }
-      },
-      {
-        "skillName": "MySQL",
-        "simpleIcon": "mysql",
-        "style": {
-          "color": "#4479A1",
-          "background": "#4479A120"
-        }
-      },
-      {
-        "skillName": "AWS Lambda",
-        "simpleIcon": "awslambda",
-        "style": {
-          "color": "#D58103",
-          "background": "#FF990020"
-        }
-      },
-      {
-        "skillName": "Amazon S3",
-        "simpleIcon": "amazons3",
-        "style": {
-          "color": "#569A31",
-          "background": "#569A3120"
-        }
-      },
-      {
-        "skillName": "Serverless",
-        "simpleIcon": "serverless",
-        "style": {
-          "color": "#FD5750",
-          "background": "#FD575020"
-        }
-      },
-      {
-        "skillName": "RabbitMQ",
-        "simpleIcon": "rabbitmq",
-        "style": {
-          "color": "#FF6600",
-          "background": "#FF660020"
-        }
-      },
-      {
-        "skillName": "Python",
-        "simpleIcon": "python",
-        "style": {
-          "color": "#3776AB",
-          "background": "#3776AB20"
-        }
-      },
-      {
-        "skillName": "GitHub Actions",
-        "simpleIcon": "githubactions",
-        "style": {
-          "color": "#2088FF",
-          "background": "#2088FF20"
-        }
-      }
-    ]
+    "source": null
   },
   {
-    "id": "asdgv3425b=",
+    "id": "afterwokr-pb",
     "name": "Afterwork",
     "url": "https://www.goafterwork.com",
     "description": "Afterwork is an AI powered platform that helps corporations plan their events at scale",
     "logo": "afterwork",
-    "category": "Backend/Web",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "NodeJS",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      },
-      {
-        "skillName": "AWS Cognito",
-        "simpleIcon": "amazoncognito",
-        "style": {
-          "color": "#DD344C",
-          "background": "#DD344C20"
-        }
-      },
-      {
-        "skillName": "Amazon S3",
-        "simpleIcon": "amazons3",
-        "style": {
-          "color": "#569A31",
-          "background": "#569A3120"
-        }
-      },
-      {
-        "skillName": "Amazon API Gateway",
-        "simpleIcon": "amazonapigateway",
-        "style": {
-          "color": "#FF4F8B",
-          "background": "#FF4F8B20"
-        }
-      },
-      {
-        "skillName": "GitHub Actions",
-        "simpleIcon": "githubactions",
-        "style": {
-          "color": "#2088FF",
-          "background": "#2088FF20"
-        }
-      },
-      {
-        "skillName": "PostgreSQL",
-        "simpleIcon": "react",
-        "style": {
-          "color": "#4169E1",
-          "background": "#4169E120"
-        }
-      },
-      {
-        "skillName": "ReactJS",
-        "simpleIcon": "postgresql",
-        "style": {
-          "color": "#2088FF",
-          "background": "#61DAFB20"
-        }
-      }
-    ]
+    "source": null
   },
   {
-    "id": "asdg3s425b=",
+    "id": "alpha",
     "name": "Alpha",
     "url": "https://alpha.umairjibran.com",
     "description": "A free browser extension that helps boost productivity by blocking distracting websites.",
     "logo": "alpha",
-    "category": "Web",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "JavaScript",
-        "simpleIcon": "javascript",
-        "style": {
-          "color": "#7F7845",
-          "background": "#F7DF1E20"
-        }
-      },
-      {
-        "skillName": "HTML",
-        "simpleIcon": "html5",
-        "style": {
-          "color": "#E34F26",
-          "background": "#E34F2620"
-        }
-      },
-      {
-        "skillName": "CSS",
-        "simpleIcon": "css3",
-        "style": {
-          "color": "#1572B6",
-          "background": "#1572B620"
-        }
-      }
-    ]
+    "source": null
   },
   {
-    "id": "asdg2353s425b=",
+    "id": "gamma",
     "name": "Gamma",
     "url": "https://gamma.umairjibran.com",
     "description": "A free GitHub Action that allows developers to ship their code to production with ease.",
     "logo": "gamma",
-    "category": "Automation",
-    "source": "https://github.com/solenova-tech/gamma",
-    "technologies": [
-      {
-        "skillName": "Git",
-        "simpleIcon": "git",
-        "style": {
-          "color": "#F05032",
-          "background": "#F0503220"
-        }
-      },
-      {
-        "skillName": "GitHub Actions",
-        "simpleIcon": "githubactions",
-        "style": {
-          "color": "#2088FF",
-          "background": "#2088FF20"
-        }
-      },
-      {
-        "skillName": "YML",
-        "simpleIcon": "yaml",
-        "style": {
-          "color": "#CB171E",
-          "background": "#CB171E20"
-        }
-      }
-    ]
+    "source": "https://github.com/solenova-tech/gamma"
   },
   {
-    "logo": "mavencery",
+    "logo": "mavencery-pb",
     "id": "sasga=",
     "name": "Mavencery",
-    "category": "Mobile/Backend",
     "url": "http://www.mavencery.com/",
     "description": "Mavencery enhances online shopping with digital coupons and personalized suggestions.",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "NodeJS",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      },
-      {
-        "skillName": "Express",
-        "simpleIcon": "express",
-        "style": {
-          "color": "#000000",
-          "background": "#00000020"
-        }
-      },
-      {
-        "skillName": "MySQL",
-        "simpleIcon": "mysql",
-        "style": {
-          "color": "#8BA8B9",
-          "background": "#8BA8B920"
-        }
-      },
-      {
-        "skillName": "Sequelize",
-        "simpleIcon": "sequelize",
-        "style": {
-          "color": "#52B0E7",
-          "background": "#52B0E720"
-        }
-      },
-      {
-        "skillName": "Firebase",
-        "simpleIcon": "firebase",
-        "style": {
-          "color": "#574510",
-          "background": "#FFCA2820"
-        }
-      },
-      {
-        "skillName": "Heroku",
-        "simpleIcon": "heroku",
-        "style": {
-          "color": "#430098",
-          "background": "#43009820"
-        }
-      },
-      {
-        "skillName": "Flutter",
-        "simpleIcon": "flutter",
-        "style": {
-          "color": "#4189A8",
-          "background": "#60CAF620"
-        }
-      }
-    ]
+    "source": null
   },
   {
     "logo": "dsm",
-    "category": "Backend/Web",
     "id": "MDEwOlJlcG9zaXRcnkyNDsU0NjcyNzQ=",
     "name": "Drive Safe Medicals",
     "url": "https://www.drivesafemedicals.co.uk",
     "description": "Drive Safe Medicals eases drivers to to administer their medicals",
-    "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io",
-    "technologies": [
-      {
-        "skillName": "Google Cloud",
-        "simpleIcon": "googlecloud",
-        "style": {
-          "color": "#4285F4",
-          "background": "#4285F420"
-        }
-      },
-      {
-        "skillName": "Firebase",
-        "simpleIcon": "firebase",
-        "style": {
-          "color": "#574510",
-          "background": "#FFCA2820"
-        }
-      },
-      {
-        "skillName": "TypeScript",
-        "simpleIcon": "typescript",
-        "style": {
-          "color": "#3178C6",
-          "background": "#3178C620"
-        }
-      },
-      {
-        "skillName": "JavaScript",
-        "simpleIcon": "javascript",
-        "style": {
-          "color": "#7F7845",
-          "background": "#F7DF1E20"
-        }
-      },
-      {
-        "skillName": "Google My Business",
-        "simpleIcon": "googlemybusiness",
-        "style": {
-          "color": "#4285F4",
-          "background": "#4285F420"
-        }
-      },
-      {
-        "skillName": "Google Search Console",
-        "simpleIcon": "googlesearchconsole",
-        "style": {
-          "color": "#458CF5",
-          "background": "#458CF520"
-        }
-      },
-      {
-        "skillName": "HTML",
-        "simpleIcon": "html5",
-        "style": {
-          "color": "#E34F26",
-          "background": "#E34F2620"
-        }
-      },
-      {
-        "skillName": "CSS",
-        "simpleIcon": "css3",
-        "style": {
-          "color": "#1572B6",
-          "background": "#1572B620"
-        }
-      }
-    ]
+    "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io"
   },
   {
     "logo": "tfp",
-    "category": "Website Development",
     "id": "MDEwOlJlcG934536cnkyNzM1MTI1NTE=",
     "name": "Tameer Foundation Pakistan",
     "url": "https://www.tameerfoundationpakistan.org",
     "description": "Tameer is a non profit working for the betterment of the people of Pakistan",
-    "source": null,
-    "technologies": [
-      {
-        "skillName": "Wordpress",
-        "simpleIcon": "flutter",
-        "style": {
-          "color": "#4189A8",
-          "background": "#60CAF620"
-        }
-      },
-      {
-        "skillName": "MySQL",
-        "simpleIcon": "mysql",
-        "style": {
-          "color": "#8BA8B9",
-          "background": "#8BA8B920"
-        }
-      },
-      {
-        "skillName": "PHP",
-        "simpleIcon": "node-dot-js",
-        "style": {
-          "color": "#339933",
-          "background": "#33993320"
-        }
-      }
-    ]
+    "source": null
   }
 ]
