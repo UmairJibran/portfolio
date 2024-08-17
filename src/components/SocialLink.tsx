@@ -1,4 +1,4 @@
-import * as Icon from 'react-feather';
+import * as Icon from "react-feather";
 
 export interface SocialLinkProps {
   icon: string;
@@ -7,7 +7,7 @@ export interface SocialLinkProps {
 }
 
 export default function SocialLink(props: SocialLinkProps) {
-  let featherIcon: keyof typeof Icon = 'ExternalLink';
+  let featherIcon: keyof typeof Icon = "ExternalLink";
 
   if (Object.keys(Icon).includes(props.icon)) {
     featherIcon = props.icon as keyof typeof Icon;

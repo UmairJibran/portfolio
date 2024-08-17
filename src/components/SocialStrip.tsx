@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import SocialLink, { SocialLinkProps } from '@/components/SocialLink';
+import SocialLink, { SocialLinkProps } from "@/components/SocialLink";
 
-import { social } from '@/data/profile.json';
+import { social } from "@/data/profile.json";
 
 export default function SocialStrip() {
   return (

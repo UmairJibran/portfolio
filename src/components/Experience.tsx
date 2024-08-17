@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import experiences from '@/data/experience.json';
-import Tabs from 'antd/es/tabs';
-import Collapse from 'antd/es/collapse';
-import { Heart, Briefcase } from 'react-feather';
-import ExperienceDetail from '@/components/ExperiencDetail';
+import experiences from "@/data/experience.json";
+import Tabs from "antd/es/tabs";
+import Collapse from "antd/es/collapse";
+import { Heart, Briefcase } from "react-feather";
+import ExperienceDetail from "@/components/ExperiencDetail";
 
 export default function Experience() {
-  const itemsRenderer = experiences.map(experience => {
+  const itemsRenderer = experiences.map((experience) => {
     return {
       label: <h2 className="font-mono">{experience.company.toUpperCase()}</h2>,
       key: experience.company,
@@ -21,11 +21,13 @@ export default function Experience() {
   });
   return (
     <>
-      <div id="experience" className="flex flex-col w-full h-screen">
-        <h1 className="my-20 text-3xl">Experience</h1>
+      <div
+        id="experience"
+        className="flex flex-col w-full min-h-screen justify-center items-center"
+      >
         <Collapse
           accordion
-          className="block md:hidden"
+          className="block md:hidden w-full my-4"
           defaultActiveKey={experiences[0].company}
           items={itemsRenderer}
         />
@@ -38,7 +40,7 @@ export default function Experience() {
           }}
           size="small"
           defaultActiveKey={experiences[0].company}
-          indicator={{ size: 50, align: 'center' }}
+          indicator={{ size: 50, align: "center" }}
           items={itemsRenderer}
         />
       </div>

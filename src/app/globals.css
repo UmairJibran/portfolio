@@ -9,7 +9,7 @@
 }
 
 .custom-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 0;

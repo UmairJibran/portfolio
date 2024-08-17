@@ -14,12 +14,12 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        white: '#f9f9f5',
-        black: '#222831'
-      }
+        white: "#f9f9f5",
+        black: "#222831",
+      },
     },
     fontFamily: {
-      mono: ['var(--font-ibm-mono)'],
+      mono: ["var(--font-ibm-mono)"],
     },
   },
   plugins: [],

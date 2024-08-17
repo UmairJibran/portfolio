@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Greetings from '@/components/Greetings';
-import Experience from '@/components/Experience';
+import Greetings from "@/components/Greetings";
+import Experience from "@/components/Experience";
 
 export default function Home() {
   return (

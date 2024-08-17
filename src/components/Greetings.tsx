@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import Intro from '@/components/Intro';
-import '@/styles/greetings.scss';
+import Intro from "@/components/Intro";
+import "@/styles/greetings.scss";
 
-import { image } from '@/data/profile.json';
+import { image } from "@/data/profile.json";
 
 export default function Greetings() {
   return (
