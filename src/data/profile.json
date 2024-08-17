@@ -22,6 +22,11 @@
       "icon": "Twitter"
     },
     {
+      "name": "Email",
+      "link": "mailto:me@umairjibran.com",
+      "icon": "Mail"
+    },
+    {
       "name": "Medium",
       "link": "https://umairjibran.medium.com/",
       "icon": "Type"
