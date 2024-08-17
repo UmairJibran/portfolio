@@ -89,7 +89,9 @@ export default function TestimonialDetail({
                 {testimonial.employerAtTime}
               </Link>
             </div>
-            <div className="flex flex-row gap-2 pt-2">{socials}</div>
+            <div className="flex flex-row gap-2 pt-2 justify-center md:justify-start">
+              {socials}
+            </div>
           </figcaption>
         </div>
       </figure>
