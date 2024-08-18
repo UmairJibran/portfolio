@@ -64,7 +64,7 @@ export default function TestimonialDetail({
     <>
       <figure className="lg:flex rounded-xl p-8 lg:p-0 border">
         <Image
-          className="w-24 h-24 lg:w-64 lg:h-auto lg:rounded-none rounded-full mx-auto object-cover"
+          className="w-24 h-24 lg:w-64 lg:h-auto lg:rounded-none rounded-full mx-auto object-cover filter-none lg:grayscale lg:hover:grayscale-0 "
           src={testimonial.image}
           alt={`${testimonial.name}'s Image`}
           width={600}
