@@ -8,7 +8,7 @@ import { ISocialLinkProps } from "@/types/social";
 export default function SocialStrip() {
   return (
     <>
-      <div className="flex flex-row gap-4 mt-4">
+      <div className="flex flex-row gap-4">
         {social.map((socialLink: ISocialLinkProps) => {
           return (
             <SocialLink
