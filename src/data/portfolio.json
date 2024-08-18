@@ -34,7 +34,7 @@
   {
     "id": "alpha",
     "name": "Alpha",
-    "url": "https://alpha.umairjibran.com",
+    "url": "https://alpha.solenova.umairjibran.com/",
     "description": "Browser addon to boost productivity by blocking distractions",
     "logo": "alpha",
     "source": null
@@ -42,7 +42,7 @@
   {
     "id": "gamma",
     "name": "Gamma",
-    "url": "https://gamma.umairjibran.com",
+    "url": "https://gamma.solenova.umairjibran.com/",
     "description": "An action to enable developers ship their code with ease",
     "logo": "gamma",
     "source": "https://github.com/solenova-tech/gamma"
