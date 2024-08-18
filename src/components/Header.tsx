@@ -1,5 +1,9 @@
-import { Popover } from "antd";
-import Link from "next/link";
+"use client";
+
+import { launchExternalUrl } from "@/utils";
+import { Button, Popover } from "antd";
+
+import profile from "@/data/profile.json";
 
 export default function Header() {
   return (
@@ -15,8 +19,9 @@ export default function Header() {
         </nav>
         <div className="lg:w-1/5" />
         <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-          <Link
-            href="/resume"
+          <Button
+            onClick={() => launchExternalUrl(profile.resume)}
+            type="text"
             className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
           >
             Resume
@@ -31,7 +36,7 @@ export default function Header() {
             >
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </Link>
+          </Button>
         </div>
       </div>
     </header>
