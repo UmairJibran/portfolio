@@ -74,7 +74,9 @@ export default function TestimonialDetail({
 
         <div className="pt-6 lg:p-8 text-center lg:text-left space-y-4">
           <blockquote>
-            <p className="text-lg font-medium">“{testimonial.testimonial}”</p>
+            <p className="text-sm md:text-lg font-medium">
+              “{testimonial.testimonial}”
+            </p>
           </blockquote>
           <figcaption className="font-medium">
             <div className="text-sky-500 dark:text-sky-400">
