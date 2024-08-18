@@ -62,16 +62,17 @@ export default function TestimonialDetail({
 
   return (
     <>
-      <figure className="md:flex rounded-xl p-8 md:p-0 border">
+      <figure className="lg:flex rounded-xl p-8 lg:p-0 border">
         <Image
-          className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto obect-contain"
+          className="w-24 h-24 lg:w-64 lg:h-auto lg:rounded-none rounded-full mx-auto object-cover"
           src={testimonial.image}
           alt={`${testimonial.name}'s Image`}
           width={600}
           height={600}
           objectFit="cover"
         />
-        <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
+
+        <div className="pt-6 lg:p-8 text-center lg:text-left space-y-4">
           <blockquote>
             <p className="text-lg font-medium">“{testimonial.testimonial}”</p>
           </blockquote>
@@ -89,7 +90,7 @@ export default function TestimonialDetail({
                 {testimonial.employerAtTime}
               </Link>
             </div>
-            <div className="flex flex-row gap-2 pt-2 justify-center md:justify-start">
+            <div className="flex flex-row gap-2 pt-2 justify-center lg:justify-start">
               {socials}
             </div>
           </figcaption>
