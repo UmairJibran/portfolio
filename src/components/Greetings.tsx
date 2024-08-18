@@ -12,7 +12,7 @@ export default function Greetings() {
     <>
       <div
         id="greeting"
-        className="flex flex-col-reverse w-full h-screen text-start items-center m-auto md:flex-row"
+        className="flex flex-col-reverse w-full min-h-screen text-start items-center m-auto md:flex-row"
       >
         <Intro />
         <Image
