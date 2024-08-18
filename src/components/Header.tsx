@@ -1,15 +1,51 @@
 "use client";
 
-import { launchExternalUrl } from "@/utils";
+import { launchExternalUrl, swrFetcher } from "@/utils";
 import { Button, Popover } from "antd";
+import useSWR from "swr";
 
 import profile from "@/data/profile.json";
+import { useState, useEffect } from "react";
+import { IGazaStats } from "@/types/gazaStats";
 
 export default function Header() {
+  const [rotationDays, setRotationDays] = useState(0);
+  const [rotationKilled, setRotationKilled] = useState(0);
+  const [killedInGaza, setKilledInGaza] = useState(0);
+  const [daysReported, setDatsReported] = useState(0);
+
+  const { data, isLoading } = useSWR(
+    "https://data.techforpalestine.org/api/v2/summary.min.json",
+    swrFetcher,
+    {
+      revalidateOnFocus: false,
+    },
+  );
+
+  useEffect(() => {
+    if (killedInGaza > 0 && daysReported > 0) return;
+    const intervalId = setInterval(() => {
+      const newKilled = Math.floor(Math.random() * 40000) + 1;
+      const days = Math.floor(Math.random() * 400) + 1;
+      setRotationKilled(Math.floor(newKilled / 1) % 10000);
+      setRotationDays(Math.floor(days / 1) % 1000);
+    }, 50);
+
+    return () => clearInterval(intervalId);
+  }, [rotationDays, rotationKilled, killedInGaza, daysReported]);
+
+  if (!isLoading && data) {
+    const gazaStats: IGazaStats = data;
+    if (!killedInGaza && !daysReported) {
+      setKilledInGaza(gazaStats.killed.total);
+      setDatsReported(gazaStats.dailyReportCount);
+    }
+  }
+
   return (
     <header className="text-gray-600 body-font sticky z-50 top-0 bg-white border-b-2 border-black">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <nav className="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
+        <nav className="flex lg:w-1/5 flex-wrap items-center text-base md:ml-auto">
           <Popover content="Launching Soon">
             <span className="mr-5 cursor-pointer">Blogs</span>
           </Popover>
@@ -17,8 +53,27 @@ export default function Header() {
             <span className="mr-5 cursor-pointer">Case Studies</span>
           </Popover>
         </nav>
-        <div className="lg:w-1/5" />
-        <div className="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+        <div className="lg:w-3/5 bg-red-500 text-white px-2 py-2 text-center order-first lg:order-none">
+          <span
+            style={{
+              transform: `rotate(${rotationKilled}deg)`,
+              transition: "transform 0.1s ease-in-out",
+            }}
+          >
+            {killedInGaza > 0 ? killedInGaza : rotationKilled}
+          </span>{" "}
+          reported murdered in the the last{" "}
+          <span
+            style={{
+              transform: `rotate(${rotationDays}deg)`,
+              transition: "transform 0.1s ease-in-out",
+            }}
+          >
+            {daysReported > 0 ? daysReported : rotationDays}
+          </span>{" "}
+          days. Ceasefire now! 🇵🇸
+        </div>
+        <div className="lg:w-1/5 inline-flex lg:justify-end ml-5 lg:ml-0">
           <Button
             onClick={() => launchExternalUrl(profile.resume)}
             type="text"

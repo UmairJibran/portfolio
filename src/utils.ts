@@ -20,3 +20,5 @@ export const launchExternalUrl = (url: string | null) => {
   if (!url) return;
   window.open(url, "_blank");
 };
+
+export const swrFetcher = (url: string) => fetch(url).then((r) => r.json());
