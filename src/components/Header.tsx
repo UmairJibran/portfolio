@@ -4,6 +4,8 @@ import { launchExternalUrl, swrFetcher } from "@/utils";
 import { Button, Popover } from "antd";
 import useSWR from "swr";
 
+import "@/styles/header.scss";
+
 import profile from "@/data/profile.json";
 import { useState, useEffect } from "react";
 import { IGazaStats } from "@/types/gazaStats";
@@ -43,7 +45,7 @@ export default function Header() {
   }
 
   return (
-    <header className="text-gray-600 body-font sticky z-50 top-0 bg-white border-b-2 border-black">
+    <header className="text-gray-600 body-font sticky z-50 top-0 bg-white blurred-bg">
       <div className="container mx-auto flex flex-wrap p-1 lg:p-4 flex-col lg:flex-row items-center">
         <nav className="lg:w-1/5 flex-wrap items-center text-base lg:ml-auto hidden lg:flex">
           <Popover content="Launching Soon">
