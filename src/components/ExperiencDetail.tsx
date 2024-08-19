@@ -18,7 +18,7 @@ export default function ExperienceDetail({
           {formatDate({ date: experience.endDate, format: "SHORT" }) ??
             "Present"}
         </h3>
-        <h2 className="mb-2">
+        <h2 className="mb-2 font-bold">
           {experience.position} @ {experience.company}
         </h2>
         <h4 className="mb-1">{experience.oneLine}</h4>
