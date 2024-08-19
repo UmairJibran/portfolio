@@ -22,3 +22,20 @@ export const launchExternalUrl = (url: string | null) => {
 };
 
 export const swrFetcher = (url: string) => fetch(url).then((r) => r.json());
+
+export const dataPoster = async (url: string | undefined, data: Object) => {
+  if (!url) return null;
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    return res.json();
+  } catch (e: unknown) {
+    console.error(e);
+    return null;
+  }
+};
