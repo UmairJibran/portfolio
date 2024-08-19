@@ -1,7 +1,5 @@
 "use client";
 
-import { Plus } from "react-feather";
-
 import { formatDate } from "@/utils";
 import { IExperienceDetail } from "@/types/experience";
 

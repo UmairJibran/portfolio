@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import Copyright from "@/components/Copyright";
 
 import meta from "@/data/meta.json";
+import umamiAnalytics from "@/data/umamiAnalytics.json";
+import Script from "next/script";
 
 const ibmPlexMono = IBM_Plex_Mono({
   weight: "400",
@@ -22,6 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id={umamiAnalytics.dataWebsiteId}
+      />
       <body className={`${ibmPlexMono.variable} font-mono`}>
         <Header />
         {children}
