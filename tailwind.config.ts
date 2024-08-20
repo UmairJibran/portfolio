@@ -19,6 +19,7 @@ const config: Config = {
     },
     fontFamily: {
       mono: ["var(--font-ibm-mono)"],
+      inconsolata: ["var(--font-inconsolata)"],
     },
   },
   plugins: [],

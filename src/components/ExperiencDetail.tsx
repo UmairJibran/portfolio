@@ -19,7 +19,7 @@ export default function ExperienceDetail({
         <h2 className="mb-2 font-bold">
           {experience.position} @ {experience.company}
         </h2>
-        <h4 className="mb-1">{experience.oneLine}</h4>
+        <h4 className="mb-1 font-inconsolata">{experience.oneLine}</h4>
         {experience.bullets.map((bullet, index) => (
           <div key={index} className="flex my-1">
             <p className="mb-2">+ {bullet}</p>

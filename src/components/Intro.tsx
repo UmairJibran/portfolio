@@ -20,7 +20,7 @@ export default function Greetings() {
           hey there, {profile.name.lastName.toLowerCase()} here!
         </h1>
         <p className="text-2xl font-black">{profile.subTitle}</p>
-        <p>{parse(profile.extraInfo)}</p>
+        <p className="font-inconsolata text-lg">{parse(profile.extraInfo)}</p>
         <SocialStrip />
         <div className="justify-center w-full flex ml-28">
           <CallToAction />

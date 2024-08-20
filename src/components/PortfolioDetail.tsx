@@ -58,7 +58,10 @@ export default function PortfolioDetail({ item }: { item: IPortfilioItem }) {
         }
         actions={actions}
       >
-        <Meta title={item.name} description={item.description} />
+        <Meta
+          title={item.name}
+          description={<p className="font-inconsolata">{item.description}</p>}
+        />
       </Card>
     </>
   );

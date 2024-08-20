@@ -74,15 +74,15 @@ export default function TestimonialDetail({
 
         <div className="pt-6 lg:p-8 text-center lg:text-left space-y-4">
           <blockquote>
-            <p className="text-sm md:text-lg font-medium">
+            <p className="text-sm md:text-lg font-medium font-inconsolata">
               “{testimonial.testimonial}”
             </p>
           </blockquote>
           <figcaption className="font-medium">
-            <div className="text-sky-500 dark:text-sky-400">
+            <div className="text-sky-500 dark:text-sky-400 text-md md:text-xl">
               {testimonial.name}
             </div>
-            <div className="text-slate-700 dark:text-slate-500">
+            <div className="text-slate-700 dark:text-slate-500 text-sm md:text-md">
               {testimonial.designationAtTime},{" "}
               <Link
                 className="custom-underline"

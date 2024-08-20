@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Inconsolata } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
@@ -12,6 +12,12 @@ import Script from "next/script";
 const ibmPlexMono = IBM_Plex_Mono({
   weight: "400",
   variable: "--font-ibm-mono",
+  preload: false,
+});
+
+const inconsolata = Inconsolata({
+  weight: "400",
+  variable: "--font-inconsolata",
   preload: false,
 });
 
@@ -29,7 +35,9 @@ export default function RootLayout({
         src="https://cloud.umami.is/script.js"
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
-      <body className={`${ibmPlexMono.variable} font-mono`}>
+      <body
+        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono`}
+      >
         <Header />
         {children}
         <Copyright />
