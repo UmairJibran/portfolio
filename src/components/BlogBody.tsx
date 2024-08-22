@@ -7,7 +7,7 @@ type Props = {
 
 export function BlogBody({ content }: Props) {
   return (
-    <div className="max-w-2xl mx-auto font-inconsolata">
+    <div className="max-w-2xl mx-4 md:mx-auto font-inconsolata">
       <div className={markdownStyles["markdown"]}>{parse(content)}</div>
     </div>
   );
