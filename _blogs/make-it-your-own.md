@@ -5,7 +5,7 @@ coverImage: "/assets/blogs/make-it-your-own/cover.webp"
 date: "2024-08-22T19:29:00.000Z"
 author:
   name: Umair Jibran
-  picture: "/assets/blogs/authors/jibran.jpeg"
+  picture: "/assets/authors/jibran.webp"
 ogImage:
   url: "/assets/blogs/make-it-your-own/cover.webp"
 ---
