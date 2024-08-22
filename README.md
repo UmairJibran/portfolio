@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  umairjibran.com
+</h1>
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![demo](https://github.com/user-attachments/assets/1654d5ff-45d4-4d42-b0dc-5e0fb9283726)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Is it free to re-use?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
+> [Brittany Chiang](brittanychiang.com)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### TL;DR
 
-## Learn More
+Yes, you can fork this repo. Please give me proper credit by linking back to [umairjibran.com](https://umairjibran.com). Thanks! And to make it even easier for you I have written a [tutorial](https://umairjibran.com/blogs/make-it-your-own) you can follow
 
-To learn more about Next.js, take a look at the following resources:
+## Found an issue?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please report issue or feature requests [here](https://github.com/UmairJibran/portfolio/issues). Contributions are encouraged!
