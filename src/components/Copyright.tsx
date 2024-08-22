@@ -10,6 +10,18 @@ export default function Copyright() {
           Umair Jibran
         </Link>
         .
+        <br />
+        <>
+          The source code is{" "}
+          <Link
+            href="https://github.com/umairjibran/portfolio.git"
+            className="custom-underline"
+            target="_blank"
+          >
+            available on GitHub
+          </Link>
+          .
+        </>
       </div>
     </>
   );
