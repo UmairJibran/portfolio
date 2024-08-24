@@ -21,7 +21,10 @@ const inconsolata = Inconsolata({
   preload: false,
 });
 
-export const metadata: Metadata = meta;
+export const metadata: Metadata = {
+  ...meta,
+  metadataBase: new URL(meta.metadataBase),
+};
 
 export default function RootLayout({
   children,
