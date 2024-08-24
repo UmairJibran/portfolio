@@ -15,7 +15,6 @@ import Link from "next/link";
 
 export default function Header() {
   const path = usePathname().split("/")[1];
-  console.log(path);
   const [rotationDays, setRotationDays] = useState(0);
   const [rotationKilled, setRotationKilled] = useState(0);
   const [killedInGaza, setKilledInGaza] = useState(0);
