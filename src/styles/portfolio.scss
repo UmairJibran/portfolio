@@ -1,0 +1,13 @@
+.logo {
+  filter: brightness(1.1) grayscale(100%);
+}
+
+.logo:hover {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .logo {
+    filter: grayscale(0%);
+  }
+}

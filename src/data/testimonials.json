@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Waleed Waseem",
+    "designationAtTime": "Co-founder and CEO",
+    "employerAtTime": "Productbox",
+    "linkedin": "waleed-waseem-2b625270",
+    "testimonial": "I had the privilege of working with Umair Jibran for over two years, and it is without a doubt that he is one of the most talented backend resources I've had the pleasure of collaborating with. Umair not only possesses exceptional technical skills but also carries himself with a remarkable level of professionalism, setting a clear standard for what a Professional Engineer should be.",
+    "email": "waleed@productbox.dev",
+    "employerSite": "https://productbox.dev",
+    "twitter": "leedz",
+    "image": "/assets/images/waleed-waseem.webp",
+    "personalSite": null
+  },
+  {
+    "name": "Farqaleet Kirmani",
+    "designationAtTime": "Co-founder",
+    "employerAtTime": "meraID",
+    "linkedin": "farqaleetkirmani",
+    "email": null,
+    "testimonial": "I highly recommend Umair as an exceptional resource for any project or team. He joined our project with limited experience but quickly proved himself as highly dedicated and a fast learner. He continuously demonstrated a remarkable work ethic, taking ownership for the project tasks and challenges even when they were not his direct responsibility. He constantly strove for excellence.",
+    "employerSite": "https://meraid.pk",
+    "twitter": null,
+    "image": "/assets/images/farqaleet-kirmani.webp",
+    "personalSite": null
+  },
+
+  {
+    "name": "Saif Ullah Sajid",
+    "designationAtTime": "Engineering Lead",
+    "employerAtTime": "Productbox",
+    "linkedin": "saifsajid99",
+    "testimonial": "Jibran is someone who stops at nothing. Once he is challenged to do a task, he delivers the best output no matter what. Being a manager jibran was the easiest engineer to manage. He is always humble and friendly. His learning attitude is amazing and he experiments with the top tech all the time. He is way ahead of his time in his professional journey.",
+    "email": null,
+    "personalSite": "https://saifullahsajid.com/",
+    "employerSite": "https://productbox.dev",
+    "twitter": "saifcodes",
+    "image": "/assets/images/saif-sajid.webp"
+  }
+]

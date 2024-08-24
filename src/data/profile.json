@@ -1,0 +1,40 @@
+{
+  "name": {
+    "firstName": "Umair",
+    "lastName": "Jibran"
+  },
+  "subTitle": "I build things for web",
+  "extraInfo": "I've spent years perfecting the art of building scalable web applications that just work. As a seasoned Backend Tech Lead at <strong><a target='_blank' class='custom-underline' href='https://www.productbox.dev'>Productbox</a></strong>, I thrive in fast-paced startups where collaboration and creativity are key. I'm passionate about harnessing the power of <strong>serverless</strong>, <strong>AWS</strong>, <strong>Node.js</strong>, and <strong>microservices</strong> to drive innovation and deliver high-quality projects. And when it comes to monitoring and observability, I'm a firm believer in the importance of tools like <strong>Grafana</strong> and <strong>Prometheus</strong> - they're essential for ensuring seamless performance and reliability. But enough about tech (for now!). When I'm not geeking behind the keyboard, you can find me lacing up my hiking boots <Image style='display: inline;' src='/assets/emojis/hiking.png' alt='Hiking' height=18 width=18 />, plotting my next chess move <Image style='display: inline;' src='/assets/emojis/chess.png' alt='Chess' height=18 width=18 />, or binge-watching Game of Thrones <Image style='display: inline;' src='/assets/emojis/iron-throne.png' alt='Iron Throne' height=18 width=18 /> (don't judge!). With a strong foundation in computer science and a drive to stay ahead of the curve, I'm excited to bring my skills to forward-thinking projects in Europe or North America. Let's build something amazing together!",
+  "social": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/umairjibran/",
+      "icon": "Linkedin"
+    },
+    {
+      "name": "GitHub",
+      "link": "https://www.github.com/umairjibran/",
+      "icon": "GitHub"
+    },
+    {
+      "name": "Twitter(x)",
+      "link": "https://www.twitter.com/umairjibran7/",
+      "icon": "Twitter"
+    },
+    {
+      "name": "Email",
+      "link": "mailto:me@umairjibran.com",
+      "icon": "Mail"
+    },
+    {
+      "name": "Medium",
+      "link": "https://umairjibran.medium.com/",
+      "icon": "Type"
+    }
+  ],
+  "email": "me@umairjibran.com",
+  "phone": "00923120919647",
+  "location": "Peshawar, Pakistan",
+  "resume": "/assets/docs/resume.pdf",
+  "image": "/assets/gifs/cat-programmer.gif"
+}
