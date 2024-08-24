@@ -8,6 +8,12 @@ author:
   picture: "/assets/authors/jibran.webp"
 ogImage:
   url: "/assets/blogs/make-it-your-own/cover.webp"
+tags:
+  - open-source
+  - portfolio
+  - nextjs
+  - tailwindcss
+  - antd
 ---
 
 This template is created with Next.js and Tailwind CSS. The primary goal of this template is to provide a starting point for developers to build their portfolio and to have a place where they can post their thoughts.

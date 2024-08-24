@@ -12,4 +12,5 @@ export type Blog = {
   };
   content: string;
   preview?: boolean;
+  tags: string[];
 };
