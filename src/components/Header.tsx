@@ -76,12 +76,12 @@ export default function Header() {
   }
 
   return (
-    <header className="text-gray-600 body-font sticky z-50 top-0 bg-white blurred-bg">
+    <header className="text-gray-600 body-font sticky z-50 top-0 blurred-bg">
       <div className="container mx-auto flex flex-wrap p-1 lg:p-4 flex-col lg:flex-row items-center">
-        <nav className="lg:w-1/5 flex-wrap items-center text-base lg:ml-auto hidden lg:flex">
+        <nav className="lg:w-1/5 flex-wrap items-center text-base lg:ml-auto flex">
           {navComponents}
         </nav>
-        <div className="text-xs lg:text-md lg:w-3/5 bg-red-500 text-white p-2 text-center order-first lg:order-none">
+        <div className="text-xs lg:text-md w-full lg:w-3/5 bg-red-500 text-white p-2 text-center order-first lg:order-none">
           <span
             style={{
               transform: `rotate(${rotationKilled}deg)`,
