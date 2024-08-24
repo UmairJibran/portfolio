@@ -52,6 +52,12 @@ export function generateMetadata({ params }: Params): Metadata {
       title,
       images: [blog.ogImage.url],
     },
+    twitter: {
+      card: "summary_large_image",
+    },
+    description: blog.excerpt,
+    authors: [blog.author],
+    keywords: blog.tags,
   };
 }
 
