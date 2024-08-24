@@ -15,7 +15,7 @@ const sacramento = Sacramento({
 export default function Greetings() {
   return (
     <>
-      <div id="intro" className="flex flex-col gap-4">
+      <div id="intro" className="flex flex-col gap-4 mt-4 md:mt-0">
         <h1 className={`${sacramento.className} text-6xl`}>
           hey there, {profile.name.lastName.toLowerCase()} here!
         </h1>
