@@ -20,14 +20,14 @@ This template is created with Next.js and Tailwind CSS. The primary goal of this
 
 ## Technology Used
 
-- **Next.js** - React framework with hybrid static rendering.
-- **Tailwind CSS** - A utility-first CSS framework.
-- **Markdown** - To write blog posts.
-- **AntD** - An enterprise-class UI design language and React UI library.
-- **React Feather** - Simply beautiful open source icons.
-- **Remark HTML** - To parse markdown in HTML.
-- **Gray Matter** - Parse front-matter from a string or file.
-- **TypeScript** - JavaScript with syntax for types.
+- **[Next.js](https://nextjs.org/)** - React framework with hybrid static rendering.
+- **[Tailwind CSS](https://tailwindcss.com/)** - A utility-first CSS framework.
+- **[Markdown](https://www.markdownguide.org/getting-started/)** - To write blog posts.
+- **[AntD](https://ant.design/components/overview)** - An enterprise-class UI design language and React UI library.
+- **[Feather Icons](https://feathericons.com/)** - Simply beautiful open source icons.
+- **[Remark HTML](https://www.npmjs.com/package/remark-html)** - To parse markdown in HTML.
+- **[Gray Matter](https://www.npmjs.com/package/gray-matter)** - Parse front-matter from a string or file.
+- **[TypeScript](https://www.typescriptlang.org/)** - JavaScript with syntax for types.
 
 ## Getting Started
 
