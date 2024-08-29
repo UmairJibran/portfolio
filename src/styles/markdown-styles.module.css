@@ -48,3 +48,7 @@
 .markdown a:focus::after {
   width: 100%;
 }
+
+.markdown img {
+  @apply flex justify-center w-full my-2;
+}
