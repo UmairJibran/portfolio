@@ -56,7 +56,7 @@ src
   └── types
 ```
 
-- **_blogs** - Contains the markdown files for the blog posts.
+- **\_blogs** - Contains the markdown files for the blog posts.
 - **public** - Contains static.
 - **src** - Contains the source code.
   - **app** - Contains the pages/layouts.
@@ -74,6 +74,13 @@ To customize this template, you can follow these steps:
 2. Add new blog posts in the `_blogs` directory. (Don't forget to add your cover image in the `public/assets/blogs/[blog-id]/` directory.)
 3. Update the `src/styles` directory to add your custom styles.
 4. Update the `src/components` directory to add new components.
+
+## Miscellaneous
+
+- To change the favicon, update the `src/app/icon.png` file.
+- To update the site metadata, update the `data/meta.json` file.
+- I am using [Umami](https://umami.is) for analytics. You can update the `data/umamiAnalytics.json` file with your own `dataWebsiteId`. (it's free to use and open-source.)
+- I am using [Azure](https://azure.microsoft.com) for hosting. You can either create your [static site](https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-react?pivots=github) on Azure, and add the environment variables in the `repo > settings > Secrets and variables > actions` or delete the `.github/workflows/azure-static-web-apps-polite-river-0640ed603.yml` file and update it with your preferred tool.
 
 ## Closing Thoughts
 
