@@ -56,7 +56,7 @@ src
   └── types
 ```
 
-- **_blogs** - Contains the markdown files for the blog posts.
+- **\_blogs** - Contains the markdown files for the blog posts.
 - **public** - Contains static.
 - **src** - Contains the source code.
   - **app** - Contains the pages/layouts.
