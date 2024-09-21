@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
 export const DATE_FORMATS = {
-  SHORT: "MMM YYYY",
+  SHORT: "MMM YYYY"
   LONG: "MMM DD, YYYY",
 };
 
