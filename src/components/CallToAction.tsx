@@ -5,7 +5,7 @@ import profile from "@/data/profile.json";
 
 export default function CallToAction() {
   return (
-    <>
+    <div className="flex flex-col md:flex-row gap-2 mx-auto justify-center">
       <Button
         type="text"
         size="large"
@@ -22,6 +22,6 @@ export default function CallToAction() {
       >
         Hire Me 🥳
       </Button>
-    </>
+    </div>
   );
 }
