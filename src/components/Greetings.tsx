@@ -3,13 +3,15 @@
 import Image from "next/image";
 
 import Intro from "@/components/Intro";
+import CallToAction from "@/components/CallToAction";
+
 import "@/styles/greetings.scss";
 
 import { image } from "@/data/profile.json";
 
 export default function Greetings() {
   return (
-    <>
+    <div>
       <div
         id="greeting"
         className="flex flex-col-reverse w-full min-h-screen text-start items-center m-auto md:flex-row"
@@ -23,6 +25,9 @@ export default function Greetings() {
           height={450}
         />
       </div>
-    </>
+      <div className="w-full mt-4 lg:mt-0">
+        <CallToAction />
+      </div>
+    </div>
   );
 }

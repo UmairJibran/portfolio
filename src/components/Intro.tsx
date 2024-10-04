@@ -5,7 +5,6 @@ import parse from "html-react-parser";
 import { Sacramento } from "next/font/google";
 
 import SocialStrip from "@/components/SocialStrip";
-import CallToAction from "@/components/CallToAction";
 
 const sacramento = Sacramento({
   subsets: ["latin"],
@@ -22,9 +21,6 @@ export default function Greetings() {
         <p className="text-2xl font-black">{profile.subTitle}</p>
         <p className="font-inconsolata text-lg">{parse(profile.extraInfo)}</p>
         <SocialStrip />
-        <div className="justify-center w-full flex ml-0: md:ml-28">
-          <CallToAction />
-        </div>
       </div>
     </>
   );
