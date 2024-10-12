@@ -1,0 +1,8 @@
+# Default owner for everything
+* @umairjibran
+
+# Owner for blog posts
+/_blogs/*.md @umairjibran
+
+# Owner for the source code
+/src/ @umairjibran
