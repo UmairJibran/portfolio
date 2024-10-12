@@ -4,7 +4,7 @@ on:
     types:
       - closed
     branches:
-      - test
+      - master
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
         fetch-depth: '0'
 
     - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@v1 # Don't use @master or @v1 unless you're happy to test the latest version
+      uses: anothrNick/github-tag-action@1.71.0
       env:
         WITH_V: true
         PRERELEASE: false
