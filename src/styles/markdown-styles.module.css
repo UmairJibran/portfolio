@@ -52,3 +52,42 @@
 .markdown img {
   @apply flex justify-center w-full my-2;
 }
+
+.markdown pre code {
+  font-family: "Fira Code", monospace;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 12px;
+  border-radius: 8px;
+  display: block;
+  overflow-x: auto;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.markdown code {
+  font-family: "Fira Code", monospace;
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline;
+  white-space: nowrap;
+}
+
+.markdown pre code {
+  position: relative;
+}
+
+.markdown pre code::before {
+  counter-increment: line;
+  content: counter(line);
+  position: absolute;
+  left: -2.5em;
+  text-align: right;
+  color: #888;
+}
+
+.markdown pre code {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
