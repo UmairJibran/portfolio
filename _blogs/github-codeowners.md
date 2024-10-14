@@ -28,9 +28,9 @@ In this blog post, we’ll dive deep into how `CODEOWNERS` works, why it’s imp
 2. Why Should You Use `CODEOWNERS`?
 3. How to Create a `CODEOWNERS` File
 4. Ownership Rules and Syntax
-    - Wildcard Patterns
-    - Assigning Multiple Owners
-    - File Extensions
+   - Wildcard Patterns
+   - Assigning Multiple Owners
+   - File Extensions
 5. Use Cases for `CODEOWNERS`
 6. Common Mistakes and How to Avoid Them
 7. Conclusion
@@ -44,6 +44,7 @@ A `CODEOWNERS` file is a GitHub-specific file that allows repository maintainers
 When changes are made to those areas of the code, the designated `CODEOWNERS` will automatically be requested for review. This ensures that the correct person or team is aware of changes and can give appropriate feedback.
 
 ### Location of the `CODEOWNERS` File
+
 The `CODEOWNERS` file can be placed in a few locations, but the most common one is:
 
 ```
@@ -51,6 +52,7 @@ The `CODEOWNERS` file can be placed in a few locations, but the most common one 
 ```
 
 Alternatively, you can place it in the root directory or a `docs/` folder:
+
 - `/CODEOWNERS`
 - `/docs/CODEOWNERS`
 
@@ -59,12 +61,19 @@ Alternatively, you can place it in the root directory or a `docs/` folder:
 ## Why Should You Use `CODEOWNERS`?
 
 ### 1. **Streamline Code Review Processes**
+
 When projects grow, it becomes increasingly difficult to ensure that changes are reviewed by the right people. The `CODEOWNERS` file helps by automating the process of assigning reviewers, ensuring that the right individuals or teams review code that affects their areas of expertise.
 
+![image](/assets/blogs/github-codeowners/ownership.webp)
+
 ### 2. **Promote Code Quality and Accountability**
+
 By clearly defining ownership, you promote accountability within your team. Owners are responsible for ensuring that changes made to their code are well-reviewed, documented, and maintain quality standards.
 
+![image](/assets/blogs/github-codeowners/auto-review.webp)
+
 ### 3. **Efficient Project Management**
+
 In large repositories, it’s common for different people to be responsible for different parts of the project (e.g., frontend, backend, documentation). A `CODEOWNERS` file helps distribute responsibilities and ensures that only relevant changes are sent to the correct owners for review.
 
 ---
@@ -74,6 +83,7 @@ In large repositories, it’s common for different people to be responsible for 
 Creating a `CODEOWNERS` file is simple. Let’s walk through the steps:
 
 ### Step 1: Create the File
+
 In your repository, create a new file called `CODEOWNERS` in the `.github` directory (or in the root or docs directory if you prefer).
 
 ```
@@ -81,6 +91,7 @@ In your repository, create a new file called `CODEOWNERS` in the `.github` direc
 ```
 
 ### Step 2: Define Ownership
+
 In the file, specify the ownership rules by mapping file paths to GitHub usernames or teams.
 
 Here’s an example of what a `CODEOWNERS` file might look like:
@@ -103,6 +114,7 @@ Here’s an example of what a `CODEOWNERS` file might look like:
 ```
 
 ### Step 3: Commit and Push
+
 Once you’ve defined the ownership rules, commit the file to your repository:
 
 ```bash
@@ -118,6 +130,7 @@ git push origin main
 Let’s break down the syntax of a `CODEOWNERS` file and the rules you can define.
 
 ### File and Directory Ownership
+
 You can specify ownership for entire directories or specific files. Ownership is defined using paths relative to the root of the repository.
 
 ```plaintext
@@ -132,6 +145,7 @@ You can specify ownership for entire directories or specific files. Ownership is
 ```
 
 ### Wildcard Patterns
+
 You can use wildcard patterns (`*`) to match multiple files.
 
 - `*.js`: All JavaScript files.
@@ -146,6 +160,7 @@ You can use wildcard patterns (`*`) to match multiple files.
 ```
 
 ### Assigning Multiple Owners
+
 You can assign multiple owners to a file or directory. Simply list them after the path, separated by spaces.
 
 ```plaintext
@@ -154,6 +169,7 @@ You can assign multiple owners to a file or directory. Simply list them after th
 ```
 
 ### File Extensions
+
 You can assign owners based on file extensions, which is useful for defining ownership of files like Markdown (`.md`) for documentation, or language-specific files like `.js` or `.py`.
 
 ```plaintext
@@ -166,6 +182,7 @@ You can assign owners based on file extensions, which is useful for defining own
 ## Use Cases for `CODEOWNERS`
 
 ### 1. **Assigning Teams to Specific Areas**
+
 If your team is split into frontend, backend, and dev-ops, you can define ownership for specific parts of the codebase.
 
 ```plaintext
@@ -175,6 +192,7 @@ If your team is split into frontend, backend, and dev-ops, you can define owners
 ```
 
 ### 2. **Documentation Ownership**
+
 You can assign documentation ownership to ensure technical writers or documentation specialists review all changes to `.md` files.
 
 ```plaintext
@@ -182,6 +200,7 @@ You can assign documentation ownership to ensure technical writers or documentat
 ```
 
 ### 3. **Language-Specific Ownership**
+
 If certain team members specialize in specific languages, you can define ownership based on file extensions.
 
 ```plaintext
