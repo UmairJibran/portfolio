@@ -1,7 +1,7 @@
 export interface IPortfilioItem {
   id: string;
   name: string;
-  url: string;
+  url: string | null;
   description: string;
   logo: string;
   source: string | null;
