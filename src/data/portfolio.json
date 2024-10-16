@@ -1,9 +1,17 @@
 [
   {
+    "id": "waltzes",
+    "name": "Waltzes",
+    "url": null,
+    "description": "Compose cover letters with power of AI in just a few seconds",
+    "logo": "waltzes",
+    "source": "https://github.com/umairjibran/waltzes"
+  },
+  {
     "id": "puppydog-pb",
     "name": "PuppyDog.io",
     "url": "https://www.puppydog.io",
-    "description": "Create hyper-personalized product demos, at scale",
+    "description": "Create hyper-personalized product demos for your customers in seconds",
     "logo": "puppydog",
     "source": null
   },
