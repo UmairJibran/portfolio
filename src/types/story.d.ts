@@ -1,6 +1,6 @@
 import { type Author } from "./author";
 
-export type Blog = {
+export type Story = {
   slug: string;
   title: string;
   date: string;
@@ -13,4 +13,5 @@ export type Blog = {
   content: string;
   preview?: boolean;
   tags: string[];
+  type: "blog" | "case-study";
 };

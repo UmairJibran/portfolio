@@ -5,7 +5,7 @@ type Props = {
   content: string;
 };
 
-export function BlogBody({ content }: Props) {
+export function StoryBody({ content }: Props) {
   return (
     <div className="max-w-2xl mx-4 md:mx-auto font-inconsolata">
       <div className={markdownStyles["markdown"]}>{parse(content)}</div>

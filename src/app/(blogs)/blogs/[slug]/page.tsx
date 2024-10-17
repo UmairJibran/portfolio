@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllBlog, getBlogBySlug } from "@/lib/api";
 import markdownToHtml from "@/lib/markdownToHtml";
-import { BlogBody } from "@/components/BlogBody";
-import { BlogHeader } from "@/components/BlogHeader";
+import { StoryBody } from "@/components/StoryBody";
+import { StoryHeader } from "@/components/StoryHeader";
 
 import profile from "@/data/profile.json";
 
@@ -19,13 +19,13 @@ export default async function Blog({ params }: Params) {
   return (
     <main>
       <article className="container mx-auto">
-        <BlogHeader
+        <StoryHeader
           title={blog.title}
           coverImage={blog.coverImage}
           date={blog.date}
           author={blog.author}
         />
-        <BlogBody content={content} />
+        <StoryBody content={content} />
       </article>
     </main>
   );
