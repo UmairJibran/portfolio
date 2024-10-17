@@ -11,23 +11,26 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  type: "blog" | "case-study";
 };
 
-export function BlogPreview({
+export function StoryPreview({
   title,
   coverImage,
   date,
   excerpt,
   author,
   slug,
+  type,
 }: Props) {
+  const root = type === "blog" ? "/blogs" : "/case-studies";
   return (
     <div>
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug mx-4">
-        <Link href={`/blogs/${slug}`} className="hover:underline">
+        <Link href={[root, slug].join("/")} className="hover:underline">
           {title}
         </Link>
       </h3>

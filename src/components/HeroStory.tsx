@@ -11,16 +11,19 @@ type Props = {
   excerpt: string;
   author: Author;
   slug: string;
+  type: "blog" | "case-study";
 };
 
-export function HeroBlog({
+export function HeroStory({
   title,
   coverImage,
   date,
   excerpt,
   author,
   slug,
+  type,
 }: Props) {
+  const root = type === "blog" ? "/blogs" : "/case-studies";
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -29,7 +32,7 @@ export function HeroBlog({
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28 mx-4">
         <div>
           <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-            <Link href={`/blogs/${slug}`} className="hover:underline">
+            <Link href={[root, slug].join("/")} className="hover:underline">
               {title}
             </Link>
           </h3>
