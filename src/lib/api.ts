@@ -1,5 +1,4 @@
-import { Blog } from "@/types/blog";
-import { CaseStudy } from "@/types/caseStudy";
+import { Story } from "@/types/story";
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
@@ -21,10 +20,10 @@ export function getBlogBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Blog;
+  return { ...data, slug: realSlug, content } as Story;
 }
 
-export function getAllBlog(): Blog[] {
+export function getAllBlog(): Story[] {
   const slugs = getBlogSlugs();
   const blogs = slugs
     .map((slug) => getBlogBySlug(slug))
@@ -38,10 +37,10 @@ export function getCaseStudyBySlug(slug: string) {
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as CaseStudy;
+  return { ...data, slug: realSlug, content } as Story;
 }
 
-export function getAllCaseStudies(): CaseStudy[] {
+export function getAllCaseStudies(): Story[] {
   const slugs = getCaseStudySlugs();
   const caseStudies = slugs
     .map((slug) => getCaseStudyBySlug(slug))
