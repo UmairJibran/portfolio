@@ -7,11 +7,19 @@ const blogsDirectory = join(process.cwd(), "_blogs");
 const caseStudiesDirectory = join(process.cwd(), "_case-studies");
 
 export function getCaseStudySlugs() {
-  return fs.readdirSync(caseStudiesDirectory);
+  try {
+    return fs.readdirSync(caseStudiesDirectory);
+  } catch (error) {
+    return [];
+  }
 }
 
 export function getBlogSlugs() {
-  return fs.readdirSync(blogsDirectory);
+  try {
+    return fs.readdirSync(blogsDirectory);
+  } catch (error) {
+    return [];
+  }
 }
 
 export function getBlogBySlug(slug: string) {
@@ -42,6 +50,9 @@ export function getCaseStudyBySlug(slug: string) {
 
 export function getAllCaseStudies(): Story[] {
   const slugs = getCaseStudySlugs();
+  if (!slugs) {
+    return [];
+  }
   const caseStudies = slugs
     .map((slug) => getCaseStudyBySlug(slug))
     .sort((caseStudy1, caseStudy2) =>
