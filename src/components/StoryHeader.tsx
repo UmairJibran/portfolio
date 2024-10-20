@@ -11,7 +11,7 @@ type Props = {
   author: Author;
 };
 
-export function BlogHeader({ title, coverImage, date, author }: Props) {
+export function StoryHeader({ title, coverImage, date, author }: Props) {
   return (
     <>
       <BlogTitle>{title}</BlogTitle>
