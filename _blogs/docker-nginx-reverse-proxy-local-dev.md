@@ -188,7 +188,7 @@ With your backend running in Docker, the next step is to use **NGINX** as a reve
        - app
    ```
 
-   This configuration sets up an NGINX service that listens on **port 80** and forwards all requests to the backend service running on **port 4000**. The `depends_on` directive ensures that NGINX waits for the backend to be ready.
+This configuration sets up an NGINX service that listens on **port 80** and forwards all requests to the backend service running on **port 4000**. The `depends_on` directive ensures that NGINX waits for the backend to be ready.
 
 3. **Rebuild and Run**:
 
@@ -200,7 +200,26 @@ With your backend running in Docker, the next step is to use **NGINX** as a reve
 
    At this stage, NGINX is set up as a reverse proxy, routing incoming traffic on **port 80** to any of the 3 backend replicas running on **port 4000**.
 
-At this point, NGINX is set up to act as a reverse proxy, forwarding all incoming traffic on **port 80** to any of the 3 services running backend on **port 4000**.
+   At this point, NGINX is set up to act as a reverse proxy, forwarding all incoming traffic on **port 80** to any of the 3 services running backend on **port 4000**.
+
+4. **Network Configuration**:
+
+To ensure that NGINX can communicate with the backend service, both services should be on the same Docker network. By default, Docker Compose creates a network for all services defined in the `docker-compose.yml` file.
+
+But to specify a custom network, add the following to your `docker-compose.yml` file:
+
+```yml
+networks:
+  app-network:
+    driver: bridge
+```
+
+Then, update the `app` and `nginx` services to use this network:
+
+```yml
+networks:
+  - app-network
+```
 
 ## Step 4: Testing and Troubleshooting
 
