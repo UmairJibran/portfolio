@@ -250,3 +250,14 @@ This request should return the response from one of the backend services. Since 
 By combining Docker and NGINX, you can efficiently replicate a complex backend environment for local development. Docker Compose simplifies managing multi-service setups, while NGINX handles traffic routing and load balancing across services. This architecture not only mirrors production environments but also streamlines testing and scaling.
 
 Whether you’re developing microservices or handling a monolithic backend, this approach provides flexibility and scalability. By following these steps, you can create a local environment that closely resembles your production setup, improving both your workflow and your deployment pipeline.
+
+---
+
+## References
+
+- [Docker](https://www.docker.com/)
+- [Docker Docs](https://docs.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [NGINX](https://www.nginx.com/)
+- [NGINX Docs](https://docs.nginx.com/)
+- [NGINX Docker Image](https://hub.docker.com/_/nginx/)

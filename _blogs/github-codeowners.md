@@ -230,3 +230,6 @@ The `CODEOWNERS` file is an essential tool for managing large projects with mult
 By setting up a well-structured `CODEOWNERS` file, you’ll ensure that your repository scales effectively while maintaining high code quality.
 
 ---
+
+## References
+- [Official Documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
