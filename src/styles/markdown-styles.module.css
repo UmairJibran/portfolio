@@ -85,3 +85,7 @@
   text-align: right;
   color: #888;
 }
+
+.markdown blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-500;
+}
