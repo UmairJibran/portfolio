@@ -23,7 +23,6 @@
     "image": "/assets/images/farqaleet-kirmani.webp",
     "personalSite": null
   },
-
   {
     "name": "Saif Ullah Sajid",
     "designationAtTime": "Engineering Lead",
@@ -35,5 +34,17 @@
     "employerSite": "https://productbox.dev",
     "twitter": "saifcodes",
     "image": "/assets/images/saif-sajid.webp"
+  },
+  {
+    "name": "Terri O'Sullivan",
+    "designationAtTime": "CEO",
+    "employerAtTime": "Waypoint",
+    "linkedin": "terrisullivan",
+    "testimonial": "I enjoyed working with Jibran and ProductBox while building a new technology application in 2023 and 2024. He is knowledgeable, organized, responsive, and a great software engineer. Not to mention, he is a joy to work with, and I highly recommend him.",
+    "email": null,
+    "personalSite": null,
+    "employerSite": "https://waypointconverts.com/",
+    "twitter": null,
+    "image": "/assets/images/terri-sullivan.webp"
   }
 ]
