@@ -24,7 +24,7 @@ tags:
 
 ### Cost Efficiency
 
-Developing on live AWS resources can incur significant costs, especially during frequent testing. LocalStack allows you to work offline, eliminating these expenses.
+Developing with live AWS resources can incur significant costs, especially during frequent testing. LocalStack allows you to work offline, eliminating these expenses.
 
 ### Faster Development Cycles
 
