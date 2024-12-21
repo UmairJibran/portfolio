@@ -22,30 +22,41 @@ export function getBlogSlugs() {
   }
 }
 
-export function getBlogBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(blogsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+export function getBlogBySlug(slug: string): Story | null {
+  try {
+    const realSlug = slug.replace(/\.md$/, "");
+    const fullPath = join(blogsDirectory, `${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Story;
+    return { ...data, slug: realSlug, content } as Story;
+  } catch (error) {
+    return null;
+  }
 }
 
 export function getAllBlog(): Story[] {
   const slugs = getBlogSlugs();
   const blogs = slugs
     .map((slug) => getBlogBySlug(slug))
-    .sort((blog1, blog2) => (blog1.date > blog2.date ? -1 : 1));
-  return blogs.map((blog) => ({ ...blog, type: "blog" }));
+    .filter((blog) => blog !== null) as Story[];
+  const sortedBlogs = blogs.sort((blog1, blog2) =>
+    blog1.date > blog2.date ? -1 : 1,
+  );
+  return sortedBlogs.map((blog) => ({ ...blog, type: "blog" }));
 }
 
-export function getCaseStudyBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(caseStudiesDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+export function getCaseStudyBySlug(slug: string): Story | null {
+  try {
+    const realSlug = slug.replace(/\.md$/, "");
+    const fullPath = join(caseStudiesDirectory, `${realSlug}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
 
-  return { ...data, slug: realSlug, content } as Story;
+    return { ...data, slug: realSlug, content } as Story;
+  } catch (error) {
+    return null;
+  }
 }
 
 export function getAllCaseStudies(): Story[] {
@@ -55,10 +66,11 @@ export function getAllCaseStudies(): Story[] {
   }
   const caseStudies = slugs
     .map((slug) => getCaseStudyBySlug(slug))
-    .sort((caseStudy1, caseStudy2) =>
-      caseStudy1.date > caseStudy2.date ? -1 : 1,
-    );
-  return caseStudies.map((caseStudy) => ({
+    .filter((caseStudy) => caseStudy !== null) as Story[];
+  const sortedCaseStudies = caseStudies.sort((caseStudy1, caseStudy2) =>
+    caseStudy1.date > caseStudy2.date ? -1 : 1,
+  );
+  return sortedCaseStudies.map((caseStudy) => ({
     ...caseStudy,
     type: "case-study",
   }));
