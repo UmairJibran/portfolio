@@ -46,7 +46,7 @@ export function getAllBlog(): Story[] {
   return sortedBlogs.map((blog) => ({ ...blog, type: "blog" }));
 }
 
-export function getCaseStudyBySlug(slug: string) {
+export function getCaseStudyBySlug(slug: string): Story | null {
   try {
     const realSlug = slug.replace(/\.md$/, "");
     const fullPath = join(caseStudiesDirectory, `${realSlug}.md`);
