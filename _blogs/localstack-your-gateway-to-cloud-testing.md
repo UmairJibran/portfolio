@@ -57,7 +57,7 @@ LocalStack integrates with popular tools like Terraform, AWS CLI, and the AWS SD
 
 ### Prerequisites:
 
-- Docker installed on your machine [L](#references)
+- Docker installed on your machine
 - Basic familiarity with AWS services and the command line
 
 ### Steps:
