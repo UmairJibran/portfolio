@@ -24,6 +24,11 @@ const inconsolata = Inconsolata({
 export const metadata: Metadata = {
   ...meta,
   metadataBase: new URL(meta.metadataBase),
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
 };
 
 export default function RootLayout({
