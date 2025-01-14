@@ -30,8 +30,8 @@ export function StoryPreview({
   return (
     <div className="group relative flex items-start">
       {/* Left side - metadata */}
-      <div className="w-28 flex-shrink-0 text-gray-900 text-right -rotate-90 pr-8">
-        <span className="text-6xl font-mono font-bold tabular-nums">{day}</span>
+      <div className="w-28 flex-shrink-0 text-gray-900 text-right pr-8">
+        <span className="text-6xl font-mono font-bold tabular-nums leading-none">{day}</span>
       </div>
 
       {/* Timeline dot */}
@@ -42,27 +42,26 @@ export function StoryPreview({
       {/* Right side - content */}
       <Link
         href={[root, slug].join("/")}
-        className="flex-grow hover:no-underline group-hover:opacity-75 transition-opacity pl-12"
+        className="flex-grow hover:no-underline group-hover:opacity-90 transition-opacity pl-12"
       >
-        <div className="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-colors">
-          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-gray-500 mb-3">
-            <span className="capitalize">{type.replace("-", " ")}</span>
-            {tags.length > 0 && (
-              <>
-                <span>•</span>
-                {tags.map((tag, index) => (
-                  <span key={tag} className="text-gray-400">
-                    {tag}
-                    {index < tags.length - 1 && ", "}
-                  </span>
-                ))}
-              </>
-            )}
+        <div className="rounded-lg p-6 hover:bg-gray-50/50 transition-colors">
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            <span className="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
+              {type.replace("-", " ")}
+            </span>
+            {tags.map((tag) => (
+              <span 
+                key={tag} 
+                className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
+              >
+                {tag}
+              </span>
+            ))}
           </div>
-          <h3 className="text-xl font-semibold mb-3 text-gray-900">
+          <h3 className="text-xl font-semibold mb-2 text-gray-900 group-hover:text-blue-600 transition-colors">
             {title}
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-600 leading-relaxed">
             {excerpt}
           </p>
         </div>

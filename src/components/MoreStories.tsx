@@ -48,7 +48,7 @@ export function MoreStories({ stories }: Props) {
   const lastSectionHeight = lastMonthStoriesCount * 96 + 24; // height per story + padding
 
   return (
-    <section className="py-12 max-w-5xl mx-auto">
+    <section className="py-12 max-w-4xl mx-auto">
       <div className="relative">
         {/* Main continuous timeline */}
         <div
@@ -59,23 +59,23 @@ export function MoreStories({ stories }: Props) {
           }}
         />
 
-        <div className="space-y-20">
+        <div className="space-y-24">
           {sortedKeys.map((key, groupIndex) => (
             <div key={key} className="relative">
               {/* Month marker */}
-              <div className="relative flex items-center mb-12">
+              <div className="relative flex items-center mb-16">
                 <div className="w-28 flex-shrink-0" />
                 {/* Month bullet */}
                 <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 z-10" />
                 {/* Month label */}
                 <div className="pl-12">
-                  <h3 className="text-4xl font-mono">
+                  <h3 className="text-3xl font-mono font-bold text-gray-800">
                     {groupedStories[key].month} {groupedStories[key].year}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-16">
+              <div className="space-y-20">
                 {groupedStories[key].stories.map((story) => (
                   <div key={story.slug} className="relative">
                     <StoryPreview
