@@ -2,13 +2,16 @@ import { getAllBlog, getAllCaseStudies } from "@/lib/api";
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { StoryBody } from "@/components/StoryBody";
+import { RelatedStories } from "@/components/RelatedStories";
 
 export default async function StoryPage({ params }: { params: { slug: string } }) {
-    // Find the story in either blogs or case studies
-    const story = [
+    const allStories = [
         ...getAllBlog(),
         ...getAllCaseStudies()
-    ].find(story => story.slug === params.slug);
+    ];
+
+    // Find the story in either blogs or case studies
+    const story = allStories.find(story => story.slug === params.slug);
 
     if (!story) {
         notFound();
@@ -18,7 +21,7 @@ export default async function StoryPage({ params }: { params: { slug: string } }
 
     return (
         <main>
-            {/* Content */}
+            {/* Header with gradient */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 mb-4">
                 <article className="max-w-4xl mx-auto px-4">
                     <header>
@@ -37,7 +40,23 @@ export default async function StoryPage({ params }: { params: { slug: string } }
                     </header>
                 </article>
             </div>
-            <StoryBody content={content} />
+
+            {/* Content with sidebar */}
+            <div className="max-w-6xl mx-auto px-4">
+                <div className="flex flex-col lg:flex-row gap-12">
+                    {/* Main content */}
+                    <div className="flex-grow">
+                        <StoryBody content={content} />
+                    </div>
+
+                    {/* Sidebar */}
+                    <div className="lg:w-80 flex-shrink-0">
+                        <div className="sticky top-8">
+                            <RelatedStories currentStory={story} allStories={allStories} />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     );
 }
