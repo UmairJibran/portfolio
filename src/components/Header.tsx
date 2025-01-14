@@ -18,14 +18,8 @@ export default function Header() {
   );
 
   navComponents.push(
-    <Link href="/blogs">
-      <span className="mr-5 cursor-pointer">Blogs</span>
-    </Link>,
-  );
-
-  navComponents.push(
-    <Link href="/case-studies">
-      <span className="mr-5 cursor-pointer">Case Studies</span>
+    <Link href="/writing">
+      <span className="mr-5 cursor-pointer">Writing</span>
     </Link>,
   );
 

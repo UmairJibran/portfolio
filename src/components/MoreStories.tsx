@@ -55,7 +55,7 @@ export function MoreStories({ stories }: Props) {
           className="absolute left-32 w-px bg-gray-200"
           style={{
             top: '12px',
-            height: `calc(100% - ${lastSectionHeight}px - 70px)`
+            height: `calc(100% - ${lastSectionHeight}px + 26px)`
           }}
         />
 
