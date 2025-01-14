@@ -19,8 +19,28 @@ function escapeXML(str) {
 }
 
 function generateRSS() {
-  const blogFiles = fs.readdirSync(BLOGS_DIR);
-  const caseStudyFiles = fs.readdirSync(CASE_STUDIES_DIR);
+  let blogFiles = [];
+  let caseStudyFiles = [];
+
+  try {
+    if (fs.existsSync(BLOGS_DIR)) {
+      blogFiles = fs.readdirSync(BLOGS_DIR);
+    } else {
+      console.warn("Blogs directory does not exist:", BLOGS_DIR);
+    }
+  } catch (error) {
+    console.error("Error reading blogs directory:", error);
+  }
+
+  try {
+    if (fs.existsSync(CASE_STUDIES_DIR)) {
+      caseStudyFiles = fs.readdirSync(CASE_STUDIES_DIR);
+    } else {
+      console.warn("Case studies directory does not exist:", CASE_STUDIES_DIR);
+    }
+  } catch (error) {
+    console.error("Error reading case studies directory:", error);
+  }
 
   const posts = blogFiles.map((file) => {
     const filePath = path.join(BLOGS_DIR, file);
