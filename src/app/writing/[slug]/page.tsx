@@ -1,7 +1,6 @@
 import { getAllBlog, getAllCaseStudies } from "@/lib/api";
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
-import { StoryHeader } from "@/components/StoryHeader";
 import { StoryBody } from "@/components/StoryBody";
 
 export default async function StoryPage({ params }: { params: { slug: string } }) {
@@ -20,17 +19,25 @@ export default async function StoryPage({ params }: { params: { slug: string } }
     return (
         <main>
             {/* Content */}
-
-            <article className="container mx-auto">
-                <StoryHeader
-                    title={story.title}
-                    coverImage={story.coverImage}
-                    date={story.date}
-                    author={story.author}
-                />
-                <StoryBody content={content} />
-            </article>
-
+            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 mb-4">
+                <article className="max-w-4xl mx-auto px-4">
+                    <header>
+                        <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
+                            <span className="inline-flex items-center rounded-md bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20">
+                                {story.type.replace("-", " ")}
+                            </span>
+                            <time dateTime={story.date}>{new Date(story.date).toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            })}</time>
+                        </div>
+                        <h1 className="text-4xl font-bold mb-4">{story.title}</h1>
+                        <p className="text-xl text-gray-300">{story.excerpt}</p>
+                    </header>
+                </article>
+            </div>
+            <StoryBody content={content} />
         </main>
     );
 }
