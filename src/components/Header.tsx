@@ -1,30 +1,28 @@
 "use client";
 
-import { launchExternalUrl, swrFetcher } from "@/utils";
-import { Button } from "antd";
-
-import "@/styles/header.scss";
-
+import { launchExternalUrl } from "@/utils";
+import { Button } from "@/components/ui/button";
 import profile from "@/data/profile.json";
 import Link from "next/link";
+import { ArrowRight } from "react-feather";
 
 export default function Header() {
   const navComponents = [];
 
   navComponents.push(
-    <Link href="/">
-      <span className="mr-5 cursor-pointer">Home</span>
+    <Link href="/" key="home">
+      <span className="mr-5 cursor-pointer hover:text-gray-900 transition-colors">Home</span>
     </Link>,
   );
 
   navComponents.push(
-    <Link href="/writing">
-      <span className="mr-5 cursor-pointer">Writing</span>
+    <Link href="/writing" key="writing">
+      <span className="mr-5 cursor-pointer hover:text-gray-900 transition-colors">Writing</span>
     </Link>,
   );
 
   return (
-    <header className="text-gray-600 body-font sticky z-50 top-0 blurred-bg">
+    <header className="text-gray-600 body-font sticky z-50 top-0 bg-white/80 backdrop-blur-sm border-b">
       <div className="container mx-auto flex flex-wrap p-1 lg:p-4 flex-col lg:flex-row items-center">
         <nav className="lg:w-1/5 flex-wrap items-center text-base lg:ml-auto flex">
           {navComponents}
@@ -33,22 +31,12 @@ export default function Header() {
         <div className="lg:w-1/5 inline-flex lg:justify-end lg:ml-0">
           <Button
             onClick={() => launchExternalUrl(profile.resume)}
-            type="text"
-            className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-1"
+            variant="ghost"
+            className="inline-flex items-center gap-2"
             data-umami-event="resume-button-clicked"
           >
             Resume
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              className="w-4 h-4 ml-1"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </div>
