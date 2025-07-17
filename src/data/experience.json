@@ -8,7 +8,7 @@
     "oneLine": "One of the first few engineers of PuppyDog working with custom models, and available LLMs, and some magic of our own",
     "bullets": [
       "Migrated our AI infrastructure from AWS to GCP",
-      "Worked alongside external teams and lead integrations of different CRMs",
+      "Worked alongside external teams and led integrations of different CRMs",
       "Introduced Agentic workflows for our LLM processes"
     ],
     "volunteer": false
