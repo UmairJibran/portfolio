@@ -31,18 +31,18 @@ export function ExperienceDialog({
 }) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange} modal>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-[#1a1a1a] border-gray-800">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold flex flex-col gap-2">
-            <span>{experience.position}</span>
+            <span className="text-white">{experience.position}</span>
             <Link 
               href={experience.website} 
-              className="text-lg text-blue-600 hover:text-blue-800 font-medium"
+              className="text-lg text-green-400 hover:text-green-300 font-medium transition-colors"
               target="_blank"
             >
               {experience.company}
             </Link>
-            <span className="text-sm font-normal text-gray-500">
+            <span className="text-sm font-normal text-gray-400">
               {new Date(experience.startDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })} - {
                 experience.endDate ? new Date(experience.endDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : 'Present'
               }
@@ -50,11 +50,11 @@ export function ExperienceDialog({
           </DialogTitle>
         </DialogHeader>
         <div className="mt-4">
-          <p className="text-gray-700 mb-6 text-lg">{experience.oneLine}</p>
-          <ul className="space-y-3 text-gray-600">
+          <p className="text-gray-300 mb-6 text-lg">{experience.oneLine}</p>
+          <ul className="space-y-3 text-gray-400">
             {experience.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-2">
-                <span className="text-blue-500 mt-1.5">•</span>
+                <span className="text-green-400 mt-1.5">•</span>
                 <span>{bullet}</span>
               </li>
             ))}
