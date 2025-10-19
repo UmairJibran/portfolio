@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -13,12 +14,16 @@ import {
   Calendar,
   Building2,
   Quote,
+  ArrowUpRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
+import { RecentWriting } from "@/components/RecentWriting";
 import profile from "@/data/profile.json";
 import experience from "@/data/experience.json";
 import testimonials from "@/data/testimonials.json";
+import { getAllBlog } from "@/lib/api";
+import { Story } from "@/types/story";
 
 type Experience = {
   company: string;
@@ -308,6 +313,29 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 }
 
 export default function Home() {
+  const [latestBlog, setLatestBlog] = useState<Story | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function fetchLatest() {
+      try {
+        const res = await fetch('/api/blogs');
+        if (!res.ok) return;
+        const data = await res.json();
+        const blogs: Story[] = data.blogs || [];
+        if (mounted && blogs.length > 0) {
+          setLatestBlog(blogs[0]);
+        }
+      } catch (err) {
+        // ignore
+      }
+    }
+
+    fetchLatest();
+    return () => { mounted = false };
+  }, []);
+
   return (
     <main className="bg-[#0d0d0d] min-h-screen grain">
       {/* Hero Section - Dark Theme */}
@@ -343,6 +371,23 @@ export default function Home() {
             </Link>
           ))}
         </div>
+
+        {/* Recent Writing Section */}
+        {latestBlog && (
+          <div className="mb-16">
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-white text-2xl font-bold">Latest Writing</h2>
+              <Link 
+                href="/writing" 
+                className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center gap-1 transition-colors"
+              >
+                View all
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <RecentWriting story={latestBlog} />
+          </div>
+        )}
 
         {/* GitHub Contribution Graph Placeholder */}
         <div className="mb-16">
