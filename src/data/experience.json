@@ -14,6 +14,19 @@
     "volunteer": false
   },
   {
+    "company": "IM Sciences",
+    "website": "https://www.imsciences.edu.pk",
+    "position": "Corporate Advisor",
+    "startDate": "2024-08-12",
+    "endDate": null,
+    "oneLine": "Corporate board advisor bringing industry perspective to modernize curriculum and strategy.",
+    "bullets": [
+      "Partnered with industry leaders to provide strategic guidance to IMSciences.",
+      "Revamped curriculum to align graduate skills with market needs and employer expectations."
+    ],
+    "volunteer": true
+  },
+  {
     "company": "Productbox",
     "website": "https://www.productbox.dev",
     "position": "Full stack engineer",
@@ -28,19 +41,6 @@
       "Worked across MySQL, Express, Firebase Auth, OpenCV, Flutter, and Git workflows."
     ],
     "volunteer": false
-  },
-  {
-    "company": "IM Sciences",
-    "website": "https://www.imsciences.edu.pk",
-    "position": "Corporate Advisor",
-    "startDate": "2024-08-12",
-    "endDate": null,
-    "oneLine": "Corporate board advisor bringing industry perspective to modernize curriculum and strategy.",
-    "bullets": [
-      "Partnered with industry leaders to provide strategic guidance to IMSciences.",
-      "Revamped curriculum to align graduate skills with market needs and employer expectations."
-    ],
-    "volunteer": true
   },
   {
     "company": "Microsoft",
