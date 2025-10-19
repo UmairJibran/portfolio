@@ -1,29 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Type, Github, Linkedin, Mail, Twitter, ChevronRight, ArrowRight, Sparkles, Code2, Rocket, Award } from "lucide-react";
+import {
+  Type,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  ExternalLink,
+  Calendar,
+  Building2,
+  Quote,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
-import { TestimonialsCarousel } from "@/components/TestimonialsCarousel";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
 import profile from "@/data/profile.json";
-import portfolio from "@/data/portfolio.json";
 import experience from "@/data/experience.json";
 import testimonials from "@/data/testimonials.json";
-
-// Get featured projects (first 3)
-const FEATURED_PROJECTS = portfolio.slice(0, 3).map(project => ({
-  ...project,
-  logo: `/assets/images/${project.logo}.png`,
-  // Common tech stacks based on project descriptions
-  tags: project.id === "waltzes" ? ["AI", "Next.js", "OpenAI"] :
-        project.id === "puppydog-pb" ? ["Node.js", "React", "AWS"] :
-        project.id === "meraid-pb" ? ["React Native", "Node.js", "MongoDB"] :
-        ["Next.js", "Node.js", "AWS"]
-}));
 
 type Experience = {
   company: string;
@@ -36,53 +31,113 @@ type Experience = {
   volunteer: boolean;
 };
 
-// Experience Card Component
-function ExperienceCard({ experience }: { experience: Experience }) {
+// Company logos mapping
+const companyLogos: Record<string, string> = {
+  "PuppyDog.io": "/assets/logos/puppydog.webp",
+  Productbox: "/assets/logos/productbox.png",
+  "IM Sciences": "/assets/logos/imsciences.png",
+  Microsoft: "/assets/logos/microsoft.png",
+  Ideometrix: "/assets/logos/ideometrix.png",
+};
+
+// Experience Card Component with dark theme - now for timeline
+function ExperienceTimelineItem({
+  experience,
+  index,
+  isLeft,
+}: {
+  experience: Experience;
+  index: number;
+  isLeft: boolean;
+}) {
   const [showDetails, setShowDetails] = useState(false);
+
+  // Calculate duration
+  const startDate = new Date(experience.startDate);
+  const endDate = experience.endDate
+    ? new Date(experience.endDate)
+    : new Date();
+  const months =
+    (endDate.getFullYear() - startDate.getFullYear()) * 12 +
+    (endDate.getMonth() - startDate.getMonth());
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+  const duration =
+    years > 0
+      ? `${years} yr${years > 1 ? "s" : ""} ${remainingMonths > 0 ? `${remainingMonths} mo${remainingMonths > 1 ? "s" : ""}` : ""}`
+      : `${remainingMonths} mo${remainingMonths > 1 ? "s" : ""}`;
 
   return (
     <>
-      <Card className="group relative overflow-hidden bg-gradient-to-br from-white to-gray-50 border-gray-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        <div className="relative p-8">
-          <div className="flex items-start justify-between mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl shadow-lg">
-              <Code2 className="h-6 w-6 text-white" />
-            </div>
-            <Badge variant="outline" className="bg-white/80 backdrop-blur-sm border-blue-200">
-              {experience.endDate ? 'Past' : 'Current'}
-            </Badge>
-          </div>
-          
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-            {experience.position}
-          </h3>
-          
-          <Link 
-            href={experience.website} 
-            className="text-blue-600 hover:text-blue-700 font-semibold mb-3 flex items-center gap-2" 
-            target="_blank"
-          >
-            {experience.company}
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          
-          <p className="text-sm text-gray-600 mb-4 font-medium">
-            {new Date(experience.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })} - {
-              experience.endDate ? new Date(experience.endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : 'Present'
-            }
-          </p>
-          
-          <Button 
-            variant="ghost" 
-            className="w-full justify-between text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+      <div
+        className={`flex items-center gap-8 mb-12 ${isLeft ? "flex-row" : "flex-row-reverse"}`}
+      >
+        {/* Card */}
+        <div className="w-[calc(50%-2rem)]">
+          <div
+            className="group bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 hover:border-green-400 transition-all duration-300 cursor-pointer"
             onClick={() => setShowDetails(true)}
           >
-            View Details
-            <ChevronRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+            <div className="flex items-start gap-4">
+              {/* Company Logo */}
+              <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                {companyLogos[experience.company] ? (
+                  <Image
+                    src={companyLogos[experience.company]}
+                    alt={experience.company}
+                    width={48}
+                    height={48}
+                    className="object-contain"
+                  />
+                ) : (
+                  <Building2 className="w-6 h-6 text-gray-400" />
+                )}
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <h3 className="text-white font-semibold text-base mb-1 group-hover:text-green-400 transition-colors">
+                  {experience.position}
+                </h3>
+                <Link
+                  href={experience.website}
+                  target="_blank"
+                  className="text-gray-400 text-sm hover:text-green-400 transition-colors inline-flex items-center gap-1 mb-2"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {experience.company}
+                  <ExternalLink className="w-3 h-3" />
+                </Link>
+                <p className="text-gray-500 text-xs mb-3">
+                  {startDate.toLocaleDateString("en-US", {
+                    month: "short",
+                    year: "numeric",
+                  })}{" "}
+                  -{" "}
+                  {experience.endDate
+                    ? endDate.toLocaleDateString("en-US", {
+                        month: "short",
+                        year: "numeric",
+                      })
+                    : "Present"}{" "}
+                  · {duration}
+                </p>
+                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                  {experience.oneLine}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </Card>
+
+        {/* Timeline dot and line */}
+        <div className="flex flex-col items-center">
+          <div className="w-4 h-4 bg-green-400 rounded-full border-4 border-[#0d0d0d] z-10"></div>
+        </div>
+
+        {/* Empty space on the other side */}
+        <div className="w-[calc(50%-2rem)]"></div>
+      </div>
 
       <ExperienceDialog
         experience={experience}
@@ -93,281 +148,368 @@ function ExperienceCard({ experience }: { experience: Experience }) {
   );
 }
 
-export default function Home() {
+// Testimonial Carousel Component - Center spotlight with timed transitions
+function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const currentTestimonial = testimonials[currentIndex];
+    const charCount = currentTestimonial.testimonial.length;
+    const displayTime = charCount * 60; // 0.06s = 60ms per character
+
+    const timer = setTimeout(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+        setIsTransitioning(false);
+      }, 500); // Transition duration
+    }, displayTime);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, testimonials]);
+
+  const getTestimonialIndex = (offset: number) => {
+    return (currentIndex + offset + testimonials.length) % testimonials.length;
+  };
+
   return (
-    <main className="relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-yellow-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left Column - Content */}
-            <div className="space-y-8 text-white">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-lg border border-white/20">
-                <Sparkles className="h-4 w-4 text-yellow-300" />
-                <span className="text-sm font-medium">Available for new opportunities</span>
-              </div>
-              
-              <div className="space-y-6">
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight">
-                  <span className="block">Hi, I&apos;m</span>
-                  <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    {profile.name.firstName}
-                  </span>
-                </h1>
-                
-                <p className="text-2xl sm:text-3xl font-semibold text-blue-200">
-                  {profile.subTitle}
-                </p>
-                
-                <div 
-                  className="text-lg text-gray-300 leading-relaxed max-w-2xl [&_a]:text-blue-400 [&_a]:underline [&_a]:hover:text-blue-300 [&_strong]:text-white [&_strong]:font-semibold [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
-                  dangerouslySetInnerHTML={{ __html: profile.extraInfo }}
-                />
-              </div>
-              
-              <div className="flex flex-wrap items-center gap-4">
-                <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 text-lg px-8">
-                  <Link href="/writing">
-                    <Rocket className="mr-2 h-5 w-5" />
-                    Read My Blog
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-8">
-                  <Link href={profile.consultationLink} target="_blank">
-                    Schedule a Call
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-              
-              <div className="flex items-center gap-6 pt-4">
-                {profile.social.map((item) => (
-                  <Link 
-                    key={item.name}
-                    href={item.link} 
-                    className="p-3 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-gray-300 hover:text-white transition-all duration-300 hover:scale-110"
-                    target="_blank"
-                    title={item.name}
-                  >
-                    {item.icon === "GitHub" && <Github className="h-5 w-5" />}
-                    {item.icon === "Linkedin" && <Linkedin className="h-5 w-5" />}
-                    {item.icon === "Twitter" && <Twitter className="h-5 w-5" />}
-                    {item.icon === "Mail" && <Mail className="h-5 w-5" />}
-                    {item.icon === "Type" && <Type className="h-5 w-5" />}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Column - Image */}
-            <div className="relative lg:order-last order-first">
-              <div className="relative">
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-3xl opacity-30 animate-pulse" />
-                
-                {/* Image container */}
-                <div className="relative">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur-sm" />
-                  <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-2">
-                    <Image
-                      src={profile.image}
-                      alt={`${profile.name.firstName} ${profile.name.lastName}`}
-                      width={600}
-                      height={600}
-                      className="rounded-2xl w-full h-auto"
-                      priority
-                    />
-                  </div>
+    <div className="relative overflow-hidden py-8">
+      <div className="flex items-center justify-center gap-6 px-6">
+        {/* Previous Testimonial (Left, smaller) */}
+        <div className="hidden lg:block w-[300px] opacity-40 transform scale-90 transition-all duration-500">
+          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-5 h-[280px] flex flex-col">
+            <Quote className="w-6 h-6 text-green-400 mb-3 flex-shrink-0" />
+            <p className="text-gray-300 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
+              {testimonials[getTestimonialIndex(-1)].testimonial}
+            </p>
+            <div className="flex items-center gap-3">
+              <Image
+                src={testimonials[getTestimonialIndex(-1)].image}
+                alt={testimonials[getTestimonialIndex(-1)].name}
+                width={32}
+                height={32}
+                className="rounded-full"
+              />
+              <div className="flex-1 min-w-0">
+                <div className="text-white font-semibold text-xs truncate">
+                  {testimonials[getTestimonialIndex(-1)].name}
+                </div>
+                <div className="text-gray-500 text-xs truncate">
+                  {testimonials[getTestimonialIndex(-1)].designationAtTime}
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse" />
+        {/* Current Testimonial (Center, larger) */}
+        <div
+          className={`w-full max-w-2xl transition-all duration-500 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
+        >
+          <div className="bg-[#1a1a1a] border-2 border-green-400 rounded-lg p-8 shadow-xl shadow-green-400/10">
+            <Quote className="w-10 h-10 text-green-400 mb-6" />
+            <p className="text-gray-200 text-base leading-relaxed mb-8">
+              {testimonials[currentIndex].testimonial}
+            </p>
+            <div className="flex items-center gap-4">
+              <Image
+                src={testimonials[currentIndex].image}
+                alt={testimonials[currentIndex].name}
+                width={56}
+                height={56}
+                className="rounded-full"
+              />
+              <div className="flex-1">
+                <div className="text-white font-bold text-lg">
+                  {testimonials[currentIndex].name}
+                </div>
+                <div className="text-gray-400 text-sm">
+                  {testimonials[currentIndex].designationAtTime}
+                </div>
+                <div className="text-gray-500 text-xs mt-1">
+                  {testimonials[currentIndex].employerAtTime}
+                </div>
+              </div>
+              {testimonials[currentIndex].linkedin && (
+                <Link
+                  href={testimonials[currentIndex].linkedin}
+                  target="_blank"
+                  className="text-gray-500 hover:text-green-400 transition-colors p-2"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Next Testimonial (Right, smaller) */}
+        <div className="hidden lg:block w-[300px] opacity-40 transform scale-90 transition-all duration-500">
+          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-5 h-[280px] flex flex-col">
+            <Quote className="w-6 h-6 text-green-400 mb-3 flex-shrink-0" />
+            <p className="text-gray-300 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
+              {testimonials[getTestimonialIndex(1)].testimonial}
+            </p>
+            <div className="flex items-center gap-3">
+              <Image
+                src={testimonials[getTestimonialIndex(1)].image}
+                alt={testimonials[getTestimonialIndex(1)].name}
+                width={32}
+                height={32}
+                className="rounded-full"
+              />
+              <div className="flex-1 min-w-0">
+                <div className="text-white font-semibold text-xs truncate">
+                  {testimonials[getTestimonialIndex(1)].name}
+                </div>
+                <div className="text-gray-500 text-xs truncate">
+                  {testimonials[getTestimonialIndex(1)].designationAtTime}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Progress indicator dots */}
+      <div className="flex justify-center gap-2 mt-8">
+        {testimonials.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              setIsTransitioning(true);
+              setTimeout(() => {
+                setCurrentIndex(index);
+                setIsTransitioning(false);
+              }, 300);
+            }}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex
+                ? "w-8 bg-green-400"
+                : "w-2 bg-gray-700 hover:bg-gray-600"
+            }`}
+            aria-label={`Go to testimonial ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  const workExperiences = experience.filter((exp) => !exp.volunteer);
+
+  return (
+    <main className="bg-[#0d0d0d] min-h-screen grain">
+      {/* Hero Section - Dark Theme */}
+      <section className="max-w-6xl mx-auto px-6 pt-20 pb-16">
+        {/* Title */}
+        <h1 className="text-white text-4xl md:text-5xl font-bold mb-4 leading-tight">
+          Software engineer, technical
+          <br />
+          writer & open-source maintainer
+        </h1>
+
+        {/* Description */}
+        <div
+          className="text-gray-400 text-base md:text-lg leading-relaxed mb-8 max-w-3xl [&_a]:text-green-400 [&_a]:hover:underline [&_strong]:text-white [&_strong]:font-medium [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
+          dangerouslySetInnerHTML={{ __html: profile.extraInfo }}
+        />
+
+        {/* Social Links */}
+        <div className="flex flex-wrap gap-3 mb-16">
+          {profile.social.map((item) => (
+            <Link
+              key={item.name}
+              href={item.link}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] hover:bg-[#252525] border border-gray-800 rounded-md text-gray-300 hover:text-white transition-colors text-sm"
+              target="_blank"
+            >
+              {item.icon === "GitHub" && <Github className="h-4 w-4" />}
+              {item.icon === "Linkedin" && <Linkedin className="h-4 w-4" />}
+              {item.icon === "Twitter" && <Twitter className="h-4 w-4" />}
+              {item.icon === "Mail" && <Mail className="h-4 w-4" />}
+              {item.icon === "Type" && <Type className="h-4 w-4" />}
+              <span>{item.name}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* GitHub Contribution Graph Placeholder */}
+        <div className="mb-16">
+          <h2 className="text-white text-xl font-semibold mb-4">
+            Contribution Graph
+          </h2>
+          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-6">
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-gray-400 text-sm">
+                1038 contributions in the last year
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-500">Less</span>
+                <div className="flex gap-1">
+                  <div className="w-3 h-3 bg-[#0e4429] rounded-sm"></div>
+                  <div className="w-3 h-3 bg-[#006d32] rounded-sm"></div>
+                  <div className="w-3 h-3 bg-[#26a641] rounded-sm"></div>
+                  <div className="w-3 h-3 bg-[#39d353] rounded-sm"></div>
+                </div>
+                <span className="text-xs text-gray-500">More</span>
+              </div>
+            </div>
+            {/* Simplified contribution grid */}
+            <div className="grid grid-cols-[repeat(53,minmax(0,1fr))] gap-[3px] overflow-x-auto">
+              {Array.from({ length: 371 }).map((_, i) => {
+                const intensity = Math.random();
+                const bgColor =
+                  intensity > 0.75
+                    ? "bg-[#39d353]"
+                    : intensity > 0.5
+                      ? "bg-[#26a641]"
+                      : intensity > 0.25
+                        ? "bg-[#006d32]"
+                        : intensity > 0.1
+                          ? "bg-[#0e4429]"
+                          : "bg-[#161b22]";
+                return (
+                  <div
+                    key={i}
+                    className={`w-[10px] h-[10px] rounded-sm ${bgColor}`}
+                    title={`Contributions on day ${i + 1}`}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="py-32 bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-              <Award className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-900">Featured Work</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-              Projects I&apos;m Proud Of
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A showcase of innovative solutions built with cutting-edge technologies
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {FEATURED_PROJECTS.map((project, index) => (
-              <Card 
-                key={project.id} 
-                className="group relative overflow-hidden border-0 bg-gradient-to-br from-white to-gray-50 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <Link href={project.url || project.source || "#"} className="block p-8 relative" target="_blank">
-                  {/* Logo section */}
-                  <div className="h-16 mb-6 flex items-center">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 blur-xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
-                      <Image
-                        src={project.logo}
-                        alt={project.name}
-                        width={180}
-                        height={64}
-                        className="object-contain relative z-10 transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                    {project.name}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6 line-clamp-2 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag) => (
-                      <Badge 
-                        key={tag} 
-                        variant="secondary" 
-                        className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-900 border border-blue-100 hover:border-blue-300 transition-colors"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:gap-3 gap-2 transition-all">
-                    View Project
-                    <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-300" />
-                  </div>
-                </Link>
-              </Card>
+      {/* Work Experience Section - Timeline */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-white text-2xl font-bold mb-12 text-center">
+          Work Experience
+        </h2>
+
+        {/* Timeline container */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 transform -translate-x-1/2 hidden md:block"></div>
+
+          {/* Timeline items */}
+          <div className="hidden md:block">
+            {workExperiences.map((exp, index) => (
+              <ExperienceTimelineItem
+                key={index}
+                experience={exp}
+                index={index}
+                isLeft={index % 2 === 0}
+              />
             ))}
           </div>
-          
-          <div className="text-center">
-            <Button asChild size="lg" variant="outline" className="border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 text-lg px-8">
-              <Link href="/projects">
-                View All Projects
-                <ChevronRight className="ml-2 h-5 w-5" />
+
+          {/* Mobile view - stacked */}
+          <div className="md:hidden space-y-4">
+            {workExperiences.map((exp, index) => (
+              <div key={index}>
+                <div
+                  className="group bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 hover:border-green-400 transition-all duration-300 cursor-pointer"
+                  onClick={() => {
+                    // Will need to handle mobile dialog
+                  }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                      {companyLogos[exp.company] ? (
+                        <Image
+                          src={companyLogos[exp.company]}
+                          alt={exp.company}
+                          width={48}
+                          height={48}
+                          className="object-contain"
+                        />
+                      ) : (
+                        <Building2 className="w-6 h-6 text-gray-400" />
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-white font-semibold text-base mb-1 group-hover:text-green-400 transition-colors">
+                        {exp.position}
+                      </h3>
+                      <Link
+                        href={exp.website}
+                        target="_blank"
+                        className="text-gray-400 text-sm hover:text-green-400 transition-colors inline-flex items-center gap-1 mb-2"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {exp.company}
+                        <ExternalLink className="w-3 h-3" />
+                      </Link>
+                      <p className="text-gray-500 text-xs mb-3">
+                        {new Date(exp.startDate).toLocaleDateString("en-US", {
+                          month: "short",
+                          year: "numeric",
+                        })}{" "}
+                        -{" "}
+                        {exp.endDate
+                          ? new Date(exp.endDate).toLocaleDateString("en-US", {
+                              month: "short",
+                              year: "numeric",
+                            })
+                          : "Present"}
+                      </p>
+                      <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                        {exp.oneLine}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section - Carousel */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6 mb-8">
+          <h2 className="text-white text-2xl font-bold">What People Say</h2>
+        </div>
+        <TestimonialsCarousel testimonials={testimonials} />
+      </section>
+
+      {/* Footer / Contact */}
+      <footer className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-gray-500 text-sm">
+            Built with ❤️ by {profile.name.firstName} {profile.name.lastName}
+          </div>
+          <div className="flex gap-4">
+            <Button
+              asChild
+              className="bg-green-600 hover:bg-green-700 text-white"
+            >
+              <Link href={`mailto:${profile.email}`}>
+                <Mail className="mr-2 h-4 w-4" />
+                Get in Touch
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="border-gray-700 text-white bg-transparent hover:bg-gray-800 hover:border-green-400 hover:text-white"
+            >
+              <Link href={profile.consultationLink} target="_blank">
+                <Calendar className="mr-2 h-4 w-4" />
+                Schedule Call
               </Link>
             </Button>
           </div>
         </div>
-      </section>
-
-      {/* Experience Section */}
-      <section className="py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 mb-6">
-              <Rocket className="h-4 w-4 text-purple-600" />
-              <span className="text-sm font-semibold text-purple-900">Career Journey</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-              Professional Experience
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Building innovative solutions across multiple companies
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {experience.filter(exp => !exp.volunteer).map((exp, index) => (
-              <ExperienceCard key={index} experience={exp} />
-            ))}
-          </div>
+        <div className="text-center text-gray-600 text-sm mt-8">
+          Copyright © {profile.name.firstName} {new Date().getFullYear()}. All
+          rights reserved.
         </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-100 mb-6">
-              <Sparkles className="h-4 w-4 text-green-600" />
-              <span className="text-sm font-semibold text-green-900">Testimonials</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-              What People Say
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Feedback from amazing clients and colleagues I&apos;ve worked with
-            </p>
-          </div>
-          
-          <TestimonialsCarousel testimonials={testimonials.map(t => ({
-            ...t,
-            twitter: t.twitter || undefined
-          }))} />
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
-        
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-              <Mail className="h-4 w-4 text-blue-300" />
-              <span className="text-sm font-semibold">Let&apos;s Connect</span>
-            </div>
-            
-            <h2 className="text-4xl sm:text-5xl font-extrabold mb-6">
-              Got an Idea in Mind?
-            </h2>
-            
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Let&apos;s collaborate and turn your vision into reality
-            </p>
-            
-            <div className="flex flex-wrap items-center justify-center gap-6">
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 text-lg px-10">
-                <Link href={`mailto:${profile.email}`}>
-                  <Mail className="mr-2 h-5 w-5" />
-                  Get in Touch
-                </Link>
-              </Button>
-              
-              <Button asChild size="lg" variant="outline" className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm text-lg px-10">
-                <Link href={profile.consultationLink} target="_blank">
-                  Schedule a Call
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </footer>
     </main>
   );
-} 
+}
