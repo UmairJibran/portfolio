@@ -5,11 +5,11 @@
     "position": "Software Engineer",
     "startDate": "2025-06-16",
     "endDate": null,
-    "oneLine": "One of the first few engineers of PuppyDog working with custom models, and available LLMs, and some magic of our own",
+    "oneLine": "Early engineer at PuppyDog.io building custom models and LLM-powered features.",
     "bullets": [
-      "Migrated our AI infrastructure from AWS to GCP",
-      "Worked alongside external teams and led integrations of different CRMs",
-      "Introduced Agentic workflows for our LLM processes"
+      "Led migration of AI infrastructure from AWS to GCP.",
+      "Spearheaded CRM integrations with external partners.",
+      "Built agentic LLM workflows to automate complex processes."
     ],
     "volunteer": false
   },
@@ -19,13 +19,13 @@
     "position": "Full stack engineer",
     "startDate": "2021-05-03",
     "endDate": "2025-06-15",
-    "oneLine": "I have been working with productbox for over 3 and a half years. I have wore multiple hats at times, including Backend Tech Lead, Full Stack Engineer, Associate Full Stack Engineer, and Junior Full Stack Developer. Some of my experiences includes:",
+    "oneLine": "Full-stack engineer at Productbox driving backend architecture and scalable applications.",
     "bullets": [
-      "Leading the development team in designing and implementing scalable and efficient backend systems, utilizing Node.js, Serverless Computing, and other technologies to build robust and fault-tolerant systems.",
-      "Designing and developing scalable and efficient full-stack applications using Node.js, Serverless Framework, and other technologies, and implementing RESTful APIs, ensuring adherence to best practices and security protocols.",
-      "Contributing to the development of multiple web applications, enhancing their robustness, fault tolerance, and scalability, using Node.js, React, Serverless, and AlpineJS to build user-friendly web applications and APIs for all platforms.",
-      "Collaborating with cross-functional teams, including DevOps, UI/UX designers, QA, and clients, to ensure seamless project execution, and utilizing Agile methodologies to foster efficient communication and adaptation.",
-      "Gaining experience in a range of technologies, including MySQL, Express.js, Firebase Authentication, Python's OpenCV, and Flutter, and utilizing Git for peer-programming, reviewing, and troubleshooting."
+      "Led backend architecture and scaling using Node.js and Serverless.",
+      "Built secure, high-performance REST APIs and full-stack features.",
+      "Improved app robustness and scalability with Node, React, Serverless, and AlpineJS.",
+      "Coordinated cross-functional teams and delivered products using Agile.",
+      "Worked across MySQL, Express, Firebase Auth, OpenCV, Flutter, and Git workflows."
     ],
     "volunteer": false
   },
@@ -35,10 +35,10 @@
     "position": "Corporate Advisor",
     "startDate": "2024-08-12",
     "endDate": null,
-    "oneLine": "Industry Insights, Academic Excellence: My Contribution to IM Sciences as Corporate Board Advisor:",
+    "oneLine": "Corporate board advisor bringing industry perspective to modernize curriculum and strategy.",
     "bullets": [
-      "During the first meeting I and along with other with other industry leaders collaborated to provide strategic guidance and insights to IMSciences.",
-      "We in an open discussion broke down and updated the curriculum that contribute to skills development for new graduates, ensuring market relevance and competitiveness"
+      "Partnered with industry leaders to provide strategic guidance to IMSciences.",
+      "Revamped curriculum to align graduate skills with market needs and employer expectations."
     ],
     "volunteer": true
   },
@@ -48,13 +48,13 @@
     "position": "Student Ambassador",
     "startDate": "2020-08-12",
     "endDate": "2021-12-16",
-    "oneLine": "As a Microsoft Student Ambassador, I empowered students and educators to leverage technology and innovation, fostering a community of digital leaders and change-makers.",
+    "oneLine": "Microsoft Student Ambassador promoting technology adoption and empowering students.",
     "bullets": [
-      "Conducted hands-on training sessions and webinars on Microsoft products and technologies, such as Azure, PowerBI, GitHub, and Figma, to enhance students' technical skills and knowledge.",
-      "Provided guidance and support to students on their projects and research, helping them to develop innovative solutions using Microsoft technologies.",
-      "Collaborated with student organizations and faculty members to promote Microsoft's initiatives and programs, increasing awareness and adoption of Microsoft technologies on campus.",
-      "Developed blog posts, videos, and tutorials to share knowledge and best practices on Microsoft products and technologies, making them accessible to a wider audience.",
-      "Served as a liaison between Microsoft and the academic community, providing feedback and insights on Microsoft's products and services, and helping to shape the company's strategy for education and research."
+      "Delivered hands-on trainings on Azure, Power BI, GitHub, and Figma.",
+      "Mentored student projects to build practical solutions with Microsoft tech.",
+      "Grew campus adoption through partnerships with student orgs and faculty.",
+      "Produced tutorials and content to make tools accessible to a wider audience.",
+      "Served as a liaison between Microsoft and the academic community."
     ],
     "volunteer": true
   },
@@ -64,12 +64,12 @@
     "position": "Junior Mobile Developer",
     "startDate": "2020-08-15",
     "endDate": "2020-11-15",
-    "oneLine": "As a Junior Flutter Developer Intern, I contributed to the development of mobile applications using Flutter, while also mentoring and training a group of junior developers in the fundamentals of Flutter, helping them to develop their own mobile apps.",
+    "oneLine": "Junior Flutter developer intern building cross-platform apps and mentoring juniors.",
     "bullets": [
-      "In addition to my development responsibilities, I was also tasked with teaching a group of junior developers the fundamentals of Flutter, including its architecture, widgets, and state management",
-      "Created and delivered a comprehensive training program, including lectures, coding exercises, and project-based learning",
-      "Contributed to the development of mobile applications using Flutter, a cross-platform framework",
-      "Participated in code reviews and ensured adherence to best practices and coding standards"
+      "Taught Flutter fundamentals and mentored a cohort of junior developers.",
+      "Designed and delivered a hands-on training curriculum with projects.",
+      "Implemented cross-platform mobile features using Flutter.",
+      "Enforced coding best practices through code reviews."
     ],
     "volunteer": false
   }

@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inconsolata } from "next/font/google";
 import "@/styles/globals.css";
 
-import Copyright from "@/components/Copyright";
-
 import meta from "@/data/meta.json";
 import umamiAnalytics from "@/data/umamiAnalytics.json";
 import Script from "next/script";
@@ -51,11 +49,10 @@ export default function RootLayout({
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
       <body
-        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono`}
+        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono bg-[#0d0d0d]`}
       >
         <Header />
         {children}
-        <Copyright />
       </body>
     </html>
   );
