@@ -18,6 +18,14 @@ export default function Header() {
   );
 
   navComponents.push(
+    <Link href="/projects" key="projects">
+      <span className="mr-5 cursor-pointer hover:text-green-400 transition-colors">
+        Projects
+      </span>
+    </Link>,
+  );
+
+  navComponents.push(
     <Link href="/writing" key="writing">
       <span className="mr-5 cursor-pointer hover:text-green-400 transition-colors">
         Writing
