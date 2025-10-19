@@ -1,10 +1,24 @@
 [
   {
+    "company": "PuppyDog.io",
+    "website": "https://www.puppydog.io",
+    "position": "Software Engineer",
+    "startDate": "2025-06-16",
+    "endDate": null,
+    "oneLine": "One of the first few engineers of PuppyDog working with custom models, and available LLMs, and some magic of our own",
+    "bullets": [
+      "Migrated our AI infrastructure from AWS to GCP",
+      "Worked alongside external teams and led integrations of different CRMs",
+      "Introduced Agentic workflows for our LLM processes"
+    ],
+    "volunteer": false
+  },
+  {
     "company": "Productbox",
     "website": "https://www.productbox.dev",
     "position": "Full stack engineer",
     "startDate": "2021-05-03",
-    "endDate": null,
+    "endDate": "2025-06-15",
     "oneLine": "I have been working with productbox for over 3 and a half years. I have wore multiple hats at times, including Backend Tech Lead, Full Stack Engineer, Associate Full Stack Engineer, and Junior Full Stack Developer. Some of my experiences includes:",
     "bullets": [
       "Leading the development team in designing and implementing scalable and efficient backend systems, utilizing Node.js, Serverless Computing, and other technologies to build robust and fault-tolerant systems.",
