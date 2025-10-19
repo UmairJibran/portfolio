@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed;
+  @apply text-lg leading-relaxed text-gray-300;
 }
 
 .markdown p,
@@ -18,18 +18,18 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
+  @apply text-3xl mt-12 mb-4 leading-snug text-white font-semibold;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug;
+  @apply text-2xl mt-8 mb-4 leading-snug text-white font-semibold;
 }
 
 .markdown a {
-  color: #0070f3;
+  color: #10b981;
   display: inline-block;
   position: relative;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .markdown a::after {
@@ -39,9 +39,9 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #0070f3;
+  background-color: #10b981;
   transform: translateX(-50%);
-  transition: width 1s;
+  transition: width 0.3s;
 }
 
 .markdown a:hover::after,
@@ -50,31 +50,33 @@
 }
 
 .markdown img {
-  @apply flex justify-center w-full my-2;
+  @apply flex justify-center w-full my-6 rounded-lg;
 }
 
 .markdown pre code {
   font-family: "Fira Code", monospace;
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 12px;
+  background-color: #1a1a1a;
+  color: #e5e7eb;
+  padding: 16px;
   border-radius: 8px;
   display: block;
   overflow-x: auto;
   line-height: 1.6;
   white-space: pre;
   position: relative;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #2a2a2a;
 }
 
 .markdown code {
   font-family: "Fira Code", monospace;
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 2px 6px;
+  background-color: #1a1a1a;
+  color: #10b981;
+  padding: 3px 8px;
   border-radius: 4px;
   display: inline;
   white-space: nowrap;
+  border: 1px solid #2a2a2a;
 }
 
 .markdown pre code::before {
@@ -83,9 +85,10 @@
   position: absolute;
   left: -2.5em;
   text-align: right;
-  color: #888;
+  color: #555;
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-gray-300 pl-4 italic text-gray-500;
+  @apply border-l-4 border-green-400/50 pl-4 italic text-gray-400 bg-[#1a1a1a] py-3 pr-4 rounded-r-lg;
 }
+

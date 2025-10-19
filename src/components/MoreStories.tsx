@@ -45,14 +45,14 @@ export function MoreStories({ stories }: Props) {
   // Calculate the height for the last section (last month's stories)
   const lastMonthKey = sortedKeys[sortedKeys.length - 1];
   const lastMonthStoriesCount = groupedStories[lastMonthKey]?.stories.length || 0;
-  const lastSectionHeight = lastMonthStoriesCount * 96 + 24; // height per story + padding
+  const lastSectionHeight = lastMonthStoriesCount * 96 + 24;
 
   return (
-    <section className="py-12 max-w-4xl mx-auto">
+    <section className="py-12 max-w-6xl mx-auto px-6">
       <div className="relative">
         {/* Main continuous timeline */}
         <div
-          className="absolute left-32 w-px bg-gray-200"
+          className="absolute left-32 w-px bg-gray-800"
           style={{
             top: '12px',
             height: `calc(100% - ${lastSectionHeight}px + 26px)`
@@ -60,16 +60,16 @@ export function MoreStories({ stories }: Props) {
         />
 
         <div className="space-y-24">
-          {sortedKeys.map((key, groupIndex) => (
+          {sortedKeys.map((key) => (
             <div key={key} className="relative">
               {/* Month marker */}
               <div className="relative flex items-center mb-16">
                 <div className="w-28 flex-shrink-0" />
                 {/* Month bullet */}
-                <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 z-10" />
+                <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-green-400 z-10 shadow-lg shadow-green-400/50" />
                 {/* Month label */}
                 <div className="pl-12">
-                  <h3 className="text-3xl font-mono font-bold text-gray-800">
+                  <h3 className="text-3xl font-mono font-bold text-white">
                     {groupedStories[key].month} {groupedStories[key].year}
                   </h3>
                 </div>

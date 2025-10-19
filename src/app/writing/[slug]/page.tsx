@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { StoryBody } from "@/components/StoryBody";
 import { RelatedStories } from "@/components/RelatedStories";
+import { Calendar, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 export default async function StoryPage({ params }: { params: { slug: string } }) {
     const allStories = [
@@ -20,32 +22,60 @@ export default async function StoryPage({ params }: { params: { slug: string } }
     const content = await markdownToHtml(story.content || "");
 
     return (
-        <main>
-            {/* Header with gradient */}
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 mb-4">
-                <article className="max-w-4xl mx-auto px-4">
+        <main className="bg-[#0d0d0d] min-h-screen grain">
+            {/* Header */}
+            <div className="border-b border-gray-800">
+                <article className="max-w-5xl mx-auto px-6 py-16">
+                    <Link 
+                        href="/writing" 
+                        className="inline-flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors mb-8 text-sm"
+                    >
+                        <ArrowLeft className="h-4 w-4" />
+                        Back to all posts
+                    </Link>
+                    
                     <header>
-                        <div className="flex items-center gap-2 text-sm text-gray-300 mb-4">
-                            <span className="inline-flex items-center rounded-md bg-blue-500/10 px-2 py-1 text-xs font-medium text-blue-400 ring-1 ring-inset ring-blue-500/20">
+                        <div className="flex items-center gap-3 mb-4">
+                            <span className="inline-flex items-center rounded-md bg-green-400/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
                                 {story.type.replace("-", " ")}
                             </span>
-                            <time dateTime={story.date}>{new Date(story.date).toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                            })}</time>
+                            {story.tags?.map((tag) => (
+                                <span 
+                                    key={tag}
+                                    className="inline-flex items-center rounded-md bg-gray-800/50 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-700/50"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
                         </div>
-                        <h1 className="text-4xl font-bold mb-4">{story.title}</h1>
-                        <p className="text-xl text-gray-300">{story.excerpt}</p>
+                        
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                            {story.title}
+                        </h1>
+                        
+                        <p className="text-xl text-gray-400 leading-relaxed mb-6">
+                            {story.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center gap-2 text-gray-500 text-sm">
+                            <Calendar className="h-4 w-4" />
+                            <time dateTime={story.date}>
+                                {new Date(story.date).toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </time>
+                        </div>
                     </header>
                 </article>
             </div>
 
             {/* Content with sidebar */}
-            <div className="max-w-6xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-6 py-12">
                 <div className="flex flex-col lg:flex-row gap-12">
                     {/* Main content */}
-                    <div className="flex-grow">
+                    <div className="flex-grow max-w-4xl">
                         <StoryBody content={content} />
                     </div>
 
