@@ -34,10 +34,10 @@ type Experience = {
 // Company logos mapping
 const companyLogos: Record<string, string> = {
   "PuppyDog.io": "/assets/logos/puppydog.webp",
-  Productbox: "/assets/logos/productbox.png",
-  "IM Sciences": "/assets/logos/imsciences.png",
-  Microsoft: "/assets/logos/microsoft.png",
-  Ideometrix: "/assets/logos/ideometrix.png",
+  Productbox: "/assets/logos/productbox.webp",
+  "IM Sciences": "/assets/logos/imsciences.webp",
+  Microsoft: "/assets/logos/microsoft.webp",
+  Ideometrix: "/assets/logos/ideometrix.webp",
 };
 
 // Experience Card Component with dark theme - now for timeline
@@ -97,7 +97,17 @@ function ExperienceTimelineItem({
               {/* Content */}
               <div className="flex-1 min-w-0">
                 <h3 className="text-white font-semibold text-base mb-1 group-hover:text-green-400 transition-colors">
-                  {experience.position}
+                  <div className="flex items-center gap-2">
+                    {experience.position}
+                    {experience.volunteer && (
+                      <span
+                        className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-900/30 border border-blue-700/50 text-blue-300 text-xs font-medium"
+                        title="Volunteer"
+                      >
+                        Volunteer
+                      </span>
+                    )}
+                  </div>
                 </h3>
                 <Link
                   href={experience.website}
@@ -298,8 +308,6 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 }
 
 export default function Home() {
-  const workExperiences = experience.filter((exp) => !exp.volunteer);
-
   return (
     <main className="bg-[#0d0d0d] min-h-screen grain">
       {/* Hero Section - Dark Theme */}
@@ -397,7 +405,7 @@ export default function Home() {
 
           {/* Timeline items */}
           <div className="hidden md:block">
-            {workExperiences.map((exp, index) => (
+            {experience.map((exp, index) => (
               <ExperienceTimelineItem
                 key={index}
                 experience={exp}
@@ -409,7 +417,7 @@ export default function Home() {
 
           {/* Mobile view - stacked */}
           <div className="md:hidden space-y-4">
-            {workExperiences.map((exp, index) => (
+            {experience.map((exp, index) => (
               <div key={index}>
                 <div
                   className="group bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 hover:border-green-400 transition-all duration-300 cursor-pointer"
