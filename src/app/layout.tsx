@@ -49,7 +49,7 @@ export default function RootLayout({
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
       <body
-        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono bg-[#0d0d0d]`}
+        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono bg-white text-black`}
       >
         <Header />
         {children}

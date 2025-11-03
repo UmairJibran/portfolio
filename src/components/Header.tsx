@@ -11,7 +11,7 @@ export default function Header() {
 
   navComponents.push(
     <Link href="/" key="home">
-      <span className="mr-5 cursor-pointer hover:text-green-400 transition-colors">
+      <span className="mr-5 cursor-pointer hover:bg-brutalist-yellow hover:text-black transition-colors px-3 py-2 border-4 border-black font-bold uppercase">
         Home
       </span>
     </Link>,
@@ -19,7 +19,7 @@ export default function Header() {
 
   navComponents.push(
     <Link href="/projects" key="projects">
-      <span className="mr-5 cursor-pointer hover:text-green-400 transition-colors">
+      <span className="mr-5 cursor-pointer hover:bg-brutalist-yellow hover:text-black transition-colors px-3 py-2 border-4 border-black font-bold uppercase">
         Projects
       </span>
     </Link>,
@@ -27,24 +27,22 @@ export default function Header() {
 
   navComponents.push(
     <Link href="/writing" key="writing">
-      <span className="mr-5 cursor-pointer hover:text-green-400 transition-colors">
+      <span className="mr-5 cursor-pointer hover:bg-brutalist-yellow hover:text-black transition-colors px-3 py-2 border-4 border-black font-bold uppercase">
         Writing
       </span>
     </Link>,
   );
 
   return (
-    <header className="text-gray-400 body-font sticky z-50 top-0 bg-[#0d0d0d]/95 backdrop-blur-sm border-b border-gray-800">
-      <div className="container mx-auto flex flex-wrap p-1 lg:p-4 flex-col lg:flex-row items-center">
-        <nav className="lg:w-1/5 flex-wrap items-center text-base lg:ml-auto flex">
+    <header className="text-black body-font sticky z-50 top-0 bg-white border-b-8 border-black">
+      <div className="container mx-auto flex flex-wrap p-4 lg:p-6 flex-col lg:flex-row items-center justify-between">
+        <nav className="flex-wrap items-center text-base flex gap-2">
           {navComponents}
         </nav>
-        <div className="w-full lg:w-3/5 p-2 order-first lg:order-none"></div>
-        <div className="lg:w-1/5 inline-flex lg:justify-end lg:ml-0">
+        <div className="inline-flex">
           <Button
             onClick={() => launchExternalUrl(profile.resume)}
-            variant="ghost"
-            className="inline-flex items-center gap-2 text-gray-300 hover:text-white hover:bg-[#1a1a1a]"
+            className="inline-flex items-center gap-2 text-black bg-brutalist-yellow hover:bg-black hover:text-brutalist-yellow border-4 border-black font-bold uppercase px-6 py-3 transition-colors"
             data-umami-event="resume-button-clicked"
           >
             Resume

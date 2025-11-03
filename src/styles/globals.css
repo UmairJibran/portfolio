@@ -2,110 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brutalist underline effect */
 .custom-underline {
   display: inline-block;
   position: relative;
   padding-bottom: 2px;
+  border-bottom: 4px solid transparent;
+  transition: border-color 0.2s;
 }
 
-.custom-underline::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: rgb(0, 0, 0);
-  transform: translateX(-50%);
-  transition: width 1s;
+.custom-underline:hover,
+.custom-underline:focus {
+  border-bottom-color: #FFFF00;
 }
 
-.custom-underline:hover::after,
-.custom-underline:focus::after {
-  width: 100%;
+/* Brutalist box shadow */
+.brutalist-shadow {
+  box-shadow: 8px 8px 0px 0px #000000;
 }
 
-/* Animated blob backgrounds */
-@keyframes blob {
+.brutalist-shadow-yellow {
+  box-shadow: 8px 8px 0px 0px #FFFF00;
+}
+
+.brutalist-shadow-red {
+  box-shadow: 8px 8px 0px 0px #FF0000;
+}
+
+/* Harsh hover effects */
+.brutalist-hover:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+/* Glitch effect for brutalist design */
+@keyframes glitch {
   0% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0);
   }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
+  20% {
+    transform: translate(-2px, 2px);
   }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
   }
   100% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0);
   }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
 }
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 0 0% 0%;
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card-foreground: 0 0% 0%;
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-  }
-  .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 0 0% 0%;
+    --chart-1: 60 100% 50%;
+    --chart-2: 0 100% 50%;
+    --chart-3: 240 100% 50%;
+    --chart-4: 0 0% 0%;
+    --chart-5: 0 0% 100%;
+    --radius: 0;
   }
 }
 
@@ -114,31 +92,13 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-black;
   }
 }
 
-/* Grainy texture overlay */
+/* Brutalist grain - removed for cleaner look */
 .grain {
   position: relative;
-}
-
-.grain::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.4;
-}
-
-.grain > * {
-  position: relative;
-  z-index: 2;
 }
 
 /* Hide scrollbar */
@@ -149,4 +109,16 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* Brutalist text styles */
+.brutalist-text {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+/* Hard lines */
+.hard-border {
+  border: 4px solid #000000;
 }

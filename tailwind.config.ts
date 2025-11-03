@@ -14,7 +14,13 @@ const config: Config = {
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
   		colors: {
-  			black: '#222831',
+  			black: '#000000',
+  			white: '#FFFFFF',
+  			brutalist: {
+  				yellow: '#FFFF00',
+  				red: '#FF0000',
+  				blue: '#0000FF',
+  			},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -57,9 +63,10 @@ const config: Config = {
   			}
   		},
   		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
+  			lg: '0',
+  			md: '0',
+  			sm: '0',
+  			none: '0'
   		}
   	},
   	fontFamily: {
