@@ -49,31 +49,31 @@ export function RelatedStories({ currentStory, allStories }: Props) {
 
   return (
     <aside className="space-y-8">
-      <h2 className="text-lg font-semibold text-white mb-6">Related Stories</h2>
+      <h2 className="text-lg font-black text-black mb-6 uppercase border-b-4 border-black pb-2">Related Stories</h2>
       
       {relatedBlog && (
         <div>
-          <h3 className="text-sm font-medium text-gray-500 mb-3">From the Blog</h3>
+          <h3 className="text-sm font-bold text-black mb-3 uppercase">From the Blog</h3>
           <Link href={`/writing/${relatedBlog.story.slug}`} className="block group">
-            <div className="rounded-lg p-4 bg-[#1a1a1a] border border-gray-800 hover:border-green-400/50 transition-all">
+            <div className="p-4 bg-white border-4 border-black hover:bg-brutalist-yellow transition-all brutalist-shadow">
               <div className="flex items-center gap-2 mb-2">
-                <span className="inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                <span className="inline-flex items-center bg-black px-2 py-1 text-xs font-black text-white uppercase">
                   blog
                 </span>
                 {relatedBlog.matchingTag && (
-                  <span className="inline-flex items-center rounded-md bg-gray-800/50 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-700/50">
+                  <span className="inline-flex items-center bg-white px-2 py-1 text-xs font-bold text-black border-2 border-black uppercase">
                     {relatedBlog.matchingTag}
                   </span>
                 )}
               </div>
               <div className="flex items-start justify-between gap-2">
                 <div className="flex-1">
-                  <h4 className="text-base font-medium text-white group-hover:text-green-400 transition-colors mb-1">
+                  <h4 className="text-base font-black text-black uppercase mb-1">
                     {relatedBlog.story.title}
                   </h4>
-                  <p className="text-sm text-gray-400 line-clamp-2">{relatedBlog.story.excerpt}</p>
+                  <p className="text-sm text-black line-clamp-2 font-medium">{relatedBlog.story.excerpt}</p>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0 mt-1" />
+                <ArrowUpRight className="h-4 w-4 text-black flex-shrink-0 mt-1" />
               </div>
             </div>
           </Link>
@@ -82,27 +82,27 @@ export function RelatedStories({ currentStory, allStories }: Props) {
 
       {relatedCaseStudy && (
         <div>
-          <h3 className="text-sm font-medium text-gray-500 mb-3">From Case Studies</h3>
+          <h3 className="text-sm font-bold text-black mb-3 uppercase">From Case Studies</h3>
           <Link href={`/writing/${relatedCaseStudy.story.slug}`} className="block group">
-            <div className="rounded-lg p-4 bg-[#1a1a1a] border border-gray-800 hover:border-green-400/50 transition-all">
+            <div className="p-4 bg-white border-4 border-black hover:bg-brutalist-yellow transition-all brutalist-shadow">
               <div className="flex items-center gap-2 mb-2">
-                <span className="inline-flex items-center rounded-md bg-green-400/10 px-2 py-1 text-xs font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                <span className="inline-flex items-center bg-black px-2 py-1 text-xs font-black text-white uppercase">
                   case study
                 </span>
                 {relatedCaseStudy.matchingTag && (
-                  <span className="inline-flex items-center rounded-md bg-gray-800/50 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-700/50">
+                  <span className="inline-flex items-center bg-white px-2 py-1 text-xs font-bold text-black border-2 border-black uppercase">
                     {relatedCaseStudy.matchingTag}
                   </span>
                 )}
               </div>
               <div className="flex items-start justify-between gap-2">
                 <div className="flex-1">
-                  <h4 className="text-base font-medium text-white group-hover:text-green-400 transition-colors mb-1">
+                  <h4 className="text-base font-black text-black uppercase mb-1">
                     {relatedCaseStudy.story.title}
                   </h4>
-                  <p className="text-sm text-gray-400 line-clamp-2">{relatedCaseStudy.story.excerpt}</p>
+                  <p className="text-sm text-black line-clamp-2 font-medium">{relatedCaseStudy.story.excerpt}</p>
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-gray-600 group-hover:text-green-400 transition-colors flex-shrink-0 mt-1" />
+                <ArrowUpRight className="h-4 w-4 text-black flex-shrink-0 mt-1" />
               </div>
             </div>
           </Link>
