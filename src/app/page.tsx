@@ -248,7 +248,10 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
               </div>
               {testimonials[currentIndex].linkedin && (
                 <Link
-                  href={testimonials[currentIndex].linkedin}
+                  href={
+                    "https://linkedin.com/in/" +
+                    testimonials[currentIndex].linkedin
+                  }
                   target="_blank"
                   className="text-gray-500 hover:text-green-400 transition-colors p-2"
                 >
@@ -320,7 +323,7 @@ export default function Home() {
 
     async function fetchLatest() {
       try {
-        const res = await fetch('/api/blogs');
+        const res = await fetch("/api/blogs");
         if (!res.ok) return;
         const data = await res.json();
         const blogs: Story[] = data.blogs || [];
@@ -333,7 +336,9 @@ export default function Home() {
     }
 
     fetchLatest();
-    return () => { mounted = false };
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   return (
@@ -377,8 +382,8 @@ export default function Home() {
           <div className="mb-16">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-white text-2xl font-bold">Latest Writing</h2>
-              <Link 
-                href="/writing" 
+              <Link
+                href="/writing"
                 className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center gap-1 transition-colors"
               >
                 View all
