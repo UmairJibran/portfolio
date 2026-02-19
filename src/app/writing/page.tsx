@@ -12,35 +12,35 @@ export default function Index() {
 
   if (allContent.length === 0) {
     return (
-      <main className="bg-[#0d0d0d] min-h-screen grain flex items-center justify-center">
-        <div className="text-gray-500">oops... I should write some up</div>
+      <main className="bg-white min-h-screen flex items-center justify-center">
+        <div className="text-black font-black text-2xl uppercase border-8 border-black p-8 bg-brutalist-yellow">oops... I should write some up</div>
       </main>
     );
   }
 
   return (
-    <main className="bg-[#0d0d0d] min-h-screen grain">
+    <main className="bg-white min-h-screen">
       {/* Header section */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-12">
         <div className="flex items-end justify-between mb-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <PenTool className="h-6 w-6 text-green-400" />
-              <span className="text-gray-500 text-sm uppercase tracking-wider">Blog & Case Studies</span>
+              <PenTool className="h-6 w-6 text-black" />
+              <span className="text-black text-sm uppercase tracking-wider font-black">Blog & Case Studies</span>
             </div>
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-black text-6xl md:text-7xl font-black mb-6 uppercase border-8 border-black p-6 bg-brutalist-red text-white inline-block transform -rotate-1">
               Writing
             </h1>
           </div>
           <div className="text-right">
-            <div className="text-gray-500 text-sm mb-1">Articles</div>
-            <div className="text-green-400 text-2xl font-bold font-mono">
+            <div className="text-black text-sm mb-1 font-bold uppercase">Articles</div>
+            <div className="text-black text-3xl font-black font-mono border-4 border-black px-4 py-2 bg-brutalist-yellow">
               {String(allContent.length).padStart(2, '0')}
             </div>
           </div>
         </div>
         
-        <div className="text-base text-gray-400 space-y-3 max-w-3xl mb-6">
+        <div className="text-base text-black space-y-3 max-w-3xl mb-6 font-medium border-l-8 border-black pl-6">
           <p>
             I write about software engineering, web development, and the technical challenges I encounter. 
             Here you will find in-depth case studies, technical articles, and development stories.
@@ -48,7 +48,7 @@ export default function Index() {
           <div className="flex items-center gap-6 pt-2">
             <Link 
               href="/rss.xml" 
-              className="flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors text-sm"
+              className="flex items-center gap-2 text-black hover:bg-brutalist-yellow transition-colors text-sm font-bold uppercase border-4 border-black px-4 py-2"
             >
               <Rss className="h-4 w-4" />
               RSS Feed
@@ -56,7 +56,7 @@ export default function Index() {
             <Link 
               href="https://linkedin.com/in/umairjibran" 
               target="_blank"
-              className="flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors text-sm"
+              className="flex items-center gap-2 text-black hover:bg-brutalist-yellow transition-colors text-sm font-bold uppercase border-4 border-black px-4 py-2"
             >
               <Linkedin className="h-4 w-4" />
               Follow on LinkedIn
@@ -64,7 +64,7 @@ export default function Index() {
           </div>
         </div>
         
-        <div className="h-px bg-gradient-to-r from-green-400 via-gray-800 to-transparent"></div>
+        <div className="h-2 bg-black"></div>
       </section>
 
       {/* All content */}

@@ -52,7 +52,7 @@ export function MoreStories({ stories }: Props) {
       <div className="relative">
         {/* Main continuous timeline */}
         <div
-          className="absolute left-32 w-px bg-gray-800"
+          className="absolute left-32 w-1 bg-black"
           style={{
             top: '12px',
             height: `calc(100% - ${lastSectionHeight}px + 26px)`
@@ -66,10 +66,10 @@ export function MoreStories({ stories }: Props) {
               <div className="relative flex items-center mb-16">
                 <div className="w-28 flex-shrink-0" />
                 {/* Month bullet */}
-                <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-green-400 z-10 shadow-lg shadow-green-400/50" />
+                <div className="absolute left-32 -translate-x-1/2 w-6 h-6 bg-brutalist-red border-4 border-black z-10" />
                 {/* Month label */}
                 <div className="pl-12">
-                  <h3 className="text-3xl font-mono font-bold text-white">
+                  <h3 className="text-4xl font-mono font-black text-black uppercase border-b-4 border-black pb-2">
                     {groupedStories[key].month} {groupedStories[key].year}
                   </h3>
                 </div>
