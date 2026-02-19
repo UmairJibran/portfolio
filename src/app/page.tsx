@@ -80,7 +80,7 @@ function ExperienceTimelineItem({
         {/* Card */}
         <div className="w-[calc(50%-2rem)]">
           <div
-            className="group bg-white border-4 border-black p-6 hover:bg-brutalist-yellow transition-all duration-300 cursor-pointer brutalist-shadow"
+            className="group bg-white border-4 border-black p-6 hover:bg-brutalist-yellow transition-all duration-300 cursor-pointer brutalist-shadow-multi hover:brutalist-shadow-multi-heavy hover:scale-105 brutalist-noise"
             onClick={() => setShowDetails(true)}
           >
             <div className="flex items-start gap-4">
@@ -147,7 +147,7 @@ function ExperienceTimelineItem({
 
         {/* Timeline dot and line */}
         <div className="flex flex-col items-center">
-          <div className="w-6 h-6 bg-brutalist-red border-4 border-black z-10"></div>
+          <div className="w-6 h-6 bg-brutalist-red border-4 border-black z-10 transform rotate-45 hover:rotate-180 transition-transform duration-300 cursor-pointer pulse-brutal"></div>
         </div>
 
         {/* Empty space on the other side */}
@@ -222,7 +222,11 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
         <div
           className={`w-full max-w-2xl transition-all duration-500 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
         >
-          <div className="bg-brutalist-yellow border-8 border-black p-8 brutalist-shadow-red">
+          <div className="bg-brutalist-yellow border-8 border-black p-8 brutalist-shadow-multi-heavy relative brutalist-noise">
+            {/* Decorative corner accent */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-brutalist-magenta border-4 border-black rotate-45"></div>
+            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-brutalist-cyan border-4 border-black rotate-45"></div>
+            
             <Quote className="w-10 h-10 text-black mb-6" />
             <p className="text-black text-base leading-relaxed mb-8 font-bold">
               {testimonials[currentIndex].testimonial}
@@ -337,11 +341,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-white min-h-screen brutalist-noise">
       {/* Hero Section - Brutalist Theme */}
-      <section className="max-w-6xl mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-6xl mx-auto px-6 pt-20 pb-16 relative">
+        {/* Decorative floating elements */}
+        <div className="absolute top-10 right-10 w-20 h-20 bg-brutalist-cyan border-4 border-black rotate-12 hidden lg:block pulse-brutal"></div>
+        <div className="absolute bottom-20 left-20 w-16 h-16 bg-brutalist-magenta border-4 border-black -rotate-12 hidden lg:block"></div>
+        
         {/* Title */}
-        <h1 className="text-black text-5xl md:text-7xl font-black mb-8 leading-none uppercase border-8 border-black p-8 bg-brutalist-yellow inline-block transform -rotate-1">
+        <h1 className="text-black text-5xl md:text-7xl font-black mb-8 leading-none uppercase border-8 border-black p-8 bg-brutalist-yellow inline-block transform -rotate-1 brutalist-shadow-multi-heavy relative z-10">
           Software engineer, technical
           <br />
           writer & open-source maintainer
@@ -349,40 +357,41 @@ export default function Home() {
 
         {/* Description */}
         <div
-          className="text-black text-base md:text-lg leading-relaxed mb-8 max-w-3xl border-l-8 border-black pl-6 font-bold [&_a]:text-brutalist-red [&_a]:underline [&_a]:decoration-4 [&_a]:hover:bg-brutalist-red [&_a]:hover:text-white [&_strong]:text-black [&_strong]:font-black [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
+          className="text-black text-base md:text-lg leading-relaxed mb-8 max-w-3xl border-l-8 border-black pl-6 bg-white/80 backdrop-blur-sm p-4 font-bold [&_a]:text-brutalist-red [&_a]:underline [&_a]:decoration-4 [&_a]:hover:bg-brutalist-red [&_a]:hover:text-white [&_a]:transition-all [&_strong]:text-black [&_strong]:font-black [&_strong]:bg-brutalist-yellow [&_strong]:px-1 [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
           dangerouslySetInnerHTML={{ __html: profile.extraInfo }}
         />
 
         {/* Social Links */}
         <div className="flex flex-wrap gap-4 mb-16">
-          {profile.social.map((item, idx) => (
-            <Link
-              key={item.name}
-              href={item.link}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white hover:bg-black border-4 border-black text-black hover:text-brutalist-yellow transition-colors text-sm font-bold uppercase brutalist-shadow transform hover:translate-x-1 hover:translate-y-1"
-              target="_blank"
-              style={{
-                transform: `rotate(${idx % 2 === 0 ? '-' : ''}${Math.random() * 2}deg)`
-              }}
-            >
-              {item.icon === "GitHub" && <Github className="h-5 w-5" />}
-              {item.icon === "Linkedin" && <Linkedin className="h-5 w-5" />}
-              {item.icon === "Twitter" && <Twitter className="h-5 w-5" />}
-              {item.icon === "Mail" && <Mail className="h-5 w-5" />}
-              {item.icon === "Type" && <Type className="h-5 w-5" />}
-              <span>{item.name}</span>
-            </Link>
-          ))}
+          {profile.social.map((item, idx) => {
+            const colors = ['bg-brutalist-yellow', 'bg-brutalist-cyan', 'bg-brutalist-magenta', 'bg-white', 'bg-brutalist-green'];
+            const shadowColors = ['brutalist-shadow', 'brutalist-shadow-cyan', 'brutalist-shadow-magenta', 'brutalist-shadow-yellow'];
+            return (
+              <Link
+                key={item.name}
+                href={item.link}
+                className={`inline-flex items-center gap-2 px-6 py-3 ${colors[idx % colors.length]} hover:bg-black border-4 border-black text-black hover:text-brutalist-yellow transition-all text-sm font-bold uppercase ${shadowColors[idx % shadowColors.length]} glitch-hover rotate-chaos-${(idx % 5) + 1}`}
+                target="_blank"
+              >
+                {item.icon === "GitHub" && <Github className="h-5 w-5" />}
+                {item.icon === "Linkedin" && <Linkedin className="h-5 w-5" />}
+                {item.icon === "Twitter" && <Twitter className="h-5 w-5" />}
+                {item.icon === "Mail" && <Mail className="h-5 w-5" />}
+                {item.icon === "Type" && <Type className="h-5 w-5" />}
+                <span>{item.name}</span>
+              </Link>
+            );
+          })}
         </div>
 
         {/* Recent Writing Section */}
         {latestBlog && (
           <div className="mb-16">
-            <div className="flex items-center justify-between mb-6 border-b-4 border-black pb-4">
-              <h2 className="text-black text-3xl font-black uppercase">Latest Writing</h2>
+            <div className="flex items-center justify-between mb-6 border-b-8 border-black pb-4 bg-brutalist-cyan/20 p-4 brutalist-torn">
+              <h2 className="text-black text-3xl font-black uppercase zigzag-underline">Latest Writing</h2>
               <Link 
                 href="/writing" 
-                className="text-black hover:bg-brutalist-yellow hover:text-black text-sm font-bold uppercase inline-flex items-center gap-1 transition-colors border-4 border-black px-4 py-2"
+                className="text-black hover:bg-brutalist-magenta hover:text-white text-sm font-bold uppercase inline-flex items-center gap-1 transition-colors border-4 border-black px-4 py-2 brutalist-shadow"
               >
                 View all
                 <ArrowUpRight className="h-4 w-4" />
@@ -393,13 +402,18 @@ export default function Home() {
         )}
 
         {/* GitHub Contribution Graph Placeholder */}
-        <div className="mb-16">
-          <h2 className="text-black text-2xl font-black mb-6 uppercase border-l-8 border-brutalist-yellow pl-4">
+        <div className="mb-16 relative">
+          {/* Decorative sticker */}
+          <div className="absolute -top-6 -right-6 bg-brutalist-magenta border-4 border-black px-4 py-2 text-black font-black text-xs uppercase rotate-12 brutalist-shadow hidden lg:block z-10">
+            HOT!
+          </div>
+          
+          <h2 className="text-black text-2xl font-black mb-6 uppercase border-l-8 border-brutalist-green pl-4 bg-gradient-to-r from-brutalist-green/20 to-transparent py-2">
             Contribution Graph
           </h2>
-          <div className="bg-white border-4 border-black p-6">
+          <div className="bg-white border-8 border-black p-6 brutalist-shadow-multi">
             <div className="flex items-center justify-between mb-4">
-              <p className="text-black text-sm font-bold uppercase">
+              <p className="text-black text-sm font-bold uppercase bg-brutalist-yellow px-3 py-1 border-2 border-black">
                 1038 contributions in the last year
               </p>
               <div className="flex items-center gap-2">
@@ -407,6 +421,7 @@ export default function Home() {
                 <div className="flex gap-1">
                   <div className="w-3 h-3 bg-gray-200 border-2 border-black"></div>
                   <div className="w-3 h-3 bg-brutalist-yellow border-2 border-black"></div>
+                  <div className="w-3 h-3 bg-brutalist-orange border-2 border-black"></div>
                   <div className="w-3 h-3 bg-brutalist-red border-2 border-black"></div>
                   <div className="w-3 h-3 bg-black border-2 border-black"></div>
                 </div>
@@ -420,17 +435,19 @@ export default function Home() {
                 const bgColor =
                   intensity > 0.75
                     ? "bg-black"
-                    : intensity > 0.5
+                    : intensity > 0.6
                       ? "bg-brutalist-red"
-                      : intensity > 0.25
-                        ? "bg-brutalist-yellow"
-                        : intensity > 0.1
-                          ? "bg-gray-200"
-                          : "bg-white";
+                      : intensity > 0.4
+                        ? "bg-brutalist-orange"
+                        : intensity > 0.25
+                          ? "bg-brutalist-yellow"
+                          : intensity > 0.1
+                            ? "bg-gray-200"
+                            : "bg-white";
                 return (
                   <div
                     key={i}
-                    className={`w-[10px] h-[10px] border-2 border-black ${bgColor}`}
+                    className={`w-[10px] h-[10px] border-2 border-black ${bgColor} hover:scale-125 transition-transform cursor-pointer`}
                     title={`Contributions on day ${i + 1}`}
                   />
                 );
@@ -441,9 +458,18 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section - Timeline */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-black text-4xl font-black mb-12 text-center uppercase bg-brutalist-yellow border-8 border-black p-6 inline-block mx-auto block w-full text-center">
-          Work Experience
+      <section className="max-w-5xl mx-auto px-6 py-16 bg-gradient-to-b from-brutalist-yellow/10 to-white relative">
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-5 w-24 h-24 border-8 border-black bg-brutalist-cyan rotate-45 hidden lg:block opacity-20"></div>
+        <div className="absolute bottom-10 right-5 w-20 h-20 border-8 border-black bg-brutalist-magenta -rotate-12 hidden lg:block opacity-20"></div>
+        
+        <h2 className="text-black text-4xl font-black mb-12 text-center uppercase bg-brutalist-yellow border-8 border-black p-6 w-full brutalist-shadow-multi relative z-10">
+          <span className="relative">
+            Work Experience
+            <span className="absolute -top-8 -right-8 bg-brutalist-red text-white px-3 py-1 text-xs border-4 border-black rotate-12 hidden lg:inline-block">
+              NEW!
+            </span>
+          </span>
         </h2>
 
         {/* Timeline container */}
@@ -526,23 +552,37 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section - Carousel */}
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 mb-8">
-          <h2 className="text-black text-4xl font-black uppercase border-b-8 border-black pb-4">What People Say</h2>
+      <section className="py-16 bg-gradient-to-r from-brutalist-magenta/5 via-brutalist-cyan/5 to-brutalist-yellow/5 border-y-8 border-black relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-brutalist-yellow border-4 border-black rotate-45"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-brutalist-cyan border-4 border-black -rotate-12"></div>
+          <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-brutalist-magenta border-4 border-black rotate-12"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto px-6 mb-8 relative z-10">
+          <h2 className="text-black text-4xl font-black uppercase border-b-8 border-black pb-4 bg-white inline-block pr-8">
+            What People Say
+            <span className="inline-block ml-2 animate-bounce">💬</span>
+          </h2>
         </div>
         <TestimonialsCarousel testimonials={testimonials} />
       </section>
 
       {/* Footer / Contact */}
-      <footer className="max-w-6xl mx-auto px-6 py-16 border-t-8 border-black">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-black text-sm font-bold uppercase">
+      <footer className="max-w-6xl mx-auto px-6 py-16 border-t-8 border-black bg-gradient-to-b from-white to-brutalist-yellow/20 relative">
+        {/* Decorative corner elements */}
+        <div className="absolute top-0 left-0 w-16 h-16 border-r-8 border-b-8 border-black"></div>
+        <div className="absolute top-0 right-0 w-16 h-16 border-l-8 border-b-8 border-black"></div>
+        
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+          <div className="text-black text-sm font-bold uppercase bg-white border-4 border-black px-4 py-2 brutalist-shadow">
             Built with ❤️ by {profile.name.firstName} {profile.name.lastName}
           </div>
           <div className="flex gap-4">
             <Button
               asChild
-              className="bg-brutalist-red hover:bg-black text-white hover:text-brutalist-red border-4 border-black font-bold uppercase px-6 py-3"
+              className="bg-brutalist-red hover:bg-black text-white hover:text-brutalist-red border-4 border-black font-bold uppercase px-6 py-3 brutalist-shadow glitch-hover"
             >
               <Link href={`mailto:${profile.email}`}>
                 <Mail className="mr-2 h-4 w-4" />
@@ -551,7 +591,7 @@ export default function Home() {
             </Button>
             <Button
               asChild
-              className="border-4 border-black text-black bg-white hover:bg-brutalist-yellow hover:text-black font-bold uppercase px-6 py-3"
+              className="border-4 border-black text-black bg-brutalist-cyan hover:bg-brutalist-magenta hover:text-white font-bold uppercase px-6 py-3 brutalist-shadow-multi"
             >
               <Link href={profile.consultationLink} target="_blank">
                 <Calendar className="mr-2 h-4 w-4" />
@@ -560,7 +600,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="text-center text-black text-sm mt-8 font-bold uppercase">
+        <div className="text-center text-black text-sm mt-8 font-bold uppercase bg-brutalist-yellow border-4 border-black p-3 inline-block w-full">
           Copyright © {profile.name.firstName} {new Date().getFullYear()}. All
           rights reserved.
         </div>

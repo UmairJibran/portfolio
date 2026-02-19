@@ -29,10 +29,100 @@
   box-shadow: 8px 8px 0px 0px #FF0000;
 }
 
+.brutalist-shadow-cyan {
+  box-shadow: 8px 8px 0px 0px #00FFFF;
+}
+
+.brutalist-shadow-magenta {
+  box-shadow: 8px 8px 0px 0px #FF00FF;
+}
+
+/* Multi-layer shadows for extra brutalism */
+.brutalist-shadow-multi {
+  box-shadow: 4px 4px 0px 0px #FFFF00, 8px 8px 0px 0px #000000;
+}
+
+.brutalist-shadow-multi-heavy {
+  box-shadow: 3px 3px 0px 0px #00FFFF, 6px 6px 0px 0px #FF00FF, 9px 9px 0px 0px #000000;
+}
+
 /* Harsh hover effects */
 .brutalist-hover:hover {
   transform: translate(4px, 4px);
-  box-shadow: 4px 4px 0px 0px #000000;
+  /* removed hover shadow to keep hover movement but no shadow */
+  box-shadow: none;
+}
+
+.brutalist-hover-intense:hover {
+  transform: translate(2px, 2px) rotate(2deg);
+  /* removed hover shadow to keep hover rotation but no shadow */
+  box-shadow: none;
+}
+
+/* Noise texture overlay */
+.brutalist-noise {
+  position: relative;
+}
+
+.brutalist-noise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Torn paper effect */
+.brutalist-torn {
+  clip-path: polygon(
+    0% 2%, 3% 0%, 5% 2%, 8% 0%, 12% 3%, 15% 1%, 18% 3%, 21% 0%, 
+    25% 2%, 28% 0%, 32% 3%, 35% 1%, 38% 3%, 42% 0%, 45% 2%, 
+    48% 0%, 52% 3%, 55% 1%, 58% 3%, 62% 0%, 65% 2%, 68% 0%, 
+    72% 3%, 75% 1%, 78% 3%, 82% 0%, 85% 2%, 88% 0%, 92% 3%, 
+    95% 1%, 98% 3%, 100% 0%, 100% 98%, 98% 100%, 95% 98%, 
+    92% 100%, 88% 97%, 85% 100%, 82% 97%, 78% 100%, 75% 98%, 
+    72% 100%, 68% 97%, 65% 100%, 62% 97%, 58% 100%, 55% 98%, 
+    52% 100%, 48% 97%, 45% 100%, 42% 97%, 38% 100%, 35% 98%, 
+    32% 100%, 28% 97%, 25% 100%, 21% 97%, 18% 100%, 15% 98%, 
+    12% 100%, 8% 97%, 5% 100%, 3% 98%, 0% 100%
+  );
+}
+
+/* Sticker rotation variants */
+.rotate-chaos-1 { transform: rotate(-2.5deg); }
+.rotate-chaos-2 { transform: rotate(1.8deg); }
+.rotate-chaos-3 { transform: rotate(-1.2deg); }
+.rotate-chaos-4 { transform: rotate(2.3deg); }
+.rotate-chaos-5 { transform: rotate(-3.1deg); }
+
+/* Aggressive glitch on hover */
+.glitch-hover:hover {
+  animation: glitch-intense 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch-intense {
+  0% {
+    transform: translate(0) skew(0deg);
+  }
+  20% {
+    transform: translate(-3px, 2px) skew(1deg);
+  }
+  40% {
+    transform: translate(-3px, -3px) skew(-2deg);
+  }
+  60% {
+    transform: translate(3px, 2px) skew(2deg);
+  }
+  80% {
+    transform: translate(3px, -2px) skew(-1deg);
+  }
+  100% {
+    transform: translate(0) skew(0deg);
+  }
 }
 
 /* Glitch effect for brutalist design */
@@ -55,6 +145,118 @@
   100% {
     transform: translate(0);
   }
+}
+
+/* Pulse animation for accents */
+@keyframes pulse-brutal {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.pulse-brutal {
+  animation: pulse-brutal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Zigzag underline */
+.zigzag-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.zigzag-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(135deg, #FFFF00 5px, transparent 5px) 0 0,
+              linear-gradient(225deg, #FFFF00 5px, transparent 5px) 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat-x;
+}
+
+/* Stamp effect */
+.stamp-effect {
+  position: relative;
+  border: 4px dashed #000000;
+  background: 
+    linear-gradient(45deg, transparent 48%, #000 48%, #000 52%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, #000 48%, #000 52%, transparent 52%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 0;
+  background-repeat: repeat;
+}
+
+/* Scribble underline effect */
+.scribble-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10'%3E%3Cpath d='M0,5 Q10,2 20,5 T40,5 T60,5 T80,5 T100,5 T120,5 T140,5 T160,5 T180,5 T200,5' stroke='%23000' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-size: 100% 10px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 8px;
+}
+
+/* Bold stripe pattern */
+.stripe-pattern {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(0, 0, 0, 0.1) 10px,
+    rgba(0, 0, 0, 0.1) 20px
+  );
+}
+
+/* Brutalist border styles */
+.border-brutal-dotted {
+  border-style: dotted;
+  border-width: 6px;
+}
+
+.border-brutal-dashed {
+  border-style: dashed;
+  border-width: 6px;
+}
+
+/* Neon glow effect for accents */
+.neon-glow {
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+}
+
+/* Cutout text effect */
+.cutout-text {
+  background: #000;
+  color: #fff;
+  mix-blend-mode: multiply;
+}
+
+/* Shake animation on hover */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-hover:hover {
+  animation: shake 0.5s;
+}
+
+/* Pop out effect */
+@keyframes pop-out {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1) rotate(5deg); }
+  100% { transform: scale(1); }
+}
+
+.pop-hover:hover {
+  animation: pop-out 0.3s ease-in-out;
 }
 
 @layer base {
