@@ -4,10 +4,10 @@ excerpt: "I received a scam email from my own domain. Here's what happened and h
 coverImage: "/assets/blogs/how-to-prevent-email-spoofing/cover.webp"
 date: "2026-02-19T13:39:40.000Z"
 author:
-name: Umair Jibran
-picture: "/assets/authors/jibran.webp"
+  name: Umair Jibran
+  picture: "/assets/authors/jibran.webp"
 ogImage:
-url: "/assets/blogs/how-to-prevent-email-spoofing/cover.webp"
+  url: "/assets/blogs/how-to-prevent-email-spoofing/cover.webp"
 tags:
   - Security
   - Email
