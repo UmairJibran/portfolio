@@ -5,6 +5,56 @@ import { StoryBody } from "@/components/StoryBody";
 import { RelatedStories } from "@/components/RelatedStories";
 import { Calendar, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const allStories = [
+        ...getAllBlog(),
+        ...getAllCaseStudies()
+    ];
+
+    const story = allStories.find(story => story.slug === params.slug);
+
+    if (!story) {
+        return {};
+    }
+
+    return {
+        title: story.title,
+        description: story.excerpt,
+        authors: story.author ? [{ name: story.author.name }] : undefined,
+        openGraph: {
+            type: "article",
+            title: story.title,
+            description: story.excerpt,
+            url: `/writing/${story.slug}`,
+            publishedTime: story.date,
+            authors: story.author ? [story.author.name] : undefined,
+            tags: story.tags,
+            images: story.ogImage?.url ? [
+                {
+                    url: story.ogImage.url,
+                    width: 1200,
+                    height: 630,
+                    alt: story.title,
+                }
+            ] : story.coverImage ? [
+                {
+                    url: story.coverImage,
+                    width: 1200,
+                    height: 630,
+                    alt: story.title,
+                }
+            ] : undefined,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: story.title,
+            description: story.excerpt,
+            images: story.ogImage?.url || story.coverImage,
+        },
+    };
+}
 
 export default async function StoryPage({ params }: { params: { slug: string } }) {
     const allStories = [
