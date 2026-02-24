@@ -7,7 +7,7 @@ author:
   name: Umair Jibran
   picture: "/assets/authors/jibran.webp"
 ogImage:
-  url: "/assets/blogs/how-to-prevent-email-spoofing/cover.webp"
+  url: "/assets/blogs/how-to-prevent-email-spoofing/open-graph.webp"
 tags:
   - Security
   - Email
