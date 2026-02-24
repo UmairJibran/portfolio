@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     const story = allStories.find(story => story.slug === params.slug);
 
     if (!story) {
-        return {};
+        notFound();
     }
 
     return {
