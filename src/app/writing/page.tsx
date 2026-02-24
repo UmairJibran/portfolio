@@ -2,6 +2,23 @@ import { MoreStories } from "@/components/MoreStories";
 import { getAllBlog, getAllCaseStudies } from "@/lib/api";
 import Link from "next/link";
 import { Rss, Linkedin, PenTool } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Writing - Umair Jibran",
+  description: "Technical articles, blog posts, and case studies about software engineering, web development, and the technical challenges I encounter.",
+  openGraph: {
+    type: "website",
+    title: "Writing - Umair Jibran",
+    description: "Technical articles, blog posts, and case studies about software engineering, web development, and the technical challenges I encounter.",
+    url: "/writing",
+  },
+  twitter: {
+    card: "summary",
+    title: "Writing - Umair Jibran",
+    description: "Technical articles, blog posts, and case studies about software engineering, web development, and the technical challenges I encounter.",
+  },
+};
 
 export default function Index() {
   // Combine and sort all content
