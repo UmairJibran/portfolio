@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "/writing",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Writing - Umair Jibran",
     description: "Technical articles, blog posts, and case studies about software engineering, web development, and the technical challenges I encounter.",
   },
