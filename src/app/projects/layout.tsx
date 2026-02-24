@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "/projects",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Projects - Umair Jibran",
     description: "Explore my portfolio of software projects, full-stack applications, and technical solutions.",
   },
