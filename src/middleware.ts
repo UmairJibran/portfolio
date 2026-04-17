@@ -9,8 +9,14 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/writing', request.url))
   }
 
-  // Redirect individual blog posts and case studies
-  if (pathname.startsWith('/blogs/') || pathname.startsWith('/case-studies/')) {
+  // Redirect legacy case-study URLs to the new /projects/<slug> location
+  if (pathname.startsWith('/case-studies/')) {
+    const slug = pathname.split('/').pop()
+    return NextResponse.redirect(new URL(`/projects/${slug}`, request.url))
+  }
+
+  // Redirect legacy blog URLs to /writing/<slug>
+  if (pathname.startsWith('/blogs/')) {
     const slug = pathname.split('/').pop()
     return NextResponse.redirect(new URL(`/writing/${slug}`, request.url))
   }

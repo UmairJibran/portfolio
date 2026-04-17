@@ -3,7 +3,6 @@
     "firstName": "Umair",
     "lastName": "Jibran"
   },
-  "subTitle": "I build things for web",
   "extraInfo": "I'm a full-stack engineer who builds reliable, scalable web apps that users love. Currently at <strong><a target='_blank' class='custom-underline' href='https://www.puppydog.io'>PuppyDog.io</a></strong>, I focus on serverless patterns, AWS, Node.js, and microservices, and lean on Grafana and Prometheus for observability. Off the clock you’ll find me hiking <Image style='display:inline;' src='/assets/emojis/hiking.png' alt='Hiking' height='18' width='18' />, plotting chess moves <Image style='display:inline;' src='/assets/emojis/chess.png' alt='Chess' height='18' width='18' />, or rewatching Game of Thrones <Image style='display:inline;' src='/assets/emojis/iron-throne.png' alt='Iron Throne' height='18' width='18' />. I bring a strong CS foundation and a bias for shipping — ready to join ambitious teams in Europe or North America and build something great together.",
   "social": [
     {

@@ -1,0 +1,48 @@
+[
+  {
+    "category": "Languages",
+    "items": ["TypeScript", "JavaScript", "Python", "Dart"]
+  },
+  {
+    "category": "Backend",
+    "items": [
+      "Node.js",
+      "Express",
+      "Serverless Framework",
+      "REST APIs",
+      "Microservices",
+      "Event-driven architecture"
+    ]
+  },
+  {
+    "category": "Frontend",
+    "items": ["React", "Next.js", "Tailwind CSS", "Alpine.js"]
+  },
+  {
+    "category": "Cloud & Infra",
+    "items": [
+      "AWS (Lambda, SQS, DynamoDB, S3, API Gateway)",
+      "GCP",
+      "Docker",
+      "GitHub Actions",
+      "Nginx"
+    ]
+  },
+  {
+    "category": "Data",
+    "items": ["MySQL", "DynamoDB", "Firebase", "Redis"]
+  },
+  {
+    "category": "Observability",
+    "items": ["Grafana", "Prometheus", "Structured logging"]
+  },
+  {
+    "category": "AI / LLM",
+    "items": [
+      "OpenAI APIs",
+      "Agentic LLM workflows",
+      "Prompt engineering",
+      "RAG pipelines"
+    ]
+  }
+]
