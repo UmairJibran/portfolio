@@ -55,9 +55,20 @@ export function ContributionGraph({ username }: { username: string }) {
 
   if (error) return null;
 
-  // Normalize to the last 365 days regardless of which endpoint responded
-  // (the all-time endpoint returns every day since account creation).
-  const lastYear = data ? data.contributions.slice(-365) : [];
+  // Filter to exactly the last 365 days ending today (UTC). Upper bound is
+  // required because the all-time endpoint pads the current year out to Dec 31
+  // with zero-count entries — without the cap those future dates render as
+  // empty cells past today.
+  const lastYear = data ? (() => {
+    const today = new Date();
+    const todayISO = today.toISOString().slice(0, 10);
+    const cutoff = new Date();
+    cutoff.setUTCDate(cutoff.getUTCDate() - 364);
+    const cutoffISO = cutoff.toISOString().slice(0, 10);
+    return data.contributions
+      .filter((c) => c.date >= cutoffISO && c.date <= todayISO)
+      .sort((a, b) => a.date.localeCompare(b.date));
+  })() : [];
   const lastYearTotal = data
     ? lastYear.reduce((sum, c) => sum + c.count, 0)
     : null;
@@ -84,6 +95,21 @@ export function ContributionGraph({ username }: { username: string }) {
     if (week.length) weeks.push(week);
   }
 
+  // Month labels: for each week column, emit a short month name the first time
+  // we see a new month in that column's real (non-pad) days. This matches the
+  // GitHub convention and lets the viewer read the time axis at a glance.
+  const MONTHS = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+  ];
+  const monthLabels: string[] = weeks.map((week) => {
+    const firstReal = week.find((d) => d.date);
+    if (!firstReal) return "";
+    const day = new Date(`${firstReal.date}T00:00:00Z`).getUTCDate();
+    // Only label if this column contains the first week of the month.
+    return day <= 7 ? MONTHS[new Date(`${firstReal.date}T00:00:00Z`).getUTCMonth()] : "";
+  });
+
   return (
     <div className="mb-16">
       <h2 className="text-white text-xl font-semibold mb-4">
@@ -93,7 +119,7 @@ export function ContributionGraph({ username }: { username: string }) {
         <div className="flex items-center justify-between mb-4">
           <p className="text-gray-400 text-sm">
             {lastYearTotal !== null
-              ? `${lastYearTotal.toLocaleString()} contributions in the last year`
+              ? `${lastYearTotal.toLocaleString()} contributions in the last 365 days`
               : "Loading contributions…"}
           </p>
           <div className="flex items-center gap-2">
@@ -106,14 +132,26 @@ export function ContributionGraph({ username }: { username: string }) {
             <span className="text-xs text-gray-500">More</span>
           </div>
         </div>
-        <div className="overflow-x-auto">
-          <div className="flex gap-[3px]">
+        <div className="flex flex-col gap-1 w-full">
+          {/* Month axis */}
+          <div className="flex gap-[3px] w-full">
+            {monthLabels.map((label, wi) => (
+              <div
+                key={wi}
+                className="flex-1 min-w-0 text-[10px] text-gray-500 leading-none"
+              >
+                {label}
+              </div>
+            ))}
+          </div>
+          {/* Contribution cells */}
+          <div className="flex gap-[3px] w-full">
             {weeks.map((week, wi) => (
-              <div key={wi} className="flex flex-col gap-[3px]">
+              <div key={wi} className="flex flex-col gap-[3px] flex-1 min-w-0">
                 {week.map((day, di) => (
                   <div
                     key={di}
-                    className={`w-[10px] h-[10px] rounded-sm ${
+                    className={`aspect-square rounded-sm ring-1 ring-inset ring-gray-700/30 ${
                       day.date ? LEVEL_BG[day.level] : "bg-transparent"
                     }`}
                     title={
