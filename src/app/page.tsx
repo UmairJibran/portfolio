@@ -15,6 +15,7 @@ import {
   Building2,
   Quote,
   ArrowUpRight,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
@@ -372,7 +373,7 @@ export default function Home() {
         />
 
         {/* Social Links */}
-        <div className="flex flex-wrap gap-3 mb-16">
+        <div className="flex flex-wrap gap-3 mb-6">
           {profile.social.map((item) => (
             <Link
               key={item.name}
@@ -390,8 +391,100 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Primary CTAs — above the fold */}
+        <div className="flex flex-wrap gap-3 mb-16">
+          <Button
+            asChild
+            className="bg-green-600 hover:bg-green-700 text-white"
+          >
+            <Link href={`mailto:${profile.email}`}>
+              <Mail className="mr-2 h-4 w-4" />
+              Get in Touch
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="border-gray-700 text-white bg-transparent hover:bg-gray-800 hover:border-green-400 hover:text-white"
+          >
+            <Link href={profile.consultationLink} target="_blank">
+              <Calendar className="mr-2 h-4 w-4" />
+              Schedule Call
+            </Link>
+          </Button>
+        </div>
+
         {/* Skills Section */}
         <SkillsSection />
+
+        {/* Featured Case Study */}
+        <div className="mb-16">
+          <Link
+            href="/projects/puppydog"
+            className="group block bg-gradient-to-br from-[#1a1a1a] to-[#141414] border border-gray-800 hover:border-green-400/60 rounded-lg p-6 md:p-8 transition-all duration-300"
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="h-4 w-4 text-green-400" />
+              <span className="text-green-400 text-xs uppercase tracking-wider font-mono">
+                Featured Case Study
+              </span>
+            </div>
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 group-hover:text-green-400 transition-colors">
+              PuppyDog.io — Personalized Demo Infrastructure at Scale
+            </h2>
+            <p className="text-gray-400 text-base leading-relaxed mb-5 max-w-3xl">
+              How I built a mass personalization engine, migrated AI compute
+              from AWS to GCP saving 36% on infra costs, and took backend test
+              coverage from 0 to 75% as the sole backend engineer.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  −36%
+                </div>
+                <div className="text-gray-500 text-xs">Infra cost</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  0 → 75%
+                </div>
+                <div className="text-gray-500 text-xs">Test coverage</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  2w → daily
+                </div>
+                <div className="text-gray-500 text-xs">Release cadence</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  10k+
+                </div>
+                <div className="text-gray-500 text-xs">
+                  Prospects / job, unattended
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex flex-wrap gap-2">
+                {["Node.js", "GCP", "AWS", "Architecture", "AI/LLM"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-md bg-gray-800/60 px-2.5 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700/50"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+              <span className="text-green-400 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Read case study
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+        </div>
 
         {/* Recent Writing Section */}
         {latestBlog && (
