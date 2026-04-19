@@ -1,19 +1,25 @@
 [
   {
-    "id": "waltzes",
-    "name": "Waltzes",
-    "url": null,
-    "description": "Compose cover letters with power of AI in just a few seconds",
-    "logo": "waltzes",
-    "source": "https://github.com/umairjibran/waltzes"
-  },
-  {
     "id": "puppydog-pb",
     "name": "PuppyDog.io",
     "url": "https://www.puppydog.io",
     "description": "Create hyper-personalized product demos for your customers in seconds",
     "logo": "puppydog",
-    "source": null
+    "source": null,
+    "caseStudySlug": "puppydog",
+    "featured": true,
+    "tech": ["Node.js", "TypeScript", "GCP", "LLMs", "Agentic workflows"]
+  },
+  {
+    "id": "waltzes",
+    "name": "Waltzes",
+    "url": null,
+    "description": "Compose cover letters with power of AI in just a few seconds",
+    "logo": "waltzes",
+    "source": "https://github.com/umairjibran/waltzes",
+    "caseStudySlug": "waltzes",
+    "featured": true,
+    "tech": ["Node.js", "OpenAI", "React", "TypeScript"]
   },
   {
     "id": "meraid-pb",
@@ -21,7 +27,10 @@
     "url": "https://www.meraid.pk",
     "description": "meraID is Pakistan's first e-identity mobile application",
     "logo": "meraid",
-    "source": null
+    "source": null,
+    "caseStudySlug": "meraid",
+    "featured": true,
+    "tech": ["Flutter", "Node.js", "AWS", "OpenCV"]
   },
   {
     "id": "afterwokr-pb",
@@ -29,7 +38,9 @@
     "url": "https://www.goafterwork.com",
     "description": "An AI powered platform that helps companies plan events at scale",
     "logo": "afterwork",
-    "source": null
+    "source": null,
+    "featured": false,
+    "tech": ["Node.js", "Serverless", "React", "AWS"]
   },
   {
     "id": "alpha",
@@ -37,7 +48,9 @@
     "url": "https://solenova-tech.github.io/project-alpha-public/",
     "description": "Browser addon to boost productivity by blocking distractions",
     "logo": "alpha",
-    "source": null
+    "source": null,
+    "featured": false,
+    "tech": ["TypeScript", "WebExtensions"]
   },
   {
     "id": "gamma",
@@ -45,7 +58,9 @@
     "url": "https://solenova-tech.github.io/gamma/",
     "description": "An action to enable developers ship their code with ease",
     "logo": "gamma",
-    "source": "https://github.com/solenova-tech/gamma"
+    "source": "https://github.com/solenova-tech/gamma",
+    "featured": false,
+    "tech": ["TypeScript", "GitHub Actions", "Node.js"]
   },
   {
     "logo": "mavencery",
@@ -53,7 +68,9 @@
     "name": "Mavencery",
     "url": "http://www.mavencery.com/",
     "description": "Enhances online shopping with coupons and personalized suggestions",
-    "source": null
+    "source": null,
+    "featured": false,
+    "tech": ["Node.js", "React", "MySQL"]
   },
   {
     "logo": "dsm",
@@ -61,7 +78,9 @@
     "name": "Drive Safe Medicals",
     "url": "https://www.drivesafemedicals.co.uk",
     "description": "Drive Safe Medicals eases drivers to administer their medicals",
-    "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io"
+    "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io",
+    "featured": false,
+    "tech": ["HTML", "CSS", "JavaScript"]
   },
   {
     "logo": "tfp",
@@ -69,6 +88,8 @@
     "name": "Tameer Foundation Pakistan",
     "url": "https://www.tameerfoundationpakistan.org",
     "description": "Tameer is a non profit working for the betterment of Pakistan",
-    "source": null
+    "source": null,
+    "featured": false,
+    "tech": ["HTML", "CSS", "JavaScript"]
   }
 ]

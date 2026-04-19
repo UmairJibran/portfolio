@@ -15,10 +15,14 @@ import {
   Building2,
   Quote,
   ArrowUpRight,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
 import { RecentWriting } from "@/components/RecentWriting";
+import { SkillsSection } from "@/components/SkillsSection";
+import { ContributionGraph } from "@/components/ContributionGraph";
+import { MapPin } from "lucide-react";
 import profile from "@/data/profile.json";
 import experience from "@/data/experience.json";
 import testimonials from "@/data/testimonials.json";
@@ -347,10 +351,20 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-16">
         {/* Title */}
         <h1 className="text-white text-4xl md:text-5xl font-bold mb-4 leading-tight">
-          Software engineer, technical
+          Software engineer building backend systems,
           <br />
-          writer & open-source maintainer
+          LLM workflows & open-source tools
         </h1>
+
+        {/* Availability badge */}
+        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-md bg-green-400/10 border border-green-400/30 text-green-400 text-sm font-medium">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+          </span>
+          <MapPin className="h-3.5 w-3.5" />
+          Open to relocation · EU / North America · Remote-friendly
+        </div>
 
         {/* Description */}
         <div
@@ -359,7 +373,7 @@ export default function Home() {
         />
 
         {/* Social Links */}
-        <div className="flex flex-wrap gap-3 mb-16">
+        <div className="flex flex-wrap gap-3 mb-6">
           {profile.social.map((item) => (
             <Link
               key={item.name}
@@ -375,6 +389,101 @@ export default function Home() {
               <span>{item.name}</span>
             </Link>
           ))}
+        </div>
+
+        {/* Primary CTAs — above the fold */}
+        <div className="flex flex-wrap gap-3 mb-16">
+          <Button
+            asChild
+            className="bg-green-600 hover:bg-green-700 text-white"
+          >
+            <Link href={`mailto:${profile.email}`}>
+              <Mail className="mr-2 h-4 w-4" />
+              Get in Touch
+            </Link>
+          </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="border-gray-700 text-white bg-transparent hover:bg-gray-800 hover:border-green-400 hover:text-white"
+          >
+            <Link href={profile.consultationLink} target="_blank">
+              <Calendar className="mr-2 h-4 w-4" />
+              Schedule Call
+            </Link>
+          </Button>
+        </div>
+
+        {/* Skills Section */}
+        <SkillsSection />
+
+        {/* Featured Case Study */}
+        <div className="mb-16">
+          <Link
+            href="/projects/puppydog"
+            className="group block bg-gradient-to-br from-[#1a1a1a] to-[#141414] border border-gray-800 hover:border-green-400/60 rounded-lg p-6 md:p-8 transition-all duration-300"
+          >
+            <div className="flex items-center gap-2 mb-3">
+              <Sparkles className="h-4 w-4 text-green-400" />
+              <span className="text-green-400 text-xs uppercase tracking-wider font-mono">
+                Featured Case Study
+              </span>
+            </div>
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 group-hover:text-green-400 transition-colors">
+              PuppyDog.io — Personalized Demo Infrastructure at Scale
+            </h2>
+            <p className="text-gray-400 text-base leading-relaxed mb-5 max-w-3xl">
+              How I built a mass personalization engine, migrated AI compute
+              from AWS to GCP saving 36% on infra costs, and took backend test
+              coverage from 0 to 75% as the sole backend engineer.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  −36%
+                </div>
+                <div className="text-gray-500 text-xs">Infra cost</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  0 → 75%
+                </div>
+                <div className="text-gray-500 text-xs">Test coverage</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  2w → daily
+                </div>
+                <div className="text-gray-500 text-xs">Release cadence</div>
+              </div>
+              <div>
+                <div className="text-green-400 text-2xl font-bold font-mono">
+                  10k+
+                </div>
+                <div className="text-gray-500 text-xs">
+                  Prospects / job, unattended
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center justify-between">
+              <div className="flex flex-wrap gap-2">
+                {["Node.js", "GCP", "AWS", "Architecture", "AI/LLM"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="inline-flex items-center rounded-md bg-gray-800/60 px-2.5 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700/50"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+              <span className="text-green-400 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                Read case study
+                <ArrowUpRight className="h-4 w-4" />
+              </span>
+            </div>
+          </Link>
         </div>
 
         {/* Recent Writing Section */}
@@ -394,52 +503,8 @@ export default function Home() {
           </div>
         )}
 
-        {/* GitHub Contribution Graph Placeholder */}
-        <div className="mb-16">
-          <h2 className="text-white text-xl font-semibold mb-4">
-            Contribution Graph
-          </h2>
-          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-gray-400 text-sm">
-                1038 contributions in the last year
-              </p>
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-gray-500">Less</span>
-                <div className="flex gap-1">
-                  <div className="w-3 h-3 bg-[#0e4429] rounded-sm"></div>
-                  <div className="w-3 h-3 bg-[#006d32] rounded-sm"></div>
-                  <div className="w-3 h-3 bg-[#26a641] rounded-sm"></div>
-                  <div className="w-3 h-3 bg-[#39d353] rounded-sm"></div>
-                </div>
-                <span className="text-xs text-gray-500">More</span>
-              </div>
-            </div>
-            {/* Simplified contribution grid */}
-            <div className="grid grid-cols-[repeat(53,minmax(0,1fr))] gap-[3px] overflow-x-auto">
-              {Array.from({ length: 371 }).map((_, i) => {
-                const intensity = Math.random();
-                const bgColor =
-                  intensity > 0.75
-                    ? "bg-[#39d353]"
-                    : intensity > 0.5
-                      ? "bg-[#26a641]"
-                      : intensity > 0.25
-                        ? "bg-[#006d32]"
-                        : intensity > 0.1
-                          ? "bg-[#0e4429]"
-                          : "bg-[#161b22]";
-                return (
-                  <div
-                    key={i}
-                    className={`w-[10px] h-[10px] rounded-sm ${bgColor}`}
-                    title={`Contributions on day ${i + 1}`}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        {/* GitHub Contribution Graph */}
+        <ContributionGraph username="umairjibran" />
       </section>
 
       {/* Work Experience Section - Timeline */}

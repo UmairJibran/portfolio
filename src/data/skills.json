@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Backend",
+    "items": [
+      "Node.js",
+      "TypeScript",
+      "Python",
+      "Serverless",
+      "Event-driven architecture",
+      "MySQL",
+      "Redis"
+    ]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "items": [
+      "AWS",
+      "GCP",
+      "Docker",
+      "GitHub Actions",
+      "Datadog"
+    ]
+  },
+  {
+    "category": "AI / LLM",
+    "items": [
+      "OpenAI APIs",
+      "Agentic workflows",
+      "RAG pipelines",
+      "Prompt engineering"
+    ]
+  },
+  {
+    "category": "Frontend",
+    "items": [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "JavaScript"
+    ]
+  }
+]
