@@ -8,6 +8,7 @@ import { Calendar, ArrowLeft, Clock } from "lucide-react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import meta from "@/data/meta.json";
+import { toJsonLdScript } from "@/lib/jsonLd";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
     const story = getAllBlog().find(story => story.slug === params.slug);
@@ -106,7 +107,7 @@ export default async function StoryPage({ params }: { params: { slug: string } }
         <main className="bg-[#0d0d0d] min-h-screen grain">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(storyJsonLd) }}
+                dangerouslySetInnerHTML={{ __html: toJsonLdScript(storyJsonLd) }}
             />
             {/* Header */}
             <div className="border-b border-gray-800">

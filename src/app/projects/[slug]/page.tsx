@@ -9,21 +9,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import meta from "@/data/meta.json";
 import portfolio from "@/data/portfolio.json";
-
-type PortfolioItem = {
-  id: string;
-  name: string;
-  url: string | null;
-  description: string;
-  logo: string;
-  source: string | null;
-  caseStudySlug?: string;
-  featured?: boolean;
-  tech?: string[];
-};
+import type { ProjectItem } from "@/types/project";
+import { toJsonLdScript } from "@/lib/jsonLd";
 
 function findProjectForSlug(slug: string) {
-  return (portfolio as PortfolioItem[]).find((p) => p.caseStudySlug === slug);
+  return (portfolio as ProjectItem[]).find((p) => p.caseStudySlug === slug);
 }
 
 export async function generateMetadata({
@@ -87,7 +77,7 @@ export default async function CaseStudyPage({
     <main className="bg-[#0d0d0d] min-h-screen grain">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: toJsonLdScript(jsonLd) }}
       />
       <div className="border-b border-gray-800">
         <article className="max-w-5xl mx-auto px-6 py-16">

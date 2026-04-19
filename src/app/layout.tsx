@@ -7,6 +7,7 @@ import profile from "@/data/profile.json";
 import umamiAnalytics from "@/data/umamiAnalytics.json";
 import Script from "next/script";
 import Header from "@/components/Header";
+import { toJsonLdScript } from "@/lib/jsonLd";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -76,7 +77,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLdScript(personJsonLd) }}
         />
       </head>
       <Script

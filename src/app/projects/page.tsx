@@ -2,7 +2,8 @@ import Link from "next/link";
 import { ArrowUpRight, Code2, Briefcase } from "lucide-react";
 import portfolio from "@/data/portfolio.json";
 import { getCaseStudySlugs } from "@/lib/api";
-import { ProjectsList, type ProjectItem } from "@/components/ProjectsList";
+import { ProjectsList } from "@/components/ProjectsList";
+import type { ProjectItem } from "@/types/project";
 
 export default function ProjectsPage() {
   const sortedPortfolio = [...(portfolio as ProjectItem[])].sort((a, b) => {

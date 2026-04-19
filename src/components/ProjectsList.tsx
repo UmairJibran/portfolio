@@ -9,18 +9,7 @@ import {
   Star,
   BookOpen,
 } from "lucide-react";
-
-export type ProjectItem = {
-  id: string;
-  name: string;
-  url: string | null;
-  description: string;
-  logo: string;
-  source: string | null;
-  caseStudySlug?: string;
-  featured?: boolean;
-  tech?: string[];
-};
+import type { ProjectItem } from "@/types/project";
 
 export function ProjectsList({
   projects,
