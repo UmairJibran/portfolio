@@ -28,43 +28,43 @@ export default function Index() {
 
   if (allContent.length === 0) {
     return (
-      <main className="bg-[#0d0d0d] min-h-screen grain flex items-center justify-center">
-        <div className="text-gray-500">oops... I should write some up</div>
+      <main className="bg-background min-h-screen grain flex items-center justify-center">
+        <div className="text-faint">oops... I should write some up</div>
       </main>
     );
   }
 
   return (
-    <main className="bg-[#0d0d0d] min-h-screen grain">
+    <main className="bg-background min-h-screen grain">
       {/* Header section */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-12">
         <div className="flex items-end justify-between mb-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <PenTool className="h-6 w-6 text-green-400" />
-              <span className="text-gray-500 text-sm uppercase tracking-wider">Blog & Case Studies</span>
+              <PenTool className="h-6 w-6 text-link" />
+              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">Blog & Case Studies</span>
             </div>
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-foreground text-5xl md:text-6xl font-bold mb-6">
               Writing
             </h1>
           </div>
           <div className="text-right">
-            <div className="text-gray-500 text-sm mb-1">Articles</div>
-            <div className="text-green-400 text-2xl font-bold font-mono">
+            <div className="text-faint text-sm mb-1">Articles</div>
+            <div className="text-link text-2xl font-bold font-mono brutal:bg-black brutal:text-white brutal:px-2">
               {String(allContent.length).padStart(2, '0')}
             </div>
           </div>
         </div>
         
-        <div className="text-base text-gray-400 space-y-3 max-w-3xl mb-6">
+        <div className="text-base text-muted-foreground space-y-3 max-w-3xl mb-6">
           <p>
             I write about software engineering, web development, and the technical challenges I encounter. 
             Here you will find in-depth case studies, technical articles, and development stories.
           </p>
           <div className="flex items-center gap-6 pt-2">
             <Link 
-              href="/rss.xml" 
-              className="flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors text-sm"
+              href="/rss.xml"
+              className="flex items-center gap-2 text-faint hover:text-link transition-colors text-sm"
             >
               <Rss className="h-4 w-4" />
               RSS Feed
@@ -72,7 +72,7 @@ export default function Index() {
             <Link 
               href="https://linkedin.com/in/umairjibran" 
               target="_blank"
-              className="flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors text-sm"
+              className="flex items-center gap-2 text-faint hover:text-link transition-colors text-sm"
             >
               <Linkedin className="h-4 w-4" />
               Follow on LinkedIn
@@ -80,7 +80,7 @@ export default function Index() {
           </div>
         </div>
         
-        <div className="h-px bg-gradient-to-r from-green-400 via-gray-800 to-transparent"></div>
+        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-black brutal:h-[3px]"></div>
       </section>
 
       {/* All content */}

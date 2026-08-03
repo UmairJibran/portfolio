@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed text-gray-300;
+  @apply text-lg leading-relaxed text-foreground/80;
 }
 
 .markdown p,
@@ -18,15 +18,15 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug text-white font-semibold;
+  @apply text-3xl mt-12 mb-4 leading-snug text-foreground font-semibold;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug text-white font-semibold;
+  @apply text-2xl mt-8 mb-4 leading-snug text-foreground font-semibold;
 }
 
 .markdown a {
-  color: #10b981;
+  color: rgb(var(--link));
   display: inline-block;
   position: relative;
   font-weight: 500;
@@ -39,7 +39,7 @@
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #10b981;
+  background-color: rgb(var(--link));
   transform: translateX(-50%);
   transition: width 0.3s;
 }
@@ -53,10 +53,14 @@
   @apply flex justify-center w-full my-6 rounded-lg;
 }
 
+:global([data-theme="brutal"]) .markdown img {
+  border: 2px solid #000;
+}
+
 .markdown pre code {
   font-family: "Fira Code", monospace;
-  background-color: #1a1a1a;
-  color: #e5e7eb;
+  background-color: rgb(var(--card));
+  color: rgb(var(--foreground) / 0.9);
   padding: 16px;
   border-radius: 8px;
   display: block;
@@ -65,18 +69,32 @@
   white-space: pre;
   position: relative;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgb(var(--border));
+}
+
+:global([data-theme="brutal"]) .markdown pre code {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 0 #000;
 }
 
 .markdown code {
   font-family: "Fira Code", monospace;
-  background-color: #1a1a1a;
-  color: #10b981;
+  background-color: rgb(var(--card));
+  color: rgb(var(--link));
   padding: 3px 8px;
   border-radius: 4px;
   display: inline;
   white-space: nowrap;
-  border: 1px solid #2a2a2a;
+  border: 1px solid rgb(var(--border));
+}
+
+:global([data-theme="brutal"]) .markdown code {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0;
+  color: #111;
 }
 
 .markdown pre code::before {
@@ -85,30 +103,40 @@
   position: absolute;
   left: -2.5em;
   text-align: right;
-  color: #555;
+  color: rgb(var(--faint));
 }
 
 .markdown blockquote {
-  @apply border-l-4 border-green-400/50 pl-4 italic text-gray-400 bg-[#1a1a1a] py-3 pr-4 rounded-r-lg;
+  @apply border-l-4 border-brand/50 pl-4 italic text-muted-foreground bg-card py-3 pr-4 rounded-r-lg;
+}
+
+:global([data-theme="brutal"]) .markdown blockquote {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-left: 6px solid #ffd400;
+  border-radius: 0;
 }
 
 .markdown table {
   @apply w-full my-6 border-collapse text-left text-base;
 }
 
+:global([data-theme="brutal"]) .markdown table {
+  border: 2px solid #000;
+}
+
 .markdown thead {
-  @apply bg-[#1a1a1a];
+  @apply bg-card;
 }
 
 .markdown th {
-  @apply text-white font-semibold px-4 py-3 border-b border-gray-700;
+  @apply text-foreground font-semibold px-4 py-3 border-b border-edge;
 }
 
 .markdown td {
-  @apply px-4 py-3 border-b border-gray-800 text-gray-300 align-top;
+  @apply px-4 py-3 border-b border-border text-foreground/80 align-top;
 }
 
 .markdown tbody tr:last-child td {
   @apply border-b-0;
 }
-

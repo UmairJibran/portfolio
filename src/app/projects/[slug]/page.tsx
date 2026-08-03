@@ -74,16 +74,16 @@ export default async function CaseStudyPage({
   };
 
   return (
-    <main className="bg-[#0d0d0d] min-h-screen grain">
+    <main className="bg-background min-h-screen grain">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLdScript(jsonLd) }}
       />
-      <div className="border-b border-gray-800">
+      <div className="border-b border-border brutal:border-b-[3px] brutal:border-black">
         <article className="max-w-5xl mx-auto px-6 py-16">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors mb-8 text-sm"
+            className="inline-flex items-center gap-2 text-faint hover:text-link transition-colors mb-8 text-sm"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to projects
@@ -92,7 +92,7 @@ export default async function CaseStudyPage({
           <header>
             <div className="flex items-center gap-4 mb-6">
               {project && (
-                <div className="flex-shrink-0 w-14 h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                <div className="flex-shrink-0 w-14 h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
                   <Image
                     src={`/assets/logos/${project.logo}.webp`}
                     alt={project.name}
@@ -102,24 +102,24 @@ export default async function CaseStudyPage({
                   />
                 </div>
               )}
-              <span className="inline-flex items-center rounded-md bg-green-400/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+              <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:bg-brand brutal:text-black brutal:border brutal:border-black brutal:ring-0 brutal:font-bold">
                 Case study
               </span>
               {story.tags?.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center rounded-md bg-gray-800/50 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-700/50"
+                  className="inline-flex items-center rounded-md bg-secondary/70 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:ring-0 brutal:font-bold"
                 >
                   {tag}
                 </span>
               ))}
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
               {story.title}
             </h1>
 
-            <p className="text-xl text-gray-400 leading-relaxed mb-6">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
               {story.excerpt}
             </p>
 
@@ -128,7 +128,7 @@ export default async function CaseStudyPage({
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-md bg-gray-800/60 px-2.5 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700/50"
+                    className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:ring-0 brutal:font-bold"
                   >
                     {t}
                   </span>
@@ -136,7 +136,7 @@ export default async function CaseStudyPage({
               </div>
             )}
 
-            <div className="flex items-center gap-4 text-gray-500 text-sm flex-wrap">
+            <div className="flex items-center gap-4 text-faint text-sm flex-wrap">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <time dateTime={story.date}>
@@ -155,7 +155,7 @@ export default async function CaseStudyPage({
                 <Link
                   href={project.url}
                   target="_blank"
-                  className="flex items-center gap-2 hover:text-green-400 transition-colors"
+                  className="flex items-center gap-2 hover:text-link transition-colors"
                 >
                   <ExternalLink className="h-4 w-4" />
                   <span>Visit project</span>
@@ -165,7 +165,7 @@ export default async function CaseStudyPage({
                 <Link
                   href={project.source}
                   target="_blank"
-                  className="flex items-center gap-2 hover:text-green-400 transition-colors"
+                  className="flex items-center gap-2 hover:text-link transition-colors"
                 >
                   <Github className="h-4 w-4" />
                   <span>Source</span>

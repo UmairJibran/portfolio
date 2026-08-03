@@ -84,12 +84,12 @@ function ExperienceTimelineItem({
         {/* Card */}
         <div className="w-[calc(50%-2rem)]">
           <div
-            className="group bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 hover:border-green-400 transition-all duration-300 cursor-pointer"
+            className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
             onClick={() => setShowDetails(true)}
           >
             <div className="flex items-start gap-4">
               {/* Company Logo */}
-              <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+              <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
                 {companyLogos[experience.company] ? (
                   <Image
                     src={companyLogos[experience.company]}
@@ -99,18 +99,18 @@ function ExperienceTimelineItem({
                     className="object-contain"
                   />
                 ) : (
-                  <Building2 className="w-6 h-6 text-gray-400" />
+                  <Building2 className="w-6 h-6 text-muted-foreground" />
                 )}
               </div>
 
               {/* Content */}
               <div className="flex-1 min-w-0">
-                <h3 className="text-white font-semibold text-base mb-1 group-hover:text-green-400 transition-colors">
+                <h3 className="text-foreground font-semibold text-base mb-1 group-hover:text-link transition-colors">
                   <div className="flex items-center gap-2">
                     {experience.position}
                     {experience.volunteer && (
                       <span
-                        className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-900/30 border border-blue-700/50 text-blue-300 text-xs font-medium"
+                        className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-900/30 border border-blue-700/50 text-blue-300 text-xs font-medium brutal:bg-brand brutal:border-black brutal:text-black brutal:font-bold"
                         title="Volunteer"
                       >
                         Volunteer
@@ -121,13 +121,13 @@ function ExperienceTimelineItem({
                 <Link
                   href={experience.website}
                   target="_blank"
-                  className="text-gray-400 text-sm hover:text-green-400 transition-colors inline-flex items-center gap-1 mb-2"
+                  className="text-muted-foreground text-sm hover:text-link transition-colors inline-flex items-center gap-1 mb-2"
                   onClick={(e) => e.stopPropagation()}
                 >
                   {experience.company}
                   <ExternalLink className="w-3 h-3" />
                 </Link>
-                <p className="text-gray-500 text-xs mb-3">
+                <p className="text-faint text-xs mb-3">
                   {startDate.toLocaleDateString("en-US", {
                     month: "short",
                     year: "numeric",
@@ -141,7 +141,7 @@ function ExperienceTimelineItem({
                     : "Present"}{" "}
                   · {duration}
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                   {experience.oneLine}
                 </p>
               </div>
@@ -151,7 +151,7 @@ function ExperienceTimelineItem({
 
         {/* Timeline dot and line */}
         <div className="flex flex-col items-center">
-          <div className="w-4 h-4 bg-green-400 rounded-full border-4 border-[#0d0d0d] z-10"></div>
+          <div className="w-4 h-4 bg-brand rounded-full border-4 border-background z-10 brutal:bg-black brutal:border-0"></div>
         </div>
 
         {/* Empty space on the other side */}
@@ -197,9 +197,9 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
       <div className="flex items-center justify-center gap-6 px-6">
         {/* Previous Testimonial (Left, smaller) */}
         <div className="hidden lg:block w-[300px] opacity-40 transform scale-90 transition-all duration-500">
-          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-5 h-[280px] flex flex-col">
-            <Quote className="w-6 h-6 text-green-400 mb-3 flex-shrink-0" />
-            <p className="text-gray-300 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
+          <div className="bg-card border border-border rounded-lg p-5 h-[280px] flex flex-col">
+            <Quote className="w-6 h-6 text-link mb-3 flex-shrink-0" />
+            <p className="text-foreground/80 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
               {testimonials[getTestimonialIndex(-1)].testimonial}
             </p>
             <div className="flex items-center gap-3">
@@ -208,13 +208,13 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[getTestimonialIndex(-1)].name}
                 width={32}
                 height={32}
-                className="rounded-full"
+                className="rounded-full brutal:border-2 brutal:border-black"
               />
               <div className="flex-1 min-w-0">
-                <div className="text-white font-semibold text-xs truncate">
+                <div className="text-foreground font-semibold text-xs truncate">
                   {testimonials[getTestimonialIndex(-1)].name}
                 </div>
-                <div className="text-gray-500 text-xs truncate">
+                <div className="text-faint text-xs truncate">
                   {testimonials[getTestimonialIndex(-1)].designationAtTime}
                 </div>
               </div>
@@ -226,9 +226,9 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
         <div
           className={`w-full max-w-2xl transition-all duration-500 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
         >
-          <div className="bg-[#1a1a1a] border-2 border-green-400 rounded-lg p-8 shadow-xl shadow-green-400/10">
-            <Quote className="w-10 h-10 text-green-400 mb-6" />
-            <p className="text-gray-200 text-base leading-relaxed mb-8">
+          <div className="bg-card border-2 border-brand rounded-lg p-8 shadow-xl shadow-brand/10 brutal:shadow-[6px_6px_0_0_#ffd400] brutal:border-black">
+            <Quote className="w-10 h-10 text-link mb-6" />
+            <p className="text-foreground/90 text-base leading-relaxed mb-8">
               {testimonials[currentIndex].testimonial}
             </p>
             <div className="flex items-center gap-4">
@@ -237,16 +237,16 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[currentIndex].name}
                 width={56}
                 height={56}
-                className="rounded-full"
+                className="rounded-full brutal:border-2 brutal:border-black"
               />
               <div className="flex-1">
-                <div className="text-white font-bold text-lg">
+                <div className="text-foreground font-bold text-lg">
                   {testimonials[currentIndex].name}
                 </div>
-                <div className="text-gray-400 text-sm">
+                <div className="text-muted-foreground text-sm">
                   {testimonials[currentIndex].designationAtTime}
                 </div>
-                <div className="text-gray-500 text-xs mt-1">
+                <div className="text-faint text-xs mt-1">
                   {testimonials[currentIndex].employerAtTime}
                 </div>
               </div>
@@ -257,7 +257,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                     testimonials[currentIndex].linkedin
                   }
                   target="_blank"
-                  className="text-gray-500 hover:text-green-400 transition-colors p-2"
+                  className="text-faint hover:text-link transition-colors p-2"
                 >
                   <Linkedin className="w-5 h-5" />
                 </Link>
@@ -268,9 +268,9 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 
         {/* Next Testimonial (Right, smaller) */}
         <div className="hidden lg:block w-[300px] opacity-40 transform scale-90 transition-all duration-500">
-          <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-5 h-[280px] flex flex-col">
-            <Quote className="w-6 h-6 text-green-400 mb-3 flex-shrink-0" />
-            <p className="text-gray-300 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
+          <div className="bg-card border border-border rounded-lg p-5 h-[280px] flex flex-col">
+            <Quote className="w-6 h-6 text-link mb-3 flex-shrink-0" />
+            <p className="text-foreground/80 text-xs leading-relaxed mb-4 line-clamp-4 flex-1">
               {testimonials[getTestimonialIndex(1)].testimonial}
             </p>
             <div className="flex items-center gap-3">
@@ -279,13 +279,13 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[getTestimonialIndex(1)].name}
                 width={32}
                 height={32}
-                className="rounded-full"
+                className="rounded-full brutal:border-2 brutal:border-black"
               />
               <div className="flex-1 min-w-0">
-                <div className="text-white font-semibold text-xs truncate">
+                <div className="text-foreground font-semibold text-xs truncate">
                   {testimonials[getTestimonialIndex(1)].name}
                 </div>
-                <div className="text-gray-500 text-xs truncate">
+                <div className="text-faint text-xs truncate">
                   {testimonials[getTestimonialIndex(1)].designationAtTime}
                 </div>
               </div>
@@ -306,10 +306,10 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 setIsTransitioning(false);
               }, 300);
             }}
-            className={`h-2 rounded-full transition-all duration-300 ${
+            className={`h-2 rounded-full transition-all duration-300 brutal:border brutal:border-black ${
               index === currentIndex
-                ? "w-8 bg-green-400"
-                : "w-2 bg-gray-700 hover:bg-gray-600"
+                ? "w-8 bg-brand"
+                : "w-2 bg-border hover:bg-edge"
             }`}
             aria-label={`Go to testimonial ${index + 1}`}
           />
@@ -346,21 +346,21 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[#0d0d0d] min-h-screen grain">
+    <main className="bg-background min-h-screen grain">
       {/* Hero Section - Dark Theme */}
       <section className="max-w-6xl mx-auto px-6 pt-20 pb-16">
         {/* Title */}
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-4 leading-tight">
+        <h1 className="text-foreground text-4xl md:text-5xl font-bold mb-4 leading-tight">
           Software engineer building backend systems,
           <br />
           LLM workflows & open-source tools
         </h1>
 
         {/* Availability badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-md bg-green-400/10 border border-green-400/30 text-green-400 text-sm font-medium">
+        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-md bg-brand/10 border border-brand/30 text-link text-sm font-medium brutal:bg-brand brutal:border-2 brutal:border-black brutal:text-black brutal:font-bold">
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75 brutal:hidden"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand brutal:bg-black"></span>
           </span>
           <MapPin className="h-3.5 w-3.5" />
           Open to relocation · EU / North America · Remote-friendly
@@ -368,7 +368,7 @@ export default function Home() {
 
         {/* Description */}
         <div
-          className="text-gray-400 text-base md:text-lg leading-relaxed mb-8 max-w-3xl [&_a]:text-green-400 [&_a]:hover:underline [&_strong]:text-white [&_strong]:font-medium [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
+          className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-3xl [&_a]:text-link [&_a]:hover:underline [&_strong]:text-foreground [&_strong]:font-medium [&_img]:inline-block [&_img]:w-5 [&_img]:h-5 [&_img]:mx-1"
           dangerouslySetInnerHTML={{ __html: profile.extraInfo }}
         />
 
@@ -378,7 +378,7 @@ export default function Home() {
             <Link
               key={item.name}
               href={item.link}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[#1a1a1a] hover:bg-[#252525] border border-gray-800 rounded-md text-gray-300 hover:text-white transition-colors text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-card hover:bg-secondary border border-border rounded-md text-foreground/80 hover:text-foreground transition-colors text-sm brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black brutal:transition-all"
               target="_blank"
             >
               {item.icon === "GitHub" && <Github className="h-4 w-4" />}
@@ -395,7 +395,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-3 mb-16">
           <Button
             asChild
-            className="bg-green-600 hover:bg-green-700 text-white"
+            className="bg-primary hover:bg-primary-hover text-primary-foreground brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
           >
             <Link href={`mailto:${profile.email}`}>
               <Mail className="mr-2 h-4 w-4" />
@@ -405,7 +405,7 @@ export default function Home() {
           <Button
             asChild
             variant="outline"
-            className="border-gray-700 text-white bg-transparent hover:bg-gray-800 hover:border-green-400 hover:text-white"
+            className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal:bg-card brutal:border-2 brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase brutal:hover:border-black"
           >
             <Link href={profile.consultationLink} target="_blank">
               <Calendar className="mr-2 h-4 w-4" />
@@ -421,46 +421,46 @@ export default function Home() {
         <div className="mb-16">
           <Link
             href="/projects/puppydog"
-            className="group block bg-gradient-to-br from-[#1a1a1a] to-[#141414] border border-gray-800 hover:border-green-400/60 rounded-lg p-6 md:p-8 transition-all duration-300"
+            className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-black brutal:shadow-[6px_6px_0_0_#ffd400] brutal:hover:shadow-[8px_8px_0_0_#ffd400] brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
           >
             <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="h-4 w-4 text-green-400" />
-              <span className="text-green-400 text-xs uppercase tracking-wider font-mono">
+              <Sparkles className="h-4 w-4 text-link" />
+              <span className="text-link text-xs uppercase tracking-wider font-mono brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">
                 Featured Case Study
               </span>
             </div>
-            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 group-hover:text-green-400 transition-colors">
+            <h2 className="text-foreground text-2xl md:text-3xl font-bold mb-3 group-hover:text-link transition-colors">
               PuppyDog.io — Personalized Demo Infrastructure at Scale
             </h2>
-            <p className="text-gray-400 text-base leading-relaxed mb-5 max-w-3xl">
+            <p className="text-muted-foreground text-base leading-relaxed mb-5 max-w-3xl">
               How I built a mass personalization engine, migrated AI compute
               from AWS to GCP saving 36% on infra costs, and took backend test
               coverage from 0 to 75% as the sole backend engineer.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
               <div>
-                <div className="text-green-400 text-2xl font-bold font-mono">
+                <div className="text-link text-2xl font-bold font-mono">
                   −36%
                 </div>
-                <div className="text-gray-500 text-xs">Infra cost</div>
+                <div className="text-faint text-xs">Infra cost</div>
               </div>
               <div>
-                <div className="text-green-400 text-2xl font-bold font-mono">
+                <div className="text-link text-2xl font-bold font-mono">
                   0 → 75%
                 </div>
-                <div className="text-gray-500 text-xs">Test coverage</div>
+                <div className="text-faint text-xs">Test coverage</div>
               </div>
               <div>
-                <div className="text-green-400 text-2xl font-bold font-mono">
+                <div className="text-link text-2xl font-bold font-mono">
                   2w → daily
                 </div>
-                <div className="text-gray-500 text-xs">Release cadence</div>
+                <div className="text-faint text-xs">Release cadence</div>
               </div>
               <div>
-                <div className="text-green-400 text-2xl font-bold font-mono">
+                <div className="text-link text-2xl font-bold font-mono">
                   10k+
                 </div>
-                <div className="text-gray-500 text-xs">
+                <div className="text-faint text-xs">
                   Prospects / job, unattended
                 </div>
               </div>
@@ -471,14 +471,14 @@ export default function Home() {
                   (tag) => (
                     <span
                       key={tag}
-                      className="inline-flex items-center rounded-md bg-gray-800/60 px-2.5 py-1 text-xs font-medium text-gray-300 ring-1 ring-inset ring-gray-700/50"
+                      className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50"
                     >
                       {tag}
                     </span>
                   ),
                 )}
               </div>
-              <span className="text-green-400 text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+              <span className="text-link text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                 Read case study
                 <ArrowUpRight className="h-4 w-4" />
               </span>
@@ -490,10 +490,15 @@ export default function Home() {
         {latestBlog && (
           <div className="mb-16">
             <div className="flex items-center justify-between mb-6">
-              <h2 className="text-white text-2xl font-bold">Latest Writing</h2>
+              <h2 className="text-foreground text-2xl font-bold">
+                <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+                  01
+                </span>
+                Latest Writing
+              </h2>
               <Link
                 href="/writing"
-                className="text-green-400 hover:text-green-300 text-sm font-medium inline-flex items-center gap-1 transition-colors"
+                className="text-link hover:text-link-hover text-sm font-medium inline-flex items-center gap-1 transition-colors"
               >
                 View all
                 <ArrowUpRight className="h-4 w-4" />
@@ -509,14 +514,17 @@ export default function Home() {
 
       {/* Work Experience Section - Timeline */}
       <section className="max-w-5xl mx-auto px-6 py-16">
-        <h2 className="text-white text-2xl font-bold mb-12 text-center">
+        <h2 className="text-foreground text-2xl font-bold mb-12 text-center">
+          <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+            02
+          </span>
           Work Experience
         </h2>
 
         {/* Timeline container */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-800 transform -translate-x-1/2 hidden md:block"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform -translate-x-1/2 hidden md:block brutal:w-[3px] brutal:bg-black"></div>
 
           {/* Timeline items */}
           <div className="hidden md:block">
@@ -535,13 +543,13 @@ export default function Home() {
             {experience.map((exp, index) => (
               <div key={index}>
                 <div
-                  className="group bg-[#1a1a1a] border border-gray-800 rounded-lg p-6 hover:border-green-400 transition-all duration-300 cursor-pointer"
+                  className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
                   onClick={() => {
                     // Will need to handle mobile dialog
                   }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
                       {companyLogos[exp.company] ? (
                         <Image
                           src={companyLogos[exp.company]}
@@ -551,23 +559,23 @@ export default function Home() {
                           className="object-contain"
                         />
                       ) : (
-                        <Building2 className="w-6 h-6 text-gray-400" />
+                        <Building2 className="w-6 h-6 text-muted-foreground" />
                       )}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-white font-semibold text-base mb-1 group-hover:text-green-400 transition-colors">
+                      <h3 className="text-foreground font-semibold text-base mb-1 group-hover:text-link transition-colors">
                         {exp.position}
                       </h3>
                       <Link
                         href={exp.website}
                         target="_blank"
-                        className="text-gray-400 text-sm hover:text-green-400 transition-colors inline-flex items-center gap-1 mb-2"
+                        className="text-muted-foreground text-sm hover:text-link transition-colors inline-flex items-center gap-1 mb-2"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {exp.company}
                         <ExternalLink className="w-3 h-3" />
                       </Link>
-                      <p className="text-gray-500 text-xs mb-3">
+                      <p className="text-faint text-xs mb-3">
                         {new Date(exp.startDate).toLocaleDateString("en-US", {
                           month: "short",
                           year: "numeric",
@@ -580,7 +588,7 @@ export default function Home() {
                             })
                           : "Present"}
                       </p>
-                      <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                         {exp.oneLine}
                       </p>
                     </div>
@@ -595,21 +603,26 @@ export default function Home() {
       {/* Testimonials Section - Carousel */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6 mb-8">
-          <h2 className="text-white text-2xl font-bold">What People Say</h2>
+          <h2 className="text-foreground text-2xl font-bold">
+            <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+              03
+            </span>
+            What People Say
+          </h2>
         </div>
         <TestimonialsCarousel testimonials={testimonials} />
       </section>
 
       {/* Footer / Contact */}
-      <footer className="max-w-6xl mx-auto px-6 py-16 border-t border-gray-800">
+      <footer className="max-w-6xl mx-auto px-6 py-16 border-t border-border brutal:border-t-[3px] brutal:border-black">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-gray-500 text-sm">
+          <div className="text-faint text-sm">
             Built with ❤️ by {profile.name.firstName} {profile.name.lastName}
           </div>
           <div className="flex gap-4">
             <Button
               asChild
-              className="bg-green-600 hover:bg-green-700 text-white"
+              className="bg-primary hover:bg-primary-hover text-primary-foreground brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
             >
               <Link href={`mailto:${profile.email}`}>
                 <Mail className="mr-2 h-4 w-4" />
@@ -619,7 +632,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-gray-700 text-white bg-transparent hover:bg-gray-800 hover:border-green-400 hover:text-white"
+              className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal:bg-card brutal:border-2 brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase brutal:hover:border-black"
             >
               <Link href={profile.consultationLink} target="_blank">
                 <Calendar className="mr-2 h-4 w-4" />
@@ -628,7 +641,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="text-center text-gray-600 text-sm mt-8">
+        <div className="text-center text-faint/80 text-sm mt-8">
           Copyright © {profile.name.firstName} {new Date().getFullYear()}. All
           rights reserved.
         </div>

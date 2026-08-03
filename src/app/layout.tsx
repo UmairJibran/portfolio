@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inconsolata } from "next/font/google";
+import { IBM_Plex_Mono, Inconsolata, Archivo_Black } from "next/font/google";
 import "@/styles/globals.css";
 
 import meta from "@/data/meta.json";
@@ -52,6 +52,16 @@ const inconsolata = Inconsolata({
   preload: false,
 });
 
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  variable: "--font-archivo",
+  preload: false,
+});
+
+/* Runs before paint: resolves theme from localStorage, else system
+   preference (dark -> noir, light -> brutal). Prevents theme flash. */
+const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="noir"&&t!=="brutal"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"brutal":"noir";}document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t==="brutal"?"light":"dark";}catch(e){}})();`;
+
 export const metadata: Metadata = {
   ...meta,
   metadataBase: new URL(meta.metadataBase),
@@ -68,13 +78,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="noir" suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/favicon/apple-touch-icon.png"
         />
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: toJsonLdScript(personJsonLd) }}
@@ -86,7 +97,7 @@ export default function RootLayout({
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
       <body
-        className={`${ibmPlexMono.variable} ${inconsolata.variable} font-mono bg-[#0d0d0d]`}
+        className={`${ibmPlexMono.variable} ${inconsolata.variable} ${archivoBlack.variable} font-mono bg-background`}
       >
         <Header />
         {children}

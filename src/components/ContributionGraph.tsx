@@ -14,11 +14,11 @@ type ApiResponse = {
 };
 
 const LEVEL_BG = [
-  "bg-[#161b22]",
-  "bg-[#0e4429]",
-  "bg-[#006d32]",
-  "bg-[#26a641]",
-  "bg-[#39d353]",
+  "bg-[#161b22] brutal:bg-[#e8e2d4]",
+  "bg-[#0e4429] brutal:bg-[#fff3b0]",
+  "bg-[#006d32] brutal:bg-[#ffe45c]",
+  "bg-[#26a641] brutal:bg-[#ffd400]",
+  "bg-[#39d353] brutal:bg-[#111111]",
 ];
 
 const API_BASE = "https://github-contributions-api.jogruber.de/v4";
@@ -112,24 +112,24 @@ export function ContributionGraph({ username }: { username: string }) {
 
   return (
     <div className="mb-16">
-      <h2 className="text-white text-xl font-semibold mb-4">
+      <h2 className="text-foreground text-xl font-semibold mb-4">
         Contribution Graph
       </h2>
-      <div className="bg-[#1a1a1a] border border-gray-800 rounded-lg p-6">
+      <div className="bg-card border border-border rounded-lg p-6 brutal:border-2 brutal:border-black brutal:shadow-hard">
         <div className="flex items-center justify-between mb-4">
-          <p className="text-gray-400 text-sm">
+          <p className="text-muted-foreground text-sm">
             {lastYearTotal !== null
               ? `${lastYearTotal.toLocaleString()} contributions in the last 365 days`
               : "Loading contributions…"}
           </p>
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Less</span>
+            <span className="text-xs text-faint">Less</span>
             <div className="flex gap-1">
               {LEVEL_BG.slice(1).map((c, i) => (
                 <div key={i} className={`w-3 h-3 rounded-sm ${c}`} />
               ))}
             </div>
-            <span className="text-xs text-gray-500">More</span>
+            <span className="text-xs text-faint">More</span>
           </div>
         </div>
         <div className="flex flex-col gap-1 w-full">
@@ -138,7 +138,7 @@ export function ContributionGraph({ username }: { username: string }) {
             {monthLabels.map((label, wi) => (
               <div
                 key={wi}
-                className="flex-1 min-w-0 text-[10px] text-gray-500 leading-none"
+                className="flex-1 min-w-0 text-[10px] text-faint leading-none"
               >
                 {label}
               </div>
@@ -151,7 +151,7 @@ export function ContributionGraph({ username }: { username: string }) {
                 {week.map((day, di) => (
                   <div
                     key={di}
-                    className={`aspect-square rounded-sm ring-1 ring-inset ring-gray-700/30 ${
+                    className={`aspect-square rounded-sm ring-1 ring-inset ring-edge/30 ${
                       day.date ? LEVEL_BG[day.level] : "bg-transparent"
                     }`}
                     title={
