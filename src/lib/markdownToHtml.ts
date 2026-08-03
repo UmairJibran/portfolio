@@ -21,7 +21,7 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
-    .use(rehypeHighlight, { detect: true })
+    .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(markdown);
   return result.toString();

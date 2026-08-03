@@ -28,13 +28,13 @@
     "react-feather": "^2.0.10",
     "rehype-highlight": "^7.0.2",
     "rehype-stringify": "^10.0.1",
-    "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
-    "remark-html": "^16.0.1",
+    "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sharp": "^0.33.4",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "unified": "^11.0.5",
     "xml-formatter": "^3.6.7"
   },
   "devDependencies": {
