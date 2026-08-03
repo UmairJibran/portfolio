@@ -47,7 +47,7 @@ When changes are made to those areas of the code, the designated `CODEOWNERS` wi
 
 The `CODEOWNERS` file can be placed in a few locations, but the most common one is:
 
-```
+```plaintext
 .github/CODEOWNERS
 ```
 
@@ -86,7 +86,7 @@ Creating a `CODEOWNERS` file is simple. Let’s walk through the steps:
 
 In your repository, create a new file called `CODEOWNERS` in the `.github` directory (or in the root or docs directory if you prefer).
 
-```
+```plaintext
 .github/CODEOWNERS
 ```
 

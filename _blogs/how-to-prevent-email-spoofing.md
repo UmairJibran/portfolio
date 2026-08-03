@@ -81,10 +81,8 @@ Add a TXT record specifying which mail servers are allowed to send emails for yo
 
 Example:
 
-```
-
+```plaintext
 "v=spf1 include:spf.privateemail.com -all"
-
 ```
 
 This tells receiving servers which senders are legitimate, in my case privateemail.com, yours may be different.
@@ -110,26 +108,20 @@ Start with monitoring mode:
 
 **NOTE**: `rua` stands for _Reporting URI for Aggregate_ reports, the email you have added will receive periodic email updates.
 
-```
-
+```plaintext
 v=DMARC1; p=none; rua=mailto:you@yourdomain.com
-
 ```
 
 Once confident, enforce it:
 
-```
-
+```plaintext
 v=DMARC1; p=quarantine; rua=mailto:you@yourdomain.com
-
 ```
 
 Eventually:
 
-```
-
+```plaintext
 v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:you@yourdomain.com
-
 ```
 
 This tells receiving servers what to do when SPF/DKIM fail.
