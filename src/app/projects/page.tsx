@@ -16,28 +16,28 @@ export default function ProjectsPage() {
     .map((f) => f.replace(/\.md$/, ""));
 
   return (
-    <main className="bg-[#0d0d0d] min-h-screen grain">
+    <main className="bg-background min-h-screen grain">
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-12">
         <div className="flex items-end justify-between mb-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <Briefcase className="h-6 w-6 text-green-400" />
-              <span className="text-gray-500 text-sm uppercase tracking-wider">
+              <Briefcase className="h-6 w-6 text-link" />
+              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
                 Portfolio
               </span>
             </div>
-            <h1 className="text-white text-5xl md:text-6xl font-bold">
+            <h1 className="text-foreground text-5xl md:text-6xl font-bold">
               Projects
             </h1>
           </div>
           <div className="text-right">
-            <div className="text-gray-500 text-sm mb-1">Total</div>
-            <div className="text-green-400 text-2xl font-bold font-mono">
+            <div className="text-faint text-sm mb-1">Total</div>
+            <div className="text-link text-2xl font-bold font-mono brutal:bg-foreground brutal:text-background brutal:px-2">
               {String(portfolio.length).padStart(2, "0")}
             </div>
           </div>
         </div>
-        <div className="h-px bg-gradient-to-r from-green-400 via-gray-800 to-transparent"></div>
+        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px]"></div>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-20">
@@ -48,14 +48,14 @@ export default function ProjectsPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="border-t border-gray-800 pt-8 flex items-center justify-between text-sm">
-          <div className="flex items-center gap-2 text-gray-500">
+        <div className="border-t border-border brutal:border-t-[3px] brutal:border-edge pt-8 flex items-center justify-between text-sm">
+          <div className="flex items-center gap-2 text-faint">
             <Code2 className="h-4 w-4" />
             <span>Open source contributions and client work</span>
           </div>
           <Link
             href="/"
-            className="text-gray-500 hover:text-green-400 transition-colors flex items-center gap-1"
+            className="text-faint hover:text-link transition-colors flex items-center gap-1"
           >
             Back to home
             <ArrowUpRight className="h-3 w-3" />

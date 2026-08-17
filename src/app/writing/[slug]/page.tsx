@@ -104,17 +104,17 @@ export default async function StoryPage({ params }: { params: { slug: string } }
     };
 
     return (
-        <main className="bg-[#0d0d0d] min-h-screen grain">
+        <main className="bg-background min-h-screen grain">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: toJsonLdScript(storyJsonLd) }}
             />
             {/* Header */}
-            <div className="border-b border-gray-800">
+            <div className="border-b border-border brutal:border-b-[3px]">
                 <article className="max-w-5xl mx-auto px-6 py-16">
                     <Link
                         href="/writing"
-                        className="inline-flex items-center gap-2 text-gray-500 hover:text-green-400 transition-colors mb-8 text-sm"
+                        className="inline-flex items-center gap-2 text-faint hover:text-link transition-colors mb-8 text-sm"
                     >
                         <ArrowLeft className="h-4 w-4" />
                         Back to all posts
@@ -122,28 +122,28 @@ export default async function StoryPage({ params }: { params: { slug: string } }
 
                     <header>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="inline-flex items-center rounded-md bg-green-400/10 px-3 py-1 text-sm font-medium text-green-400 ring-1 ring-inset ring-green-400/20">
+                            <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
                                 {story.type.replace("-", " ")}
                             </span>
                             {story.tags?.map((tag) => (
                                 <span
                                     key={tag}
-                                    className="inline-flex items-center rounded-md bg-gray-800/50 px-2 py-1 text-xs font-medium text-gray-400 ring-1 ring-inset ring-gray-700/50"
+                                    className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold"
                                 >
                                     {tag}
                                 </span>
                             ))}
                         </div>
 
-                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground leading-tight">
                             {story.title}
                         </h1>
 
-                        <p className="text-xl text-gray-400 leading-relaxed mb-6">
+                        <p className="text-xl text-muted-foreground leading-relaxed mb-6">
                             {story.excerpt}
                         </p>
 
-                        <div className="flex items-center gap-4 text-gray-500 text-sm">
+                        <div className="flex items-center gap-4 text-faint text-sm">
                             <div className="flex items-center gap-2">
                                 <Calendar className="h-4 w-4" />
                                 <time dateTime={story.date}>

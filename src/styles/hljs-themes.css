@@ -1,0 +1,209 @@
+/* GENERATED FILE — do not edit by hand.
+   Source: highlight.js 11.11.1 (github-dark.css, github.css).
+   Regenerate with: node scripts/generate-hljs-themes.js */
+
+/* github-dark.css -> [data-theme="noir"] */
+[data-theme="noir"] pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+[data-theme="noir"] code.hljs {
+  padding: 3px 5px;
+}
+
+[data-theme="noir"] .hljs {
+  color: #c9d1d9;
+  background: #0d1117;
+}
+
+[data-theme="noir"] .hljs-doctag,
+[data-theme="noir"] .hljs-keyword,
+[data-theme="noir"] .hljs-meta .hljs-keyword,
+[data-theme="noir"] .hljs-template-tag,
+[data-theme="noir"] .hljs-template-variable,
+[data-theme="noir"] .hljs-type,
+[data-theme="noir"] .hljs-variable.language_ {
+  color: #ff7b72;
+}
+
+[data-theme="noir"] .hljs-title,
+[data-theme="noir"] .hljs-title.class_,
+[data-theme="noir"] .hljs-title.class_.inherited__,
+[data-theme="noir"] .hljs-title.function_ {
+  color: #d2a8ff;
+}
+
+[data-theme="noir"] .hljs-attr,
+[data-theme="noir"] .hljs-attribute,
+[data-theme="noir"] .hljs-literal,
+[data-theme="noir"] .hljs-meta,
+[data-theme="noir"] .hljs-number,
+[data-theme="noir"] .hljs-operator,
+[data-theme="noir"] .hljs-variable,
+[data-theme="noir"] .hljs-selector-attr,
+[data-theme="noir"] .hljs-selector-class,
+[data-theme="noir"] .hljs-selector-id {
+  color: #79c0ff;
+}
+
+[data-theme="noir"] .hljs-regexp,
+[data-theme="noir"] .hljs-string,
+[data-theme="noir"] .hljs-meta .hljs-string {
+  color: #a5d6ff;
+}
+
+[data-theme="noir"] .hljs-built_in,
+[data-theme="noir"] .hljs-symbol {
+  color: #ffa657;
+}
+
+[data-theme="noir"] .hljs-comment,
+[data-theme="noir"] .hljs-code,
+[data-theme="noir"] .hljs-formula {
+  color: #8b949e;
+}
+
+[data-theme="noir"] .hljs-name,
+[data-theme="noir"] .hljs-quote,
+[data-theme="noir"] .hljs-selector-tag,
+[data-theme="noir"] .hljs-selector-pseudo {
+  color: #7ee787;
+}
+
+[data-theme="noir"] .hljs-subst {
+  color: #c9d1d9;
+}
+
+[data-theme="noir"] .hljs-section {
+  color: #1f6feb;
+  font-weight: bold;
+}
+
+[data-theme="noir"] .hljs-bullet {
+  color: #f2cc60;
+}
+
+[data-theme="noir"] .hljs-emphasis {
+  color: #c9d1d9;
+  font-style: italic;
+}
+
+[data-theme="noir"] .hljs-strong {
+  color: #c9d1d9;
+  font-weight: bold;
+}
+
+[data-theme="noir"] .hljs-addition {
+  color: #aff5b4;
+  background-color: #033a16;
+}
+
+[data-theme="noir"] .hljs-deletion {
+  color: #ffdcd7;
+  background-color: #67060c;
+}
+
+/* github.css -> [data-theme="brutal"] */
+[data-theme="brutal"] pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+[data-theme="brutal"] code.hljs {
+  padding: 3px 5px;
+}
+
+[data-theme="brutal"] .hljs {
+  color: #24292e;
+  background: #ffffff;
+}
+
+[data-theme="brutal"] .hljs-doctag,
+[data-theme="brutal"] .hljs-keyword,
+[data-theme="brutal"] .hljs-meta .hljs-keyword,
+[data-theme="brutal"] .hljs-template-tag,
+[data-theme="brutal"] .hljs-template-variable,
+[data-theme="brutal"] .hljs-type,
+[data-theme="brutal"] .hljs-variable.language_ {
+  color: #d73a49;
+}
+
+[data-theme="brutal"] .hljs-title,
+[data-theme="brutal"] .hljs-title.class_,
+[data-theme="brutal"] .hljs-title.class_.inherited__,
+[data-theme="brutal"] .hljs-title.function_ {
+  color: #6f42c1;
+}
+
+[data-theme="brutal"] .hljs-attr,
+[data-theme="brutal"] .hljs-attribute,
+[data-theme="brutal"] .hljs-literal,
+[data-theme="brutal"] .hljs-meta,
+[data-theme="brutal"] .hljs-number,
+[data-theme="brutal"] .hljs-operator,
+[data-theme="brutal"] .hljs-variable,
+[data-theme="brutal"] .hljs-selector-attr,
+[data-theme="brutal"] .hljs-selector-class,
+[data-theme="brutal"] .hljs-selector-id {
+  color: #005cc5;
+}
+
+[data-theme="brutal"] .hljs-regexp,
+[data-theme="brutal"] .hljs-string,
+[data-theme="brutal"] .hljs-meta .hljs-string {
+  color: #032f62;
+}
+
+[data-theme="brutal"] .hljs-built_in,
+[data-theme="brutal"] .hljs-symbol {
+  color: #e36209;
+}
+
+[data-theme="brutal"] .hljs-comment,
+[data-theme="brutal"] .hljs-code,
+[data-theme="brutal"] .hljs-formula {
+  color: #6a737d;
+}
+
+[data-theme="brutal"] .hljs-name,
+[data-theme="brutal"] .hljs-quote,
+[data-theme="brutal"] .hljs-selector-tag,
+[data-theme="brutal"] .hljs-selector-pseudo {
+  color: #22863a;
+}
+
+[data-theme="brutal"] .hljs-subst {
+  color: #24292e;
+}
+
+[data-theme="brutal"] .hljs-section {
+  color: #005cc5;
+  font-weight: bold;
+}
+
+[data-theme="brutal"] .hljs-bullet {
+  color: #735c0f;
+}
+
+[data-theme="brutal"] .hljs-emphasis {
+  color: #24292e;
+  font-style: italic;
+}
+
+[data-theme="brutal"] .hljs-strong {
+  color: #24292e;
+  font-weight: bold;
+}
+
+[data-theme="brutal"] .hljs-addition {
+  color: #22863a;
+  background-color: #f0fff4;
+}
+
+[data-theme="brutal"] .hljs-deletion {
+  color: #b31d28;
+  background-color: #ffeef0;
+}
