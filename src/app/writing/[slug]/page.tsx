@@ -110,7 +110,7 @@ export default async function StoryPage({ params }: { params: { slug: string } }
                 dangerouslySetInnerHTML={{ __html: toJsonLdScript(storyJsonLd) }}
             />
             {/* Header */}
-            <div className="border-b border-border">
+            <div className="border-b border-border brutal:border-b-[3px]">
                 <article className="max-w-5xl mx-auto px-6 py-16">
                     <Link
                         href="/writing"
@@ -122,13 +122,13 @@ export default async function StoryPage({ params }: { params: { slug: string } }
 
                     <header>
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-black brutal:bg-brand brutal:text-black brutal:font-bold">
+                            <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
                                 {story.type.replace("-", " ")}
                             </span>
                             {story.tags?.map((tag) => (
                                 <span
                                     key={tag}
-                                    className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:font-bold"
+                                    className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold"
                                 >
                                     {tag}
                                 </span>

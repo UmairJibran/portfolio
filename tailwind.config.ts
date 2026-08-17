@@ -71,6 +71,9 @@ const config: Config = {
         "hard-sm": "2px 2px 0 0 rgb(var(--shadow-color))",
         hard: "4px 4px 0 0 rgb(var(--shadow-color))",
         "hard-lg": "6px 6px 0 0 rgb(var(--shadow-color))",
+        // Accent-coloured variants, for the pieces that get a brand-yellow drop.
+        "hard-brand": "6px 6px 0 0 rgb(var(--brand))",
+        "hard-brand-lg": "8px 8px 0 0 rgb(var(--brand))",
       },
     },
     fontFamily: {

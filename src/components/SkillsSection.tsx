@@ -12,16 +12,16 @@ export function SkillsSection() {
         {skills.map((group) => (
           <div
             key={group.category}
-            className="bg-card border border-border rounded-lg p-5 hover:border-brand/50 transition-colors brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5"
+            className="bg-card border border-border rounded-lg p-5 hover:border-brand/50 transition-colors brutal-card"
           >
-            <div className="text-faint text-xs uppercase tracking-wider mb-3 font-mono brutal:w-fit brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">
+            <div className="text-faint text-xs uppercase tracking-wider mb-3 font-mono brutal:w-fit brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
               {group.category}
             </div>
             <div className="flex flex-wrap gap-2">
               {group.items.map((item) => (
                 <span
                   key={item}
-                  className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50 brutal:border-2 brutal:border-black brutal:bg-card brutal:font-bold brutal:shadow-hard-sm brutal:ring-0"
+                  className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50 brutal:border-2 brutal:border-edge brutal:bg-card brutal:font-bold brutal:shadow-hard-sm brutal:ring-0"
                 >
                   {item}
                 </span>

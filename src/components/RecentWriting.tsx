@@ -19,19 +19,19 @@ export function RecentWriting({ story }: Props) {
   return (
     <Link
       href={`${root}/${story.slug}`}
-      className="group block bg-card border border-border rounded-lg p-6 hover:border-brand hover:bg-card/80 transition-all duration-300 brutal:hover:bg-card brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
+      className="group block bg-card border border-border rounded-lg p-6 hover:border-brand hover:bg-card/80 transition-all duration-300 brutal:hover:bg-card brutal-card"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1">
           {/* Type Badge */}
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-black brutal:bg-brand brutal:text-black brutal:font-bold">
+            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
               {story.type === "blog" ? "blog" : "case study"}
             </span>
             {story.tags?.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:font-bold"
+                className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold"
               >
                 {tag}
               </span>

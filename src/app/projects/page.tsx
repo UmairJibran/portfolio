@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <Briefcase className="h-6 w-6 text-link" />
-              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">
+              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
                 Portfolio
               </span>
             </div>
@@ -32,12 +32,12 @@ export default function ProjectsPage() {
           </div>
           <div className="text-right">
             <div className="text-faint text-sm mb-1">Total</div>
-            <div className="text-link text-2xl font-bold font-mono brutal:bg-black brutal:text-white brutal:px-2">
+            <div className="text-link text-2xl font-bold font-mono brutal:bg-foreground brutal:text-background brutal:px-2">
               {String(portfolio.length).padStart(2, "0")}
             </div>
           </div>
         </div>
-        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-black brutal:h-[3px]"></div>
+        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px]"></div>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-20">
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="border-t border-border brutal:border-t-[3px] brutal:border-black pt-8 flex items-center justify-between text-sm">
+        <div className="border-t border-border brutal:border-t-[3px] brutal:border-edge pt-8 flex items-center justify-between text-sm">
           <div className="flex items-center gap-2 text-faint">
             <Code2 className="h-4 w-4" />
             <span>Open source contributions and client work</span>

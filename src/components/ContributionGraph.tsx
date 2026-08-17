@@ -115,7 +115,7 @@ export function ContributionGraph({ username }: { username: string }) {
       <h2 className="text-foreground text-xl font-semibold mb-4">
         Contribution Graph
       </h2>
-      <div className="bg-card border border-border rounded-lg p-6 brutal:border-2 brutal:border-black brutal:shadow-hard">
+      <div className="bg-card border border-border rounded-lg p-6 brutal:border-2 brutal:border-edge brutal:shadow-hard">
         <div className="flex items-center justify-between mb-4">
           <p className="text-muted-foreground text-sm">
             {lastYearTotal !== null

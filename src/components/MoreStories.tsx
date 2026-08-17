@@ -66,7 +66,7 @@ export function MoreStories({ stories }: Props) {
               <div className="relative flex items-center mb-16">
                 <div className="w-28 flex-shrink-0" />
                 {/* Month bullet */}
-                <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-brand z-10 shadow-lg shadow-brand/50 brutal:border-2 brutal:border-black brutal:shadow-none" />
+                <div className="absolute left-32 -translate-x-1/2 w-4 h-4 rounded-full bg-brand z-10 shadow-lg shadow-brand/50 brutal:border-2 brutal:border-edge brutal:shadow-none" />
                 {/* Month label */}
                 <div className="pl-12">
                   <h3 className="text-3xl font-mono font-bold text-foreground">

@@ -79,7 +79,7 @@ export default async function CaseStudyPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: toJsonLdScript(jsonLd) }}
       />
-      <div className="border-b border-border brutal:border-b-[3px] brutal:border-black">
+      <div className="border-b border-border brutal:border-b-[3px] brutal:border-edge">
         <article className="max-w-5xl mx-auto px-6 py-16">
           <Link
             href="/projects"
@@ -92,7 +92,7 @@ export default async function CaseStudyPage({
           <header>
             <div className="flex items-center gap-4 mb-6">
               {project && (
-                <div className="flex-shrink-0 w-14 h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
+                <div className="flex-shrink-0 w-14 h-14 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-edge">
                   <Image
                     src={`/assets/logos/${project.logo}.webp`}
                     alt={project.name}
@@ -102,13 +102,13 @@ export default async function CaseStudyPage({
                   />
                 </div>
               )}
-              <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:bg-brand brutal:text-black brutal:border brutal:border-black brutal:ring-0 brutal:font-bold">
+              <span className="inline-flex items-center rounded-md bg-brand/10 px-3 py-1 text-sm font-medium text-link ring-1 ring-inset ring-brand/20 brutal:bg-brand brutal:text-foreground brutal:border brutal:border-edge brutal:ring-0 brutal:font-bold">
                 Case study
               </span>
               {story.tags?.map((tag) => (
                 <span
                   key={tag}
-                  className="inline-flex items-center rounded-md bg-secondary/70 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:ring-0 brutal:font-bold"
+                  className="inline-flex items-center rounded-md bg-secondary/70 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:ring-0 brutal:font-bold"
                 >
                   {tag}
                 </span>
@@ -128,7 +128,7 @@ export default async function CaseStudyPage({
                 {project.tech.map((t) => (
                   <span
                     key={t}
-                    className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:ring-0 brutal:font-bold"
+                    className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:ring-0 brutal:font-bold"
                   >
                     {t}
                   </span>

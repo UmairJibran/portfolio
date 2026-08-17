@@ -77,8 +77,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  /* The font variables go on <html>, not <body>: globals.css resolves
+     --font-heading: var(--font-archivo) on :root, and a var() inside a custom
+     property is substituted against the element it is declared on — so the
+     variables have to be in scope there or --font-heading resolves to nothing. */
   return (
-    <html lang="en" data-theme="noir" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-theme="noir"
+      className={`${ibmPlexMono.variable} ${inconsolata.variable} ${archivoBlack.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <link
           rel="apple-touch-icon"
@@ -96,9 +105,7 @@ export default function RootLayout({
         src="https://cloud.umami.is/script.js"
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
-      <body
-        className={`${ibmPlexMono.variable} ${inconsolata.variable} ${archivoBlack.variable} font-mono bg-background`}
-      >
+      <body className="font-mono bg-background">
         <Header />
         {children}
       </body>

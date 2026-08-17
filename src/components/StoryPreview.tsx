@@ -37,7 +37,7 @@ export function StoryPreview({
 
       {/* Timeline dot */}
       <div
-        className="absolute left-32 -translate-x-1/2 w-2 h-2 rounded-full bg-brand mt-[12px] z-10 shadow-lg shadow-brand/30 brutal:border brutal:border-black brutal:shadow-none"
+        className="absolute left-32 -translate-x-1/2 w-2 h-2 rounded-full bg-brand mt-[12px] z-10 shadow-lg shadow-brand/30 brutal:border brutal:border-edge brutal:shadow-none"
       />
 
       {/* Right side - content */}
@@ -45,15 +45,15 @@ export function StoryPreview({
         href={[root, slug].join("/")}
         className="flex-grow hover:no-underline group-hover:opacity-90 transition-opacity pl-12"
       >
-        <div className="rounded-lg p-6 border border-border bg-card/30 hover:bg-card/60 hover:border-brand/50 transition-all brutal:bg-card brutal:hover:bg-card brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black">
+        <div className="rounded-lg p-6 border border-border bg-card/30 hover:bg-card/60 hover:border-brand/50 transition-all brutal:bg-card brutal:hover:bg-card brutal-card">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-black brutal:bg-brand brutal:text-black brutal:font-bold">
+            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
               {type.replace("-", " ")}
             </span>
             {tags.map((tag) => (
               <span 
                 key={tag} 
-                className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:font-bold"
+                className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold"
               >
                 {tag}
               </span>

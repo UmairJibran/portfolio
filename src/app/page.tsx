@@ -84,12 +84,12 @@ function ExperienceTimelineItem({
         {/* Card */}
         <div className="w-[calc(50%-2rem)]">
           <div
-            className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
+            className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal-card"
             onClick={() => setShowDetails(true)}
           >
             <div className="flex items-start gap-4">
               {/* Company Logo */}
-              <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
+              <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-edge">
                 {companyLogos[experience.company] ? (
                   <Image
                     src={companyLogos[experience.company]}
@@ -110,7 +110,7 @@ function ExperienceTimelineItem({
                     {experience.position}
                     {experience.volunteer && (
                       <span
-                        className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-900/30 border border-blue-700/50 text-blue-300 text-xs font-medium brutal:bg-brand brutal:border-black brutal:text-black brutal:font-bold"
+                        className="inline-flex items-center justify-center px-2 py-0.5 rounded-md bg-blue-900/30 border border-blue-700/50 text-blue-300 text-xs font-medium brutal:bg-brand brutal:border-edge brutal:text-foreground brutal:font-bold"
                         title="Volunteer"
                       >
                         Volunteer
@@ -151,7 +151,7 @@ function ExperienceTimelineItem({
 
         {/* Timeline dot and line */}
         <div className="flex flex-col items-center">
-          <div className="w-4 h-4 bg-brand rounded-full border-4 border-background z-10 brutal:bg-black brutal:border-0"></div>
+          <div className="w-4 h-4 bg-brand rounded-full border-4 border-background z-10 brutal:bg-foreground brutal:border-0"></div>
         </div>
 
         {/* Empty space on the other side */}
@@ -208,7 +208,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[getTestimonialIndex(-1)].name}
                 width={32}
                 height={32}
-                className="rounded-full brutal:border-2 brutal:border-black"
+                className="rounded-full brutal:border-2 brutal:border-edge"
               />
               <div className="flex-1 min-w-0">
                 <div className="text-foreground font-semibold text-xs truncate">
@@ -226,7 +226,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
         <div
           className={`w-full max-w-2xl transition-all duration-500 ${isTransitioning ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
         >
-          <div className="bg-card border-2 border-brand rounded-lg p-8 shadow-xl shadow-brand/10 brutal:shadow-[6px_6px_0_0_#ffd400] brutal:border-black">
+          <div className="bg-card border-2 border-brand rounded-lg p-8 shadow-xl shadow-brand/10 brutal:shadow-hard-brand brutal:border-edge">
             <Quote className="w-10 h-10 text-link mb-6" />
             <p className="text-foreground/90 text-base leading-relaxed mb-8">
               {testimonials[currentIndex].testimonial}
@@ -237,7 +237,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[currentIndex].name}
                 width={56}
                 height={56}
-                className="rounded-full brutal:border-2 brutal:border-black"
+                className="rounded-full brutal:border-2 brutal:border-edge"
               />
               <div className="flex-1">
                 <div className="text-foreground font-bold text-lg">
@@ -279,7 +279,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 alt={testimonials[getTestimonialIndex(1)].name}
                 width={32}
                 height={32}
-                className="rounded-full brutal:border-2 brutal:border-black"
+                className="rounded-full brutal:border-2 brutal:border-edge"
               />
               <div className="flex-1 min-w-0">
                 <div className="text-foreground font-semibold text-xs truncate">
@@ -306,7 +306,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 setIsTransitioning(false);
               }, 300);
             }}
-            className={`h-2 rounded-full transition-all duration-300 brutal:border brutal:border-black ${
+            className={`h-2 rounded-full transition-all duration-300 brutal:border brutal:border-edge ${
               index === currentIndex
                 ? "w-8 bg-brand"
                 : "w-2 bg-border hover:bg-edge"
@@ -357,10 +357,10 @@ export default function Home() {
         </h1>
 
         {/* Availability badge */}
-        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-md bg-brand/10 border border-brand/30 text-link text-sm font-medium brutal:bg-brand brutal:border-2 brutal:border-black brutal:text-black brutal:font-bold">
+        <div className="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-md bg-brand/10 border border-brand/30 text-link text-sm font-medium brutal:bg-brand brutal:border-2 brutal:border-edge brutal:text-foreground brutal:font-bold">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75 brutal:hidden"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand brutal:bg-black"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand brutal:bg-foreground"></span>
           </span>
           <MapPin className="h-3.5 w-3.5" />
           Open to relocation · EU / North America · Remote-friendly
@@ -378,7 +378,7 @@ export default function Home() {
             <Link
               key={item.name}
               href={item.link}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-card hover:bg-secondary border border-border rounded-md text-foreground/80 hover:text-foreground transition-colors text-sm brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black brutal:transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-card hover:bg-secondary border border-border rounded-md text-foreground/80 hover:text-foreground transition-colors text-sm brutal-card brutal:transition-all"
               target="_blank"
             >
               {item.icon === "GitHub" && <Github className="h-4 w-4" />}
@@ -395,7 +395,7 @@ export default function Home() {
         <div className="flex flex-wrap gap-3 mb-16">
           <Button
             asChild
-            className="bg-primary hover:bg-primary-hover text-primary-foreground brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
+            className="bg-primary hover:bg-primary-hover text-primary-foreground brutal-btn"
           >
             <Link href={`mailto:${profile.email}`}>
               <Mail className="mr-2 h-4 w-4" />
@@ -405,7 +405,7 @@ export default function Home() {
           <Button
             asChild
             variant="outline"
-            className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal:bg-card brutal:border-2 brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase brutal:hover:border-black"
+            className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal-btn brutal:bg-card"
           >
             <Link href={profile.consultationLink} target="_blank">
               <Calendar className="mr-2 h-4 w-4" />
@@ -421,11 +421,11 @@ export default function Home() {
         <div className="mb-16">
           <Link
             href="/projects/puppydog"
-            className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-black brutal:shadow-[6px_6px_0_0_#ffd400] brutal:hover:shadow-[8px_8px_0_0_#ffd400] brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
+            className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-edge brutal:shadow-hard-brand brutal:hover:shadow-hard-brand-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-edge"
           >
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="h-4 w-4 text-link" />
-              <span className="text-link text-xs uppercase tracking-wider font-mono brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">
+              <span className="text-link text-xs uppercase tracking-wider font-mono brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
                 Featured Case Study
               </span>
             </div>
@@ -491,7 +491,7 @@ export default function Home() {
           <div className="mb-16">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-foreground text-2xl font-bold">
-                <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+                <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
                   01
                 </span>
                 Latest Writing
@@ -515,7 +515,7 @@ export default function Home() {
       {/* Work Experience Section - Timeline */}
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-foreground text-2xl font-bold mb-12 text-center">
-          <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+          <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
             02
           </span>
           Work Experience
@@ -524,7 +524,7 @@ export default function Home() {
         {/* Timeline container */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform -translate-x-1/2 hidden md:block brutal:w-[3px] brutal:bg-black"></div>
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-border transform -translate-x-1/2 hidden md:block brutal:w-[3px] brutal:bg-foreground"></div>
 
           {/* Timeline items */}
           <div className="hidden md:block">
@@ -543,13 +543,13 @@ export default function Home() {
             {experience.map((exp, index) => (
               <div key={index}>
                 <div
-                  className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black"
+                  className="group bg-card border border-border rounded-lg p-6 hover:border-brand transition-all duration-300 cursor-pointer brutal-card"
                   onClick={() => {
                     // Will need to handle mobile dialog
                   }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-black">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg flex items-center justify-center overflow-hidden brutal:border-2 brutal:border-edge">
                       {companyLogos[exp.company] ? (
                         <Image
                           src={companyLogos[exp.company]}
@@ -604,7 +604,7 @@ export default function Home() {
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6 mb-8">
           <h2 className="text-foreground text-2xl font-bold">
-            <span className="hidden brutal:inline-block bg-black text-white px-2 py-0.5 mr-3 text-base align-middle font-heading">
+            <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
               03
             </span>
             What People Say
@@ -614,7 +614,7 @@ export default function Home() {
       </section>
 
       {/* Footer / Contact */}
-      <footer className="max-w-6xl mx-auto px-6 py-16 border-t border-border brutal:border-t-[3px] brutal:border-black">
+      <footer className="max-w-6xl mx-auto px-6 py-16 border-t border-border brutal:border-t-[3px] brutal:border-edge">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-faint text-sm">
             Built with ❤️ by {profile.name.firstName} {profile.name.lastName}
@@ -622,7 +622,7 @@ export default function Home() {
           <div className="flex gap-4">
             <Button
               asChild
-              className="bg-primary hover:bg-primary-hover text-primary-foreground brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
+              className="bg-primary hover:bg-primary-hover text-primary-foreground brutal-btn"
             >
               <Link href={`mailto:${profile.email}`}>
                 <Mail className="mr-2 h-4 w-4" />
@@ -632,7 +632,7 @@ export default function Home() {
             <Button
               asChild
               variant="outline"
-              className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal:bg-card brutal:border-2 brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase brutal:hover:border-black"
+              className="border-edge text-foreground bg-transparent hover:bg-secondary hover:border-brand hover:text-foreground brutal-btn brutal:bg-card"
             >
               <Link href={profile.consultationLink} target="_blank">
                 <Calendar className="mr-2 h-4 w-4" />

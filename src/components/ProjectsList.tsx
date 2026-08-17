@@ -30,7 +30,7 @@ export function ProjectsList({
         return (
           <div
             key={project.id}
-            className="group relative border-b border-border last:border-b-0 hover:bg-card/30 transition-all duration-300 brutal:border-2 brutal:border-black brutal:shadow-hard brutal:hover:shadow-hard-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-black brutal:bg-card brutal:mb-4"
+            className="group relative border-b border-border last:border-b-0 hover:bg-card/30 transition-all duration-300 brutal-card brutal:bg-card brutal:mb-4"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -41,9 +41,9 @@ export function ProjectsList({
 
               <div className="relative flex-shrink-0">
                 <div
-                  className={`w-16 h-16 md:w-20 md:h-20 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden border transition-all duration-300 brutal:border-2 brutal:border-black ${
+                  className={`w-16 h-16 md:w-20 md:h-20 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden border transition-all duration-300 brutal:border-2 brutal:border-edge ${
                     hoveredIndex === index
-                      ? "border-brand shadow-lg shadow-brand/20 brutal:border-black brutal:shadow-none"
+                      ? "border-brand shadow-lg shadow-brand/20 brutal:border-edge brutal:shadow-none"
                       : "border-border"
                   }`}
                 >
@@ -68,13 +68,13 @@ export function ProjectsList({
                     {project.name}
                   </h3>
                   {project.featured && (
-                    <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-brand/10 text-link border border-brand/30 brutal:bg-brand brutal:text-black brutal:border brutal:border-black brutal:font-bold">
+                    <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-brand/10 text-link border border-brand/30 brutal:bg-brand brutal:text-foreground brutal:border brutal:border-edge brutal:font-bold">
                       <Star className="h-3 w-3" />
                       Featured
                     </span>
                   )}
                   {!project.url && !project.source && (
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-faint border border-edge brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:font-bold">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-faint border border-edge brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold">
                       Private
                     </span>
                   )}
@@ -87,7 +87,7 @@ export function ProjectsList({
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="inline-flex items-center rounded-md bg-secondary/80 px-2 py-0.5 text-[11px] font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-black brutal:bg-card brutal:text-black brutal:ring-0 brutal:font-bold"
+                        className="inline-flex items-center rounded-md bg-secondary/80 px-2 py-0.5 text-[11px] font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:ring-0 brutal:font-bold"
                       >
                         {t}
                       </span>
@@ -100,7 +100,7 @@ export function ProjectsList({
                 {hasCaseStudy && (
                   <Link
                     href={`/projects/${project.caseStudySlug}`}
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
+                    className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal-btn"
                   >
                     <BookOpen className="h-4 w-4" />
                     <span className="hidden sm:inline">Case study</span>
@@ -110,7 +110,7 @@ export function ProjectsList({
                   <Link
                     href={project.url}
                     target="_blank"
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary hover:bg-primary-hover text-primary-foreground rounded-md transition-all text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
+                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary hover:bg-primary-hover text-primary-foreground rounded-md transition-all text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 brutal-btn"
                   >
                     <span className="hidden sm:inline">Visit</span>
                     <ArrowUpRight className="h-4 w-4" />
@@ -120,7 +120,7 @@ export function ProjectsList({
                   <Link
                     href={project.source}
                     target="_blank"
-                    className="p-2 border border-edge hover:border-brand hover:bg-brand/10 text-muted-foreground hover:text-link rounded-md transition-all brutal:bg-card brutal:border-2 brutal:border-black brutal:shadow-hard-sm brutal:hover:shadow-hard brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:font-bold brutal:uppercase"
+                    className="p-2 border border-edge hover:border-brand hover:bg-brand/10 text-muted-foreground hover:text-link rounded-md transition-all brutal:bg-card brutal-btn"
                     title="View Source Code"
                   >
                     <Github className="h-5 w-5" />
@@ -130,7 +130,7 @@ export function ProjectsList({
             </div>
 
             <div
-              className={`absolute bottom-0 left-0 h-px bg-gradient-to-r from-brand via-brand/50 to-transparent brutal:bg-none brutal:bg-black brutal:h-[3px] transition-all duration-500 ${
+              className={`absolute bottom-0 left-0 h-px bg-gradient-to-r from-brand via-brand/50 to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px] transition-all duration-500 ${
                 hoveredIndex === index ? "w-full opacity-100" : "w-0 opacity-0"
               }`}
             ></div>

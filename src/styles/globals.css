@@ -1,7 +1,9 @@
 /* Syntax highlighting for fenced code blocks (rehype-highlight output).
-   Theme-scoped copies of highlight.js github-dark (noir) and github (brutal),
-   generated into hljs-themes.css. Must precede Tailwind directives so the
-   @import is at the top of the stylesheet, per CSS spec. */
+   Theme-scoped copies of highlight.js github-dark (noir) and github (brutal).
+   Regenerate after bumping highlight.js:
+     node scripts/generate-hljs-themes.js
+   Must precede the Tailwind directives so the @import stays at the top of the
+   stylesheet, per CSS spec. */
 @import "./hljs-themes.css";
 
 @tailwind base;
@@ -169,6 +171,48 @@
   [data-theme="brutal"] :focus-visible {
     outline: 2px solid rgb(17 17 17);
     outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* The brutal design has two recurring "lift" recipes: a hard offset shadow
+     that grows while the element shifts up-left on hover. They were repeated
+     verbatim as seven-class strings across ~20 call sites; these collapse them.
+     Inert outside the brutal theme.
+
+     The `html` prefix is load-bearing: it lifts these to specificity (0,2,1) so
+     they beat single-class width utilities that also target the same elements
+     (e.g. `last:border-b-0` on the last projects row). The trade-off is that a
+     plain `brutal:border-*`/`brutal:shadow-*` on the same element would now lose
+     to these — no call site needs that today, so reach for a `brutal:hover:*`
+     (0,3,0) or a local override if you ever do. Transition timing is left
+     entirely to the call site, which already declares its own. */
+  html[data-theme="brutal"] .brutal-card,
+  html[data-theme="brutal"] .brutal-btn {
+    border-width: 2px;
+    border-color: rgb(var(--edge));
+  }
+
+  html[data-theme="brutal"] .brutal-card {
+    box-shadow: 4px 4px 0 0 rgb(var(--shadow-color));
+  }
+
+  html[data-theme="brutal"] .brutal-card:hover {
+    box-shadow: 6px 6px 0 0 rgb(var(--shadow-color));
+    transform: translate(-2px, -2px);
+    border-color: rgb(var(--edge));
+  }
+
+  html[data-theme="brutal"] .brutal-btn {
+    box-shadow: 2px 2px 0 0 rgb(var(--shadow-color));
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  html[data-theme="brutal"] .brutal-btn:hover {
+    box-shadow: 4px 4px 0 0 rgb(var(--shadow-color));
+    transform: translate(-2px, -2px);
+    border-color: rgb(var(--edge));
   }
 }
 

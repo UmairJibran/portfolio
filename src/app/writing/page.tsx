@@ -42,7 +42,7 @@ export default function Index() {
           <div>
             <div className="flex items-center gap-3 mb-2">
               <PenTool className="h-6 w-6 text-link" />
-              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-black brutal:px-1 brutal:font-bold">Blog & Case Studies</span>
+              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">Blog & Case Studies</span>
             </div>
             <h1 className="text-foreground text-5xl md:text-6xl font-bold mb-6">
               Writing
@@ -50,7 +50,7 @@ export default function Index() {
           </div>
           <div className="text-right">
             <div className="text-faint text-sm mb-1">Articles</div>
-            <div className="text-link text-2xl font-bold font-mono brutal:bg-black brutal:text-white brutal:px-2">
+            <div className="text-link text-2xl font-bold font-mono brutal:bg-foreground brutal:text-background brutal:px-2">
               {String(allContent.length).padStart(2, '0')}
             </div>
           </div>
@@ -80,7 +80,7 @@ export default function Index() {
           </div>
         </div>
         
-        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-black brutal:h-[3px]"></div>
+        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px]"></div>
       </section>
 
       {/* All content */}
