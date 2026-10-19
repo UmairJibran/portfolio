@@ -1,49 +1,16 @@
 import { Story } from "@/types/story";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { findRelatedStory } from "@/lib/related";
 
 type Props = {
   currentStory: Story;
   allStories: Story[];
 };
 
-type RelatedStoryResult = {
-  story: Story;
-  matchingTag?: string;
-};
-
-function findRelatedStory(stories: Story[], currentStory: Story, type: "blog" | "case-study"): RelatedStoryResult | null {
-  // Filter stories by type and exclude current story
-  const typeStories = stories.filter(s => s.type === type && s.slug !== currentStory.slug);
-  if (typeStories.length === 0) return null;
-
-  // Try to find a story with matching tags
-  if (currentStory.tags && currentStory.tags.length > 0) {
-    const relatedByTags = typeStories.map(story => {
-      const matchingTags = story.tags?.filter(tag => currentStory.tags.includes(tag)) || [];
-      return {
-        story,
-        matchingTags,
-        matchingCount: matchingTags.length
-      };
-    })
-    .sort((a, b) => b.matchingCount - a.matchingCount);
-
-    if (relatedByTags[0].matchingCount > 0) {
-      return {
-        story: relatedByTags[0].story,
-        matchingTag: relatedByTags[0].matchingTags[0]
-      };
-    }
-  }
-
-  // If no matching tags, return the latest story
-  return { story: typeStories[0] };
-}
-
 export function RelatedStories({ currentStory, allStories }: Props) {
-  const relatedBlog = findRelatedStory(allStories, currentStory, "blog");
-  const relatedCaseStudy = findRelatedStory(allStories, currentStory, "case-study");
+  const relatedBlog = findRelatedStory(currentStory, allStories, "blog");
+  const relatedCaseStudy = findRelatedStory(currentStory, allStories, "case-study");
 
   if (!relatedBlog && !relatedCaseStudy) return null;
 
