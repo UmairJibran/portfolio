@@ -1,8 +1,9 @@
-import { getAllCaseStudies, getCaseStudyBySlug } from "@/lib/api";
+import { getAllBlog, getAllCaseStudies, getCaseStudyBySlug } from "@/lib/api";
 import { notFound } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { readingTimeMinutes } from "@/lib/utils";
 import { StoryBody } from "@/components/StoryBody";
+import { RelatedStories } from "@/components/RelatedStories";
 import { Calendar, ArrowLeft, Clock, ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -57,6 +58,7 @@ export default async function CaseStudyPage({
   if (!story) notFound();
 
   const project = findProjectForSlug(params.slug);
+  const allStories = [...getAllBlog(), ...getAllCaseStudies()];
   const content = await markdownToHtml(story.content || "");
   const readingTime = readingTimeMinutes(story.content || "");
 
@@ -176,8 +178,21 @@ export default async function CaseStudyPage({
         </article>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <StoryBody content={content} />
+      {/* Content with sidebar */}
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="flex flex-col lg:flex-row gap-12">
+          {/* Main content */}
+          <div className="flex-grow max-w-4xl">
+            <StoryBody content={content} />
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:w-80 flex-shrink-0">
+            <div className="sticky top-8">
+              <RelatedStories currentStory={story} allStories={allStories} />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
