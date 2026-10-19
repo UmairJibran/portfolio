@@ -6,15 +6,39 @@ import { ArrowUpRight, Calendar } from "lucide-react";
 
 type Props = {
   story: Story;
+  // A slimmer, low-key card for when something else on the page is the focus
+  compact?: boolean;
 };
 
-export function RecentWriting({ story }: Props) {
+export function RecentWriting({ story, compact = false }: Props) {
   const root = story.type === "blog" ? "/writing" : "/projects";
   const formattedDate = new Date(story.date).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
   });
+
+  if (compact) {
+    return (
+      <Link
+        href={`${root}/${story.slug}`}
+        className="group flex items-center justify-between gap-4 bg-card/40 border border-border rounded-lg px-5 py-4 hover:border-brand/50 transition-all duration-300 brutal:bg-card brutal-card"
+      >
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
+              {story.type === "blog" ? "blog" : "case study"}
+            </span>
+            <span className="text-faint text-xs">{formattedDate}</span>
+          </div>
+          <h3 className="text-base font-semibold text-foreground group-hover:text-link transition-colors truncate">
+            {story.title}
+          </h3>
+        </div>
+        <ArrowUpRight className="h-5 w-5 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" />
+      </Link>
+    );
+  }
 
   return (
     <Link

@@ -394,6 +394,7 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 
 export default function Home() {
   const [latestStory, setLatestStory] = useState<Story | null>(null);
+  const hasFeatured = featuredCaseStudies.length > 0;
 
   useEffect(() => {
     let mounted = true;
@@ -497,11 +498,15 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Recent Writing Section */}
+        {/* Recent Writing Section: low-key while a case study is featured above */}
         {latestStory && (
           <div className="mb-16">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-foreground text-2xl font-bold">
+            <div
+              className={`flex items-center justify-between ${hasFeatured ? "mb-3" : "mb-6"}`}
+            >
+              <h2
+                className={`text-foreground font-bold ${hasFeatured ? "text-lg" : "text-2xl"}`}
+              >
                 <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
                   01
                 </span>
@@ -515,7 +520,7 @@ export default function Home() {
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
-            <RecentWriting story={latestStory} />
+            <RecentWriting story={latestStory} compact={hasFeatured} />
           </div>
         )}
 
