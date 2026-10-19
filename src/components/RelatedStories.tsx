@@ -83,7 +83,7 @@ export function RelatedStories({ currentStory, allStories }: Props) {
       {relatedCaseStudy && (
         <div>
           <h3 className="text-sm font-medium text-faint mb-3">From Case Studies</h3>
-          <Link href={`/writing/${relatedCaseStudy.story.slug}`} className="block group">
+          <Link href={`/projects/${relatedCaseStudy.story.slug}`} className="block group">
             <div className="rounded-lg p-4 bg-card border border-border hover:border-brand/50 transition-all brutal-card">
               <div className="flex items-center gap-2 mb-2">
                 <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">

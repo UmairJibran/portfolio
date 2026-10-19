@@ -23,7 +23,7 @@ export function StoryPreview({
   type,
   tags = [],
 }: Props) {
-  const root = type === "blog" ? "/blogs" : "/case-studies";
+  const root = type === "blog" ? "/writing" : "/projects";
   const day = new Date(date).getDate();
 
   return (
