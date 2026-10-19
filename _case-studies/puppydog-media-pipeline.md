@@ -23,7 +23,7 @@ PuppyDog's media pipeline turns raw inputs into finished, personalized videos: i
 
 That shape had three costs:
 
-- **GPU capacity spent on CPU work.** Most of our workload ran through just three services, and none of them used a GPU. But because every machine ran every worker, handling that load meant buying more expensive GPU machines, which drove the bill up.
+- **GPU capacity spent on CPU work.** Most of our volume went through just three job types, none of which used a GPU. But because every machine ran every worker, absorbing that volume meant adding more GPU machines, the most expensive kind in the fleet.
 - **Coupling through the filesystem.** The repositories depended on each other's directory layout and shared working directories, not on clean imports. A change in one could break another at runtime.
 - **Duplicated infrastructure.** Logging, storage access and queue handling had each been written several times, and the copies had drifted apart.
 
@@ -41,7 +41,7 @@ I own backend, DevOps and AI/ML at PuppyDog. I set the goals for this project: o
 
 **Before:** three repositories → one bundle → every worker on every GPU machine.
 
-**After:** one monorepo:
+**After:** one monorepo with:
 
 - **Shared libraries.** A core runtime library covers configuration, logging, the queue worker loop, storage, callbacks and graceful shutdown. Smaller libraries cover media processing, LLM clients and the lip-sync contract.
 - **11 services.** Each consumes one message queue, ships as its own container image, and scales on its own queue depth.
@@ -50,7 +50,7 @@ I own backend, DevOps and AI/ML at PuppyDog. I set the goals for this project: o
 
 Services never read each other's files. They talk only through queue messages and object storage. The message formats the rest of the product depends on stayed exactly as they were, so an old and a new version of a service can share a queue during cut-over without changing anything upstream.
 
-I imported all three repositories with their full history, then moved code in small, reviewable steps, so `git blame` still traces every line to its original author.
+I imported all three repositories with their history intact, then moved code in small, reviewable steps, so `git blame` still traces every line to its original author.
 
 ---
 
@@ -60,7 +60,7 @@ I imported all three repositories with their full history, then moved code in sm
 
 Only the lip-sync model actually needs a GPU, yet several workers used to invoke it directly mid-pipeline. Now it sits behind a dedicated service. A caller puts a job on its queue, waits for the result in object storage, and keeps its own message alive while it waits. The model code is wrapped rather than modified, so swapping models later means changing a client backend, not rewriting every pipeline that uses it.
 
-I chose a queue over an HTTP API because queue depth is a natural scaling signal and scales to zero. There's no load balancer, and no request timeout to fight on long-running jobs.
+I chose a queue over an HTTP API because queue depth is a natural scaling signal, and a queue consumer can scale all the way to zero. There's no load balancer, and no request timeout to fight on long-running jobs.
 
 **Cost accepted:** callers hold a CPU slot while they wait, and the caller's timeout and the worker's timeout must agree, or a backlog turns into duplicate GPU jobs. Requests now carry the caller's deadline, and the worker skips work that has already expired.
 
@@ -81,11 +81,11 @@ The platform's job shrinks to "run this image, give it a GPU if it asks for one,
 
 After the split, most services ran on CPU, but the encoding code either probed for hardware encoders on every start or hard-coded the CPU encoder. I replaced both with one setting (CPU only, GPU, or auto-detect) and routed every encode through it. Any service can now opt into an inexpensive GPU for NVENC/NVDEC hardware encoding, while the high-end GPU stays reserved for the model.
 
-The setting applies per service, not per job. Several pipelines join segments with a stream copy, and mixing CPU-encoded and GPU-encoded segments in one MP4 breaks playback.
+The setting applies per service, not per job, because several pipelines join segments with a stream copy, and mixing CPU-encoded and GPU-encoded segments in one MP4 breaks playback.
 
 ### Fix and delete before moving anything
 
-Before importing a line, I spent a phase in the old repositories fixing reliability issues and deleting dead code, so neither would be carried into the new structure.
+Before importing anything, I spent a phase in the old repositories fixing reliability issues and deleting dead code, so that neither would be carried into the new structure.
 
 **Cost accepted:** an extra phase before any visible progress, and open branches had to land first, because commits can't be rebased across a history import.
 
@@ -96,15 +96,15 @@ Before importing a line, I spent a phase in the old repositories fixing reliabil
 | Metric | Result |
 |---|---|
 | Monthly infrastructure cost | **~80% lower** |
-| Repositories | **3 → 1**, with full history kept |
+| Repositories | **3 → 1**, history kept |
 | Deployable units | **1 bundle on every machine → 11 independently scaled services** |
-| Services that need a GPU | **Every machine → 1 service**; others can optionally use an inexpensive GPU for encoding |
+| GPU footprint | **Every machine → 1 service**; others can opt into an inexpensive GPU for encoding |
 | Idle capacity | **Most services scale to zero** when their queue is empty |
 | Shared infrastructure | Duplicated logging, storage and queue code → **one shared runtime** |
 | Tests | **~1,200** across libraries, deploy tooling and services |
 | Service code changed for the first platform | **None**, only CI and configuration |
 
-The new shape is what makes that possible: instead of every machine carrying a GPU around the clock, one service holds one, and most of the fleet scales to zero between jobs. The new environment isn't billed at standard rates yet, so the figure is an estimate, not an invoice.
+The cost drop comes from the new shape: instead of every machine carrying a GPU around the clock, a single service holds the only one, and most of the fleet scales to zero between jobs. The new environment isn't on standard billing yet, so that figure is projected rather than invoiced.
 
 The whole fleet runs end to end in its new environment, including the GPU service, and deploys automatically on merge.
 
@@ -114,6 +114,6 @@ The whole fleet runs end to end in its new environment, including the GPU servic
 
 ## Lesson Learned
 
-Every service came with tests, and the post-migration review still found issues that would have stopped jobs from running in containers. None of them were logic bugs. They were environment assumptions: file paths that changed meaning once workspaces moved, permission assumptions that broke for a non-root user, and CI triggers pointing at the wrong branch.
+Every service came with tests, yet the post-migration review still found issues that would have stopped jobs from running in containers. None of them were logic bugs. They were environment assumptions: file paths that changed meaning once workspaces moved, permission assumptions that broke for a non-root user, and CI triggers pointing at the wrong branch.
 
 A migration moves code into a new environment, and the environment is where it breaks. **Test the artifact, not the source.** A contract test that starts the real image, sends it a real message and stops it mid-job would have caught most of these in minutes. Ours checked the health endpoints but never sent a message. Next time, that's the first thing I'll write, before moving the first service.
