@@ -1,4 +1,4 @@
-import { getAllBlog, getCaseStudyBySlug } from "@/lib/api";
+import { getAllBlog, getAllCaseStudies, getCaseStudyBySlug } from "@/lib/api";
 import { notFound, redirect } from "next/navigation";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { readingTimeMinutes } from "@/lib/utils";
@@ -174,7 +174,7 @@ export default async function StoryPage({ params }: { params: { slug: string } }
                     {/* Sidebar */}
                     <div className="lg:w-80 flex-shrink-0">
                         <div className="sticky top-8">
-                            <RelatedStories currentStory={story} allStories={allStories} />
+                            <RelatedStories currentStory={story} allStories={[...allStories, ...getAllCaseStudies()]} />
                         </div>
                     </div>
                 </div>
