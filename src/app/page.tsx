@@ -49,6 +49,79 @@ const companyLogos: Record<string, string> = {
   Ideometrix: "/assets/logos/ideometrix.webp",
 };
 
+type FeaturedCaseStudy = {
+  href: string;
+  title: string;
+  summary: string;
+  stats: { value: string; label: string }[];
+  tags: string[];
+};
+
+// Newest first
+const featuredCaseStudies: FeaturedCaseStudy[] = [
+  {
+    href: "/projects/puppydog-media-pipeline",
+    title: "PuppyDog.io — Eleven Services, One GPU, 80% Leaner",
+    summary:
+      "How I split a tightly coupled media pipeline into eleven independent, queue-driven services, confined the GPU to the one workload that needs it, and cut monthly infrastructure cost by about 80%.",
+    stats: [
+      { value: "−80%", label: "Monthly infra cost" },
+      { value: "11", label: "Independent services" },
+      { value: "1", label: "Service that needs a GPU" },
+      { value: "~1.2k", label: "Tests" },
+    ],
+    tags: ["Python", "Architecture", "Docker", "GPU", "Kubernetes"],
+  },
+];
+
+function FeaturedCaseStudyCard({ study }: { study: FeaturedCaseStudy }) {
+  return (
+    <Link
+      href={study.href}
+      className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-edge brutal:shadow-hard-brand brutal:hover:shadow-hard-brand-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-edge"
+    >
+      <div className="flex items-center gap-2 mb-3">
+        <Sparkles className="h-4 w-4 text-link" />
+        <span className="text-link text-xs uppercase tracking-wider font-mono brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
+          Featured Case Study
+        </span>
+      </div>
+      <h2 className="text-foreground text-2xl md:text-3xl font-bold mb-3 group-hover:text-link transition-colors">
+        {study.title}
+      </h2>
+      <p className="text-muted-foreground text-base leading-relaxed mb-5 max-w-3xl">
+        {study.summary}
+      </p>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+        {study.stats.map((stat) => (
+          <div key={stat.label}>
+            <div className="text-link text-2xl font-bold font-mono">
+              {stat.value}
+            </div>
+            <div className="text-faint text-xs">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+      <div className="flex items-center justify-between">
+        <div className="flex flex-wrap gap-2">
+          {study.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        <span className="text-link text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+          Read case study
+          <ArrowUpRight className="h-4 w-4" />
+        </span>
+      </div>
+    </Link>
+  );
+}
+
 // Experience Card Component with dark theme - now for timeline
 function ExperienceTimelineItem({
   experience,
@@ -417,73 +490,11 @@ export default function Home() {
         {/* Skills Section */}
         <SkillsSection />
 
-        {/* Featured Case Study */}
-        <div className="mb-16">
-          <Link
-            href="/projects/puppydog"
-            className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-edge brutal:shadow-hard-brand brutal:hover:shadow-hard-brand-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-edge"
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <Sparkles className="h-4 w-4 text-link" />
-              <span className="text-link text-xs uppercase tracking-wider font-mono brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
-                Featured Case Study
-              </span>
-            </div>
-            <h2 className="text-foreground text-2xl md:text-3xl font-bold mb-3 group-hover:text-link transition-colors">
-              PuppyDog.io — Personalized Demo Infrastructure at Scale
-            </h2>
-            <p className="text-muted-foreground text-base leading-relaxed mb-5 max-w-3xl">
-              How I built a mass personalization engine, migrated AI compute
-              from AWS to GCP saving 36% on infra costs, and took backend test
-              coverage from 0 to 75% as the sole backend engineer.
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
-              <div>
-                <div className="text-link text-2xl font-bold font-mono">
-                  −36%
-                </div>
-                <div className="text-faint text-xs">Infra cost</div>
-              </div>
-              <div>
-                <div className="text-link text-2xl font-bold font-mono">
-                  0 → 75%
-                </div>
-                <div className="text-faint text-xs">Test coverage</div>
-              </div>
-              <div>
-                <div className="text-link text-2xl font-bold font-mono">
-                  2w → daily
-                </div>
-                <div className="text-faint text-xs">Release cadence</div>
-              </div>
-              <div>
-                <div className="text-link text-2xl font-bold font-mono">
-                  10k+
-                </div>
-                <div className="text-faint text-xs">
-                  Prospects / job, unattended
-                </div>
-              </div>
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex flex-wrap gap-2">
-                {["Node.js", "GCP", "AWS", "Architecture", "AI/LLM"].map(
-                  (tag) => (
-                    <span
-                      key={tag}
-                      className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50"
-                    >
-                      {tag}
-                    </span>
-                  ),
-                )}
-              </div>
-              <span className="text-link text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                Read case study
-                <ArrowUpRight className="h-4 w-4" />
-              </span>
-            </div>
-          </Link>
+        {/* Featured Case Studies */}
+        <div className="mb-16 space-y-6">
+          {featuredCaseStudies.map((study) => (
+            <FeaturedCaseStudyCard key={study.href} study={study} />
+          ))}
         </div>
 
         {/* Recent Writing Section */}
