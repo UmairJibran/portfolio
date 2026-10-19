@@ -393,19 +393,19 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 }
 
 export default function Home() {
-  const [latestBlog, setLatestBlog] = useState<Story | null>(null);
+  const [latestStory, setLatestStory] = useState<Story | null>(null);
 
   useEffect(() => {
     let mounted = true;
 
     async function fetchLatest() {
       try {
-        const res = await fetch("/api/blogs");
+        const res = await fetch("/api/writing");
         if (!res.ok) return;
         const data = await res.json();
-        const blogs: Story[] = data.blogs || [];
-        if (mounted && blogs.length > 0) {
-          setLatestBlog(blogs[0]);
+        const stories: Story[] = data.stories || [];
+        if (mounted && stories.length > 0) {
+          setLatestStory(stories[0]);
         }
       } catch (err) {
         // ignore
@@ -498,7 +498,7 @@ export default function Home() {
         </div>
 
         {/* Recent Writing Section */}
-        {latestBlog && (
+        {latestStory && (
           <div className="mb-16">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-foreground text-2xl font-bold">
@@ -515,7 +515,7 @@ export default function Home() {
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </div>
-            <RecentWriting story={latestBlog} />
+            <RecentWriting story={latestStory} />
           </div>
         )}
 
