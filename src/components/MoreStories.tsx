@@ -77,7 +77,7 @@ export function MoreStories({ stories }: Props) {
 
               <div className="space-y-20">
                 {groupedStories[key].stories.map((story) => (
-                  <div key={story.slug} className="relative">
+                  <div key={`${story.type}-${story.slug}`} className="relative">
                     <StoryPreview
                       title={story.title}
                       coverImage={story.coverImage}

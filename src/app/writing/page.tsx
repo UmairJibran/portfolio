@@ -1,5 +1,5 @@
 import { MoreStories } from "@/components/MoreStories";
-import { getAllBlog } from "@/lib/api";
+import { getAllBlog, getAllCaseStudies } from "@/lib/api";
 import Link from "next/link";
 import { Rss, Linkedin, PenTool } from "lucide-react";
 import type { Metadata } from "next";
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 };
 
 export default function Index() {
-  // Writing hub = blog posts only. Case studies live under /projects/<slug>.
-  const allContent = getAllBlog().sort(
+  // Writing hub = blog posts and case studies together. Case studies still live under /projects/<slug>.
+  const allContent = [...getAllBlog(), ...getAllCaseStudies()].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
