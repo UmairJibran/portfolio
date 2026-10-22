@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inconsolata, Archivo_Black } from "next/font/google";
+import { IBM_Plex_Mono, Archivo_Black } from "next/font/google";
 import "@/styles/globals.css";
 
 import meta from "@/data/meta.json";
@@ -8,13 +8,13 @@ import umamiAnalytics from "@/data/umamiAnalytics.json";
 import Script from "next/script";
 import Header from "@/components/Header";
 import { toJsonLdScript } from "@/lib/jsonLd";
+import { WRITING_URL } from "@/lib/writing";
 
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: `${profile.name.firstName} ${profile.name.lastName}`,
   url: meta.metadataBase,
-  image: `${meta.metadataBase}${profile.image}`,
   jobTitle: "Full-Stack Software Engineer",
   description:
     "Full-stack engineer specializing in Node.js, serverless, AWS, and LLM-powered workflows.",
@@ -46,12 +46,6 @@ const ibmPlexMono = IBM_Plex_Mono({
   preload: false,
 });
 
-const inconsolata = Inconsolata({
-  weight: "400",
-  variable: "--font-inconsolata",
-  preload: false,
-});
-
 const archivoBlack = Archivo_Black({
   weight: "400",
   variable: "--font-archivo",
@@ -67,7 +61,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(meta.metadataBase),
   alternates: {
     types: {
-      "application/rss+xml": "/rss.xml",
+      "application/rss+xml": `${WRITING_URL}/rss/`,
     },
   },
 };
@@ -85,15 +79,10 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="noir"
-      className={`${ibmPlexMono.variable} ${inconsolata.variable} ${archivoBlack.variable}`}
+      className={`${ibmPlexMono.variable} ${archivoBlack.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"

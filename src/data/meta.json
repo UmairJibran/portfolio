@@ -7,15 +7,7 @@
     "locale": "en_US",
     "url": "https://www.umairjibran.com",
     "title": "Umair Jibran - Full Stack Engineer",
-    "description": "Full-stack developer with expertise in Node.js, JavaScript, and AWS",
-    "images": [
-      {
-        "url": "/assets/gifs/cat-programmer.gif",
-        "width": 1200,
-        "height": 630,
-        "alt": "Not Umair Jibran"
-      }
-    ]
+    "description": "Full-stack developer with expertise in Node.js, JavaScript, and AWS"
   },
   "metadataBase": "https://umairjibran.com"
 }

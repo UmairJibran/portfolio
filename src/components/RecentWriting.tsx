@@ -2,23 +2,50 @@
 
 import { Story } from "@/types/story";
 import Link from "next/link";
-import { ArrowUpRight, Calendar } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
+import { writingLinkProps } from "@/lib/writing";
 
 type Props = {
   story: Story;
+  // A slimmer, low-key card for when something else on the page is the focus
+  compact?: boolean;
 };
 
-export function RecentWriting({ story }: Props) {
-  const root = story.type === "blog" ? "/writing" : "/projects";
+export function RecentWriting({ story, compact = false }: Props) {
   const formattedDate = new Date(story.date).toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
   });
 
+  if (compact) {
+    return (
+      <Link
+        href={story.url}
+        {...writingLinkProps}
+        className="group flex items-center justify-between gap-4 bg-card/40 border border-border rounded-lg px-5 py-4 hover:border-brand/50 transition-all duration-300 brutal:bg-card brutal-card"
+      >
+        <div className="min-w-0">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
+              {story.type === "blog" ? "blog" : "case study"}
+            </span>
+            <span className="text-faint text-xs">{formattedDate}</span>
+          </div>
+          <h3 className="text-base font-semibold text-foreground group-hover:text-link transition-colors truncate">
+            {story.title}
+          </h3>
+        </div>
+        <ExternalLink className="h-5 w-5 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" aria-hidden />
+        <span className="sr-only"> (opens in a new tab)</span>
+      </Link>
+    );
+  }
+
   return (
     <Link
-      href={`${root}/${story.slug}`}
+      href={story.url}
+      {...writingLinkProps}
       className="group block bg-card border border-border rounded-lg p-6 hover:border-brand hover:bg-card/80 transition-all duration-300 brutal:hover:bg-card brutal-card"
     >
       <div className="flex items-start justify-between gap-4">
@@ -54,7 +81,8 @@ export function RecentWriting({ story }: Props) {
         </div>
 
         {/* Arrow Icon */}
-        <ArrowUpRight className="h-6 w-6 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" />
+        <ExternalLink className="h-6 w-6 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" aria-hidden />
+        <span className="sr-only"> (opens in a new tab)</span>
       </div>
     </Link>
   );

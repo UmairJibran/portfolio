@@ -8,25 +8,17 @@ import {
   Github,
   Star,
   BookOpen,
+  ExternalLink,
 } from "lucide-react";
 import type { ProjectItem } from "@/types/project";
+import { writingLinkProps } from "@/lib/writing";
 
-export function ProjectsList({
-  projects,
-  publishedCaseStudies,
-}: {
-  projects: ProjectItem[];
-  publishedCaseStudies: string[];
-}) {
+export function ProjectsList({ projects }: { projects: ProjectItem[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const publishedSet = new Set(publishedCaseStudies);
 
   return (
     <div className="space-y-0">
       {projects.map((project, index) => {
-        const hasCaseStudy =
-          project.caseStudySlug && publishedSet.has(project.caseStudySlug);
-
         return (
           <div
             key={project.id}
@@ -97,14 +89,24 @@ export function ProjectsList({
               </div>
 
               <div className="flex items-center gap-2 md:gap-3">
-                {hasCaseStudy && (
-                  <Link
-                    href={`/projects/${project.caseStudySlug}`}
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal-btn"
-                  >
-                    <BookOpen className="h-4 w-4" />
-                    <span className="hidden sm:inline">Case study</span>
-                  </Link>
+                {project.caseStudies && (
+                  <div className="flex flex-col gap-2">
+                    {project.caseStudies.map((caseStudy) => (
+                      <Link
+                        key={caseStudy.url}
+                        href={caseStudy.url}
+                        {...writingLinkProps}
+                        aria-label={`${caseStudy.label} case study (opens in a new tab)`}
+                        className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal-btn"
+                      >
+                        <BookOpen className="h-4 w-4" />
+                        <span className="hidden sm:inline">
+                          {caseStudy.label}
+                        </span>
+                        <ExternalLink className="h-3 w-3" aria-hidden />
+                      </Link>
+                    ))}
+                  </div>
                 )}
                 {project.url && (
                   <Link

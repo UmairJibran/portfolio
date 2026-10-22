@@ -6,8 +6,18 @@
     "description": "Create hyper-personalized product demos for your customers in seconds",
     "logo": "puppydog",
     "source": null,
-    "caseStudySlug": "puppydog",
+    "caseStudies": [
+      {
+        "label": "Media pipeline",
+        "url": "https://quill.umairjibran.com/optimizing-media-pipeline/"
+      },
+      {
+        "label": "Personalization",
+        "url": "https://quill.umairjibran.com/personalization-at-scale/"
+      }
+    ],
     "featured": true,
+    "category": "work",
     "tech": ["Node.js", "TypeScript", "GCP", "LLMs", "Agentic workflows"]
   },
   {
@@ -17,8 +27,8 @@
     "description": "Compose cover letters with power of AI in just a few seconds",
     "logo": "waltzes",
     "source": "https://github.com/umairjibran/waltzes",
-    "caseStudySlug": "waltzes",
     "featured": true,
+    "category": "open-source",
     "tech": ["Node.js", "OpenAI", "React", "TypeScript"]
   },
   {
@@ -28,9 +38,19 @@
     "description": "meraID is Pakistan's first e-identity mobile application",
     "logo": "meraid",
     "source": null,
-    "caseStudySlug": "meraid",
     "featured": true,
+    "category": "work",
     "tech": ["Flutter", "Node.js", "AWS", "OpenCV"]
+  },
+  {
+    "id": "upptik-pb",
+    "name": "Upptik",
+    "url": "https://upptik.com/",
+    "description": "Connects Connecticut youth with local employers through video resumés",
+    "logo": "upptik",
+    "source": null,
+    "featured": false,
+    "category": "work"
   },
   {
     "id": "afterwokr-pb",
@@ -40,6 +60,7 @@
     "logo": "afterwork",
     "source": null,
     "featured": false,
+    "category": "work",
     "tech": ["Node.js", "Serverless", "React", "AWS"]
   },
   {
@@ -50,6 +71,7 @@
     "logo": "alpha",
     "source": null,
     "featured": false,
+    "category": "open-source",
     "tech": ["TypeScript", "WebExtensions"]
   },
   {
@@ -60,6 +82,7 @@
     "logo": "gamma",
     "source": "https://github.com/solenova-tech/gamma",
     "featured": false,
+    "category": "open-source",
     "tech": ["TypeScript", "GitHub Actions", "Node.js"]
   },
   {
@@ -70,6 +93,7 @@
     "description": "Enhances online shopping with coupons and personalized suggestions",
     "source": null,
     "featured": false,
+    "category": "work",
     "tech": ["Node.js", "React", "MySQL"]
   },
   {
@@ -80,6 +104,7 @@
     "description": "Drive Safe Medicals eases drivers to administer their medicals",
     "source": "https://github.com/Drive-Safe-Medicals/Drive-Safe-Medicals.github.io",
     "featured": false,
+    "category": "work",
     "tech": ["HTML", "CSS", "JavaScript"]
   },
   {
@@ -90,6 +115,7 @@
     "description": "Tameer is a non profit working for the betterment of Pakistan",
     "source": null,
     "featured": false,
+    "category": "charity",
     "tech": ["HTML", "CSS", "JavaScript"]
   }
 ]

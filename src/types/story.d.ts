@@ -1,17 +1,10 @@
-import { type Author } from "./author";
-
+/** A post from the Ghost RSS feed. */
 export type Story = {
   slug: string;
   title: string;
-  date: string;
-  coverImage: string;
-  author: Author;
   excerpt: string;
-  ogImage: {
-    url: string;
-  };
-  content: string;
-  preview?: boolean;
+  url: string;
+  date: string;
   tags: string[];
   type: "blog" | "case-study";
 };
