@@ -19,15 +19,13 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
-import { RecentWriting } from "@/components/RecentWriting";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ContributionGraph } from "@/components/ContributionGraph";
 import { MapPin } from "lucide-react";
 import profile from "@/data/profile.json";
 import experience from "@/data/experience.json";
 import testimonials from "@/data/testimonials.json";
-import { getAllBlog } from "@/lib/api";
-import { Story } from "@/types/story";
+import { writingUrl } from "@/lib/writing";
 
 type Experience = {
   company: string;
@@ -60,7 +58,7 @@ type FeaturedCaseStudy = {
 // Newest first
 const featuredCaseStudies: FeaturedCaseStudy[] = [
   {
-    href: "/projects/puppydog-media-pipeline",
+    href: writingUrl("puppydog-media-pipeline"),
     title: "PuppyDog.io — Eleven Services, One GPU, 80% Leaner",
     summary:
       "How I split a tightly coupled media pipeline into eleven independent, queue-driven services, confined the GPU to the one workload that needs it, and cut monthly infrastructure cost by about 80%.",
@@ -393,32 +391,6 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 }
 
 export default function Home() {
-  const [latestStory, setLatestStory] = useState<Story | null>(null);
-  const hasFeatured = featuredCaseStudies.length > 0;
-
-  useEffect(() => {
-    let mounted = true;
-
-    async function fetchLatest() {
-      try {
-        const res = await fetch("/api/writing");
-        if (!res.ok) return;
-        const data = await res.json();
-        const stories: Story[] = data.stories || [];
-        if (mounted && stories.length > 0) {
-          setLatestStory(stories[0]);
-        }
-      } catch (err) {
-        // ignore
-      }
-    }
-
-    fetchLatest();
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
   return (
     <main className="bg-background min-h-screen grain">
       {/* Hero Section - Dark Theme */}
@@ -498,32 +470,6 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Recent Writing Section: low-key while a case study is featured above */}
-        {latestStory && (
-          <div className="mb-16">
-            <div
-              className={`flex items-center justify-between ${hasFeatured ? "mb-3" : "mb-6"}`}
-            >
-              <h2
-                className={`text-foreground font-bold ${hasFeatured ? "text-lg" : "text-2xl"}`}
-              >
-                <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-                  01
-                </span>
-                Latest Writing
-              </h2>
-              <Link
-                href="/writing"
-                className="text-link hover:text-link-hover text-sm font-medium inline-flex items-center gap-1 transition-colors"
-              >
-                View all
-                <ArrowUpRight className="h-4 w-4" />
-              </Link>
-            </div>
-            <RecentWriting story={latestStory} compact={hasFeatured} />
-          </div>
-        )}
-
         {/* GitHub Contribution Graph */}
         <ContributionGraph username="umairjibran" />
       </section>
@@ -532,7 +478,7 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-foreground text-2xl font-bold mb-12 text-center">
           <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-            02
+            01
           </span>
           Work Experience
         </h2>
@@ -621,7 +567,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 mb-8">
           <h2 className="text-foreground text-2xl font-bold">
             <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-              03
+              02
             </span>
             What People Say
           </h2>

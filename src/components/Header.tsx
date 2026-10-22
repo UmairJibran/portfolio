@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import profile from "@/data/profile.json";
 import Link from "next/link";
+import { WRITING_URL } from "@/lib/writing";
 import { ArrowRight } from "react-feather";
 
 export default function Header() {
@@ -27,7 +28,7 @@ export default function Header() {
   );
 
   navComponents.push(
-    <Link href="/writing" key="writing">
+    <Link href={WRITING_URL} key="writing">
       <span className="mr-5 cursor-pointer hover:text-link transition-colors brutal:hover:bg-accent brutal:hover:text-accent-foreground brutal:px-1 brutal:font-bold">
         Writing
       </span>

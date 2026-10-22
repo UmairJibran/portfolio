@@ -1,11 +1,3 @@
-/* Syntax highlighting for fenced code blocks (rehype-highlight output).
-   Theme-scoped copies of highlight.js github-dark (noir) and github (brutal).
-   Regenerate after bumping highlight.js:
-     node scripts/generate-hljs-themes.js
-   Must precede the Tailwind directives so the @import stays at the top of the
-   stylesheet, per CSS spec. */
-@import "./hljs-themes.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

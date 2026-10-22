@@ -8,6 +8,7 @@ import umamiAnalytics from "@/data/umamiAnalytics.json";
 import Script from "next/script";
 import Header from "@/components/Header";
 import { toJsonLdScript } from "@/lib/jsonLd";
+import { WRITING_URL } from "@/lib/writing";
 
 const personJsonLd = {
   "@context": "https://schema.org",
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(meta.metadataBase),
   alternates: {
     types: {
-      "application/rss+xml": "/rss.xml",
+      "application/rss+xml": `${WRITING_URL}/rss/`,
     },
   },
 };

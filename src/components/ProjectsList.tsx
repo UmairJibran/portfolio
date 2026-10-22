@@ -11,22 +11,12 @@ import {
 } from "lucide-react";
 import type { ProjectItem } from "@/types/project";
 
-export function ProjectsList({
-  projects,
-  publishedCaseStudies,
-}: {
-  projects: ProjectItem[];
-  publishedCaseStudies: string[];
-}) {
+export function ProjectsList({ projects }: { projects: ProjectItem[] }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const publishedSet = new Set(publishedCaseStudies);
 
   return (
     <div className="space-y-0">
       {projects.map((project, index) => {
-        const hasCaseStudy =
-          project.caseStudySlug && publishedSet.has(project.caseStudySlug);
-
         return (
           <div
             key={project.id}
@@ -97,9 +87,9 @@ export function ProjectsList({
               </div>
 
               <div className="flex items-center gap-2 md:gap-3">
-                {hasCaseStudy && (
+                {project.caseStudyUrl && (
                   <Link
-                    href={`/projects/${project.caseStudySlug}`}
+                    href={project.caseStudyUrl}
                     className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal-btn"
                   >
                     <BookOpen className="h-4 w-4" />

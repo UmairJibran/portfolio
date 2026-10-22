@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Code2, Briefcase } from "lucide-react";
 import portfolio from "@/data/portfolio.json";
-import { getCaseStudySlugs } from "@/lib/api";
 import { ProjectsList } from "@/components/ProjectsList";
 import type { ProjectItem } from "@/types/project";
 
@@ -11,9 +10,6 @@ export default function ProjectsPage() {
     const bf = b.featured ? 1 : 0;
     return bf - af;
   });
-
-  const publishedCaseStudies = getCaseStudySlugs()
-    .map((f) => f.replace(/\.md$/, ""));
 
   return (
     <main className="bg-background min-h-screen grain">
@@ -41,10 +37,7 @@ export default function ProjectsPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-20">
-        <ProjectsList
-          projects={sortedPortfolio}
-          publishedCaseStudies={publishedCaseStudies}
-        />
+        <ProjectsList projects={sortedPortfolio} />
       </section>
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
