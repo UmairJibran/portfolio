@@ -4,12 +4,25 @@ import portfolio from "@/data/portfolio.json";
 import { ProjectsList } from "@/components/ProjectsList";
 import type { ProjectItem } from "@/types/project";
 
+const categories: { key: ProjectItem["category"]; title: string }[] = [
+  { key: "work", title: "Work" },
+  { key: "open-source", title: "Open Source" },
+  { key: "charity", title: "Charity" },
+];
+
 export default function ProjectsPage() {
   const sortedPortfolio = [...(portfolio as ProjectItem[])].sort((a, b) => {
     const af = a.featured ? 1 : 0;
     const bf = b.featured ? 1 : 0;
     return bf - af;
   });
+
+  const sections = categories
+    .map((category) => ({
+      ...category,
+      projects: sortedPortfolio.filter((p) => p.category === category.key),
+    }))
+    .filter((section) => section.projects.length > 0);
 
   return (
     <main className="bg-background min-h-screen grain">
@@ -36,9 +49,22 @@ export default function ProjectsPage() {
         <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px]"></div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-        <ProjectsList projects={sortedPortfolio} />
-      </section>
+      {sections.map((section, index) => (
+        <section key={section.key} className="max-w-7xl mx-auto px-6 pb-16">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-foreground text-2xl font-bold">
+              <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              {section.title}
+            </h2>
+            <span className="text-faint text-sm font-mono">
+              {String(section.projects.length).padStart(2, "0")}
+            </span>
+          </div>
+          <ProjectsList projects={section.projects} />
+        </section>
+      ))}
 
       <section className="max-w-7xl mx-auto px-6 pb-16">
         <div className="border-t border-border brutal:border-t-[3px] brutal:border-edge pt-8 flex items-center justify-between text-sm">

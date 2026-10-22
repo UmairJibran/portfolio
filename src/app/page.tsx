@@ -15,6 +15,7 @@ import {
   Building2,
   Quote,
   Sparkles,
+  Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ExperienceDialog } from "@/components/ExperienceDialog";
@@ -27,6 +28,7 @@ import testimonials from "@/data/testimonials.json";
 import { RecentWriting } from "@/components/RecentWriting";
 import { WRITING_URL, writingLinkProps } from "@/lib/writing";
 import type { Story } from "@/types/story";
+import type { ITestimonial } from "@/types/testimonial";
 
 type Experience = {
   company: string;
@@ -234,7 +236,37 @@ function ExperienceTimelineItem({
 }
 
 // Testimonial Carousel Component - Center spotlight with timed transitions
-function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
+// Contact links shown on a testimonial card, for whichever ones the person shared
+function testimonialLinks(testimonial: ITestimonial) {
+  return [
+    testimonial.linkedin && {
+      label: "LinkedIn",
+      href: `https://linkedin.com/in/${testimonial.linkedin}`,
+      Icon: Linkedin,
+    },
+    testimonial.twitter && {
+      label: "X (Twitter)",
+      href: `https://x.com/${testimonial.twitter}`,
+      Icon: Twitter,
+    },
+    testimonial.personalSite && {
+      label: "Website",
+      href: testimonial.personalSite,
+      Icon: Globe,
+    },
+    testimonial.email && {
+      label: "Email",
+      href: `mailto:${testimonial.email}`,
+      Icon: Mail,
+    },
+  ].filter(Boolean) as { label: string; href: string; Icon: typeof Mail }[];
+}
+
+function TestimonialsCarousel({
+  testimonials,
+}: {
+  testimonials: ITestimonial[];
+}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -312,22 +344,38 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
                 <div className="text-muted-foreground text-sm">
                   {testimonials[currentIndex].designationAtTime}
                 </div>
-                <div className="text-faint text-xs mt-1">
-                  {testimonials[currentIndex].employerAtTime}
-                </div>
+                {testimonials[currentIndex].employerSite ? (
+                  <Link
+                    href={testimonials[currentIndex].employerSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-faint hover:text-link transition-colors text-xs mt-1 inline-flex items-center gap-1"
+                  >
+                    {testimonials[currentIndex].employerAtTime}
+                    <ExternalLink className="w-3 h-3" aria-hidden />
+                  </Link>
+                ) : (
+                  <div className="text-faint text-xs mt-1">
+                    {testimonials[currentIndex].employerAtTime}
+                  </div>
+                )}
               </div>
-              {testimonials[currentIndex].linkedin && (
-                <Link
-                  href={
-                    "https://linkedin.com/in/" +
-                    testimonials[currentIndex].linkedin
-                  }
-                  target="_blank"
-                  className="text-faint hover:text-link transition-colors p-2"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </Link>
-              )}
+              <div className="flex items-center">
+                {testimonialLinks(testimonials[currentIndex]).map(
+                  ({ label, href, Icon }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      target={href.startsWith("mailto:") ? undefined : "_blank"}
+                      rel="noopener noreferrer"
+                      aria-label={`${testimonials[currentIndex].name}'s ${label}`}
+                      className="text-faint hover:text-link transition-colors p-2"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </Link>
+                  ),
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Inconsolata, Archivo_Black } from "next/font/google";
+import { IBM_Plex_Mono, Archivo_Black } from "next/font/google";
 import "@/styles/globals.css";
 
 import meta from "@/data/meta.json";
@@ -15,7 +15,6 @@ const personJsonLd = {
   "@type": "Person",
   name: `${profile.name.firstName} ${profile.name.lastName}`,
   url: meta.metadataBase,
-  image: `${meta.metadataBase}${profile.image}`,
   jobTitle: "Full-Stack Software Engineer",
   description:
     "Full-stack engineer specializing in Node.js, serverless, AWS, and LLM-powered workflows.",
@@ -44,12 +43,6 @@ const personJsonLd = {
 const ibmPlexMono = IBM_Plex_Mono({
   weight: "400",
   variable: "--font-ibm-mono",
-  preload: false,
-});
-
-const inconsolata = Inconsolata({
-  weight: "400",
-  variable: "--font-inconsolata",
   preload: false,
 });
 
@@ -86,15 +79,10 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="noir"
-      className={`${ibmPlexMono.variable} ${inconsolata.variable} ${archivoBlack.variable}`}
+      className={`${ibmPlexMono.variable} ${archivoBlack.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"

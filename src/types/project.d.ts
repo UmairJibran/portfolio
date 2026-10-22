@@ -7,5 +7,6 @@ export type ProjectItem = {
   source: string | null;
   caseStudies?: { label: string; url: string }[];
   featured?: boolean;
+  category: "work" | "open-source" | "charity";
   tech?: string[];
 };

@@ -6,7 +6,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import profile from "@/data/profile.json";
 import Link from "next/link";
 import { WRITING_URL, writingLinkProps } from "@/lib/writing";
-import { ArrowRight, ExternalLink } from "react-feather";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 export default function Header() {
   const navComponents = [];
