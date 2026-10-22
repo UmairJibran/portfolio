@@ -14,7 +14,6 @@ import {
   Calendar,
   Building2,
   Quote,
-  ArrowUpRight,
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -25,7 +24,9 @@ import { MapPin } from "lucide-react";
 import profile from "@/data/profile.json";
 import experience from "@/data/experience.json";
 import testimonials from "@/data/testimonials.json";
-import { writingUrl } from "@/lib/writing";
+import { RecentWriting } from "@/components/RecentWriting";
+import { WRITING_URL, writingLinkProps } from "@/lib/writing";
+import type { Story } from "@/types/story";
 
 type Experience = {
   company: string;
@@ -47,35 +48,26 @@ const companyLogos: Record<string, string> = {
   Ideometrix: "/assets/logos/ideometrix.webp",
 };
 
-type FeaturedCaseStudy = {
-  href: string;
-  title: string;
-  summary: string;
-  stats: { value: string; label: string }[];
-  tags: string[];
+type Stat = { value: string; label: string };
+
+// Headline numbers for case studies, keyed by Ghost slug. The rest of the
+// featured card comes from the RSS feed.
+const caseStudyStats: Record<string, Stat[]> = {
+  "optimizing-media-pipeline": [
+    { value: "−80%", label: "Monthly infra cost" },
+    { value: "11", label: "Independent services" },
+    { value: "1", label: "Service that needs a GPU" },
+    { value: "~1.2k", label: "Tests" },
+  ],
 };
 
-// Newest first
-const featuredCaseStudies: FeaturedCaseStudy[] = [
-  {
-    href: writingUrl("puppydog-media-pipeline"),
-    title: "PuppyDog.io — Eleven Services, One GPU, 80% Leaner",
-    summary:
-      "How I split a tightly coupled media pipeline into eleven independent, queue-driven services, confined the GPU to the one workload that needs it, and cut monthly infrastructure cost by about 80%.",
-    stats: [
-      { value: "−80%", label: "Monthly infra cost" },
-      { value: "11", label: "Independent services" },
-      { value: "1", label: "Service that needs a GPU" },
-      { value: "~1.2k", label: "Tests" },
-    ],
-    tags: ["Python", "Architecture", "Docker", "GPU", "Kubernetes"],
-  },
-];
+function FeaturedCaseStudyCard({ study }: { study: Story }) {
+  const stats = caseStudyStats[study.slug];
 
-function FeaturedCaseStudyCard({ study }: { study: FeaturedCaseStudy }) {
   return (
     <Link
-      href={study.href}
+      href={study.url}
+      {...writingLinkProps}
       className="group block bg-card noir:bg-gradient-to-br noir:from-[#1a1a1a] noir:to-[#141414] border border-border hover:border-brand/60 rounded-lg p-6 md:p-8 transition-all duration-300 brutal:border-2 brutal:border-edge brutal:shadow-hard-brand brutal:hover:shadow-hard-brand-lg brutal:hover:-translate-x-0.5 brutal:hover:-translate-y-0.5 brutal:hover:border-edge"
     >
       <div className="flex items-center gap-2 mb-3">
@@ -88,21 +80,23 @@ function FeaturedCaseStudyCard({ study }: { study: FeaturedCaseStudy }) {
         {study.title}
       </h2>
       <p className="text-muted-foreground text-base leading-relaxed mb-5 max-w-3xl">
-        {study.summary}
+        {study.excerpt}
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
-        {study.stats.map((stat) => (
-          <div key={stat.label}>
-            <div className="text-link text-2xl font-bold font-mono">
-              {stat.value}
+      {stats && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-5">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <div className="text-link text-2xl font-bold font-mono">
+                {stat.value}
+              </div>
+              <div className="text-faint text-xs">{stat.label}</div>
             </div>
-            <div className="text-faint text-xs">{stat.label}</div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
       <div className="flex items-center justify-between">
         <div className="flex flex-wrap gap-2">
-          {study.tags.map((tag) => (
+          {study.tags.slice(0, 5).map((tag) => (
             <span
               key={tag}
               className="inline-flex items-center rounded-md bg-secondary/80 px-2.5 py-1 text-xs font-medium text-foreground/80 ring-1 ring-inset ring-edge/50"
@@ -112,8 +106,9 @@ function FeaturedCaseStudyCard({ study }: { study: FeaturedCaseStudy }) {
           ))}
         </div>
         <span className="text-link text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-          Read case study
-          <ArrowUpRight className="h-4 w-4" />
+          Read on quill
+          <ExternalLink className="h-4 w-4" aria-hidden />
+          <span className="sr-only"> (opens in a new tab)</span>
         </span>
       </div>
     </Link>
@@ -391,6 +386,32 @@ function TestimonialsCarousel({ testimonials }: { testimonials: any[] }) {
 }
 
 export default function Home() {
+  const [stories, setStories] = useState<Story[]>([]);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function fetchStories() {
+      try {
+        const res = await fetch("/api/writing");
+        if (!res.ok) return;
+        const data = await res.json();
+        if (mounted) setStories(data.stories || []);
+      } catch (err) {
+        // ignore
+      }
+    }
+
+    fetchStories();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  // Newest case study is featured; latest writing is the newest post besides it
+  const featured = stories.find((story) => story.type === "case-study");
+  const latestStory = stories.find((story) => story !== featured);
+
   return (
     <main className="bg-background min-h-screen grain">
       {/* Hero Section - Dark Theme */}
@@ -463,12 +484,40 @@ export default function Home() {
         {/* Skills Section */}
         <SkillsSection />
 
-        {/* Featured Case Studies */}
-        <div className="mb-16 space-y-6">
-          {featuredCaseStudies.map((study) => (
-            <FeaturedCaseStudyCard key={study.href} study={study} />
-          ))}
-        </div>
+        {/* Featured Case Study */}
+        {featured && (
+          <div className="mb-16">
+            <FeaturedCaseStudyCard study={featured} />
+          </div>
+        )}
+
+        {/* Recent Writing Section: low-key while a case study is featured above */}
+        {latestStory && (
+          <div className="mb-16">
+            <div
+              className={`flex items-center justify-between ${featured ? "mb-3" : "mb-6"}`}
+            >
+              <h2
+                className={`text-foreground font-bold ${featured ? "text-lg" : "text-2xl"}`}
+              >
+                <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
+                  01
+                </span>
+                Latest Writing
+              </h2>
+              <Link
+                href={WRITING_URL}
+                {...writingLinkProps}
+                className="text-link hover:text-link-hover text-sm font-medium inline-flex items-center gap-1 transition-colors"
+              >
+                View all on quill
+                <ExternalLink className="h-4 w-4" aria-hidden />
+                <span className="sr-only"> (opens in a new tab)</span>
+              </Link>
+            </div>
+            <RecentWriting story={latestStory} compact={!!featured} />
+          </div>
+        )}
 
         {/* GitHub Contribution Graph */}
         <ContributionGraph username="umairjibran" />
@@ -478,7 +527,7 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-6 py-16">
         <h2 className="text-foreground text-2xl font-bold mb-12 text-center">
           <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-            01
+            02
           </span>
           Work Experience
         </h2>
@@ -567,7 +616,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 mb-8">
           <h2 className="text-foreground text-2xl font-bold">
             <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-              02
+              03
             </span>
             What People Say
           </h2>

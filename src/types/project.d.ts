@@ -5,7 +5,7 @@ export type ProjectItem = {
   description: string;
   logo: string;
   source: string | null;
-  caseStudyUrl?: string;
+  caseStudies?: { label: string; url: string }[];
   featured?: boolean;
   tech?: string[];
 };

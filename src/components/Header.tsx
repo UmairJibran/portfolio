@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import profile from "@/data/profile.json";
 import Link from "next/link";
-import { WRITING_URL } from "@/lib/writing";
-import { ArrowRight } from "react-feather";
+import { WRITING_URL, writingLinkProps } from "@/lib/writing";
+import { ArrowRight, ExternalLink } from "react-feather";
 
 export default function Header() {
   const navComponents = [];
@@ -28,9 +28,11 @@ export default function Header() {
   );
 
   navComponents.push(
-    <Link href={WRITING_URL} key="writing">
-      <span className="mr-5 cursor-pointer hover:text-link transition-colors brutal:hover:bg-accent brutal:hover:text-accent-foreground brutal:px-1 brutal:font-bold">
+    <Link href={WRITING_URL} key="writing" {...writingLinkProps}>
+      <span className="mr-5 cursor-pointer inline-flex items-center gap-1 hover:text-link transition-colors brutal:hover:bg-accent brutal:hover:text-accent-foreground brutal:px-1 brutal:font-bold">
         Writing
+        <ExternalLink className="h-3 w-3" aria-hidden />
+        <span className="sr-only"> (opens in a new tab)</span>
       </span>
     </Link>,
   );

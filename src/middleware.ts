@@ -13,6 +13,16 @@ function getLastSegment(pathname: string): string | null {
 }
 
 /**
+ * Posts whose slug changed when they moved to Ghost. null means the post was
+ * not carried over, so its old URLs go to the Ghost home page instead.
+ */
+const MOVED_SLUGS: Record<string, string | null> = {
+  puppydog: 'personalization-at-scale',
+  'puppydog-media-pipeline': 'optimizing-media-pipeline',
+  'make-it-your-own': null,
+}
+
+/**
  * Permanently redirect to the Ghost site, preserving the incoming search
  * string so UTM/campaign params survive the redirect.
  */
@@ -30,8 +40,10 @@ export function middleware(request: NextRequest) {
   }
 
   // Blogs (/writing, legacy /blogs) and case studies (/projects/<slug>,
-  // legacy /case-studies) all moved to Ghost under the same slugs.
-  return redirectTo(request, writingUrl(getLastSegment(pathname)))
+  // legacy /case-studies) all moved to Ghost, mostly under the same slugs.
+  const slug = getLastSegment(pathname)
+  const ghostSlug = slug && slug in MOVED_SLUGS ? MOVED_SLUGS[slug] : slug
+  return redirectTo(request, writingUrl(ghostSlug))
 }
 
 export const config = {

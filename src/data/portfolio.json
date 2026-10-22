@@ -6,7 +6,16 @@
     "description": "Create hyper-personalized product demos for your customers in seconds",
     "logo": "puppydog",
     "source": null,
-    "caseStudyUrl": "https://quill.umairjibran.com/puppydog/",
+    "caseStudies": [
+      {
+        "label": "Media pipeline",
+        "url": "https://quill.umairjibran.com/optimizing-media-pipeline/"
+      },
+      {
+        "label": "Personalization",
+        "url": "https://quill.umairjibran.com/personalization-at-scale/"
+      }
+    ],
     "featured": true,
     "tech": ["Node.js", "TypeScript", "GCP", "LLMs", "Agentic workflows"]
   },
