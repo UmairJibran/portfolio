@@ -1,0 +1,55 @@
+[
+  {
+    "category": "CRM & sales tooling",
+    "items": [
+      "HubSpot",
+      "Salesforce",
+      "Clay",
+      "SmartLead",
+      "Lead enrichment pipelines",
+      "Two-way contact sync"
+    ]
+  },
+  {
+    "category": "Automation & workflow",
+    "items": [
+      "n8n",
+      "Custom webhook workers",
+      "Queue-backed retries",
+      "Scheduled jobs",
+      "Zapier-style triggers"
+    ]
+  },
+  {
+    "category": "Comms & collaboration",
+    "items": [
+      "Slack bots & slash commands",
+      "Slack Events API",
+      "Gmail",
+      "Google Calendar",
+      "Google Drive & Sheets",
+      "Google OAuth"
+    ]
+  },
+  {
+    "category": "Developer platforms",
+    "items": [
+      "GitHub Apps & webhooks",
+      "GitHub Actions",
+      "OAuth 2.0 flows",
+      "API key & HMAC auth",
+      "Third-party REST & GraphQL APIs"
+    ]
+  },
+  {
+    "category": "Transport & delivery",
+    "items": [
+      "Inbound & outbound webhooks",
+      "Signature verification",
+      "WebSockets",
+      "Server-sent events",
+      "Idempotency & replay handling",
+      "Rate-limit backoff"
+    ]
+  }
+]

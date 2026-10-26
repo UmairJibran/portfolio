@@ -1,0 +1,46 @@
+{
+  "availability": "Open to new roles",
+  "roleTypes": ["Full-time remote", "Relocation (EU / North America)"],
+  "titles": [
+    "Backend Engineer",
+    "Senior Backend Engineer",
+    "Full-Stack Engineer",
+    "Platform Engineer",
+    "DevOps Engineer",
+    "AI / LLM Engineer",
+    "Integrations Engineer"
+  ],
+  "base": {
+    "city": "Peshawar",
+    "region": "Khyber Pakhtunkhwa",
+    "country": "PK",
+    "timezone": "UTC+5"
+  },
+  "preferredRegions": ["Europe", "North America", "Remote"],
+  "faq": [
+    {
+      "question": "Is Umair Jibran available for hire?",
+      "answer": "Yes. He is open to full-time remote engineering roles, and open to relocating for the right team in Europe or North America. The quickest route is email or a 30-minute call — both are linked from this page."
+    },
+    {
+      "question": "Where is he based, and does remote work actually overlap?",
+      "answer": "He works from Peshawar, Pakistan (UTC+5). That is a full working-day overlap with European teams and a solid morning overlap with North America, and he has shipped production work on distributed teams for the last four years."
+    },
+    {
+      "question": "What does he actually build?",
+      "answer": "Backend systems and the infrastructure under them: Node.js and Python services, event-driven and serverless architectures on AWS and GCP, observability with Datadog, and agentic LLM workflows. At PuppyDog.io he is the sole backend, DevOps, and AI/ML engineer, and also manages two frontend engineers and a QA engineer."
+    },
+    {
+      "question": "Which integrations has he shipped?",
+      "answer": "CRM and GTM tools including HubSpot, Salesforce, Clay, and SmartLead; automation through n8n and custom webhook workers; Slack bots and slash commands; Google services such as Gmail, Calendar, Drive, and Sheets; GitHub Apps, Actions, and webhooks; plus the plumbing underneath — inbound and outbound webhooks, signature verification, WebSockets, idempotency, and rate-limit backoff. Niche or in-house APIs are usually the same job with a different contract."
+    },
+    {
+      "question": "What has he measurably delivered?",
+      "answer": "He built a mass personalization engine that scaled from 10 to 10,000+ prospects per job unattended, led a hybrid AWS to GCP migration that cut infrastructure cost by 36%, redesigned a media pipeline down to 11 independent services and roughly 80% lower monthly infra cost, and took backend test coverage from 0 to about 75% — which moved releases from fortnightly to daily."
+    },
+    {
+      "question": "How should a recruiter or hiring manager start?",
+      "answer": "Email me@umairjibran.com or book a slot on the scheduling link. A PDF resume is linked in the site header, deeper write-ups live on the writing site, and the code is on GitHub."
+    }
+  ]
+}
