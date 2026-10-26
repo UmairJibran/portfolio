@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -13,132 +10,119 @@ import {
 import type { ProjectItem } from "@/types/project";
 import { writingLinkProps } from "@/lib/writing";
 
+/**
+ * Projects as rows in a listing: an index column, the logo, the detail, then
+ * the actions. Hover lifts the row's tint and accent rule rather than moving
+ * it, so a long list stays still as the pointer travels down it.
+ */
 export function ProjectsList({ projects }: { projects: ProjectItem[] }) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
-    <div className="space-y-0">
-      {projects.map((project, index) => {
-        return (
-          <div
-            key={project.id}
-            className="group relative border-b border-border last:border-b-0 hover:bg-card/30 transition-all duration-300 brutal-card brutal:bg-card brutal:mb-4"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            <div className="flex items-center gap-6 md:gap-8 py-6 px-4">
-              <div className="hidden md:block text-faint/80 group-hover:text-link font-mono text-sm w-12 transition-colors">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-
-              <div className="relative flex-shrink-0">
-                <div
-                  className={`w-16 h-16 md:w-20 md:h-20 bg-white/5 rounded-lg flex items-center justify-center overflow-hidden border transition-all duration-300 brutal:border-2 brutal:border-edge ${
-                    hoveredIndex === index
-                      ? "border-brand shadow-lg shadow-brand/20 brutal:border-edge brutal:shadow-none"
-                      : "border-border"
-                  }`}
-                >
-                  <Image
-                    src={`/assets/logos/${project.logo}.webp`}
-                    alt={project.name}
-                    width={60}
-                    height={60}
-                    className={`object-contain p-2 transition-transform duration-300 ${
-                      hoveredIndex === index ? "scale-110" : "scale-100"
-                    }`}
-                  />
-                </div>
-                {hoveredIndex === index && (
-                  <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-brand"></div>
-                )}
-              </div>
-
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-3 mb-1 flex-wrap">
-                  <h3 className="text-foreground font-semibold text-lg md:text-xl group-hover:text-link transition-colors">
-                    {project.name}
-                  </h3>
-                  {project.featured && (
-                    <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-brand/10 text-link border border-brand/30 brutal:bg-brand brutal:text-foreground brutal:border brutal:border-edge brutal:font-bold">
-                      <Star className="h-3 w-3" />
-                      Featured
-                    </span>
-                  )}
-                  {!project.url && !project.source && (
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-secondary text-faint border border-edge brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold">
-                      Private
-                    </span>
-                  )}
-                </div>
-                <p className="text-muted-foreground text-sm md:text-base line-clamp-1 md:line-clamp-2 mb-2">
-                  {project.description}
-                </p>
-                {project.tech && (
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="inline-flex items-center rounded-md bg-secondary/80 px-2 py-0.5 text-[11px] font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:ring-0 brutal:font-bold"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <div className="flex items-center gap-2 md:gap-3">
-                {project.caseStudies && (
-                  <div className="flex flex-col gap-2">
-                    {project.caseStudies.map((caseStudy) => (
-                      <Link
-                        key={caseStudy.url}
-                        href={caseStudy.url}
-                        {...writingLinkProps}
-                        aria-label={`${caseStudy.label} case study (opens in a new tab)`}
-                        className="flex items-center gap-2 px-3 md:px-4 py-2 border border-brand/30 bg-brand/5 hover:bg-brand/10 text-link rounded-md transition-all text-sm font-medium brutal:bg-card brutal-btn"
-                      >
-                        <BookOpen className="h-4 w-4" />
-                        <span className="hidden sm:inline">
-                          {caseStudy.label}
-                        </span>
-                        <ExternalLink className="h-3 w-3" aria-hidden />
-                      </Link>
-                    ))}
-                  </div>
-                )}
-                {project.url && (
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    className="flex items-center gap-2 px-3 md:px-4 py-2 bg-primary hover:bg-primary-hover text-primary-foreground rounded-md transition-all text-sm font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 brutal-btn"
-                  >
-                    <span className="hidden sm:inline">Visit</span>
-                    <ArrowUpRight className="h-4 w-4" />
-                  </Link>
-                )}
-                {project.source && (
-                  <Link
-                    href={project.source}
-                    target="_blank"
-                    className="p-2 border border-edge hover:border-brand hover:bg-brand/10 text-muted-foreground hover:text-link rounded-md transition-all brutal:bg-card brutal-btn"
-                    title="View Source Code"
-                  >
-                    <Github className="h-5 w-5" />
-                  </Link>
-                )}
-              </div>
+    <div className="divide-y divide-border border-y border-border">
+      {projects.map((project, index) => (
+        <div
+          key={project.id}
+          className="group relative transition-colors duration-300 hover:bg-card/40"
+        >
+          <span
+            aria-hidden
+            className="absolute inset-y-0 left-0 w-px bg-brand opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+          <div className="flex items-center gap-4 px-4 py-6 md:gap-8">
+            <div className="hidden w-10 shrink-0 font-mono text-sm text-faint transition-colors group-hover:text-brand md:block">
+              {String(index + 1).padStart(2, "0")}
             </div>
 
-            <div
-              className={`absolute bottom-0 left-0 h-px bg-gradient-to-r from-brand via-brand/50 to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px] transition-all duration-500 ${
-                hoveredIndex === index ? "w-full opacity-100" : "w-0 opacity-0"
-              }`}
-            ></div>
+            <div className="logo-tile h-14 w-14 group-hover:bg-white md:h-16 md:w-16">
+              <Image
+                src={`/assets/logos/${project.logo}.webp`}
+                alt=""
+                width={64}
+                height={64}
+                className="h-full w-full object-contain p-1.5 transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+
+            <div className="min-w-0 flex-1">
+              <div className="mb-1 flex flex-wrap items-center gap-2">
+                <h3 className="text-base font-semibold text-foreground transition-colors group-hover:text-link md:text-lg">
+                  {project.name}
+                </h3>
+                {project.featured && (
+                  <span className="inline-flex items-center gap-1 rounded border border-brand/30 bg-brand/5 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-brand">
+                    <Star className="h-2.5 w-2.5" aria-hidden />
+                    featured
+                  </span>
+                )}
+                {!project.url && !project.source && (
+                  <span className="rounded border border-edge/60 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-faint">
+                    private
+                  </span>
+                )}
+              </div>
+              <p className="mb-2 line-clamp-2 text-sm text-muted-foreground">
+                {project.description}
+              </p>
+              {project.tech && (
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center rounded bg-secondary/60 px-1.5 py-0.5 font-mono text-[10px] text-muted-foreground ring-1 ring-inset ring-edge/40"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="flex shrink-0 items-center gap-2">
+              {project.caseStudies && (
+                <div className="hidden flex-col gap-2 sm:flex">
+                  {project.caseStudies.map((caseStudy) => (
+                    <Link
+                      key={caseStudy.url}
+                      href={caseStudy.url}
+                      {...writingLinkProps}
+                      aria-label={`${caseStudy.label} case study (opens in a new tab)`}
+                      className="inline-flex items-center gap-2 rounded-md border border-brand/30 bg-brand/5 px-3 py-1.5 font-mono text-xs text-link transition-colors hover:border-brand/60 hover:bg-brand/10"
+                    >
+                      <BookOpen className="h-3.5 w-3.5" aria-hidden />
+                      {caseStudy.label}
+                      <ExternalLink className="h-3 w-3" aria-hidden />
+                    </Link>
+                  ))}
+                </div>
+              )}
+              {project.url && (
+                <Link
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 rounded-md border border-edge px-3 py-1.5 font-mono text-xs text-foreground transition-colors hover:border-brand/60 hover:bg-brand/10 hover:text-link"
+                >
+                  <span className="hidden sm:inline">visit</span>
+                  <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                  <span className="sr-only">
+                    {project.name} website (opens in a new tab)
+                  </span>
+                </Link>
+              )}
+              {project.source && (
+                <Link
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.name} source code (opens in a new tab)`}
+                  className="rounded-md border border-edge p-2 text-muted-foreground transition-colors hover:border-brand/60 hover:bg-brand/10 hover:text-link"
+                >
+                  <Github className="h-4 w-4" aria-hidden />
+                </Link>
+              )}
+            </div>
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   );
 }

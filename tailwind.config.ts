@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -53,6 +52,9 @@ const config: Config = {
           DEFAULT: "rgb(var(--link) / <alpha-value>)",
           hover: "rgb(var(--link-hover) / <alpha-value>)",
         },
+        // Terminal output semantics, used by the session transcripts.
+        info: "rgb(var(--info) / <alpha-value>)",
+        warn: "rgb(var(--warn) / <alpha-value>)",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -60,27 +62,18 @@ const config: Config = {
         sm: "var(--radius-sm)",
         full: "var(--radius-full)",
       },
-      boxShadow: {
-        "hard-sm": "2px 2px 0 0 rgb(var(--shadow-color))",
-        hard: "4px 4px 0 0 rgb(var(--shadow-color))",
-        "hard-lg": "6px 6px 0 0 rgb(var(--shadow-color))",
-        // Accent-coloured variants, for the pieces that get a brand-yellow drop.
-        "hard-brand": "6px 6px 0 0 rgb(var(--brand))",
-        "hard-brand-lg": "8px 8px 0 0 rgb(var(--brand))",
-      },
     },
     fontFamily: {
-      mono: ["var(--font-ibm-mono)"],
-      heading: ["var(--font-heading)"],
+      sans: [
+        "var(--font-plex-sans)",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+      ],
+      mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"],
+      serif: ["var(--font-plex-serif)", "ui-serif", "Georgia", "serif"],
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    plugin(({ addVariant }) => {
-      // Theme-scoped utilities: brutal:shadow-hard, noir:bg-card/50, etc.
-      addVariant("brutal", '[data-theme="brutal"] &');
-      addVariant("noir", '[data-theme="noir"] &');
-    }),
-  ],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

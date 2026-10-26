@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SectionHeading, Em } from "@/components/SectionHeading";
 
 type Contribution = {
   date: string;
@@ -14,11 +15,11 @@ type ApiResponse = {
 };
 
 const LEVEL_BG = [
-  "bg-[#161b22] brutal:bg-[#e8e2d4]",
-  "bg-[#0e4429] brutal:bg-[#fff3b0]",
-  "bg-[#006d32] brutal:bg-[#ffe45c]",
-  "bg-[#26a641] brutal:bg-[#ffd400]",
-  "bg-[#39d353] brutal:bg-[#111111]",
+  "bg-secondary/60",
+  "bg-[#0e4429]",
+  "bg-[#006d32]",
+  "bg-[#26a641]",
+  "bg-[#39d353]",
 ];
 
 const API_BASE = "https://github-contributions-api.jogruber.de/v4";
@@ -59,16 +60,18 @@ export function ContributionGraph({ username }: { username: string }) {
   // required because the all-time endpoint pads the current year out to Dec 31
   // with zero-count entries — without the cap those future dates render as
   // empty cells past today.
-  const lastYear = data ? (() => {
-    const today = new Date();
-    const todayISO = today.toISOString().slice(0, 10);
-    const cutoff = new Date();
-    cutoff.setUTCDate(cutoff.getUTCDate() - 364);
-    const cutoffISO = cutoff.toISOString().slice(0, 10);
-    return data.contributions
-      .filter((c) => c.date >= cutoffISO && c.date <= todayISO)
-      .sort((a, b) => a.date.localeCompare(b.date));
-  })() : [];
+  const lastYear = data
+    ? (() => {
+        const today = new Date();
+        const todayISO = today.toISOString().slice(0, 10);
+        const cutoff = new Date();
+        cutoff.setUTCDate(cutoff.getUTCDate() - 364);
+        const cutoffISO = cutoff.toISOString().slice(0, 10);
+        return data.contributions
+          .filter((c) => c.date >= cutoffISO && c.date <= todayISO)
+          .sort((a, b) => a.date.localeCompare(b.date));
+      })()
+    : [];
   const lastYearTotal = data
     ? lastYear.reduce((sum, c) => sum + c.count, 0)
     : null;
@@ -99,23 +102,40 @@ export function ContributionGraph({ username }: { username: string }) {
   // we see a new month in that column's real (non-pad) days. This matches the
   // GitHub convention and lets the viewer read the time axis at a glance.
   const MONTHS = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
   const monthLabels: string[] = weeks.map((week) => {
     const firstReal = week.find((d) => d.date);
     if (!firstReal) return "";
     const day = new Date(`${firstReal.date}T00:00:00Z`).getUTCDate();
     // Only label if this column contains the first week of the month.
-    return day <= 7 ? MONTHS[new Date(`${firstReal.date}T00:00:00Z`).getUTCMonth()] : "";
+    return day <= 7
+      ? MONTHS[new Date(`${firstReal.date}T00:00:00Z`).getUTCMonth()]
+      : "";
   });
 
   return (
-    <div className="mb-16">
-      <h2 className="text-foreground text-xl font-semibold mb-4">
-        Contribution Graph
-      </h2>
-      <div className="bg-card border border-border rounded-lg p-6 brutal:border-2 brutal:border-edge brutal:shadow-hard">
+    <>
+      <SectionHeading
+        command="git log --graph --since=1.year"
+        title={
+          <>
+            A year of <Em>commits</Em>
+          </>
+        }
+      />
+      <div className="panel p-6">
         <div className="flex items-center justify-between mb-4">
           <p className="text-muted-foreground text-sm">
             {lastYearTotal !== null
@@ -166,6 +186,6 @@ export function ContributionGraph({ username }: { username: string }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

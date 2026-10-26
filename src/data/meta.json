@@ -1,13 +1,60 @@
 {
-  "title": "Umair Jibran - FullStack Engineer & AWS Expert",
-  "description": "Explore the world of Umair Jibran - a highly skilled full-stack developer with expertise in Node.js, JavaScript, and AWS. Discover his impressive portfolio and passion for open-source technologies. Connect with him to discuss your next project or exchange thoughts on the latest tech trends.",
+  "title": {
+    "default": "Umair Jibran — Remote Backend, Cloud & AI Engineer",
+    "template": "%s · Umair Jibran"
+  },
+  "description": "Umair Jibran is a backend, DevOps, and AI/LLM engineer working remotely — Node.js, TypeScript, Python, AWS, GCP — who ships CRM and automation integrations (HubSpot, Salesforce, Clay, n8n, Slack). Open to remote roles in Europe and North America.",
+  "applicationName": "Umair Jibran",
   "authors": [{ "name": "Umair Jibran", "url": "https://umairjibran.com" }],
+  "creator": "Umair Jibran",
+  "publisher": "Umair Jibran",
+  "category": "technology",
+  "keywords": [
+    "Umair Jibran",
+    "remote backend engineer",
+    "hire Node.js developer",
+    "remote full-stack engineer",
+    "TypeScript engineer for hire",
+    "Python backend engineer",
+    "AWS serverless engineer",
+    "GCP Cloud Run engineer",
+    "DevOps engineer remote",
+    "LLM engineer",
+    "AI integration engineer",
+    "agentic workflows engineer",
+    "RAG pipelines",
+    "integrations engineer",
+    "HubSpot integration developer",
+    "Salesforce integration developer",
+    "Clay integration developer",
+    "SmartLead integration",
+    "n8n automation developer",
+    "Slack app developer",
+    "Google Workspace API developer",
+    "GitHub Apps developer",
+    "webhooks and WebSockets engineer",
+    "event-driven architecture",
+    "microservices",
+    "Datadog observability",
+    "available for remote work",
+    "open to relocation Europe",
+    "open to relocation North America"
+  ],
   "openGraph": {
-    "type": "website",
+    "type": "profile",
     "locale": "en_US",
-    "url": "https://www.umairjibran.com",
-    "title": "Umair Jibran - Full Stack Engineer",
-    "description": "Full-stack developer with expertise in Node.js, JavaScript, and AWS"
+    "url": "https://umairjibran.com",
+    "siteName": "Umair Jibran",
+    "firstName": "Umair",
+    "lastName": "Jibran",
+    "username": "umairjibran",
+    "title": "Umair Jibran — Remote Backend, Cloud & AI Engineer",
+    "description": "Backend, DevOps, and AI/LLM engineer. Node.js, TypeScript, Python, AWS, GCP, and the CRM/automation integrations around them. Open to remote roles in Europe and North America."
+  },
+  "twitter": {
+    "card": "summary_large_image",
+    "title": "Umair Jibran — Remote Backend, Cloud & AI Engineer",
+    "description": "Backend, DevOps, and AI/LLM engineer. Node.js, TypeScript, Python, AWS, GCP, plus CRM and automation integrations. Open to remote roles in Europe and North America."
   },
   "metadataBase": "https://umairjibran.com"
 }

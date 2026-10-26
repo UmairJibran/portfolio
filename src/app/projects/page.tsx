@@ -1,13 +1,21 @@
 import Link from "next/link";
-import { ArrowUpRight, Code2, Briefcase } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import portfolio from "@/data/portfolio.json";
 import { ProjectsList } from "@/components/ProjectsList";
+import { SectionHeading, Em } from "@/components/SectionHeading";
+import { Terminal, type TerminalLine } from "@/components/Terminal";
 import type { ProjectItem } from "@/types/project";
+import { toJsonLdScript } from "@/lib/jsonLd";
+import { projectsGraph } from "@/lib/structuredData";
 
-const categories: { key: ProjectItem["category"]; title: string }[] = [
-  { key: "work", title: "Work" },
-  { key: "open-source", title: "Open Source" },
-  { key: "charity", title: "Charity" },
+const categories: {
+  key: ProjectItem["category"];
+  title: string;
+  command: string;
+}[] = [
+  { key: "work", title: "Work", command: "ls ./work" },
+  { key: "open-source", title: "Open source", command: "ls ./open-source" },
+  { key: "charity", title: "Charity", command: "ls ./charity" },
 ];
 
 export default function ProjectsPage() {
@@ -24,62 +32,74 @@ export default function ProjectsPage() {
     }))
     .filter((section) => section.projects.length > 0);
 
+  const intro: TerminalLine[] = [
+    { kind: "command", text: "ls -la ./projects" },
+    { kind: "output", text: `total ${portfolio.length}` },
+    ...sections.map(
+      (section): TerminalLine => ({
+        kind: "info",
+        text: `${section.key.padEnd(12)} ${String(section.projects.length).padStart(2, "0")} ${
+          section.projects.length === 1 ? "project" : "projects"
+        }`,
+      }),
+    ),
+    {
+      kind: "success",
+      text: `${sortedPortfolio.filter((p) => p.featured).length} featured · ${
+        sortedPortfolio.filter((p) => p.source).length
+      } with public source`,
+    },
+  ];
+
   return (
-    <main className="bg-background min-h-screen grain">
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-12">
-        <div className="flex items-end justify-between mb-4">
+    <main className="grain min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: toJsonLdScript(projectsGraph()) }}
+      />
+
+      <section className="mx-auto max-w-6xl px-6 pb-10 pt-14 md:pt-20">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:items-center lg:gap-12">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <Briefcase className="h-6 w-6 text-link" />
-              <span className="text-faint text-sm uppercase tracking-wider brutal:bg-brand brutal:text-foreground brutal:px-1 brutal:font-bold">
-                Portfolio
-              </span>
-            </div>
-            <h1 className="text-foreground text-5xl md:text-6xl font-bold">
-              Projects
-            </h1>
+            <SectionHeading
+              as="h1"
+              command="cd ~/projects"
+              title={
+                <>
+                  Things I&apos;ve <Em>shipped</Em>
+                </>
+              }
+              description="Product work, open-source tools, and a few non-profit builds — with the stack behind each one and links to the source or the live site where they exist."
+            />
           </div>
-          <div className="text-right">
-            <div className="text-faint text-sm mb-1">Total</div>
-            <div className="text-link text-2xl font-bold font-mono brutal:bg-foreground brutal:text-background brutal:px-2">
-              {String(portfolio.length).padStart(2, "0")}
-            </div>
-          </div>
+          <Terminal title="~/projects — zsh" lines={intro} />
         </div>
-        <div className="h-px bg-gradient-to-r from-brand via-border to-transparent brutal:bg-none brutal:bg-foreground brutal:h-[3px]"></div>
       </section>
 
-      {sections.map((section, index) => (
-        <section key={section.key} className="max-w-7xl mx-auto px-6 pb-16">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-foreground text-2xl font-bold">
-              <span className="hidden brutal:inline-block bg-foreground text-background px-2 py-0.5 mr-3 text-base align-middle font-heading">
-                {String(index + 1).padStart(2, "0")}
+      {sections.map((section) => (
+        <section key={section.key} className="mx-auto max-w-6xl px-6 py-10">
+          <SectionHeading
+            command={section.command}
+            title={section.title}
+            action={
+              <span className="font-mono text-xs text-faint">
+                {String(section.projects.length).padStart(2, "0")}{" "}
+                {section.projects.length === 1 ? "entry" : "entries"}
               </span>
-              {section.title}
-            </h2>
-            <span className="text-faint text-sm font-mono">
-              {String(section.projects.length).padStart(2, "0")}
-            </span>
-          </div>
+            }
+          />
           <ProjectsList projects={section.projects} />
         </section>
       ))}
 
-      <section className="max-w-7xl mx-auto px-6 pb-16">
-        <div className="border-t border-border brutal:border-t-[3px] brutal:border-edge pt-8 flex items-center justify-between text-sm">
-          <div className="flex items-center gap-2 text-faint">
-            <Code2 className="h-4 w-4" />
-            <span>Open source contributions and client work</span>
-          </div>
-          <Link
-            href="/"
-            className="text-faint hover:text-link transition-colors flex items-center gap-1"
-          >
-            Back to home
-            <ArrowUpRight className="h-3 w-3" />
-          </Link>
-        </div>
+      <section className="mx-auto max-w-6xl px-6 pb-16 pt-6">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 font-mono text-xs text-faint transition-colors hover:text-link"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
+          cd ..
+        </Link>
       </section>
     </main>
   );
