@@ -1,67 +1,65 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Archivo_Black } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "@/styles/globals.css";
 
 import meta from "@/data/meta.json";
-import profile from "@/data/profile.json";
 import umamiAnalytics from "@/data/umamiAnalytics.json";
 import Script from "next/script";
 import Header from "@/components/Header";
 import { toJsonLdScript } from "@/lib/jsonLd";
+import { personNode, websiteNode } from "@/lib/structuredData";
 import { WRITING_URL } from "@/lib/writing";
 
-const personJsonLd = {
+/* Site-wide identity. Page-specific nodes (ProfilePage, FAQPage, the project
+   collection) are emitted by the pages themselves and reference these by @id. */
+const siteJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: `${profile.name.firstName} ${profile.name.lastName}`,
-  url: meta.metadataBase,
-  jobTitle: "Full-Stack Software Engineer",
-  description:
-    "Full-stack engineer specializing in Node.js, serverless, AWS, and LLM-powered workflows.",
-  email: `mailto:${profile.email}`,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Peshawar",
-    addressCountry: "PK",
-  },
-  sameAs: profile.social
-    .filter((s) => s.icon !== "Mail")
-    .map((s) => s.link),
-  knowsAbout: [
-    "Node.js",
-    "TypeScript",
-    "Serverless",
-    "AWS",
-    "GCP",
-    "Microservices",
-    "LLM workflows",
-    "Grafana",
-    "Prometheus",
-  ],
+  "@graph": [websiteNode(), personNode()],
 };
 
-const ibmPlexMono = IBM_Plex_Mono({
-  weight: "400",
-  variable: "--font-ibm-mono",
-  preload: false,
+/* One superfamily, three voices: Sans carries prose, Mono is the terminal
+   language (nav, prompts, labels, chips), Serif italic is reserved for the
+   one or two emphasised words in a heading. */
+const plexSans = IBM_Plex_Sans({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-plex-sans",
+  display: "swap",
 });
 
-const archivoBlack = Archivo_Black({
-  weight: "400",
-  variable: "--font-archivo",
-  preload: false,
+const plexMono = IBM_Plex_Mono({
+  weight: ["400", "500"],
+  subsets: ["latin"],
+  variable: "--font-plex-mono",
+  display: "swap",
 });
 
-/* Runs before paint: resolves theme from localStorage, else system
-   preference (dark -> noir, light -> brutal). Prevents theme flash. */
-const themeInitScript = `(function(){try{var t=localStorage.getItem("theme");if(t!=="noir"&&t!=="brutal"){t=window.matchMedia("(prefers-color-scheme: light)").matches?"brutal":"noir";}document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t==="brutal"?"light":"dark";}catch(e){}})();`;
+const plexSerif = IBM_Plex_Serif({
+  weight: ["400"],
+  style: ["italic"],
+  subsets: ["latin"],
+  variable: "--font-plex-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   ...meta,
   metadataBase: new URL(meta.metadataBase),
   alternates: {
+    canonical: "/",
     types: {
       "application/rss+xml": `${WRITING_URL}/rss/`,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -71,22 +69,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  /* The font variables go on <html>, not <body>: globals.css resolves
-     --font-heading: var(--font-archivo) on :root, and a var() inside a custom
-     property is substituted against the element it is declared on — so the
-     variables have to be in scope there or --font-heading resolves to nothing. */
   return (
     <html
       lang="en"
-      data-theme="noir"
-      className={`${ibmPlexMono.variable} ${archivoBlack.variable}`}
-      suppressHydrationWarning
+      className={`${plexSans.variable} ${plexMono.variable} ${plexSerif.variable}`}
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: toJsonLdScript(personJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: toJsonLdScript(siteJsonLd) }}
         />
       </head>
       <Script
@@ -94,7 +85,7 @@ export default function RootLayout({
         src="https://cloud.umami.is/script.js"
         data-website-id={umamiAnalytics.dataWebsiteId}
       />
-      <body className="font-mono bg-background">
+      <body>
         <Header />
         {children}
       </body>
