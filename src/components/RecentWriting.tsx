@@ -1,5 +1,3 @@
-"use client";
-
 import { Story } from "@/types/story";
 import Link from "next/link";
 import { Calendar, ExternalLink } from "lucide-react";
@@ -7,9 +5,17 @@ import { writingLinkProps } from "@/lib/writing";
 
 type Props = {
   story: Story;
-  // A slimmer, low-key card for when something else on the page is the focus
+  // A slimmer, low-key row for when something else on the page is the focus
   compact?: boolean;
 };
+
+function StoryKind({ type }: { type: Story["type"] }) {
+  return (
+    <span className="rounded border border-brand/30 bg-brand/5 px-1.5 py-0.5 font-mono text-[10px] uppercase tracking-wide text-brand">
+      {type === "blog" ? "post" : "case study"}
+    </span>
+  );
+}
 
 export function RecentWriting({ story, compact = false }: Props) {
   const formattedDate = new Date(story.date).toLocaleDateString("en-US", {
@@ -23,20 +29,23 @@ export function RecentWriting({ story, compact = false }: Props) {
       <Link
         href={story.url}
         {...writingLinkProps}
-        className="group flex items-center justify-between gap-4 bg-card/40 border border-border rounded-lg px-5 py-4 hover:border-brand/50 transition-all duration-300 brutal:bg-card brutal-card"
+        className="panel panel-hover group flex items-center justify-between gap-4 px-5 py-4"
       >
         <div className="min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-0.5 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
-              {story.type === "blog" ? "blog" : "case study"}
+          <div className="mb-1.5 flex items-center gap-2">
+            <StoryKind type={story.type} />
+            <span className="font-mono text-[11px] text-faint">
+              {formattedDate}
             </span>
-            <span className="text-faint text-xs">{formattedDate}</span>
           </div>
-          <h3 className="text-base font-semibold text-foreground group-hover:text-link transition-colors truncate">
+          <h3 className="truncate text-sm font-medium text-foreground transition-colors group-hover:text-link md:text-base">
             {story.title}
           </h3>
         </div>
-        <ExternalLink className="h-5 w-5 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" aria-hidden />
+        <ExternalLink
+          className="h-4 w-4 shrink-0 text-faint transition-colors group-hover:text-link"
+          aria-hidden
+        />
         <span className="sr-only"> (opens in a new tab)</span>
       </Link>
     );
@@ -46,43 +55,25 @@ export function RecentWriting({ story, compact = false }: Props) {
     <Link
       href={story.url}
       {...writingLinkProps}
-      className="group block bg-card border border-border rounded-lg p-6 hover:border-brand hover:bg-card/80 transition-all duration-300 brutal:hover:bg-card brutal-card"
+      className="panel panel-hover group block p-6"
     >
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex-1">
-          {/* Type Badge */}
-          <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="inline-flex items-center rounded-md bg-brand/10 px-2 py-1 text-xs font-medium text-link ring-1 ring-inset ring-brand/20 brutal:border brutal:border-edge brutal:bg-brand brutal:text-foreground brutal:font-bold">
-              {story.type === "blog" ? "blog" : "case study"}
-            </span>
-            {story.tags?.slice(0, 3).map((tag) => (
-              <span
-                key={tag}
-                className="inline-flex items-center rounded-md bg-border/50 px-2 py-1 text-xs font-medium text-muted-foreground ring-1 ring-inset ring-edge/50 brutal:border brutal:border-edge brutal:bg-card brutal:text-foreground brutal:font-bold"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          {/* Title */}
-          <h3 className="text-2xl font-bold mb-3 text-foreground group-hover:text-link transition-colors">
-            {story.title}
-          </h3>
-
-          {/* Excerpt */}
-          <p className="text-muted-foreground leading-relaxed mb-4">{story.excerpt}</p>
-
-          {/* Date */}
-          <div className="flex items-center gap-2 text-faint text-sm">
-            <Calendar className="h-4 w-4" />
-            <span>{formattedDate}</span>
-          </div>
-        </div>
-
-        {/* Arrow Icon */}
-        <ExternalLink className="h-6 w-6 text-faint/80 group-hover:text-link transition-colors flex-shrink-0" aria-hidden />
-        <span className="sr-only"> (opens in a new tab)</span>
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <StoryKind type={story.type} />
+        {story.tags?.slice(0, 3).map((tag) => (
+          <span key={tag} className="chip">
+            {tag}
+          </span>
+        ))}
+      </div>
+      <h3 className="mb-3 text-xl font-semibold text-foreground transition-colors group-hover:text-link">
+        {story.title}
+      </h3>
+      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+        {story.excerpt}
+      </p>
+      <div className="flex items-center gap-2 font-mono text-[11px] text-faint">
+        <Calendar className="h-3.5 w-3.5" aria-hidden />
+        {formattedDate}
       </div>
     </Link>
   );

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import {
@@ -43,14 +43,24 @@ export function ExperienceDialog({
               {experience.company}
             </Link>
             <span className="text-sm font-normal text-muted-foreground">
-              {new Date(experience.startDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })} - {
-                experience.endDate ? new Date(experience.endDate).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : 'Present'
-              }
+              {new Date(experience.startDate).toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric",
+              })}{" "}
+              -{" "}
+              {experience.endDate
+                ? new Date(experience.endDate).toLocaleDateString("en-US", {
+                    month: "long",
+                    year: "numeric",
+                  })
+                : "Present"}
             </span>
           </DialogTitle>
         </DialogHeader>
         <div className="mt-4">
-          <p className="text-foreground/80 mb-6 text-lg">{experience.oneLine}</p>
+          <p className="text-foreground/80 mb-6 text-lg">
+            {experience.oneLine}
+          </p>
           <ul className="space-y-3 text-muted-foreground">
             {experience.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-2">
@@ -63,4 +73,4 @@ export function ExperienceDialog({
       </DialogContent>
     </Dialog>
   );
-} 
+}
